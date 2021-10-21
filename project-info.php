@@ -1,16 +1,19 @@
 <?php 
-	$cardInfo = [
+	$projectList= [
 		[
-      'name' => 'physician business card',
-      'description' => 'a business card for a cool physician',
-      'url' => 'https://peprojects.dev',
+      'name' => $name,
+      "image" => $image,
+      'description' => $description,
+      'url' => $url,
 		],
-    [
-      'name' => 'bauhaus website',
-      'description' => 'a bauhaus project!',
-      'url' => 'https://peprojects.dev',
-    ],
-	]
+	];
 
+
+/*
+'name' => '',
+"image" => "",
+'description' => '',
+'url' => '',
+*/ 
   
 ?>

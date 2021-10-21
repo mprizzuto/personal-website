@@ -8,4 +8,15 @@
 </card>
 <?php } ?>
 
+<?php function projectBuilder($name, $image, $description, $url) { ?>
+<project-card class="project">
+	<h2 class="project-title"><?=$name?></h2>
+	<picture class="project-pic">
+		<img src="<?=$image?>" alt="<?=$name?>">
+	</picture>
+
+	<p><?=$description?></p>
+	<a href="<?=$url?>">read more</a>
+</project-card>
+<?php } ?>
 

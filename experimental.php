@@ -31,7 +31,6 @@
           <inner-column>
             <h1 class="design-title">web</h1>
             <?php 
-            include 'project-info.php';
             include 'functions.php';
             ?>
 

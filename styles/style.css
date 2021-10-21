@@ -15,7 +15,8 @@
   /*border:  3px solid red;*/
 }
 
-picture, inner-column, shapes, card {
+picture, inner-column, shapes, 
+card, project-card {
 	display: block;
 }
 

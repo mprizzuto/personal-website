@@ -19,6 +19,8 @@
           <a class="link" href="index.php">home</a>
           <a class="link" href="experimental.php">experimental</a>
           <a class="link" href="writing.php">writing</a>
+          <a class="link" href="projects.php">projects</a>
+          <a class="link" href="contact.php">contact</a>
           </nav>
       </section>
 

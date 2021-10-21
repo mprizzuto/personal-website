@@ -1,4 +1,4 @@
-<svg width="100%" height="100%" viewBox="0 0 1000 973" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg class="shy-sun" width="100%" height="100%" viewBox="0 0 1000 973" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1,0,0,1,-200.704,-71.1661)">
         <g transform="matrix(0.500185,0,0,1.06608,100.315,-33.0134)">
             <path d="M241.048,102.454C241.048,99.842 236.529,97.722 230.962,97.722L210.79,97.722C205.223,97.722 200.704,99.842 200.704,102.454L200.704,995.452C200.704,998.064 205.223,1000.19 210.79,1000.19L230.962,1000.19C236.529,1000.19 241.048,998.064 241.048,995.452L241.048,102.454Z" style="fill:rgb(57,69,231);"/>

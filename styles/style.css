@@ -250,6 +250,11 @@ p, a, ul, details {
   width: 20vw;
 }
 
+.shy-sun {
+  max-width: 600px;
+  margin-right: 10px;
+}
+
 .dev-credentials {
   margin-top: 5px;
   max-width: 450px;

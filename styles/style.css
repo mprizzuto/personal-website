@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import "colors.css";
 @font-face {
   font-family: "rubik";
   src: url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
@@ -9,10 +10,15 @@
   src: url("../fonts/Karla/Karla-Regular.ttf") format("truetype");
 }
 
+
 * {
 	margin: 0;
 	padding: 0;
   /*border:  3px solid red;*/
+}
+
+header ul {
+  list-style: none;
 }
 
 picture, inner-column, shapes, 
@@ -60,6 +66,26 @@ inner-column {
   letter-spacing: 0.03em;
 }
 
+.project-gallery inner-column {
+  max-width: 950px;
+}
+
+.project-list {
+  /*display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  gap: 5%;
+  list-style: none;
+}
+
+project-card picture {
+  /*max-width: 20vw;*/
+  /*max-width: 300px;*/
+}
+
 /*.cool-shapes inner-column {
   margin-right: auto;
   margin-left: auto;
@@ -67,9 +93,7 @@ inner-column {
   max-width: 900px;
 }*/
 
-.welcome inner-column, .dev-article aside inner-column,
-.writing-body inner-column, .writing-body header inner-column, .cool-shapes inner-column,
-.visual-design inner-column  {
+inner-column  {
   max-width: 900px;
   margin-right: auto;
   margin-left: auto;
@@ -285,8 +309,7 @@ p + p {
 .lfps:first-letter {
 }
 
-.project-list {
-  list-style: square;
+.project-list, .exercise-list {
   margin-left: 15px;
 }
 
@@ -308,6 +331,78 @@ p + p {
 .ments {
   /*transform: rotate(-90deg);*/
 }
+
+/*style guide*/
+letters.upper-case {
+  display: block;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.font-flag {
+  background: black;
+  color:  gold;
+  max-width: 90px;
+  padding-left: 10px;
+}
+
+.rubik-font, h1, h2, h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+.karla-font, .site-pages li {
+  font-family: "karla", serif;
+}
+
+letters + p, .font-flag {
+  margin-top: 20px;
+}
+
+.site-pages {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/*colors*/
+.color-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-list li {
+  flex-basis: 100px;
+  min-height: 100px;
+  min-width: 30px;
+  max-width: 100px;
+  margin-top: 5px;
+  margin-right:  10px;
+}
+
+li ul {
+  margin-left:  40px;
+}
+
+.color-list li:first-of-type {
+  background: var(--lolly-pop);
+}
+
+.color-list :nth-child(2) {
+  background: var(--accent-color);
+}
+
+.color-list :nth-child(3) {
+  background: var(--body-color);
+}
+
+.color-list :nth-child(4) {
+  background: var(--guac-color);
+}
+
+.color-list :last-of-type {
+  background: var(--line-color);
+}
+
 
 
 @media(min-width: 700px) {

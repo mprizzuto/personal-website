@@ -24,27 +24,27 @@
     <meta property="og:url" content="htps://peprojects.dev/alpha-1/mprizzuto/images/sun.jpg">
 	</head>
 	<body class="experimental-body">
-    <?php include('header.php');?>
+    <?php include('header.php');
+    include 'experiment-info.php';
+    ?>
     <main class="designer-experiments">
       <article class="web-experimental">
         <section class="visual-design">
           <inner-column>
             <h1 class="design-title">web</h1>
-            <?php 
-            include 'functions.php';
-            ?>
 
-            <?php 
-            cardBuilder('physician business card', 'a website for a doctor', 'https://peprojects.dev/alpha-1/mprizzuto/portfolio/physician-bc/');
-            cardBuilder('medical scrub company', 'plant-based medical scrubs', 'https://google.com');
-            cardBuilder('tourette symptom checker', 'a project that demonstrates form handling. Using PHP', 'https://google.com');
-            cardBuilder('dermatology practice', 'a website for a modern Dermatologist', 'https://codepen.io/MPRizzuto/pen/dyNwOWJ');
-            cardBuilder('student form', 'a study that uses PHP and sql.', 'https://google.com');
-            ?>
+            <?php foreach($experimentList as $experiment): ?>
+              <card class="project-card">
+                <details open>
+                  <summary><?=$experiment["name"]?></summary>
+                  <p><?=$experiment["purpose"]?></p>
+                  <a href="<?=$experiment["link"]?>" target="_blank"><?=$experiment["name"]?></a>
+                </details>
+              </card>
+             <?php endforeach; ?> 
 
             <h2>design</h2>
             <h2 class="experiments-title"><span>experi</span><span class="ments">ments</span></h2>
-
             
           </inner-column>
         </section>

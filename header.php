@@ -21,6 +21,8 @@
           <a class="link" href="writing.php">writing</a>
           <a class="link" href="projects.php">projects</a>
           <a class="link" href="contact.php">contact</a>
+          <a class="link" href="style-guide.php">style guide</a>
+
           </nav>
       </section>
 

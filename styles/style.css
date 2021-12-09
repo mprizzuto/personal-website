@@ -4,18 +4,6 @@
 @import "typography.css";
 
 
-@font-face {
-  font-family: "rubik";
-  src: url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "karla";
-  src: url("../fonts/Karla/Karla-Regular.ttf") format("truetype");
-}
-
-
-
 
 body {
   padding-bottom:  20vh;
@@ -100,133 +88,7 @@ inner-column  {
   align-self: flex-end;
 }
 
-.blog-list li {
-  border-bottom: 4px solid black;
-}
 
-.author-welcome inner-column {
-  border-bottom: 5px solid gold;
-  max-width: 900px;
-}
-
-.link {
-  display: inline-block;
-  padding-right: .5em;
-}
-
-a {
-  /*text-decoration: none;*/
-}
-
-body.homepage a:link {
-  color:  black;
-}
-
-body.homepage a:visited {
-  color:  gray;
-}
-
-body.homepage a:hover {
-  color:  orange;
-}
-
-body.homepage a:active {
-  color:  green;
-}
-
-body.experimental-body a:link {
-  /*color:  lightgray;*/
-}
-
-body.experimental-body a:visited {
-  /*color:  linen;*/
-}
-
-body.experimental-body a:hover {
-  color:  orange;
-}
-
-body.experimental-body a:active {
-  color:  wheat;
-}
-
-a[target='_blank']::after {
-  content: '\21D7';
-}
-
-.dev-credentails h2:first-of-type, .cool-shapes h1 {
-  font-size: clamp(2.5em, 3vw, 5em);
-}
-
-.credentials h1 {
-  font-family: 'Rubik', sans-serif;
-  font-size: clamp(1.8em, 4vw, 4em);
-}
-
-.dev-credentials h2 {
-  margin-top: 10px;
-}
-
-.dev-credentials p abbr {
-  text-transform: uppercase;
-}
-
-em {
-  font-weight: bold;
-}
-
-span.job {
-  display:block;
-  font-size: .5em;
-  transform: translate(2px, 0px);
-}
-
-.role {
-  display: block;
-  transform: translate(40px, 10px);
-  max-width: 200px;
-}
-
-.interest-list {
-  writing-mode: vertical-rl;
-  display: flex;
-  justify-content: flex-start;
-  transform:  translate(-20px, 0px);
-}
-
-.interest-list li {
-  margin: 10px;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Karla', sans-serif;
-  line-height: 1;
-  text-transform: capitalize;
-}
-
-.dev-main h1, .writing-area h2 {
-  display: none;
-}
-
-.visual-design h2 {
-  font-size: 2em;
-}
-
-.design-title {
-  font-size:  2em;
-}
-
-.experiments-title {
-  font-size: 1.5em;
-}
-
-p, a, ul, details {
-  font-family: 'Karla', sans-serif;
-}
-
-.web-languages {
-  /*display: inline-block;*/
-}
 
 .welcome h2:first-of-type {
   /*writing-mode: vertical-rl;*/
@@ -235,6 +97,10 @@ p, a, ul, details {
 }
 
 /*SVGs*/
+header .right-arrow {
+  max-width: 200px;
+}
+
 .construction {
   max-width: 400px;
   margin-top: 10px;
@@ -308,15 +174,11 @@ p + p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 500px;
+  max-width: 350px;
 }
 
 .experiments-title span {
   display: inline-block;
-}
-
-.ments {
-  /*transform: rotate(-90deg);*/
 }
 
 /*style guide*/
@@ -331,14 +193,6 @@ letters.upper-case {
   color:  gold;
   max-width: 90px;
   padding-left: 10px;
-}
-
-.rubik-font, h1, h2, h3 {
-  font-family: "Rubik", sans-serif;
-}
-
-.karla-font, .site-pages li {
-  font-family: "karla", serif;
 }
 
 letters + p, .font-flag {

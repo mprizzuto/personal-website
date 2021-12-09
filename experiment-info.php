@@ -14,7 +14,7 @@ $experimentList = [
 	[
 		"name" => "Tourette symptom checker",
 		"purpose" => "a project that demonstrates form handling. Using PHP",
-		"link" => "https://google.com",
+		"link" => "https://peprojects.dev/alpha-1/mprizzuto/projects/ts-symptom-checker",
 	],
 	[
 		"name" => "rotation/transform study",

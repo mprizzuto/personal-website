@@ -1,13 +1,3 @@
-<!-- <header>
-	<inner-column>
-    <nav class="site-menu">
-      <a class="link" href="index.php">home</a>
-      <a class="link" href="experimental.php">experimental</a>
-      <a class="link" href="writing.php">writing</a>
-    </nav>
-	</inner-column>
-</header> -->
-
 <header class="author-welcome">
   <inner-column>
     <div class="dev-info">

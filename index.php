@@ -40,37 +40,14 @@
             </div>
 
             <shapes>
-              <?php include('lollypop.php'); ?>
-              <svg class="chips-and-guac" width="100%" height="100%" viewBox="0 0 314 326" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                  <g transform="matrix(1,0,0,1,-406.991,-94.071)">
-                      <circle cx="610" cy="310" r="110" style="fill:rgb(0,74,31);"/>
-                      <g transform="matrix(-0.770271,0.637716,-1.12827,-1.36279,1161.96,214.188)">
-                          <path d="M490,150L570,280L410,280L490,150Z" style="fill:rgb(219,25,0);fill-opacity:0.69;"/>
-                      </g>
-                  </g>
-              </svg>
+              
             </shapes>
           </inner-column>
         </section>
 
-        <aside>
-          <inner-column>
-            <h2 class="heading-two">social</h2>
-
-            <ul class="media-list">
-              <li>
-                <a class="link" href="https://twitter.com/marcorizzuto4" target="_blank">twitter</a>
-              </li>
-              <li>
-                <a class="link" href="https://www.instagram.com/marcor.dev/" target="_blank">instagram</a>
-              </li>
-              <li id="email">
-                 <a class="link" href="mailto:mprizzuto88@gmail.com" target="_blank">email me</a>
-              </li>
-            </ul>
-          </inner-column>
-        </aside>
+        
       </article>
     </main>
+    <?php include "footer.php";?>
   </body>
 </html>

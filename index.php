@@ -24,7 +24,7 @@
     <meta property="og:url" content="htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2">
   </head>
   <body class="homepage">  
-    <?php include('header.php'); ?>
+    <?php include('components/header.php'); ?>
 
     <main class="dev-main">
       <article class="dev-article">
@@ -45,9 +45,8 @@
           </inner-column>
         </section>
 
-        
       </article>
     </main>
-    <?php include "footer.php";?>
+    <?php include "components/footer.php";?>
   </body>
 </html>

@@ -1,0 +1,27 @@
+* {
+	/*outline:  3px solid gray;*/
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+header ul {
+  list-style: none;
+}
+
+picture, inner-column, shapes, 
+card, project-card {
+	display: block;
+}
+
+picture img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+

@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import "reset.css";
 @import "colors.css";
+@import "setup.css";
+@import "typography.css";
+
+
 @font-face {
   font-family: "rubik";
   src: url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
@@ -11,34 +15,7 @@
 }
 
 
-* {
-	margin: 0;
-	padding: 0;
-  /*border:  3px solid red;*/
-}
 
-header ul {
-  list-style: none;
-}
-
-picture, inner-column, shapes, 
-card, project-card {
-	display: block;
-}
-
-picture img {
-	display: block;
-	height: auto;
-	width: 100%;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-html {
-	box-sizing: border-box;
-}
 
 body {
   padding-bottom:  20vh;

@@ -191,7 +191,7 @@ p + p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .experiments-title span {
@@ -220,3 +220,11 @@ letters + p, .font-flag {
   margin-left: 20px;
   margin-top: 10px;
 }
+
+@media (min-width: 600px) {
+	.author-welcome .credentials {
+  max-width: 450px;
+	}
+}
+
+

@@ -40,7 +40,7 @@
             </div>
 
             <shapes>
-              
+              <?php include "day-night-router.php";?>
             </shapes>
           </inner-column>
         </section>

@@ -98,7 +98,7 @@ inner-column  {
 
 /*SVGs*/
 header .right-arrow {
-  max-width: 200px;
+  max-width: 145px;
 }
 
 .construction {
@@ -133,76 +133,7 @@ header .right-arrow {
   margin-right: 10px;
 }
 
-.dev-credentials {
-  margin-top: 5px;
-  max-width: 450px;
-}
 
-aside inner-column {
-  display: flex;
-  /*justify-content: flex-end;*/
-}
-
-aside ul li, h2 + p {
-  margin-top: 10px;
-}
-
-aside ul li:first-of-type {
-  margin-top: 15px;
-}
-
-p + p {
-  margin-top: 20px;
-}
-
-.lfps {
-  /*margin-top: 40px;*/
-}
-
-.lfps:first-letter {
-}
-
-.project-list, .exercise-list {
-  margin-left: 15px;
-}
-
-.purpose {
-  margin-top: 10px;
-}
-
-.author-welcome .credentials {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 350px;
-}
-
-.experiments-title span {
-  display: inline-block;
-}
-
-/*style guide*/
-letters.upper-case {
-  display: block;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
-
-.font-flag {
-  background: black;
-  color:  gold;
-  max-width: 90px;
-  padding-left: 10px;
-}
-
-letters + p, .font-flag {
-  margin-top: 20px;
-}
-
-.site-pages {
-  margin-left: 20px;
-  margin-top: 10px;
-}
 
 /*colors*/
 .color-list {

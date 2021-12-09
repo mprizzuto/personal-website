@@ -48,6 +48,16 @@ body {
   padding-bottom: 40vh;
 }
 
+.greet {
+  display: block;
+  font-size: 5em;
+}
+
+.dev-credentials {
+  border-left:  20px solid black;
+  padding: 10px;
+}
+
 /*page bodys*/
 
 body.homepage, body.experimental-body {

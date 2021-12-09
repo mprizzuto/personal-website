@@ -32,23 +32,9 @@
         <section class="welcome">
           <inner-column>
             <div class="dev-credentials">
-              <!-- <h2 class="heading-one">marco rizzuto <span class="role">web designer</span></h2> -->
+              <p class="lfps"><span class="greet">Hello!</span>My name is Marco Rizzuto. I bring a neurodiverse approach to web development  and User Experience.</p>
 
-              <!-- <h2 class="heading-two">web designer</h2> -->
-
-              <p class="lfps">I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Neurodiverse and goal-oriented, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.</p>
-
-              <p>Whether you are a <abbr title="Physician Assistant">pa</abbr>, Nurse, Doctor, or other medical professional, your career can certainly benefit from an online presence. In the <em>21st century</em>, a health care professional's reputation and bedside manner extend to the online world.</p>
-
-              <p>Be sure to put your best foot forward by having a high quality and Modern website. <a href="#email">Contact me</a> for project inquries</p>
-
-              <!-- <svg class="green-rect" width="10%" height="100px" viewBox="0 0 20 100" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                <g transform="matrix(1,0,0,1,-100,-20)">
-                    <g transform="matrix(1,0,0,0.344828,0,13.1034)">
-                        <rect x="110" y="20" width="10" height="290"/>
-                    </g>
-                </g>
-              </svg> -->
+              <p>I am excited to take part in the current web revolution to build highly performant and accessible websites.</p>
             </div>
 
             <shapes>

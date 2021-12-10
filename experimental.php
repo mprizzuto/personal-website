@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-	<html lang="en" >
-	<head>
-    <link rel="stylesheet" type="text/css" href="./styles/reset.css">
 
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    
-    <meta charset="utf-8">
-
-    <title>Marco Rizzuto- Web Designer</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="A Web Designer's experimental page. Welcome to my lab!">
-
-    <meta property="og:description" content="A Web Designer's experimental page. Welcome to my lab!">
-    
-    <meta property="og:title" content="Marco Rizzuto- Web Designer">
-
-    <meta property="og:image" content="https://peprojects.dev/alpha-1/mprizzuto/images/brenda.png">
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:url" content="htps://peprojects.dev/alpha-1/mprizzuto/images/sun.jpg">
-	</head>
-	<body class="experimental-body">
-    <?php include('header.php');
+    <?php
     include 'experiment-info.php';
     ?>
     <main class="designer-experiments">
@@ -48,7 +23,4 @@
             
           </inner-column>
         </section>
-      </article>
-    </main>
-  </body>
-</html>	
+  

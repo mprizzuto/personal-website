@@ -4,7 +4,6 @@
 @import "typography.css";
 
 
-
 body {
   padding-bottom:  20vh;
 }
@@ -175,7 +174,16 @@ li ul {
   background: var(--line-color);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
 
+
+main {
+  min-height: 100vh;
+  flex-grow: 1;
+}
 
 @media(min-width: 700px) {
   .writing-area inner-column {

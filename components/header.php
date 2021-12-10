@@ -11,10 +11,10 @@
         </div>
 
         <nav class="site-menu">
-          <a class="link" href="index.php">home</a>
-          <a class="link" href="projects.php">projects</a>
-          <a class="link" href="about.php">about</a>
-          <a class="link" href="writing.php">writing</a>
+          <a class="link" href="?page=home">home</a>
+          <a class="link" href="?page=projects">projects</a>
+          <a class="link" href="?page=about">about</a>
+          <a class="link" href="?page=writing">writing</a>
           
           </nav>
       </section>

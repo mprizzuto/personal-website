@@ -221,6 +221,10 @@ letters + p, .font-flag {
   margin-top: 10px;
 }
 
+.projects-svg {
+	display: block;
+}
+
 @media (min-width: 600px) {
 	.author-welcome .credentials {
   max-width: 450px;

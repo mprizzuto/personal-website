@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<?php
-		include "header.php";
+		// include "header.php";
 		?>
 		<main class="contact">
 			<section class="contact-cta">

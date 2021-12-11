@@ -5,11 +5,11 @@ $time = date("H");
 
 	switch ($time) {
 		case $time > 16:
-			include "svgs/moon.svg";
+			include "svgs/moon.php";
 			break;
 
 		default:
-			include "svgs/sun.svg";
+			include "svgs/sun.php";
 			break;
 	}
 

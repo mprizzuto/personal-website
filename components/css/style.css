@@ -1,0 +1,7 @@
+header a, footer a {
+	text-transform: uppercase;
+}
+
+footer nav {
+	max-width:  300px;
+}

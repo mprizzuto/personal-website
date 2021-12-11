@@ -2,25 +2,14 @@
 @import "colors.css";
 @import "setup.css";
 @import "typography.css";
+@import "../components/css/style.css";
+
 
 
 body {
   padding-bottom:  20vh;
 }
 
-.writing-body {
-  padding-bottom: 40vh;
-}
-
-.greet {
-  display: block;
-  font-size: 5em;
-}
-
-.dev-credentials {
-  border-left:  20px solid black;
-  padding: 10px;
-}
 
 /*page bodys*/
 
@@ -51,7 +40,7 @@ inner-column {
   align-items: center;*/
   display: grid;
   grid-template-columns: repeat(auto-fill, 400px);
-  gap: 5%;
+  gap: 5px;
   list-style: none;
 }
 
@@ -88,6 +77,9 @@ inner-column  {
 }
 
 
+.welcome {
+  margin-top: 30px;
+}
 
 .welcome h2:first-of-type {
   /*writing-mode: vertical-rl;*/
@@ -132,6 +124,13 @@ header .right-arrow {
   margin-right: 10px;
 }
 
+.projects-svg {
+  display: block;
+  margin-top:  20px;
+  width: 32vw;
+  max-width: 300px;
+}
+
 
 
 /*colors*/
@@ -172,17 +171,6 @@ li ul {
 
 .color-list :last-of-type {
   background: var(--line-color);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-
-main {
-  min-height: 100vh;
-  flex-grow: 1;
 }
 
 @media(min-width: 700px) {
@@ -242,6 +230,10 @@ main {
    .visual-design inner-column {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .projects-svg {
+    margin-left: 30px;
+    margin-top: 120px;
   }
 }
 

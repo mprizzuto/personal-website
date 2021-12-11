@@ -4,27 +4,27 @@ $experimentList = [
 	[
 		"name" => "jan tschichold poster",
 		"purpose" => "using HTML and CSS to create a cool poster",
-		"link" => "https://codepen.io/MPRizzuto/pen/QWMEQjM?editors=1100",
+		"link" => "?experiment-detail=link-to-detail",
 	],
 	[
 		"name" => "SVG and CSS grid study",
 		"purpose" => "using SVG and CSS grid to create poster art ",
-		"link" => "https://codepen.io/MPRizzuto/pen/JjEeBrz",
+		"link" => "?experiment-detail=link-to-detail",
 	],
 	[
 		"name" => "Tourette symptom checker",
 		"purpose" => "a project that demonstrates form handling. Using PHP",
-		"link" => "https://peprojects.dev/alpha-1/mprizzuto/projects/ts-symptom-checker",
+		"link" => "?experiment-detail=link-to-detail",
 	],
 	[
 		"name" => "rotation/transform study",
 		"purpose" => "practice using CSS rotate/transform",
-		"link" => "https://codepen.io/MPRizzuto/pen/jOydGOQ",
+		"link" => "?experiment-detail=link-to-detail",
 	],
 	[
 		"name" => "color study",
 		"purpose" => "a study that uses colors and shapes to evoke feeling.",
-		"link" => "https://codepen.io/MPRizzuto/pen/poRXMgo",
+		"link" => "?experiment-detail=link-to-detail",
 	],
 ];
 

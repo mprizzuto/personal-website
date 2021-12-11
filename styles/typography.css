@@ -25,6 +25,22 @@ h1 {
 h2 {
 
 }
+
+.writing-body {
+  padding-bottom: 40vh;
+}
+
+.greet {
+  font-family:  "zen kaku", sans-serif;
+  display: block;
+  font-size: 5em;
+}
+
+.dev-credentials {
+  border-left:  20px solid black;
+  padding: 10px;
+}
+
 .blog-list li {
   border-bottom: 4px solid black;
 }
@@ -149,7 +165,6 @@ p, a, ul, details,
   /*display: inline-block;*/
 }
 
-
 .dev-credentials {
   margin-top: 5px;
   max-width: 450px;
@@ -179,7 +194,7 @@ p + p {
 .lfps:first-letter {
 }
 
-.project-list, .exercise-list {
+.exercise-list {
   margin-left: 15px;
 }
 
@@ -225,9 +240,25 @@ letters + p, .font-flag {
 	display: block;
 }
 
+.project-list {
+  margin-top: 40px;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+.lfps strong {
+  font-size: .1.3em;
+}
+
+.welcome h2 {
+  font-size: 4em;
+}
+
 @media (min-width: 600px) {
 	.author-welcome .credentials {
-  max-width: 450px;
+    max-width: 450px;
 	}
 }
 

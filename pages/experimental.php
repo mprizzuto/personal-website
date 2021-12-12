@@ -6,7 +6,7 @@ include 'experiment-info.php';
     <h2 class="design-title">web</h2>
 
     <?php foreach($experimentList as $experiment): ?>
-      <card class="project-card">
+      <card class="experiment-card">
         <details open>
           <summary><?=$experiment["name"]?></summary>
           <p><?=$experiment["purpose"]?></p>

@@ -51,4 +51,17 @@ project-card picture {
   outline:  5px solid red;
 }
 
+project-card {
+  display:  block;
+}
+
+project-card picture + p {
+  margin-top: 10px;
+}
+
+.project-card + .project-card {
+  margin-top: 20px;
+}
+
+
 

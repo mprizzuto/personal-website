@@ -1,0 +1,4 @@
+detail-router.php
+<?php 
+
+?>

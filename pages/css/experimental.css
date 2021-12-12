@@ -6,11 +6,20 @@
   max-width: 1200px;
 }
 
+.experiment-card summary {
+  color:  red;
+  font-size: 1.3em;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+
+
 @media (min-width: 700px) {
   .experiments inner-column {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2%;
+    gap: 1%;
   }
   .experiments h2, .experiments span {
     color:  rgb(0,42,216);

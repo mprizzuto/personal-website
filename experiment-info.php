@@ -4,7 +4,7 @@ $experimentList = [
 	[
 		"name" => "jan tschichold poster",
 		"purpose" => "using HTML and CSS to create a cool poster",
-		"link" => "?experiment-detail=link-to-detail",
+		"link" => "?experiment-detail=poster-art",
 	],
 	[
 		"name" => "SVG and CSS grid study",

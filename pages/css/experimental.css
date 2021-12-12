@@ -1,0 +1,18 @@
+*{
+  /*outline:  3px solid lime;*/
+}
+
+.experiments inner-column {
+  max-width: 1200px;
+}
+
+@media (min-width: 700px) {
+  .experiments inner-column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+  }
+  .experiments h2, .experiments span {
+    color:  rgb(0,42,216);
+  }
+}

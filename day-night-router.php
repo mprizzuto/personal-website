@@ -13,4 +13,6 @@ $time = date("H");
 			break;
 	}
 
+	//TO DO. conditionall say "sun" or "moon"  based on time of day
+
 ?>

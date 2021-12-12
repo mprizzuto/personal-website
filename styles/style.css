@@ -3,8 +3,7 @@
 @import "setup.css";
 @import "typography.css";
 @import "../components/css/style.css";
-
-
+@import "../pages/css/style.css";
 
 body {
   padding-bottom:  20vh;
@@ -12,7 +11,6 @@ body {
 
 
 /*page bodys*/
-
 body.homepage, body.experimental-body {
   background:  linen;
 }
@@ -21,41 +19,6 @@ body.writing-body {
   /*background: linen;*/
 }
 
-inner-column {
-	padding: 10px;
-  margin-right: auto;
-  margin-left: auto;
-  line-height: 2;
-  letter-spacing: 0.03em;
-}
-
-.project-gallery inner-column {
-  max-width: 950px;
-}
-
-.project-list {
-  /*display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;*/
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
-  gap: 5px;
-  list-style: none;
-}
-
-project-card picture {
-  /*max-width: 20vw;*/
-  /*max-width: 300px;*/
-}
-
-/*.cool-shapes inner-column {
-  margin-right: auto;
-  margin-left: auto;
-  line-height: 2;
-  max-width: 900px;
-}*/
-
 inner-column  {
   max-width: 900px;
   margin-right: auto;
@@ -63,19 +26,12 @@ inner-column  {
   line-height: 2;
   /*max-width: 600px;*/
   padding: 10px;
+  letter-spacing: 0.03em;
 }
 
-/*.writing-body inner-column, .writing-body header inner-column {
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
-  line-height: 2;
-}
-*/
 .blog-list {
   align-self: flex-end;
 }
-
 
 .welcome {
   margin-top: 30px;
@@ -88,10 +44,6 @@ inner-column  {
 }
 
 /*SVGs*/
-header .right-arrow {
-  max-width: 145px;
-}
-
 .construction {
   max-width: 400px;
   margin-top: 10px;
@@ -123,14 +75,6 @@ header .right-arrow {
   max-width: 600px;
   margin-right: 10px;
 }
-
-.projects-svg {
-  display: block;
-  margin-top:  20px;
-  width: 32vw;
-  max-width: 300px;
-}
-
 
 
 /*colors*/
@@ -209,8 +153,9 @@ li ul {
   .role {
     transform: rotate(90deg) translate(-70px, 30px);
   }
-  .welcome inner-column, .homepage header inner-column, .dev-article aside inner-column {
-    max-width: 900px;
+  .welcome inner-column, .homepage header inner-column, 
+  .dev-article aside inner-column {
+    /*max-width: 900px;*/
     margin-right: auto;
     margin-left: auto;
     line-height: 2;
@@ -226,10 +171,6 @@ li ul {
   }
   .experiments-title {
     margin-top: 40px;
-  }
-   .visual-design inner-column {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
   }
   .projects-svg {
     margin-left: 30px;

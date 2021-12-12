@@ -26,9 +26,7 @@ h2 {
 
 }
 
-.writing-body {
-  padding-bottom: 40vh;
-}
+/*homepage*/
 
 .greet {
   font-family:  "zen kaku", sans-serif;
@@ -45,35 +43,12 @@ h2 {
   border-bottom: 4px solid black;
 }
 
-.author-welcome inner-column {
-  border-bottom: 5px solid gold;
-  max-width: 900px;
-}
-
 .link {
   display: inline-block;
   padding-right: .5em;
 }
 
-a {
-  /*text-decoration: none;*/
-}
 
-body.homepage a:link {
-  color:  black;
-}
-
-body.homepage a:visited {
-  color:  gray;
-}
-
-body.homepage a:hover {
-  color:  orange;
-}
-
-body.homepage a:active {
-  color:  green;
-}
 
 body.experimental-body a:link {
   /*color:  lightgray;*/
@@ -144,7 +119,7 @@ span.job {
   display: none;
 }
 
-.visual-design h2 {
+.experiments h2 {
   font-size: 2em;
 }
 
@@ -236,14 +211,6 @@ letters + p, .font-flag {
   margin-top: 10px;
 }
 
-.projects-svg {
-	display: block;
-}
-
-.project-list {
-  margin-top: 40px;
-}
-
 strong {
   font-weight: bolder;
 }
@@ -255,6 +222,8 @@ strong {
 .welcome h2 {
   font-size: 4em;
 }
+
+
 
 @media (min-width: 600px) {
 	.author-welcome .credentials {

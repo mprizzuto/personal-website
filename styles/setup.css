@@ -14,17 +14,21 @@ header ul {
   list-style: none;
 }
 
+
+/*custom elements*/
 picture, inner-column, shapes, 
 card, project-card {
 	display: block;
 }
 
+/*media*/
 picture img {
 	display: block;
 	height: auto;
 	width: 100%;
 }
 
+/*sticky footer*/
 body {
   display: flex;
   flex-direction: column;

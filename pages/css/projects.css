@@ -1,0 +1,54 @@
+* {
+  /*outline:  3px solid red;*/
+}
+
+.projects h2 {
+  color:  rgb(0,42,216);
+  font-size: 1.8em;
+}
+
+.projects h2 + picture {
+  margin-top: 30px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 25px;
+  list-style: none;
+}
+
+project-card picture {
+  max-width: 15vw;
+  max-width: 300px;
+}
+
+.projects inner-column {
+  /*outline:  20px solid purple;*/
+  max-width: 1200px;
+}
+
+.projects-svg {
+  display: block;
+}
+
+.project-list {
+  margin-top: 40px;
+}
+
+.projects-svg {
+  display: block;
+  margin-top:  30px;
+  width: 32vw;
+  max-width: 300px;
+}
+
+.projects p {
+  max-width: 90ch;
+}
+
+.project-list picture {
+  outline:  5px solid red;
+}
+
+

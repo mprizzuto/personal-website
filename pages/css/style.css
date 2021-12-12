@@ -1,3 +1,35 @@
 @import "homepage.css";
 @import "experimental.css";
 @import "projects.css";
+
+.four-o-four {
+	margin-top: 40px;
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px 20px 30px 20px;
+}
+
+.dev-article {
+	margin-right: auto;
+	margin-left: auto;
+	/*max-width: 600px;*/
+}
+
+.four-o-four h2 {
+	font-size:  3em;
+}
+
+.four-o-four h2 mark {
+	background: rgb(255,209,102);
+	padding: 10px;
+}
+
+
+.warning {
+	margin-top: 20px;
+	font-size: 1.5em;
+	line-height: 1.4;
+	color: rgb(154,3,30);
+	max-width: 42ch;
+}

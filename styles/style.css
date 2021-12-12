@@ -76,6 +76,12 @@ inner-column  {
   margin-right: 10px;
 }
 
+.experimental-svg {
+  width: 30vw;
+  max-width: 800px;
+  margin-top: 40px;
+}
+
 
 /*colors*/
 .color-list {

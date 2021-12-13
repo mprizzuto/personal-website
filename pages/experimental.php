@@ -1,5 +1,6 @@
 <?php
 include 'experiment-info.php';
+include 'detail-router.php';
 ?>
 <section class="experiments">
   <inner-column>

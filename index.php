@@ -25,11 +25,10 @@
   </head>
   <body class="homepage">  
     <?php include "components/header.php";?>
-
     <main class="dev-main">
-
       <article class="dev-article">
         <?php require "components/page-router.php";?>
+        <?=var_dump($_GET)?>
       </article>
     </main>
     <?php include "components/footer.php";?>

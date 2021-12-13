@@ -1,4 +1,3 @@
-detail-router.php
 <?php 
 $page = $_GET["experiment-detail"] ?? null;
 	var_dump($page);
@@ -6,7 +5,7 @@ $page = $_GET["experiment-detail"] ?? null;
 	switch ($page) {
 		case "0":
 		echo "it is cse 0";
-		include "pages/poster-art.php";
+		include "../pages/poster-art.php";
 		break;
 
 		case "1":

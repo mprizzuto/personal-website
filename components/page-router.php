@@ -5,7 +5,7 @@ $page = $_GET["page"] ?? null;
 
 // var_dump($_GET);
 // echo ("the page is ") .  var_dump($page);
-// var_dump($page);
+var_dump($page);
 
 
 
@@ -48,6 +48,11 @@ switch ($page) {
 
 	case checkPages($page) === "false":
 	include "pages/404.php";
+	break;
+
+	case "0":
+	// include "pages/404.php";
+	echo "EXPERIMENTAL DETAIl";
 	break;
 
 	default:

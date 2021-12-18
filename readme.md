@@ -8,3 +8,8 @@ PHP, CSS, HTML 5, and *coming soon* Javascript
 
 ## link to project
 [my website](https://peprojects.dev/alpha-1/mprizzuto/)
+
+## special thanks to 
+[Derek Wood](https://github.com/sheriffderek), my Perpetual Education mentor. For your knowledge and guidance 
+
+[Brian Lowery](https://github.com/bdlowery), for helpng me with the data structures

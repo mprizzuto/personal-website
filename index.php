@@ -24,13 +24,13 @@
     <meta property="og:url" content="htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2">
   </head>
   <body class="homepage">  
-    <?php include "components/header.php";?>
+    <?php include "modules/header.php";?>
     <main class="dev-main">
       <article class="dev-article">
-        <?php require "components/page-router.php";?>
-        <?=var_dump($_GET)?>
+        <?php require "modules/page-router.php";?>
+
       </article>
     </main>
-    <?php include "components/footer.php";?>
+    <?php include "modules/footer.php";?>
   </body>
 </html>

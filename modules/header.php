@@ -5,7 +5,7 @@
         <h1 class="heading-one">Marco Rizzuto</h1>
 
         <div class="credentials">
-          <?php include "svgs/arrow.svg"; ?>
+          <?php include "images/svgs/arrow.svg"; ?>
           <span class="job">Web Developer</span>
           
         </div>

@@ -2,7 +2,7 @@
   <inner-column>
     <div class="dev-info">
       <section class="nav">
-        <h1 class="heading-one">Marco Rizzuto test</h1>
+        <h1 class="heading-one">Marco Rizzuto</h1>
 
         <div class="credentials">
           <?php include "images/svgs/arrow.svg"; ?>

@@ -10,13 +10,13 @@
           
         </div>
 
-        <nav class="site-menu">
+        <!-- <nav class="site-menu">
           <a class="link" href="?page=home">home</a>
           <a class="link" href="?page=projects">projects</a>
           <a class="link" href="?page=about">about</a>
           <a class="link" href="?page=writing">writing</a>
           
-          </nav>
+          </nav> -->
       </section>
     </div>
   </inner-column>

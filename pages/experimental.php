@@ -1,5 +1,5 @@
 <?php
-include 'experiment-info.php';
+include 'database/experiment-database.php';
 include 'detail-router.php';
 ?>
 <section class="experiments">

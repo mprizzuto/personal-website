@@ -1,23 +1,45 @@
 <?php 
 $page = $_GET["page"] ?? null;
-// echo "the page is " . var_dump($page);
-// echo "the GET is " . var_dump($_GET);
 
-// var_dump($_GET);
-// echo ("the page is ") .  var_dump($page);
-// var_dump($page);
+function getPage() {
+	$page = $_GET["page"] ?? null;
+	return $page;
+}
 
+// function formatVar($input) {
+// 	echo "<pre>";
+// 	var_dump($input);
+// 	echo "</pre>";
+// }
+
+// // formatVar($_GET["page"]);
 
 
 function checkPages($page) {
 	// compare $pages against a list of known strings
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
 }
 
-switch ($page) {
+
+
+/*project details router*/
+
+// switch ($_GET) {
+// 	case "responsive-layout";
+// 		// code...
+// 	echo "responsive layout.php";
+// 		break;
+	
+// 	default:
+// 		echo "404";
+// 		break;
+// }
+
+/*main page router*/ 
+switch (getPage()) {
 	case "home":
 	include "pages/home.php";
 	break;
@@ -46,16 +68,20 @@ switch ($page) {
 	include "pages/experimental.php";
 	break;
 
+
+	// project details router
+	case "project-detail":
+	include "./database/project-details-database.php";
+	break;
+
+	// 404 page
 	case checkPages($page) === "false":
 	include "pages/404.php";
 	break;
 
-	case "0":
-	// include "pages/404.php";
-	echo "EXPERIMENTAL DETAIl";
-	break;
 
 	default:
 	include "pages/home.php";
 }
+
 ?>

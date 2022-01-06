@@ -3,7 +3,7 @@
 }
 
 .projects h2 {
-  color:  rgb(0,42,216);
+  color:  var(--moon-blue);
   font-size: 1.8em;
 }
 
@@ -48,7 +48,7 @@ project-card picture {
 }
 
 .project-list picture {
-  outline:  5px solid red;
+  outline:  5px solid var(--moon-color);;
 }
 
 project-card {
@@ -66,11 +66,11 @@ project-card picture + p {
 /*project details card*/
 detail-card {
   display: block;
-  outline: 3px solid red;
   max-width: 900px;
   margin-right: auto;
   margin-left: auto;
   line-height: 1.5;
+  padding: 10px;
 }
 
 detail-card picture {
@@ -86,5 +86,8 @@ detail-card a {
   display: block;
 }
 
+detail-card p {
+  max-width: 75ch;
+}
 
 

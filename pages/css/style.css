@@ -1,6 +1,7 @@
 @import "homepage.css";
 @import "experimental.css";
 @import "projects.css";
+@import "../pages/css/colors.css";
 
 .four-o-four {
 	margin-top: 40px;
@@ -34,9 +35,8 @@
 	max-width: 42ch;
 }
 
-
 .dev-article {
-	/*max-width: 900px;*/
+	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 }

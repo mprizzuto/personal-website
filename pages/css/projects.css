@@ -63,6 +63,11 @@ project-card picture + p {
   margin-top: 20px;
 }
 
+.projects a[href="https://perpetual.education"] {
+  display: inline-block;
+  color:  red;
+}
+
 /*project details card*/
 detail-card {
   display: block;

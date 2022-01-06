@@ -2,7 +2,6 @@
 @import "colors.css";
 @import "setup.css";
 @import "typography.css";
-@import "../components/css/style.css";
 @import "../pages/css/style.css";
 
 body {

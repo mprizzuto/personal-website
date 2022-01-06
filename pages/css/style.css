@@ -1,7 +1,7 @@
 @import "homepage.css";
 @import "experimental.css";
 @import "projects.css";
-@import "../pages/css/colors.css";
+@import "../../styles/colors.css";
 
 .four-o-four {
 	margin-top: 40px;

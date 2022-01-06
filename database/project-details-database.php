@@ -76,29 +76,39 @@ $projectDetail = $_GET["project"] ?? null;
 
 ?>
 
-
-<?php if ($projectDetail === "responsive-layout"): ?>
+<?php
+ /*
+	projectDetailBuilder(string $name, 
+	string $skills, string $image,
+	string $alt,
+	string $description, 
+	string $url
+	);
+ */ 
 	
-	<?php 
+	// get the correct project using query strings
+switch ($projectDetail) {
+	case "responsive-layout":
 	projectDetailBuilder("Responsive layout details", "CSS layout- what i learned", "https://via.placeholder.com/150", "descriptive alt text", "The responsive layout was part of the core Perpetual Education curriculum. We learned how to research and spot design patterns and recreate common (and abstract) design patterns using CSS flexbox and grid", "../projects/responsive-layout");
+		break;
 
-	?>
-<?php endif; ?>
+		case "theming-challenge":
+	projectDetailBuilder("theming challenge details", "CSS theming challenge- what i learned", "https://via.placeholder.com/150", "descriptive alt text", "this project involved.. insert details here", "../projects/theming-challenge");
+		break;
 
+		case "accessibility":
+	projectDetailBuilder("accessibility challenge details", "accessibility- what I learned", "https://via.placeholder.com/150", "descriptive alt text", "The responsive layout was part of the core Perpetual Education curriculum. We learned how to research and spot design patterns and recreate common (and abstract) design patterns using CSS flexbox and grid", "../projects/accessibility");
+		break;
 
-<?php if ($projectDetail === "theming-challenge"): ?>
+		case "efp":
+	projectDetailBuilder("exercises for programmers details", "efp- what I learned", "https://via.placeholder.com/150", "descriptive alt text", "I worked through the book EFP using PHP and js.", "../projects/efp");
+		break;
 	
-	<?php 
-	projectDetailBuilder("theming challenge details", "CSS theming challenge- what i learned", "https://via.placeholder.com/150", "descriptive alt text", "this project involved.. insert details here");
-	?>
-<?php endif; ?>
-
-<?php if ($projectDetail === "accessibility"): ?>
-	
-	<?php 
-	projectDetailBuilder("accessibility challenge details", "accessibility", "https://via.placeholder.com/150", "descriptive alt text", "The responsive layout was part of the core Perpetual Education curriculum. We learned how to research and spot design patterns and recreate common (and abstract) design patterns using CSS flexbox and grid", "../projects/responsive-layout");
-	?>
-<?php endif; ?>
+	default:
+	echo "404 page not found";
+		break;
+}
+?>
 
 
 

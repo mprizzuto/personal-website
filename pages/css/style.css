@@ -33,3 +33,10 @@
 	color: rgb(154,3,30);
 	max-width: 42ch;
 }
+
+
+.dev-article {
+	/*max-width: 900px;*/
+	margin-right: auto;
+	margin-left: auto;
+}

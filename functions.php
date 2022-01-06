@@ -1,4 +1,3 @@
-
 <?php 
 // a better var_dump
 function formatVar(mixed $input):array {
@@ -6,9 +5,6 @@ function formatVar(mixed $input):array {
 	var_dump($input);
 	echo "</pre>";
 }
-
-// project detail generator
-
 
 ?>
 <?php function cardBuilder($name, $goal, $link) {?>
@@ -21,19 +17,7 @@ function formatVar(mixed $input):array {
 </card>
 <?php } ?>
 
-<?php function projectBuilder($name, $image, $description, $url) { ?>
-<project-card class="project">
-	<h2 class="project-title"><?=$name?></h2>
-	<picture class="project-pic">
-		<img src="<?=$image?>" alt="<?=$name?>">
-	</picture>
-
-	<p><?=$description?></p>
-	<a href="<?=$url?>">read more</a>
-</project-card>
-<?php } ?>
-
-<?php function projectDetailBuilder(string $name, string $skills, string $image, string $alt, string $description, string $url ) { ?>
+<?php function projectDetailBuilder(string $name, string $skills, string $image, string $alt, string $description, string $url ):void { ?>
 	<detail-card>
 
 		<h2><?=$name?></h2>

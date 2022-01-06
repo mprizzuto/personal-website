@@ -63,5 +63,28 @@ project-card picture + p {
   margin-top: 20px;
 }
 
+/*project details card*/
+detail-card {
+  display: block;
+  outline: 3px solid red;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+}
+
+detail-card picture {
+  max-width: 600px;
+  width: 40vw;
+}
+
+detail-card * {
+  margin-top: 10px;
+}
+
+detail-card a {
+  display: block;
+}
+
 
 

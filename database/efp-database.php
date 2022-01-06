@@ -1,4 +1,4 @@
-<?php 
+w<?php 
 $exerciseList = [
 	[
 		"name" => "anagram checker",

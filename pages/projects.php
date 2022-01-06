@@ -1,8 +1,6 @@
 <?php 
 	include "database/project-database.php";
 	// include "detail-router.php";
-
-
 ?>
 
 <section class="projects">
@@ -20,7 +18,7 @@
 							<img src="<?=$project["image"]?>" alt="<?=$project["alt"]?>">
 						</picture>
 						<p><?=$project["description"]?></p>
-						<a href="<?=$project["url"]?>" target="_blank"><?=$project["name"]?></a>
+						<a href="<?=$project["url"]?>"><?=$project["name"]?></a>
 					</project-card>
 				</li>
 			<?php endforeach; ?>

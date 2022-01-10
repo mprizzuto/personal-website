@@ -11,7 +11,7 @@ include 'detail-router.php';
         <details open>
           <summary><?=$experiment["name"]?></summary>
           <p><?=$experiment["purpose"]?></p>
-          <a href="<?=$experiment["link"]?>" target="_blank"><?=$experiment["name"]?></a>
+          <a href="<?=$experiment["link"]?>"><?=$experiment["name"]?></a>
         </details>
       </card>
      <?php endforeach; ?> 

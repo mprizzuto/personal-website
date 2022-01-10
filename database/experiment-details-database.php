@@ -47,6 +47,20 @@ $experimentDetailsList = [
 		case "art-poster":
 			experimentDetailBuilder("jan tschichold art poster", "can i make a poster art responsive?", "skitch, affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, i was successful!");
 			break;
+
+			case "svg-grid-study":
+			experimentDetailBuilder("svg-grid-study", "can i combine SVGS and grid to make a cool layout?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, a funky layout with SVGs!");
+			break;
+
+			case "ts-symptom-checker":
+			experimentDetailBuilder("TS symptom checker", "can i create a form with seamless UX to empower people with TS to report their symptoms?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, the users found the form easy to fill out and use!");
+			break;
+
+			case "transform-rotate":
+			experimentDetailBuilder("transform-rotate", "can i use CSS to positons, transform and rotate elements?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, a funky layout with SVGs!");
+			break;
+
+
 		
 		default:
 			echo "something went wrong";

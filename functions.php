@@ -1,6 +1,7 @@
 <?php 
+//funcsutins.hpp
 // a better var_dump
-function formatVar(mixed $input):array {
+function formatVar(mixed $input) {
 	echo "<pre>";
 	var_dump($input);
 	echo "</pre>";
@@ -12,7 +13,7 @@ function formatVar(mixed $input):array {
 	<details>
 		<summary><?=$name?></summary>
 		<p><?=$goal?></p>
-    <a class="project-link" href="<?=$link?>" target="_blank"><?=$name?></a>
+    <a class="project-link" href="<?=$link?>"><?=$name?></a>
 	</details> 
 </card>
 <?php } ?>
@@ -33,6 +34,26 @@ function formatVar(mixed $input):array {
 		<a href="<?=$url?>">see the project</a>
 	</detail-card>
 <?php } ?>
+
+<?php function experimentDetailBuilder(string $name, string $hypothesis, string $materials, string $image, string $alt, string $result):void { ?>
+	<detail-card>
+
+		<h2><?=$name?></h2>
+
+		<p><?=$hypothesis?></p>
+
+		<p><?=$materials?></p>
+
+		<picture>
+			<img src="<?=$image?>" alt="<?=$alt?>">
+		</picture>
+
+		<p><?=$result?></p>
+	</detail-card>
+<?php } ?>
+
+
+
 
 
 

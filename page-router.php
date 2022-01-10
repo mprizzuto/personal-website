@@ -1,5 +1,7 @@
 <?php 
+require "functions.php";
 $page = $_GET["page"] ?? null;
+$experimentDetail = $_GET["experiment-detail"] ?? null;
 
 function getPage() {
 	$page = $_GET["page"] ?? null;
@@ -12,12 +14,13 @@ function getPage() {
 // 	echo "</pre>";
 // }
 
-// // formatVar($_GET["page"]);
+// formatVar($experimentDetail);
+// formatVar(getPage());
 
 
 function checkPages($page) {
 	// compare $pages against a list of known strings
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -74,6 +77,11 @@ switch (getPage()) {
 	include "./database/project-details-database.php";
 	break;
 
+	// experiment detail router
+	case "experiment-detail":
+	include "./database/experiment-details-database.php";
+	break;
+
 	// 404 page
 	case checkPages($page) === "false":
 	include "pages/404.php";
@@ -83,5 +91,6 @@ switch (getPage()) {
 	default:
 	include "pages/home.php";
 }
+
 
 ?>

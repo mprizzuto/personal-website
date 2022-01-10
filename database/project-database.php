@@ -1,4 +1,3 @@
-project database.php
 <?php 
 	$projectList= [
 		[
@@ -46,7 +45,7 @@ project database.php
 ],
 */ 
 
-var_dump($_GET);
+// var_dump($_GET);
   
 
 

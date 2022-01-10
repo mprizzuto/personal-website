@@ -1,6 +1,3 @@
-experiment-details-database.php !!!!
-
-
 <?php 
 // require "./functions.php";
 // $experimentDetail = $_GET["page"] ?? null;
@@ -57,7 +54,7 @@ $experimentDetailsList = [
 			break;
 
 			case "transform-rotate":
-			experimentDetailBuilder("transform-rotate", "can i use CSS to positons, transform and rotate elements?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, a funky layout with SVGs!");
+			experimentDetailBuilder("transform-rotate", "can i use CSS to positons, transform and rotate elements?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, a cool transformations and rotationss!");
 			break;
 
 

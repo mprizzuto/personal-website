@@ -1,5 +1,4 @@
 <?php 
-require "functions.php";
 
 // maybe i can find a way to loop through these with the function I made..
 $detailOne = [

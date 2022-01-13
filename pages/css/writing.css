@@ -20,3 +20,8 @@ svg + writing-card {
 	/*outline: 20px solid lime;*/
 	margin-top: 20px;
 }
+
+
+.blog-posts p {
+	max-width: 80ch;
+}

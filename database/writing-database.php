@@ -43,7 +43,7 @@ $caseStudy = getPosts($writingList, "category", "case-study");
 
 		<?php foreach ($writingList as $list) {?>
 		<writing-card>
-			<p><a href="?detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
+			<p><a href="?page=writing&post-detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
 			<p><?=$list["date"]?></p>
 			<p><?=$list["title"]?></p>
 			<p><?=$list["description"]?></p>

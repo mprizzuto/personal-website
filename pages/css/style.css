@@ -1,6 +1,8 @@
 @import "homepage.css";
 @import "experimental.css";
 @import "projects.css";
+@import "about.css";
+@import "writing.css";
 @import "../../styles/colors.css";
 
 .four-o-four {

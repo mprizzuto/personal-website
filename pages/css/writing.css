@@ -1,0 +1,22 @@
+writing-card {
+	display: block;
+}
+
+.blog-posts svg {
+	max-width: 180px;
+	display: block;
+}
+
+.left-quote {
+	margin-top: 40px;
+}
+
+.right-quote {
+	margin-left: 20vw;
+	margin-top: 40px;
+}
+
+svg + writing-card {
+	/*outline: 20px solid lime;*/
+	margin-top: 20px;
+}

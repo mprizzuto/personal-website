@@ -1,0 +1,17 @@
+about-card {
+	display: block;
+}
+
+.hobby-intro {
+	display: block;
+}
+
+.hobby-photo {
+	max-width: 500px;
+}
+
+.hobby-figure + .hobby-figure {
+	margin-top: 30px;
+}
+
+ 

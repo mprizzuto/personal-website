@@ -3,7 +3,7 @@
 // $experimentDetail = $_GET["page"] ?? null;
 $experimentDetail = $_GET["experiment-detail"] ?? null;
 $experiment = $_GET["experiment"];
-var_dump($_GET);
+// var_dump($_GET);
 // var_dump($experimentDetail);
 
 $experimentDetailsList = [

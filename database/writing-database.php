@@ -1,5 +1,4 @@
 <?php 
-echo "writing datatbase";
 $writingList = [
 	[
 		"id" => "agile-sprinting",
@@ -36,16 +35,24 @@ function getPosts($data, $key, $value)
 $caseStudy = getPosts($writingList, "category", "case-study");
 $caseStudy = getPosts($writingList, "category", "case-study");
 
-
 ?>
 
-<?php foreach ($writingList as $list) {?>
-<card>
-	<p><a href="?detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
-	<p><?=$list["date"]?></p>
-	<p><?=$list["title"]?></p>
-	<p><?=$list["description"]?></p>
-	<p><?=$list["category"]?></p>
+<section class="article">
+	<!-- <inner-column> -->
+		<?php include "./images/svgs/left-quote.svg";?>
 
-</card>
-<?php }?>
+		<?php foreach ($writingList as $list) {?>
+		<writing-card>
+			<p><a href="?detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
+			<p><?=$list["date"]?></p>
+			<p><?=$list["title"]?></p>
+			<p><?=$list["description"]?></p>
+
+			<!-- maybe this is a link? -->
+			<p><?=$list["category"]?></p>
+
+		</writing-card>
+		<?php }?>
+		<?php include "./images/svgs/right-quote.svg";?>
+	<!-- </inner-column> -->
+</section>

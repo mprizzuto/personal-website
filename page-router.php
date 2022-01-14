@@ -17,10 +17,10 @@ function getPage() {
 // formatVar($experimentDetail);
 // formatVar(getPage());
 
-
+// a function that is used in the control flow for the 404 page
 function checkPages($page) {
 	// compare $pages against a list of known strings
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -80,6 +80,11 @@ switch (getPage()) {
 	// experiment detail router
 	case "experiment-detail":
 	include "./database/experiment-details-database.php";
+	break;
+
+	// writing details router
+	case "blog-post-detail":
+	include "./database/writing-details-database";
 	break;
 
 	// 404 page

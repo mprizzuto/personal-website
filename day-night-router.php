@@ -1,16 +1,18 @@
 <?php
-$timezone = date_default_timezone_set("America/New_York");
+// $timezone = date_default_timezone_set("America/New_York");
 
 $time = date("H");
 $timeChange = 13;
 $planetaryBody = "sun";
 
-if ($time > $timeChange) {
+var_dump($time);
+
+if ($time !== "08") {
 	$planetaryBody = "moon";
 }
 
 	switch ($time) {
-		case $time > $timeChange:
+		case $time !== "08":
 			include "images/svgs/moon.php";
 			break;
 

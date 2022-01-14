@@ -1,10 +1,11 @@
 <?php 
+$timezone = date_default_timezone_set("America/New_York");
 $planetaryBody = "sun";
 $time = date("H");
 $timeChange = 13;
 var_dump($time);
 
-if ($timeChange > $time) {
+if ($time > $timeChange) {
   $planetaryBody = "moon";
 }
 // var_dump($_GET);

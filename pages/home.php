@@ -2,8 +2,9 @@
 $planetaryBody = "sun";
 $time = date("H");
 $timeChange = 13;
+var_dump($time);
 
-if ($time > $timeChange) {
+if ($timeChange > $time) {
   $planetaryBody = "moon";
 }
 // var_dump($_GET);

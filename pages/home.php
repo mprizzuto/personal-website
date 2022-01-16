@@ -2,12 +2,13 @@
 $timezone = date_default_timezone_set("America/New_York");
 $planetaryBody = "sun";
 $time = date("H");
-$timeChange = 13;
-var_dump($time);
+// $timeChange = 18;
+// var_dump($time);
 
-if ($time > $timeChange) {
+if ($time >= 18 || $time <= 07) {
   $planetaryBody = "moon";
 }
+
 // var_dump($_GET);
 // var_dump($_GET["project"]);
 

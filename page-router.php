@@ -8,6 +8,11 @@ function getPage() {
 	return $page;
 }
 
+function getWritingPage() {
+	$page = $_GET["writing"] ?? null;
+	return $page;
+}
+
 // function formatVar($input) {
 // 	echo "<pre>";
 // 	var_dump($input);
@@ -84,7 +89,7 @@ switch (getPage()) {
 
 	// writing details router
 	case "blog-post-detail":
-	include "./database/writing-details-database";
+	include "./database/writing-detail-database.php";
 	break;
 
 	// 404 page

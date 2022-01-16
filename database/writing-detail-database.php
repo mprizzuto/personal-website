@@ -3,23 +3,6 @@
  // var_dump($_GET);
  $writingDetail = $_GET["post-detail"] ?? null;
  // echo $writingDetail;
-	$writingDetailList = [
-		[
-			"title" => "agile sprinting",
-			"teaser" => "agile sprintign is fun and is defined as a sprint where people work towards goals undr a  time constraint",
-			"link" => "https://marcor.substack.com/",
-		],
-		[
-			"title" => "",
-			"teaser" => "pesonal website case s`tudy",
-			"link" => "https://marcor.substack.com/",
-		],
-	];
-
-	// "teaser" => "",
-	// 	"link" => "https://marcor.substack.com/",
-
-
 ?>
 
 <?php function writingDetailGenerator($title, $description, $link, $teaser) { ?>

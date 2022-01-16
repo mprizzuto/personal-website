@@ -1,4 +1,5 @@
 <?php 
+var_dump($_GET);
 $writingList = [
 	[
 		"id" => "agile-sprinting",
@@ -43,7 +44,7 @@ $caseStudy = getPosts($writingList, "category", "case-study");
 
 		<?php foreach ($writingList as $list) {?>
 		<writing-card>
-			<p><a href="?page=writing&blog-post-detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
+			<p><a href="?page=blog-post-detail&post-detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
 			<p><?=$list["date"]?></p>
 			<p><?=$list["title"]?></p>
 			<p><?=$list["description"]?></p>

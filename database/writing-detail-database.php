@@ -5,12 +5,15 @@
  // echo $writingDetail;
 ?>
 
-<?php function writingDetailGenerator($title, $description, $link, $teaser) { ?>
+<?php function writingDetailGenerator($title, $image, $alt, $description, $link, $teaser) { ?>
 
 		<writing-detail>
 			<h2><?=$title?></h2>
+			<picture>
+				<img src="<?=$image?>" alt="$<?=$alt?>">
+			</picture>
 				<p><?=$description?></p>
-				<a href="<?=$link?>"><?=$teaser?></a>
+				<a href="<?=$link?>" target="_external"><?=$teaser?></a>
 			</writing-detail>
 			
 		
@@ -20,11 +23,11 @@
 <?php 
 switch ($writingDetail) {
 	case 'agile-sprinting':
-		writingDetailGenerator("agile-sprinting", "agile sprintign is fun and is defined as a sprint where people work towards goals undr a  time constraint", "https://marcor.substack.com/",  "sprint on!");
+		writingDetailGenerator("agile-sprinting", "./images/blog-images/sprint.png", "a design sprint schedule", "agile sprintign is fun and is defined as a sprint where people work towards goals undr a  time constraint", "https://marcor.substack.com/", "sprint on!");
 		break;
 
 	case 'personal-website-case-study':
-		writingDetailGenerator("personal website case study", "come see how i approached making my personal website", "https://marcor.substack.com/",  "study it");
+		writingDetailGenerator("personal website case study", "./images/blog-images/weird.jpg", "a grid of funky shapes", "come see how i approached making my personal website", "https://marcor.substack.com/",  "study it");
 		break;
 	
 	default:

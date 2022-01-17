@@ -1,5 +1,5 @@
 <?php 
-var_dump($_GET);
+// var_dump($_GET);
 $writingList = [
 	[
 		"id" => "agile-sprinting",

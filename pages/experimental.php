@@ -4,7 +4,8 @@ include 'detail-router.php';
 ?>
 <section class="experiments">
   <inner-column>
-    <h2 class="design-title">web</h2>
+    <h2 class="design-title">web
+    </h2>
 
     <?php foreach($experimentList as $experiment): ?>
       <card class="experiment-card">

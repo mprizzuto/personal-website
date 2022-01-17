@@ -14,6 +14,11 @@ header ul {
   list-style: none;
 }
 
+/*links*/
+a {
+	text-decoration: none;
+}
+
 
 /*custom elements*/
 picture, inner-column, shapes, 

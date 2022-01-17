@@ -48,6 +48,11 @@ h2 {
   padding-right: .5em;
 }
 
+/*put extenal link signifer for all external links*/
+a[target=_external]:after {
+  content: "\2197";
+}
+
 
 
 body.experimental-body a:link {

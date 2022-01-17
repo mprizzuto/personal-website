@@ -1,5 +1,7 @@
-writing-card {
+writing-card, writing-detail {
 	display: block;
+	line-height: 2;
+	padding:  10px;
 }
 
 .blog-posts svg {

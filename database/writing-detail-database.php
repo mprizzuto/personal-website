@@ -27,7 +27,7 @@ switch ($writingDetail) {
 		break;
 
 	case 'personal-website-case-study':
-		writingDetailGenerator("personal website case study", "./images/blog-images/weird.jpg", "a grid of funky shapes", "come see how i approached making my personal website", "https://marcor.substack.com/",  "study it");
+		writingDetailGenerator("personal website case study", "./images/svgs/experimental.svg", "a grid of funky shapes", "come see how i approached making my personal website", "https://marcor.substack.com/",  "study it");
 		break;
 	
 	default:

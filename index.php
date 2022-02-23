@@ -30,7 +30,7 @@
         <?php 
         require "page-router.php";
         ?>
-
+        
       </article>
     </main>
     <?php include "modules/footer.php";?>

@@ -1,10 +1,28 @@
 <?php 
-//funcsutins.hpp
 // a better var_dump
 function formatVar(mixed $input) {
 	echo "<pre>";
 	var_dump($input);
 	echo "</pre>";
+}
+
+function getPage() {
+	$page = $_GET["page"] ?? null;
+	return $page;
+}
+
+function getWritingPage() {
+	$page = $_GET["writing"] ?? null;
+	return $page;
+}
+
+// a function that is used in the control flow for the 404 page
+function checkPages($page) {
+	// compare $pages against a list of known strings
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail"];
+
+	// return "true" if page exists, otherwise return "false"
+	return in_array($page, $pageList) ? "true" : "false";
 }
 
 ?>
@@ -51,6 +69,34 @@ function formatVar(mixed $input) {
 		<p><?=$result?></p>
 	</detail-card>
 <?php } ?>
+
+<?php 
+function generateMeta($title, $description, $image) {?>
+<title><?=$title?></title>
+    <meta name="description" content="<?=$description?>">
+
+    <meta property="og:image" content="<?=$image?>">
+<?php }?>
+
+<?php 
+  function getHead () {
+  	switch (getPage()) {
+  		case "":
+  			// code...
+  			break;
+
+  		case "":
+  			// code...
+  			break;
+
+  		
+  		default:
+  			// code...
+  			break;
+  	}
+  }
+
+?>
 
 
 

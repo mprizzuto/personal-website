@@ -1,8 +1,6 @@
 <?php
 
-// $page = $_GET["page"] ?? null;
-// $experimentDetail = $_GET["experiment-detail"] ?? null;
-
+$page = $_GET["page"] ?? null;
 /*main page router*/ 
 switch (getPage()) {
 	case "home":

@@ -6,6 +6,7 @@
 			    <a class="link" href="?page=about">about</a>
 			    <a class="link" href="?page=writing">writing</a>
 			    <a class="link" href="?page=experiments">experiments</a>
+			    <a class="link" href="?page=portfolio">portfolio</a>
 			    <a class="link" href="?page=style-guide">style guide</a>
 			    <a class="link" href="?page=contact">contact</a>
 			  </nav>

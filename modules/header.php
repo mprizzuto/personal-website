@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     
     <meta charset="utf-8">
-    
+    <?=getHead()?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="homepage"> 
@@ -28,6 +28,7 @@
             <a class="link" href="?page=projects">projects</a>
             <a class="link" href="?page=about">about</a>
             <a class="link" href="?page=writing">writing</a>
+            <a class="link" href="?page=portfolio">portfolio</a>
             
            </nav>
           </section>

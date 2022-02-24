@@ -228,6 +228,11 @@ strong {
   font-size: 4em;
 }
 
+/*footer*/
+footer .site-menu {
+  max-width: 60ch;
+}
+
 
 
 @media (min-width: 600px) {

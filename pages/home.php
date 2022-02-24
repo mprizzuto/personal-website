@@ -9,17 +9,6 @@ if ($time >= 18 || $time <= 07) {
   $planetaryBody = "moon";
 }
 
-// var_dump($_GET);
-// var_dump($_GET["project"]);
-
- // if ($_GET["project"]) {
- //    echo "responsive layout";
- //  } else {
- //    echo "somethign went wrog";
- //  }
-
-
-
 ?>
     <section class="welcome">
       <inner-column>

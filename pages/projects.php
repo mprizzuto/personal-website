@@ -1,6 +1,5 @@
 <?php 
 	include "database/project-database.php";
-	// include "detail-router.php";
 ?>
 
 <section class="projects">

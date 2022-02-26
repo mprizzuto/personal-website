@@ -11,3 +11,4 @@ PHP, CSS, HTML 5, and *coming soon* Javascript
 
 ## special thanks to 
 [Derek Wood](https://github.com/sheriffderek), my Perpetual Education mentor. For your knowledge and guidance
+The Perpetual Education students, for their feedback and friendship

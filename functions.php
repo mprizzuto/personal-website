@@ -24,7 +24,8 @@ function getWritingPage() {
 // a function that is used in the control flow for the 404 page
 function checkPages($page) {
 	// compare $pages against a list of known strings
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "portfolio", "goals", "resume"];
+
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "portfolio"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";

@@ -7,7 +7,7 @@ $time = date("H");
 // var_dump($time);
 
 	switch ($time) {
-		case $time >= 18 || $time <= 07:
+		case $time >= 16 || $time <= 07:
 			include "images/svgs/moon.php";
 			break;
 

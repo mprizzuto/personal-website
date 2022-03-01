@@ -173,8 +173,19 @@ function generateSkills(array $skills) {
 <?php }?>
 
 
-
-
+<ul>
+<?php function generatePortfolio(iterable $portfolioData) {?>
+	<?php foreach ($portfolioData as $portfolio): ?>
+		<li><?=$portfolio["name"]?>
+			
+			<ul>
+				<li><?=$portfolio["description"]?></li>
+				<li><a href="<?=$portfolio["link"]?>"><?=$portfolio["name"]?></a></li>
+			</ul>
+		</li>
+	<?php endforeach; ?>
+<?php }?>
+</ul>
 
 
 

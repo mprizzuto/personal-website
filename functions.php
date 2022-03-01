@@ -24,6 +24,7 @@ function getWritingPage() {
 // a function that is used in the control flow for the 404 page
 function checkPages($page) {
 	// compare $pages against a list of known strings
+
 	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "portfolio"];
 
 	// return "true" if page exists, otherwise return "false"
@@ -101,25 +102,84 @@ function generateMeta($title, $description, $image) {?>
   			case "writing":
 	  			generateMeta("writing", "like reading? you'll love my blog posts", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
 	  			break;
+
+	  		case "portfolio":
+	  			generateMeta("portfolio", "check out my portfolio", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  			break;
+
+	  			case "resume":
+	  			generateMeta("resume", "check out my resume", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  			break;
 		
 	  		default:
 					generateMeta("404", "looks like you took a wrong turn", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
   	}
   }
-
-	//OR
-  // function getHead() {
-  // 	switch ($_SERVER["SCRIPT_NAME"]) {
-  // 		case 'value':
-  // 			// code...
-  // 			break;
-  		
-  // 		default:
-  // 			// code...
-  // 			break;
-  // 	}
-  // }
 ?>
+
+<?php 
+// function generateSkills(array $skills) {
+// 	foreach ($skills as $key => $value) 
+// 		echo "<li>" . "<span class='language'>$key</span> " . $value . "</li>";
+// 	}
+?>
+
+<?php 
+// generates skill list for homepage
+function generateSkills(array $skills) {
+	foreach ($skills as $key => $value) 
+		echo "<li>" . "<span class='language'>$key</span> " . $value . "</li>";
+	}
+
+	// function formatInput($input) {
+	// 	echo "<pre>";
+	// 	var_dump($input);
+	// 	echo "</pre>";
+	// }
+?>
+
+
+<?php 
+//code for portfolio section of site
+?>
+
+<?php function generateResume(iterable $resumeData) { ?>
+
+	<?php foreach ($resumeData as $resume): ?>
+		<?php foreach ($resume as $key => $value): ?>
+			<h2><?=$key?></h2>
+
+			<p><?=$value?></p>
+		<?php endforeach ?>
+	<?php endforeach ?>
+<?php } ?>
+
+<?php function generateGoals(iterable $goalData) {?>
+	<ul class="goal-list">
+  <?php foreach($goalData as $goals) {?>
+    <?php foreach($goals as $key => $value){ ?>
+    	<li><strong><?=$key?></strong></li>
+
+    	<li>
+    	<ul class="goal-expanded">
+    	<?php foreach($value as $subvalue){?>
+    		<li><?=$subvalue?></li>
+    	<?php }?>
+    	</ul>
+    	</li>
+    <?php } ?>
+  <?php }?>
+  </ul>
+<?php }?>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -183,3 +183,6 @@ function generateSkills(array $skills) {
 
 
 
+
+
+

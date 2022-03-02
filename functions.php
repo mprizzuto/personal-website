@@ -25,7 +25,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "portfolio"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail",""];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -85,10 +85,12 @@ function generateMeta($title, $description, $image) {?>
 <?php }?>
 
 <?php 
+	//generate the meta for the pages based on the query string returned by the getHead() function
+	//TODO. update paths to meta images
   function getHead() {
   	switch (getPage()) {
   		case "home":
-  			generateMeta("projects", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+  			generateMeta("home", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
   			break;
 
   		case "projects":
@@ -118,24 +120,11 @@ function generateMeta($title, $description, $image) {?>
 ?>
 
 <?php 
-// function generateSkills(array $skills) {
-// 	foreach ($skills as $key => $value) 
-// 		echo "<li>" . "<span class='language'>$key</span> " . $value . "</li>";
-// 	}
-?>
-
-<?php 
 // generates skill list for homepage
 function generateSkills(array $skills) {
 	foreach ($skills as $key => $value) 
 		echo "<li>" . "<span class='language'>$key</span> " . $value . "</li>";
 	}
-
-	// function formatInput($input) {
-	// 	echo "<pre>";
-	// 	var_dump($input);
-	// 	echo "</pre>";
-	// }
 ?>
 
 
@@ -173,8 +162,9 @@ function generateSkills(array $skills) {
 <?php }?>
 
 
-<ul>
+
 <?php function generatePortfolio(iterable $portfolioData) {?>
+	<ul>
 	<?php foreach ($portfolioData as $portfolio): ?>
 		<li><?=$portfolio["name"]?>
 			
@@ -184,8 +174,9 @@ function generateSkills(array $skills) {
 			</ul>
 		</li>
 	<?php endforeach; ?>
+	</ul>
 <?php }?>
-</ul>
+
 
 
 

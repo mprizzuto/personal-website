@@ -39,21 +39,20 @@ $writingList = [
 ?>
 
 <section class="article">
-	<!-- <inner-column> -->
-		<?php include "./images/svgs/left-quote.svg";?>
+	<?php include "./images/svgs/left-quote.svg";?>
+	<?php foreach ($writingList as $list) {?>
+		
+	<writing-card>
+		<p><a href="?page=blog-post-detail&post-detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
+		<p><?=$list["date"]?></p>
+		<p><?=$list["title"]?></p>
+		<p><?=$list["description"]?></p>
 
-		<?php foreach ($writingList as $list) {?>
-		<writing-card>
-			<p><a href="?page=blog-post-detail&post-detail=<?=$list["id"]?>"><?=$list["id"]?></a></p>
-			<p><?=$list["date"]?></p>
-			<p><?=$list["title"]?></p>
-			<p><?=$list["description"]?></p>
+		<!-- maybe this is a link? -->
+		<p><?=$list["category"]?></p>
 
-			<!-- maybe this is a link? -->
-			<p><?=$list["category"]?></p>
-
-		</writing-card>
-		<?php }?>
-		<?php include "./images/svgs/right-quote.svg";?>
-	<!-- </inner-column> -->
+	</writing-card>
+	<?php }?>
+	<?php include "./images/svgs/right-quote.svg";?>
 </section>
+

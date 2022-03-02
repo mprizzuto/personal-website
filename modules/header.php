@@ -1,10 +1,10 @@
-<?php 
-require_once "functions.php";
 
-
-?>
 <!doctype html>
+
 <html lang="en">
+ <?php 
+require_once "functions.php";
+?>
 <head>
     <link rel="stylesheet" type="text/css" href="./styles/reset.css">
 
@@ -31,9 +31,7 @@ require_once "functions.php";
             <a class="link" href="?page=home">home</a>
             <a class="link" href="?page=projects">projects</a>
             <a class="link" href="?page=about">about</a>
-            <a class="link" href="?page=writing">writing</a>
-            <a class="link" href="?page=portfolio">portfolio</a>
-            
+            <a class="link" href="?page=writing">writing</a>  
            </nav>
           </section>
         </div>

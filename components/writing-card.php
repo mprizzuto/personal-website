@@ -1,4 +1,3 @@
-writing-card.php
 <section class="writing">
 	<inner-column>
 		<writing-card>

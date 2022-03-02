@@ -50,18 +50,12 @@ switch (getPage()) {
 
 
 	case "goals":
-		include "portfolio-outline/pages/goals.php";
-		break;
-
-	
-	//portfolio page
-	case "portfolio":
-		include "portfolio-outline/pages/home.php";
+		include "pages/goals.php";
 		break;
 
 	//resume page
 	case "resume":
-		include "portfolio-outline/pages/resume.php";
+		include "pages/resume.php";
 		break;
 
 	// 404 page

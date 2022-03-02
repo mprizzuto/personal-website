@@ -23,7 +23,11 @@ svg + writing-card {
 	margin-top: 20px;
 }
 
-
 .blog-posts p {
 	max-width: 80ch;
+}
+
+section.article {
+	/*outline:  4px solid red;*/
+	/*display: flex;*/
 }

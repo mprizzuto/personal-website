@@ -1,5 +1,5 @@
 <?php 
-require "./data/goal-data.php";
+require "./database/goal-data.php";
 // require_once "./functions.php";
 ?>
 <section class="goal-data">

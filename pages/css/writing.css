@@ -23,6 +23,10 @@ svg + writing-card {
 	margin-top: 20px;
 }
 
+writing-card {
+	text-align: center;
+}
+
 .blog-posts p {
 	max-width: 80ch;
 }

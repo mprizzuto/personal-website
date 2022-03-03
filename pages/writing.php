@@ -1,4 +1,4 @@
-<section class="blog-posts" style="outline: 4px solid lime">
+<section class="blog-posts">
 	<inner-column>
 		<h2>the writing page</h2>
 

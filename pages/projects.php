@@ -17,7 +17,8 @@
 							<img src="<?=$project["image"]?>" alt="<?=$project["alt"]?>">
 						</picture>
 						<p><?=$project["description"]?></p>
-						<a href="<?=$project["url"]?>"><?=$project["name"]?></a>
+						<a class="project-link" href="<?=$project["project-url"]?>">see the project</a>
+						<a class="project-case-study" href="<?=$project["case-study"]?>">case study</a>
 					</project-card>
 				</li>
 			<?php endforeach; ?>

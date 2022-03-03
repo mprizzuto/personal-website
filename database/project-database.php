@@ -6,7 +6,8 @@
       "image" => "https://via.placeholder.com/150",
       "alt" => "descriptive alt text",
       "description" => "responsive layout patterns",
-      "url" => "?page=project-detail&project=responsive-layout",
+      "project-url" => "?page=project&project=responsive-layout",
+      "case-study" => "?page=case-study&case-study=",
 		],
 		[
 			"id" => "accessibility-challenge",
@@ -14,7 +15,8 @@
 			"image" => "https://via.placeholder.com/150",
 			"alt" => "descriptive alt text",
 			"description" => "a study using semantic HTML and best practices to create the msot accessible website possible",
-			"url" => "?page=project-detail&project=accessibility",
+			"project-url" => "?page=project&project=responsive-layout",
+			"case-study" => "?page=case-study&case-study=",
 		],
 		[
 			"id" => "theming-challenge",
@@ -22,7 +24,8 @@
 			"image" => "https://via.placeholder.com/150",
 			"alt" => "descriptive alt text",
 			"description" => "we all had the same HTML, the challenge was to research styles for our niche and dress up the HTML",
-			"url" => "?page=project-detail&project=theming-challenge",
+			"project-url" => "?page=project&project=theming-challenge",
+			"case-study" => "?page=case-study&case-study=",
 		],
 		[
 			"id" => "exercises-for-programers",
@@ -30,7 +33,8 @@
 			"image" => "https://via.placeholder.com/150",
 			"alt" => "descriptive alt text",
 			"description" => "programming exercises using PHP and JavaScript",
-			"url" => "?page=project-detail&project=efp",
+			"project-url" => "?page=project&project=efp",
+			"case-study" => "?page=case-study&case-study=",
 		],
 	];
 

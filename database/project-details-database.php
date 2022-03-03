@@ -88,7 +88,7 @@ $projectDetail = $_GET["project"] ?? null;
 	// get the correct project using query strings
 switch ($projectDetail) {
 	case "responsive-layout":
-	projectDetailBuilder("Responsive layout details", "CSS layout- what i learned", "https://via.placeholder.com/150", "descriptive alt text", "The responsive layout was part of the core Perpetual Education curriculum. We learned how to research and spot design patterns and recreate common (and abstract) design patterns using CSS flexbox and grid", "../projects/responsive-layout");
+	projectDetailBuilder("Responsive layout challenge", "what i learned", "https://via.placeholder.com/150", "descriptive alt text", "The goal of the responsive layout challenge was to learn CSS positioning(grid and flexbox) in a goal-oriented manner. <br> Instead of trying to mmorize every property and value,  I learned how to research and spot design patterns and recreate common (and abstract) design patterns using CSS flexbox and grid", "../projects/responsive-layout");
 		break;
 
 		case "theming-challenge":

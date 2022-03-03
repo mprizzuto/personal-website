@@ -1,7 +1,7 @@
 <?php 
 //get the current file .. i.e index.php
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);
-
+$queryString = $_GET["page"];
 // a better var_dump
 function formatVar(mixed $input) {
 	echo "<pre>";
@@ -25,7 +25,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail",""];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", ""];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";

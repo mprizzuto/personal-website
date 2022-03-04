@@ -9,4 +9,6 @@ $goalData = [
 		"expectations" => ["clear instructions", "one-on-one support ", "respectuful communication ", "clear deliverables and timeline"], 
 	],
 ];
+
+$goalJson = json_encode($goalData);
 ?>

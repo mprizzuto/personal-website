@@ -3,8 +3,9 @@
       <article class="dev-article">
         <?php 
         require "page-router.php";
+        // echo $_SERVER['SCRIPT_FILENAME'] === "index.php" ? true: false;
+
         ?>
-        <?=var_dump($_GET)?>
       </article>
     </main>
     <?php require "modules/footer.php";

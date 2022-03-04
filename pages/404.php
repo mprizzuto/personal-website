@@ -1,5 +1,4 @@
 
-<?php var_dump($_GET);?>
 
  <section class="four-o-four">
   <h2 class="heading-two">

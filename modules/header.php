@@ -31,7 +31,7 @@ require_once "functions.php";
             <a class="link" href="?page=home">home</a>
             <a class="link" href="?page=projects">projects</a>
             <a class="link" href="?page=about">about</a>
-            <a class="link" href="?page=writing">writing</a>  <?php if($_GET["page"] === "about"): ?>
+            <a class="link" href="?page=writing">writing</a>  <?php if($_GET["page"]?? null === "about"): ?>
                 <a href="?page=goals">goals</a> 
                 <a href="?page=resume">resume</a>
               <?php endif; ?>

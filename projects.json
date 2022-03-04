@@ -1,0 +1,17 @@
+<?php 
+//an array of JSON objects.. to decode into an associative array
+$projectsData = [
+	{
+		"title": "responsive layout",
+		"slug": "?page=responsive-layout",
+		"id": 0,
+		"description": "a project that combines research, visual design and CSS."
+	},
+	{
+		"title": "theming challenge",
+		"slug": "?page=theming-challenge",
+		"id": 1,
+		"description": "in this project, we were given the base HTML code and told to style it to evoke a certain feeling"
+	}
+];
+

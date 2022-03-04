@@ -58,6 +58,10 @@ switch (getPage()) {
 		include "pages/resume.php";
 		break;
 
+	case null:
+		include "pages/home.php";
+		break;
+
 	// 404 page
 	case checkPages($page) === "false":
 		include "pages/404.php";
@@ -66,6 +70,5 @@ switch (getPage()) {
 	default:
 		include "pages/home.php";
 }
-
 
 ?>

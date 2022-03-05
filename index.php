@@ -4,7 +4,7 @@
         <?php 
         require "page-router.php";
         // echo $_SERVER['SCRIPT_FILENAME'] === "index.php" ? true: false;
-
+        // var_dump(getPage());
         ?>
       </article>
     </main>

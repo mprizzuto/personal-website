@@ -11,6 +11,10 @@ switch (getPage()) {
 		include "pages/projects.php";
 		break;
 
+	case "project":
+		include "./database/project-details-database.php";
+	  break;
+
 	case "about":
 		include "pages/about.php";
 		break;
@@ -58,6 +62,11 @@ switch (getPage()) {
 		include "pages/resume.php";
 		break;
 
+		//case study page
+		case "case-study":
+			include "pages/case-studies.php";
+			break;
+
 	case null:
 		include "pages/home.php";
 		break;
@@ -67,8 +76,8 @@ switch (getPage()) {
 		include "pages/404.php";
 		break;
 
-	default:
-		include "pages/home.php";
+	// default:
+	// 	include "pages/home.php";
 }
 
 ?>

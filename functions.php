@@ -25,7 +25,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -94,6 +94,10 @@ function generateMeta($title, $description, $image) {?>
   			generateMeta("home", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
   			break;
 
+  		case null:
+  			generateMeta("home", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+  			break;
+
   		case "projects":
   			generateMeta("projects", "come see my projects", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
   			break;
@@ -113,9 +117,14 @@ function generateMeta($title, $description, $image) {?>
 	  			case "resume":
 	  			generateMeta("resume", "check out my resume", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
 	  			break;
+
+	  			// case checkPages(getPage()) === false:
+	  			// 	generateMeta("404", "looks like you took a wrong turn", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+
 		
-	  		default:
-					generateMeta("404", "looks like you took a wrong turn", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  		// default:
+					// generateMeta("home", "the homepage meta", "https://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  		// echo "this is the defualt";
   	}
   }
 ?>
@@ -176,6 +185,10 @@ function generateSkills(array $skills) {
 		</li>
 	<?php endforeach; ?>
 	</ul>
+<?php }?>
+
+<?php function generateCaseStudy(string $html,  iterable $array, int $index, string $key){?>
+	<<?=$html?>><?=$array[$index][$key]?><<?=$html?>>
 <?php }?>
 
 

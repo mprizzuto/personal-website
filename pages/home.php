@@ -5,7 +5,7 @@ $time = date("H");
 // $timeChange = 18;
 // var_dump($time);
 
-if ($time >= 18 || $time <= 07) {
+if ($time >= 16 || $time <= 07) {
   $planetaryBody = "moon";
 }
 

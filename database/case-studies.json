@@ -1,17 +1,16 @@
 [
 	{
 		"title": "responsive layout-case study",
-		"slug": "responsive-layout",
+		"slug": "responsive-layout-cs",
 		"id": 0,
 		"hypothesis": "hypothesis: responsiv elayout case study",
 		"conclusion": "conclusion: responsive layout conclusion"
 	},
 	{
 		"title": "theming challenge",
-		"slug": "theming-challenge",
+		"slug": "theming-challenge-cs",
 		"id": 1,
 		"hypothesis": "hypothesis: theming challenge",
 		"conclusion": "conclusion: theming challenge"
 	}
 ]
-

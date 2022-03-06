@@ -12,7 +12,7 @@ switch (getPage()) {
 		break;
 
 	case "project":
-		include "./database/project-details-database.php";
+		include "pages/project.php";
 	  break;
 
 	case "about":

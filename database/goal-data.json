@@ -1,0 +1,14 @@
+[
+	{
+		"5-year-goal": "[I have a position programming websites/ apps with PHP and JavaScript. I make >=$150,000 per year.', 'I also mentor future developers. I have my own home (with multiple pets) in a different city. someplace warm year-round(California). <p>I work at a company that prides itself on accessibility and user experience. I am open to working in the fields of health care and education</p>]"
+	},
+	{
+		"1-year-goal": "[I am a jr developer who makes >= $70,000 a year. my role is primarilly using HTML and css with light programming (PHP or JS). ,'I am working remotely. or on-site someplace warm year-round. The company offers a mentorship program or some other kind of on-on-one/specialized support']"
+	},
+	{
+		"End-of-month": "[be comfortable with the git workflow(handling merge conflicts, reverting back to a previous commit). <p>Have atleast 2 exercises for programmers that use JavaScript/DOM manipulation</p>]"
+	},
+	{
+		"end-of-week": "[3 projects that demonstrate knowledge in PHP form handling/routing/storage(cookies) and uses JSON for all data structures. the code should be up on github. <p>3 projects that use javascript to change theme/store data/manipulate the DOM, set up deploy bot</p>]"
+	}
+]

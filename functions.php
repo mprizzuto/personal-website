@@ -155,19 +155,19 @@ function generateSkills(array $skills) {
 
 <?php function generateGoals(iterable $goalData) {?>
 	<ul class="goal-list">
-  <?php foreach($goalData as $goals) {?>
-    <?php foreach($goals as $key => $value){ ?>
-    	<li><strong><?=$key?></strong></li>
-
-    	<li>
-    	<ul class="goal-expanded">
-    	<?php foreach($value as $subvalue){?>
-    		<li><?=$subvalue?></li>
-    	<?php }?>
-    	</ul>
-    	</li>
-    <?php } ?>
-  <?php }?>
+  <?php
+  	foreach($goalData as $data) {
+	foreach($data as $key => $values) {
+      echo "<li>" . "<h2>$key</h2>";
+	  
+      foreach((array)$values as $value) {
+        // remove the square brackets from the string
+        echo str_replace(array('[',']'), "", $value ). " ";
+      }
+    }
+    echo "</li>";
+}
+   ?>
   </ul>
 <?php }?>
 
@@ -185,10 +185,6 @@ function generateSkills(array $skills) {
 		</li>
 	<?php endforeach; ?>
 	</ul>
-<?php }?>
-
-<?php function generateCaseStudy(string $html,  iterable $array, int $index, string $key){?>
-	<<?=$html?>><?=$array[$index][$key]?><<?=$html?>>
 <?php }?>
 
 <?php 

@@ -1,0 +1,48 @@
+html {
+  --brick: #840808;
+  --building-blue: #0060A6;
+  --logo-color: #FF3F01;
+  --architecture-blue: #0F335A;
+}
+
+articles-intro {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 12px;
+}
+
+articles-intro header {
+  margin-bottom: 40px;
+}
+
+articles-intro article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 2em;
+}
+
+/*article colors*/
+article-grid article-card:nth-child(2n) {
+  /*background-color: var(--architecture-blue);*/
+  /*color:  linen;*/
+}
+
+article-grid article-card:first-of-type {
+  /*background-color: var(--brick);*/
+  /*color: linen;*/
+}
+
+article-grid article-card:nth-child(3) {
+  /*background-color: var(--logo-color);*/
+  /*color: linen;*/
+}
+
+article-grid article-card:nth-child(5) {
+  /*background-color: var(--building-blue);*/
+  /*color: linen;*/
+}
+
+
+
+

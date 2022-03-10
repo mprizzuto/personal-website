@@ -1,7 +1,7 @@
 <?php 
 //get project data
 $project = getProjectBySlug($_GET["slug"]);
-formatVar($project);
+// formatVar($project);
 //show projects
 ?>
 

@@ -211,6 +211,28 @@ function generateSkills(array $skills) {
 		}
 	}
 
+	function getAllExperiments() {
+		//get the project data
+		$json = file_get_contents("database/experiments.json");
+		//decode data to PHP
+		return json_decode($json, true);
+		//return data
+	}
+
+
+	function getExperimentBySlug($slug) {
+		//get projects
+		$experiment = getAllProjects();
+		//look at each project
+		foreach($experiment as $experiment) {
+			//if it matches the given slug
+			if ($experiment["slug"] === $slug) {
+	  		//return data for that project
+				return $experiment;
+			}
+		}
+	}
+
 
 	// get all the case studies
 	// decode the JSON to PHP

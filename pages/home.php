@@ -17,7 +17,7 @@ if ($time >= 16 || $time <= 07) {
 
           <p class="lfps">
             <!-- <span class="greet">Hello!</span> --> 
-            <strong>My name is Marco Rizzuto.</strong> I bring a neurodiverse approach to web development  and User Experience.</p>
+            <strong>My name is Marco Rizzuto.</strong> I bring a neurodiverse approach to <span class="job-role">web development</span> and <span class="job-role">User Experience.</span></p>
 
           <p>I am excited to take part in the current web revolution to build highly performant and accessible websites.</p>
 

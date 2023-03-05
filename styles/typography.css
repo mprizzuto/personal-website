@@ -35,7 +35,7 @@ h2 {
 }
 
 .dev-credentials {
-  border-left:  20px solid black;
+  border-left:  8px solid black;
   padding: 10px;
 }
 
@@ -53,6 +53,10 @@ a[target=_external]:after {
   content: "\2197";
 }
 
+.job-role { 
+  display: inline-block;
+  text-transform: capitalize;
+}
 
 
 body.experimental-body a:link {
@@ -101,6 +105,7 @@ span.job {
   font-size: clamp(1.2em, 2vw, 6em);
   transform: translate(2px, 0px);
   line-height: 1.3;
+  min-width: 70%;
 }
 
 .role {

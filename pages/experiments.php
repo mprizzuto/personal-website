@@ -7,7 +7,7 @@ include 'detail-router.php';
     <h2 class="design-title">web
     </h2>
 
-    <?php foreach($experimentList as $experiment): ?>
+    <?php foreach($experimentsList as $experiment): ?>
       <card class="experiment-card">
         <details open>
           <summary><?=$experiment["name"]?></summary>

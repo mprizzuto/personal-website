@@ -32,7 +32,7 @@ switch (getPage()) {
 		break;
 
 	case "experiments":
-		include "pages/experimental.php";
+		include "pages/experiments.php";
 		break;
 
 

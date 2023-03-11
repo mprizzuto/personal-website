@@ -2,6 +2,12 @@
 //get the current file .. i.e index.php
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);
 $queryString = $_GET["page"] ?? null;
+
+function getQueryString() {
+	$queryString = $_GET["page"] ?? null;
+	return $queryString;
+}
+
 // a better var_dump
 function formatVar(mixed $input) {
 	echo "<pre>";
@@ -13,6 +19,42 @@ function formatVar(mixed $input) {
 function getPage() {
 	$page = $_GET["page"] ?? null;
 	return $page;
+}
+
+function styleAnchorLink($slug) {
+	$queryString = $_GET["page"] ?? null;
+	switch ($slug === getQueryString()) {
+		case null || "home":
+			return "style = 'border-bottom: 2px solid gold'";
+			break;
+
+		case "projects":
+			return "border-bottom: 2px solid gold";
+			break;
+
+		case "about":
+			return "border-bottom: 2px solid gold";
+			break;
+
+		case "writing":
+			return "border-bottom: 2px solid gold";
+			break;
+
+		case "goals":
+			return "border-bottom: 2px solid gold";
+			break;
+
+		case "resume":
+			return "border-bottom: 2px solid gold";
+			break;
+
+		case "experiments":
+			return "border-bottom: 2px solid gold";
+			break;		
+		
+		default:
+			// echo "border-bottom: 2px solid lime";
+	}
 }
 
 //get any page with ?writing query string
@@ -115,8 +157,12 @@ function generateMeta($title, $description, $image) {?>
 	  			break;
 
 	  			case "resume":
-	  			generateMeta("resume", "check out my resume", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-	  			break;
+		  			generateMeta("resume", "check out my resume", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+		  			break;
+
+		  		case "goals":
+	  				generateMeta("goals", "check out my goals", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  			break;	
 
 	  			// case checkPages(getPage()) === false:
 	  			// 	generateMeta("404", "looks like you took a wrong turn", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
@@ -253,6 +299,14 @@ function generateSkills(array $skills) {
 				//return case study data
 				return $caseStudy;
 			}
+		}
+	}
+
+	function generateNavLinks() {
+		include "database/nav-data.php";
+
+		foreach($navLinks as $navLinkText => $navLink) {
+			echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
 		}
 	}
 

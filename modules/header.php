@@ -28,17 +28,7 @@ require_once "functions.php";
             </div>
 
            <nav class="site-menu">
-            <a class="link" href="?page=home">home</a>
-            <a class="link" href="?page=projects">projects</a>
-            <a class="link" href="?page=about">about</a>
-            <a class="link" href="?page=writing">writing</a>
-              
-            <?php if( isset($_GET["page"]) ) :?>
-              <?php if($_GET["page"] === "about"): ?>
-                <a class="link" href="?page=goals">goals</a> 
-                <a class="link" href="?page=resume">resume</a>
-              <?php endif; ?>
-            <?php endif;?>
+            <?php generateNavLinks() ?>
 
            </nav>
           </section>

@@ -1,4 +1,6 @@
+PROJECT.PHP
 <?php 
+
 //get project data
 $project = getProjectBySlug($_GET["slug"]);
 

@@ -25,31 +25,31 @@ function styleAnchorLink($slug) {
 	$queryString = $_GET["page"] ?? null;
 	switch ($slug === getQueryString()) {
 		case null || "home":
-			return "style = 'border-bottom: 2px solid gold'";
+			return "style = 'border-bottom: 2px solid maroon'";
 			break;
 
 		case "projects":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;
 
 		case "about":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;
 
 		case "writing":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;
 
 		case "goals":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;
 
 		case "resume":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;
 
 		case "experiments":
-			return "border-bottom: 2px solid gold";
+			return "border-bottom: 2px solid maroon;";
 			break;		
 		
 		default:
@@ -133,15 +133,14 @@ function generateMeta($title, $description, $image) {?>
   function getHead() {
   	switch (getPage()) {
   		case "home":
-  			generateMeta("home", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-  			break;
+  			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
 
   		case null:
-  			generateMeta("home", "I am a Web Designer who creates websites that help Health Professionals build and promote their personal brand. Unlike my competitors, I have experience with product beta-testing, and a passion for creating positive change in America's healthcare system.", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+  			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
   			break;
 
   		case "projects":
-  			generateMeta("projects", "come see my projects", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+  			generateMeta("projects", "come see my projects", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/projects.jpg");
   			break;
 
   			case "about":
@@ -162,15 +161,10 @@ function generateMeta($title, $description, $image) {?>
 
 		  		case "goals":
 	  				generateMeta("goals", "check out my goals", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-	  			break;	
+	  			break;
 
-	  			// case checkPages(getPage()) === false:
-	  			// 	generateMeta("404", "looks like you took a wrong turn", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-
-		
-	  		// default:
-					// generateMeta("home", "the homepage meta", "https://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-	  		// echo "this is the defualt";
+	  			default:
+	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
   	}
   }
 ?>

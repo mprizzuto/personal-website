@@ -27,10 +27,7 @@ require_once "functions.php";
               
             </div>
 
-           <nav class="site-menu">
-            <?php generateNavLinks() ?>
-
-           </nav>
+           <?php include "components/nav.php";?>
           </section>
         </div>
       </inner-column>

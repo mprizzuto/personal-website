@@ -11,6 +11,10 @@ switch (getPage()) {
 		include "pages/projects.php";
 		break;
 
+	case "project":
+		include "pages/project.php";
+		break;
+
 	case "about":
 		include "pages/about.php";
 		break;

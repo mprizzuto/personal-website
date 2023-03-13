@@ -48,6 +48,10 @@ function styleAnchorLink($slug) {
 			return "border-bottom: 2px solid maroon;";
 			break;
 
+		case "contact":
+			return "border-bottom: 2px solid maroon;";
+			break;	
+
 		case "experiments":
 			return "border-bottom: 2px solid maroon;";
 			break;		
@@ -144,27 +148,31 @@ function generateMeta($title, $description, $image) {?>
   			break;
 
   			case "about":
-	  			generateMeta("about", "come read about the man behind the code", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  			generateMeta("about", "come read about the man behind the code", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/about.jpg");
 	  			break;
 
   			case "writing":
-	  			generateMeta("writing", "like reading? you'll love my blog posts", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  			generateMeta("writing", "like reading? you'll love my blog posts", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing.jpg");
 	  			break;
 
-	  		case "portfolio":
-	  			generateMeta("portfolio", "check out my portfolio", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-	  			break;
+	  		// case "portfolio":
+	  		// 	generateMeta("portfolio", "check out my portfolio", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  		// 	break;
 
 	  			case "resume":
-		  			generateMeta("resume", "check out my resume", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+		  			generateMeta("resume", "check out my resume", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/resume.jpg");
 		  			break;
 
 		  		case "goals":
-	  				generateMeta("goals", "check out my goals", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  				generateMeta("goals", "check out my goals", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/goals.jpg");
+	  			break;
+
+	  			case "contact":
+	  				generateMeta("contact", "contact me", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/contact.jpg");
 	  			break;
 
 	  			default:
-	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
+	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/404.jpg");
   	}
   }
 ?>
@@ -296,12 +304,47 @@ function generateSkills(array $skills) {
 		}
 	}
 
-	function generateNavLinks() {
+	// function generateNavLinks() {
+	// 	include "database/nav-data.php";
+
+	// 	foreach($navLinks as $navLinkText => $navLink) {
+	// 		echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+	// 	}
+	// }
+
+	function globalNav() {
 		include "database/nav-data.php";
 
-		foreach($navLinks as $navLinkText => $navLink) {
-			echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
-		}
+    foreach($navLinks as $navLinkText => $navLink) {
+      if ($navLinkText == "home" ||
+        $navLinkText == "projects" ||
+        $navLinkText == "about") {
+
+        echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+      }
+    }
+	}
+
+	function aboutPageNav() {
+		include "database/nav-data.php";
+		echo "<aside class='about-links'>" . 
+		"<nav class='about-page-nav'>" . 
+		"<h2>curious about me?</h2>";
+    foreach($navLinks as $navLinkText => $navLink) {
+      if ($navLinkText == "about" ||
+        $navLinkText == "writing" ||
+        $navLinkText == "resume" ||
+        $navLinkText == "goals" ||
+        $navLinkText == "contact"
+      ) {
+
+        // echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+				echo <<< HEREDOC
+					<a href='$navLink' styleAnchorLink($navLinkText)> $navLinkText</a>
+				HEREDOC;
+      }
+    }
+    echo "</aside>" . "</nav>";
 	}
 
 ?>

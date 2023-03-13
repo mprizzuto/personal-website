@@ -1,3 +1,3 @@
 <nav class="site-menu">
-  <?php generateNavLinks() ?>
+  <?php globalNav(); ?>
 </nav>

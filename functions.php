@@ -327,21 +327,16 @@ function generateSkills(array $skills) {
 
 	function aboutPageNav() {
 		include "database/nav-data.php";
+
 		echo "<aside class='about-links'>" . 
 		"<nav class='about-page-nav'>" . 
 		"<h2>curious about me?</h2>";
-    foreach($navLinks as $navLinkText => $navLink) {
-      if ($navLinkText == "about" ||
-        $navLinkText == "writing" ||
-        $navLinkText == "resume" ||
-        $navLinkText == "goals" ||
-        $navLinkText == "contact"
-      ) {
+		
+		$aboutLinks = ["about", "writing", "resume", "goals", "contacts"];
 
-        // echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
-				echo <<< HEREDOC
-					<a href='$navLink' styleAnchorLink($navLinkText)> $navLinkText</a>
-				HEREDOC;
+    foreach($navLinks as $navLinkText => $navLink) {
+      if ( in_array($navLinkText, $aboutLinks)) {
+				echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
       }
     }
     echo "</aside>" . "</nav>";

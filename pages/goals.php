@@ -9,3 +9,5 @@ $goalData = json_decode($jsonGoals, true);
 	   <?php generateGoals($goalData)?>
 	</inner-column>
 </section>
+
+<?php aboutPageNav();?>

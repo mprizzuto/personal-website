@@ -8,3 +8,5 @@ require "./database/resume-data.php";
 		<?php generateResume($resumeData) ?>
 	</inner-column>
 </section>
+
+<?php aboutPageNav();?>

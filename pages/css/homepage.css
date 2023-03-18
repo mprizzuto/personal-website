@@ -1,9 +1,9 @@
 body.homepage a:link {
-  color:  black;
+  color:  white;
 }
 
 body.homepage a:visited {
-  color:  gray;
+/*  color:  gray;*/
 }
 
 body.homepage a:hover {

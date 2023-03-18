@@ -3,7 +3,7 @@
 }
 
 .projects h2 {
-  color:  var(--moon-blue);
+/*  color:  var(--moon-blue);*/
   font-size: 1.8em;
 }
 
@@ -65,7 +65,7 @@ project-card picture + p {
 
 .projects a[href="https://perpetual.education"] {
   display: inline-block;
-  color:  red;
+/*  color:  red;*/
 }
 
 /*project details card*/

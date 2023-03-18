@@ -2,6 +2,7 @@
 $timezone = date_default_timezone_set("America/New_York");
 $planetaryBody = "sun";
 $time = date("H");
+$projectsCTA = "see my projects";
 // $timeChange = 18;
 // var_dump($time);
 
@@ -10,22 +11,23 @@ if ($time >= 16 || $time <= 07) {
 }
 
 ?>
-    <section class="welcome">
-      <inner-column>
-        <h2 class="heading-two">Hello!</h2>
-        <div class="dev-credentials">
+<section class="welcome">
+  <inner-column>
+    <h2 class="heading-two">and welcome</h2>
+    
+    <div class="dev-credentials">
 
-          <p class="lfps">
-            <!-- <span class="greet">Hello!</span> --> 
-            <strong>My name is Marco Rizzuto.</strong> I bring a neurodiverse approach to <span class="job-role">web development</span> and <span class="job-role">User Experience.</span></p>
+      <p class="lfps">
+        <!-- <span class="greet">Hello!</span> --> 
+        <strong>My name is Marco Rizzuto.</strong> I bring a neurodiverse approach to <span class="job-role">web development</span> and <span class="job-role">User Experience.</span></p>
 
-          <p>I am excited to take part in the current web revolution to build highly performant and accessible websites.</p>
+      <p>I am excited to take part in the current web revolution to build highly performant and accessible websites.</p>
 
-          <p>To see my projects, click the <?=$planetaryBody?>. To contact me, click <a href="mailto:mprizzuto88@gmail.com" target="_external">here</a></p>
-        </div>
+      <p>To see my projects, click the <?=$planetaryBody?>. To contact me, <a href="?page=contact">read my contact page first</a></p>
+    </div>
 
-        <shapes>
-          <?php include "day-night-router.php";?>
-        </shapes>
-      </inner-column>
-    </section>
+    <shapes>
+      <?php include "day-night-router.php";?>
+    </shapes>
+  </inner-column>
+</section>

@@ -5,6 +5,7 @@
 @import "writing.css";
 @import "goals.css";
 @import "../../styles/colors.css";
+@import "../../styles/themes.css";
 
 .four-o-four {
 	margin-top: 40px;
@@ -43,3 +44,4 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+

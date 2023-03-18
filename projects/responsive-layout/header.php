@@ -5,11 +5,11 @@
 
 	<body>
 		<header class='site-header'>
-		<inner-column>
+			<inner-column>
 
-			<?php include('./projects/responsive-layout/modules/masthead.php'); ?>
+				<?php include('./projects/responsive-layout/modules/masthead.php'); ?>
 
-		</inner-column>
+			</inner-column>
 		</header>
 
 

@@ -23,41 +23,41 @@ function getPage() {
 
 function styleAnchorLink($slug) {
 	$queryString = $_GET["page"] ?? null;
+	$navLinkStyle = "style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
 	switch ($slug === getQueryString()) {
+
 		case null || "home":
-			return "style = 'border-bottom: 2px solid maroon'";
+			// return "style = 'border-bottom: 2px solid maroon'";
+		  return $navLinkStyle;
 			break;
 
 		case "projects":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;
 
 		case "about":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;
 
 		case "writing":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;
 
 		case "goals":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;
 
 		case "resume":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;
 
 		case "contact":
-			return "border-bottom: 2px solid maroon;";
+			return $navLinkStyle;
 			break;	
 
 		case "experiments":
-			return "border-bottom: 2px solid maroon;";
-			break;		
-		
-		default:
-			// echo "border-bottom: 2px solid lime";
+			return $navLinkStyle;
+			break;
 	}
 }
 
@@ -71,7 +71,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiment-detail", "blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
+	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiments", "experiment-detail", "blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -155,6 +155,14 @@ function generateMeta($title, $description, $image) {?>
 	  			generateMeta("writing", "like reading? you'll love my blog posts", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing.jpg");
 	  			break;
 
+	  		case "blog-post-detail":
+	  			generateMeta("blog post detail", "get the detail!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing-page-detail.jpg");
+	  			break;	
+
+	  		case "case-study":
+	  			generateMeta("project case study", "read the case study!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing-page-detail.jpg");
+	  			break;		
+
 	  		// case "portfolio":
 	  		// 	generateMeta("portfolio", "check out my portfolio", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
 	  		// 	break;
@@ -169,6 +177,14 @@ function generateMeta($title, $description, $image) {?>
 
 	  			case "contact":
 	  				generateMeta("contact", "contact me", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/contact.jpg");
+	  			break;
+
+	  			case "experiments":
+	  				generateMeta("experiments", "experiments", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiments.jpg");
+	  			break;
+
+	  			case "experiment-detail":
+	  				generateMeta("experiment detail", "experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
 	  			break;
 
 	  			default:
@@ -314,11 +330,10 @@ function generateSkills(array $skills) {
 
 	function globalNav() {
 		include "database/nav-data.php";
+		$globalLinks = ["home", "about", "projects", "experiments"];
 
     foreach($navLinks as $navLinkText => $navLink) {
-      if ($navLinkText == "home" ||
-        $navLinkText == "projects" ||
-        $navLinkText == "about") {
+      if ( in_array($navLinkText, $globalLinks) ) {
 
         echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
       }
@@ -331,7 +346,7 @@ function generateSkills(array $skills) {
 		echo "<aside class='about-links'>" . 
 		"<nav class='about-page-nav'>" . 
 		"<h2>curious about me?</h2>";
-		
+
 		$aboutLinks = ["about", "writing", "resume", "goals", "contacts"];
 
     foreach($navLinks as $navLinkText => $navLink) {

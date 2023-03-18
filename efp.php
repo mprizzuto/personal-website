@@ -18,7 +18,7 @@
 						<?php foreach($exerciseList as $exercise): ?>
 							<li><?=$exercise["name"]?></li>
 							<li><?=$exercise["description"]?></li>
-							<li><a href="<?=$exercise["link"]?>" target="_external">read more</a></li>
+							<li><a href="<?=$exercise["link"]?>" target="_blank">read more</a></li>
 						<?php endforeach; ?>
 					</ul>
 					

@@ -1,0 +1,37 @@
+body {
+  --body-color: rgb(255,200,30);
+  --heading-color: rgb(0,42,216);
+  --background-color: rgb(59,68,75);
+}
+
+.light-mode {
+  background: linen;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    color: var(--body-color);
+    background: var(--background-color);
+  }
+  body h1, h2 {
+    color: linen;
+  }
+  .right-arrow {
+    background: linen;
+  }
+  a {
+    color: inherit;
+  }
+  a:visited {
+    color: lightblue;
+  }
+  .dev-credentials {
+    border-left:  8px solid white;
+    padding: 10px;
+  }
+}
+
+
+

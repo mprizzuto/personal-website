@@ -11,7 +11,7 @@ body {
 
 /*page bodys*/
 body.homepage, body.experimental-body {
-  background:  linen;
+/*  background:  linen;*/
 }
 
 body.writing-body {
@@ -120,6 +120,23 @@ li ul {
 
 .color-list :last-of-type {
   background: var(--line-color);
+}
+
+/*theme changer*/
+#theme-change, #theme-change option {
+  background-color: inherit;
+  color: inherit;
+}
+
+/*night theme*/
+.night-theme {
+  background: black;
+  color: white;
+}
+
+.bauhaus-theme {
+  background: maroon;
+  color: lightslategray;
 }
 
 @media(min-width: 700px) {

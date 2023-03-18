@@ -49,7 +49,7 @@ h2 {
 }
 
 /*put extenal link signifer for all external links*/
-a[target=_external]:after {
+a[target="_blank"]:after {
   content: "\2197";
 }
 
@@ -236,6 +236,17 @@ strong {
 /*footer*/
 footer .site-menu {
   max-width: 60ch;
+}
+
+/*contact page*/
+.client-reasons {
+  margin-left: 10px;
+/*lis*/
+list-style: circle;
+}
+
+.client-reasons li::before {
+
 }
 
 

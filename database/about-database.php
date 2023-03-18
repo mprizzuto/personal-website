@@ -18,14 +18,13 @@ $aboutData = [
 		<?php foreach($data["hobbies"] as $hobby): ?>
 			<li><?=$hobby?></li>
 		<?php endforeach; ?>
-
+		<h2>random photos</h2>
 		<?php foreach($data["photos"] as $photo => $alt): ?>
 			<figure class="hobby-figure">
 				<picture class="hobby-photo">
 					<img src="<?=$photo?>" alt="<?=$alt?>">
 				</picture>
 
-				<figcaption><?=$alt?></figcaption>
 			</figure>
 		<?php endforeach; ?>
 	<?php endforeach; ?>

@@ -13,7 +13,7 @@
 				<img src="<?=$image?>" alt="$<?=$alt?>">
 			</picture>
 				<p><?=$description?></p>
-				<a href="<?=$link?>" target="_external"><?=$teaser?></a>
+				<a href="<?=$link?>" target="_blank"><?=$teaser?></a>
 			</writing-detail>
 			
 		

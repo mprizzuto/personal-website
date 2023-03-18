@@ -4,7 +4,7 @@
             <g transform="matrix(0.413287,0,0,1,233.648,658.57)">
                 <g transform="matrix(4.08718,-0,-0,1.68918,422.146,153.931)">
                     <path d="M92.746,7.896L100.246,13.521L92.746,19.146L92.746,7.896Z"/>
-                    <path d="M13.521,13.521L94.246,13.521" style="fill:none;stroke:black;stroke-width:2.5px;"/>
+                    <path d="M13.521,13.521L94.246,13.521" style="stroke:black;stroke-width:2.5px;"/>
                 </g>
             </g>
         </g>

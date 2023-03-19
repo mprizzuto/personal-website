@@ -71,7 +71,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
+	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study", "resume"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -138,6 +138,7 @@ function generateMeta($title, $description, $image) {?>
   	switch (getPage()) {
   		case "home":
   			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
+  		break;	
 
   		case null:
   			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
@@ -211,30 +212,36 @@ function generateSkills(array $skills) {
 ?>
 
 <?php function generateResume(iterable $resumeData) { ?>
+	<?="<ul class='resume-list'>"?>
+		<?php foreach ($resumeData as $data): ?>
+		  <?php foreach ($data as $category => $items): ?>
+		    <?php echo "<li>" . "<h2>" . $category . "</h2>" . "</li>" .  "<li>" . "<ul>"; ?>
 
-	<?php foreach ($resumeData as $resume): ?>
-		<?php foreach ($resume as $key => $value): ?>
-			<h2><?=$key?></h2>
+		    <?php foreach ($items as $item => $value): ?>
+		      <?php echo "<li> " . $value . "</li>"?>
+		    <?php endforeach; ?>
+		    <?="</ul> </li>"?>
+		  <?php endforeach; ?>
+		<?php endforeach; ?>
 
-			<p><?=$value?></p>
-		<?php endforeach ?>
-	<?php endforeach ?>
-<?php } ?>
+	<?="</ul>"?>
+<?php }?>
+
 
 <?php function generateGoals(iterable $goalData) {?>
 	<ul class="goal-list">
   <?php
   	foreach($goalData as $data) {
-	foreach($data as $key => $values) {
-      echo "<li>" . "<h2>$key</h2>";
-	  
-      foreach((array)$values as $value) {
-        // remove the square brackets from the string
-        echo str_replace(array('[',']'), "", $value ). " ";
-      }
-    }
-    echo "</li>";
-}
+			foreach($data as $key => $values) {
+		    echo "<li>" . "<h2>$key</h2>";
+			  
+	      foreach((array)$values as $value) {
+	        // remove the square brackets from the string
+	        echo str_replace(array('[',']'), "", $value ). " ";
+	      }
+		  }
+		    echo "</li>";
+		}
    ?>
   </ul>
 <?php }?>
@@ -349,15 +356,14 @@ function generateSkills(array $skills) {
 
 		$aboutLinks = ["about", "writing", "resume", "goals", "contacts"];
 
-		echo "<aside class='about-links'>" . "<h2>curious about me?</h2>" .
-		"<nav class='about-page-nav'>";
+		echo "<aside class='about-links'>" . "<inner-column>". "<h2>curious about me?</h2>" . "<nav class='about-page-nav'>";
 
     foreach($navLinks as $navLinkText => $navLink) {
       if ( in_array($navLinkText, $aboutLinks)) {
 				echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
       }
     }
-    echo "</nav>" . "</aside>";
+    echo "</nav>" . "</inner-column>" . "</aside>";
 	}
 
 	function generatePageTitle() {
@@ -410,10 +416,20 @@ function generateSkills(array $skills) {
 				return $articleH1;
 				break;
 
-			// case checkPages( getPage() ) !== "false";
-			// 	$articleH1 = "404!";
-			// 	return $articleH1;
-			// 	break;
+			case "resume":
+				$articleH1 = "My resume";
+				return $articleH1;
+				break;
+
+			case "writing":
+				$articleH1 = "My writing";
+				return $articleH1;
+				break;		
+			
+			case "goals":
+				$articleH1 = "My goals";
+				return $articleH1;
+				break;	
 
 			default:
 				$articleH1 = "404!";

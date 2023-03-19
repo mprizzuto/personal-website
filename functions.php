@@ -23,7 +23,7 @@ function getPage() {
 
 function styleAnchorLink($slug) {
 	$queryString = $_GET["page"] ?? null;
-	$navLinkStyle = "style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
+	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
 	switch ($slug === getQueryString()) {
 
 		case null || "home":
@@ -71,7 +71,7 @@ function getWritingPage() {
 function checkPages($page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home", "projects" , "about", "writing", "style-guide", "contact", "experiments", "project-detail", "experiments", "experiment-detail", "blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
+	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
@@ -185,6 +185,10 @@ function generateMeta($title, $description, $image) {?>
 
 	  			case "experiment-detail":
 	  				generateMeta("experiment detail", "experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
+	  			break;
+
+	  			case "project":
+	  				generateMeta("project detail ", "project detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/project-detail.jpg");
 	  			break;
 
 	  			default:
@@ -335,7 +339,7 @@ function generateSkills(array $skills) {
     foreach($navLinks as $navLinkText => $navLink) {
       if ( in_array($navLinkText, $globalLinks) ) {
 
-        echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+        echo " " . "<a href='$navLink' " . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
       }
     }
 	}
@@ -343,27 +347,86 @@ function generateSkills(array $skills) {
 	function aboutPageNav() {
 		include "database/nav-data.php";
 
-		echo "<aside class='about-links'>" . 
-		"<nav class='about-page-nav'>" . 
-		"<h2>curious about me?</h2>";
-
 		$aboutLinks = ["about", "writing", "resume", "goals", "contacts"];
+
+		echo "<aside class='about-links'>" . "<h2>curious about me?</h2>" .
+		"<nav class='about-page-nav'>";
 
     foreach($navLinks as $navLinkText => $navLink) {
       if ( in_array($navLinkText, $aboutLinks)) {
 				echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
       }
     }
-    echo "</aside>" . "</nav>";
+    echo "</nav>" . "</aside>";
+	}
+
+	function generatePageTitle() {
+		$articleH1 = ""; 
+
+		if ( !isset($_GET["page"]) && getPage() !== "false")  {
+			$articleH1 = "Hi!";
+			return $articleH1;
+		}
+
+		else if( isset($_GET["page"]) ) {
+			switch ( getPage() ) {
+			case "home":
+			$articleH1 = "Hi!";
+				return $articleH1;
+				break;
+
+			case "projects":
+				$articleH1 = "My Projects";
+				return $articleH1;
+				break;
+
+			case "project":
+				$articleH1 = "My Project";
+				return $articleH1;
+				break;	
+
+			case "experiments":
+				$articleH1 = "My experiments";
+				return $articleH1;
+				break;
+
+			case "experiment-detail":
+				$articleH1 = "experiment detail";
+				return $articleH1;
+				break;
+
+			case "case-study":
+				$articleH1 = "case study";
+				return $articleH1;
+				break;		
+
+			// case "project":
+			// 	$articleH1 = "my project";
+			// 	return $articleH1;
+			// 	break;	
+					
+			case "about":
+				$articleH1 = "About me";
+				return $articleH1;
+				break;
+
+			// case checkPages( getPage() ) !== "false";
+			// 	$articleH1 = "404!";
+			// 	return $articleH1;
+			// 	break;
+
+			default:
+				$articleH1 = "404!";
+				return $articleH1;
+		}
+		
+		}
+
+		return $articleH1;
+		
 	}
 
 ?>
-
-
-
-
-
-
 
 
 

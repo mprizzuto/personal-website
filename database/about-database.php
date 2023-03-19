@@ -12,13 +12,21 @@ $aboutData = [
 ?>
 
 <?php foreach($aboutData as $data): ?>
-<about-card>
-	<h2><?=$data["heading"]?></h2>
-	<p><?=$data["my-story"]?></p>
-		<?php foreach($data["hobbies"] as $hobby): ?>
-			<li><?=$hobby?></li>
-		<?php endforeach; ?>
-		<h2>random photos</h2>
+	<about-card>
+		<h2><?=$data["heading"]?></h2>
+		
+		<p><?=$data["my-story"]?></p>
+		
+		<ul class="hobby-list">
+			<?php foreach($data["hobbies"] as $hobby): ?>
+				
+					<li><?=$hobby?></li>
+				
+			<?php endforeach; ?>
+			</ul>
+		
+			<h2 class="favorite-photo-title">my favorite photos</h2>
+		
 		<?php foreach($data["photos"] as $photo => $alt): ?>
 			<figure class="hobby-figure">
 				<picture class="hobby-photo">
@@ -27,7 +35,7 @@ $aboutData = [
 
 			</figure>
 		<?php endforeach; ?>
-	<?php endforeach; ?>
+<?php endforeach; ?>
 
-	<?php aboutPageNav();?>
+<?php aboutPageNav();?>
 </about-card>

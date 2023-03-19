@@ -7,7 +7,7 @@ $project = getProjectBySlug($_GET["slug"]);
 //show projects
 ?>
 
-<h1><?=$project["title"] ?? null ?></h1>
+<h2><?=$project["title"] ?? null ?></h2>
 
 
 

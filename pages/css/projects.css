@@ -11,13 +11,6 @@
   margin-top: 30px;
 }
 
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
-  gap: 25px;
-  list-style: none;
-}
-
 project-card picture {
   max-width: 15vw;
   max-width: 300px;
@@ -25,7 +18,7 @@ project-card picture {
 
 .projects inner-column {
   /*outline:  20px solid purple;*/
-  max-width: 1200px;
+/*  max-width: 1200px;*/
 }
 
 .projects-svg {
@@ -96,3 +89,11 @@ detail-card p {
 }
 
 
+@media (min-width: 600px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 25px;
+    list-style: none;
+  }
+}

@@ -2,7 +2,7 @@
 
  <section class="four-o-four">
   <h2 class="heading-two">
-    <mark>page not found</mark>
+    <mark>you made a wrong turn</mark>
   </h2>
 
   <?php include "./images/svgs/404-shape.php";?>

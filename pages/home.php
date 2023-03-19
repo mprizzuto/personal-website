@@ -26,8 +26,8 @@ if ($time >= 16 || $time <= 07) {
       <p>To see my projects, click the <?=$planetaryBody?>. To contact me, <a href="?page=contact">read my contact page first</a></p>
     </div>
 
-    <shapes>
+    <celestial-shapes>
       <?php include "day-night-router.php";?>
-    </shapes>
+    </celestial-shapes>
   </inner-column>
 </section>

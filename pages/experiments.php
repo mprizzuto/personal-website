@@ -8,13 +8,13 @@ include 'detail-router.php';
     </h2>
 
     <?php foreach($experimentsList as $experiment): ?>
-      <card class="experiment-card">
+      <experiment-card class="experiment-experiment-card">
         <details open>
           <summary><?=$experiment["name"]?></summary>
           <p><?=$experiment["purpose"]?></p>
           <a href="<?=$experiment["link"]?>"><?=$experiment["name"]?></a>
         </details>
-      </card>
+      </experiment-card>
      <?php endforeach; ?> 
 
     <h2>design</h2>

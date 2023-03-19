@@ -3,8 +3,12 @@
   /*outline:  3px solid lime;*/
 }
 
+experiment-card {
+  display: block;
+}
+
 .experiments inner-column {
-  max-width: 1200px;
+/*  max-width: 1200px;*/
 }
 
 .experiment-card summary {

@@ -35,7 +35,7 @@
 	margin-top: 20px;
 	font-size: 1.5em;
 	line-height: 1.4;
-	color: rgb(154,3,30);
+	color: inherit;
 	max-width: 42ch;
 }
 

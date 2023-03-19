@@ -13,3 +13,7 @@ body.homepage a:hover {
 body.homepage a:active {
   color:  green;
 }
+
+.heading-one {
+  font-size: clamp(2.5em, 5vw, 5em);
+}

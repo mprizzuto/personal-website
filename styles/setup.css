@@ -21,9 +21,15 @@ a {
 
 
 /*custom elements*/
-picture, inner-column, shapes, 
-card, project-card {
+picture, inner-column, celestial-shapes, 
+card, project-card, dev-info {
 	display: block;
+}
+
+inner-column {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*media*/

@@ -17,9 +17,9 @@
   <body class="homepage"> 
     <header class="author-welcome">
       <inner-column>
-        <div class="dev-info">
-          <section class="nav">
-            <h1 class="heading-one">Marco Rizzuto</h1>
+        <dev-info class="dev-info">
+          <div class="dev-credential">
+            <p class="heading-one">Marco Rizzuto</p>
 
             <div class="credentials">
               <?php include "images/svgs/arrow.svg"; ?>
@@ -30,7 +30,7 @@
            <?php include "components/nav.php";?>
 
            <?php include "components/theme-changer.php"; ?>
-          </section>
-        </div>
+          </div>
+        </dev-info>
       </inner-column>
     </header>

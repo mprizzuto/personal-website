@@ -1,5 +1,5 @@
 <?php require "modules/header.php"?>
-<main class="<?=$queryString?>-main">
+<main class="<?=$queryString ?? "home"?>-main">
   <article class="<?=$queryString?>-article">
     <header class="article-header">
       <inner-column>

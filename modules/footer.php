@@ -1,4 +1,4 @@
-		<footer class="author-welcome">
+		<footer class="site-footer">
 		  <inner-column>
 			  <?php include "components/nav.php";?>
 		  </inner-column>

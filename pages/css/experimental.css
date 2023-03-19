@@ -7,6 +7,10 @@ experiment-card {
   display: block;
 }
 
+experiment-card + experiment-card{
+  margin-top: 20px;
+}
+
 .experiments inner-column {
 /*  max-width: 1200px;*/
 }
@@ -37,5 +41,8 @@ experiment-card {
   }
   .experiments h2, .experiments span {
 /*    color:  rgb(0,42,216);*/
+  }
+  experiment-card + experiment-card{
+    margin-top: unset;
   }
 }

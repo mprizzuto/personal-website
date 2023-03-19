@@ -29,6 +29,10 @@ project-card picture {
   margin-top: 40px;
 }
 
+.project-list li + li {
+  margin-top: 20px;
+}
+
 .projects-svg {
   display: block;
   margin-top:  30px;
@@ -95,5 +99,8 @@ detail-card p {
     grid-template-columns: repeat(auto-fill, 350px);
     gap: 25px;
     list-style: none;
+  }
+  .project-list li + li {
+    margin-top: unset;
   }
 }

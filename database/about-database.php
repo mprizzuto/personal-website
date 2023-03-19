@@ -23,9 +23,9 @@ $aboutData = [
 					<li><?=$hobby?></li>
 				
 			<?php endforeach; ?>
-			</ul>
+		</ul>
 		
-			<h2 class="favorite-photo-title">my favorite photos</h2>
+		<h2 class="favorite-photo-title">my favorite photos</h2>
 		
 		<?php foreach($data["photos"] as $photo => $alt): ?>
 			<figure class="hobby-figure">

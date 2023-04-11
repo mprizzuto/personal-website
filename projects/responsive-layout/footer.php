@@ -4,19 +4,19 @@
 
 
 		<footer class='site-footer'>
-		<inner-column>
+			<inner-column>
 
 			<!-- no headers in footers allowed? -->
-			<div class='what-to-call-it-then'>
-				<h2 class='attention-voice'>This is the site footer and it has a "site-map" module in it.</h2>
+				<div class='what-to-call-it-then'>
+					<h2 class='attention-voice'>This is the site footer and it has a "site-map" module in it.</h2>
 
-				<p>Pretty standard type of thing, right?</p>
-			</div>
+					<p>Pretty standard type of thing, right?</p>
+				</div>
 
-			<?php include('./projects/responsive-layout/modules/site-map.php'); ?>
+				<?php include('./projects/responsive-layout/modules/site-map.php'); ?>
 
-		</inner-column>
+			</inner-column>
 		</footer>
-
+		<!-- <script src="theme-changer.js"></script> -->
 	</body>
 </html>

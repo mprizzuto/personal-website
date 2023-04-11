@@ -1,15 +1,13 @@
 <?php require "modules/header.php"?>
-<main class="<?=$queryString ?? "home"?>-main">
-  <article class="<?=$queryString?>-article">
+<main class=<?php echo getClassByQuery() . "-main"?> >
+  <article class=<?php echo getClassByQuery() . "-article"?>>
     <header class="article-header">
       <inner-column>
         <h1><?=generatePageTitle()?></h1>
       </inner-column>
     </header>
-    <?php 
-    require "page-router.php";
-    
-    ?>
+
+    <?php require "page-router.php";?>
   </article>
 </main>
 

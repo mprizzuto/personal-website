@@ -5,7 +5,5 @@ $siteData = [
 	"about" => ["writing", "resume", "goals", "contact"],
 	"experiments" => getAllExperiments(),
 	]
-	// "about" => ["writing", "resume", "goals", "contact"],
-	// "experiments" => ["experiment detail one", "experiment detail two"],
 ];
 ?>

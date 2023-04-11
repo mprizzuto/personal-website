@@ -24,6 +24,8 @@ if ($time >= 16 || $time <= 07) {
       <p>I am excited to take part in the current web revolution to build highly performant and accessible websites.</p>
 
       <p>To see my projects, click the <?=$planetaryBody?>. To contact me, <a href="?page=contact">read my contact page first</a></p>
+
+      <p>not sure where to start? check out the <a href="?page=sitemap">sitemap</a></p>
     </div>
 
     <celestial-shapes>

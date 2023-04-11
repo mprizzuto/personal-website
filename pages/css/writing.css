@@ -35,3 +35,11 @@ section.article {
 	/*outline:  4px solid red;*/
 	/*display: flex;*/
 }
+
+writing-detail picture {
+	max-width: 500px;
+}
+
+writing-detail h2 + picture, writing-detail picture + p {
+	margin-top: 10px;
+}

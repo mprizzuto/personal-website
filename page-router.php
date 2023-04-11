@@ -1,6 +1,4 @@
 <?php
-
-$page = $_GET["page"] ?? null;
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
@@ -35,6 +33,9 @@ switch (getPage()) {
 		include "pages/experiments.php";
 		break;
 
+	case "site-map":
+		include "pages/site-map.php";
+		break;	
 
 
 	// project details router
@@ -62,22 +63,22 @@ switch (getPage()) {
 		include "pages/resume.php";
 		break;
 
-		//case study page
-		case "case-study":
-			include "pages/case-studies.php";
-			break;
+	//case study page
+	case "case-study":
+		include "pages/case-studies.php";
+		break;
 
-	case null:
+	case "null":
 		include "pages/home.php";
 		break;
 
-	// 404 page
-	case checkPages($page) === "false":
-		include "pages/404.php";
+	case "":
+		include "pages/home.php";
 		break;
 
-	// default:
-	// 	include "pages/home.php";
+	default:
+		// include "pages/home.php";
+	include "pages/404.php";
 }
 
 ?>

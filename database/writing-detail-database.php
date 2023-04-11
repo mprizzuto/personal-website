@@ -6,17 +6,18 @@
 ?>
 
 <?php function writingDetailGenerator($title, $image, $alt, $description, $link, $teaser) { ?>
-
-		<writing-detail>
-			<h2><?=$title?></h2>
-			<picture>
-				<img src="<?=$image?>" alt="$<?=$alt?>">
-			</picture>
+	<section class="writing-detail">
+		<inner-column>
+			<writing-detail>
+				<h2><?=$title?></h2>
+				<picture>
+					<img src="<?=$image?>" alt="$<?=$alt?>">
+				</picture>
 				<p><?=$description?></p>
 				<a href="<?=$link?>" target="_blank"><?=$teaser?></a>
 			</writing-detail>
-			
-		
+		</inner-column>
+	</section>
 <?php }?>
 
 

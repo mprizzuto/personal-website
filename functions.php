@@ -1,7 +1,7 @@
 <?php 
 //get the current file .. i.e index.php
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);
-$queryString = $_GET["page"] ?? null;
+// $queryString = $_GET["page"] ?? null;
 
 function getQueryString() {
 	$queryString = $_GET["page"] ?? null;
@@ -15,19 +15,28 @@ function formatVar(mixed $input) {
 	echo "</pre>";
 }
 
+function sanitizeString(string $str) {
+	$result = htmlspecialchars($str);
+	$result = strip_tags($str);
+
+	 return $result;
+}
+
 //get any page with ?page query string
 function getPage() {
 	$page = $_GET["page"] ?? null;
 	return $page;
 }
 
+//this should probably be an array of pages . loop over using foreach, if current index === $slug, apply
+
 function styleAnchorLink($slug) {
+	// TODO. abstract out $navLinkStyle rule into its own function.
 	$queryString = $_GET["page"] ?? null;
 	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
 	switch ($slug === getQueryString()) {
 
 		case null || "home":
-			// return "style = 'border-bottom: 2px solid maroon'";
 		  return $navLinkStyle;
 			break;
 
@@ -58,6 +67,10 @@ function styleAnchorLink($slug) {
 		case "experiments":
 			return $navLinkStyle;
 			break;
+
+		case "site-map":
+			return $navLinkStyle;
+			break;	
 	}
 }
 
@@ -68,16 +81,15 @@ function getWritingPage() {
 }
 
 // a function that is used in the control flow for the 404 page
-function checkPages($page) {
+function checkPages(mixed $page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", $_SERVER['SCRIPT_FILENAME'] === "index.php", "case-study", "resume"];
+	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", "case-study", "resume", "site-map"];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
 }
 ?>
-
 
 <?php function cardBuilder($name, $goal, $link) {?>
 <card class="project-card">
@@ -90,37 +102,45 @@ function checkPages($page) {
 <?php } ?>
 
 <?php function projectDetailBuilder(string $name, string $skills, string $image, string $alt, string $description, string $url ):void { ?>
-	<detail-card>
+	<section class="project-detail">
+		<inner-column>
+			<detail-card>
+				<h2><?=$name?></h2>
 
-		<h2><?=$name?></h2>
+				<p><?=$skills?></p>
 
-		<p><?=$skills?></p>
+				<picture>
+					<img src="<?=$image?>" alt="<?=$alt?>">
+				</picture>
 
-		<picture>
-			<img src="<?=$image?>" alt="<?=$alt?>">
-		</picture>
+				<p><?=$description?></p>
 
-		<p><?=$description?></p>
-
-		<a href="<?=$url?>">see the project</a>
-	</detail-card>
+				<a href="<?=$url?>">see the project</a>
+			</detail-card>
+		</inner-column>
+	</section>
 <?php } ?>
 
 <?php function experimentDetailBuilder(string $name, string $hypothesis, string $materials, string $image, string $alt, string $result):void { ?>
-	<detail-card>
+	<section class="experiment-detail">
+		<inner-column>
+			<detail-card>
 
-		<h2><?=$name?></h2>
+				<h2><?=$name?></h2>
 
-		<p><?=$hypothesis?></p>
+				<p><?=$hypothesis?></p>
 
-		<p><?=$materials?></p>
+				<p><?=$materials?></p>
 
-		<picture>
-			<img src="<?=$image?>" alt="<?=$alt?>">
-		</picture>
+				<picture>
+					<img src="<?=$image?>" alt="<?=$alt?>">
+				</picture>
 
-		<p><?=$result?></p>
-	</detail-card>
+				<p><?=$result?></p>
+			</detail-card>
+		</inner-column>
+	</section>
+	
 <?php } ?>
 
 <?php 
@@ -152,6 +172,10 @@ function generateMeta($title, $description, $image) {?>
 	  			generateMeta("about", "come read about the man behind the code", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/about.jpg");
 	  			break;
 
+	  		case "sitemap":
+	  			generateMeta("sitemap", "the sitemap", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/sitemap.jpg");
+	  			break;	
+
   			case "writing":
 	  			generateMeta("writing", "like reading? you'll love my blog posts", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing.jpg");
 	  			break;
@@ -181,15 +205,23 @@ function generateMeta($title, $description, $image) {?>
 	  			break;
 
 	  			case "experiments":
-	  				generateMeta("experiments", "experiments", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiments.jpg");
+	  				generateMeta("experiments", "my experiments", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiments.jpg");
 	  			break;
 
 	  			case "experiment-detail":
-	  				generateMeta("experiment detail", "experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
+	  				generateMeta("experiment detail", "my experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
 	  			break;
 
 	  			case "project":
-	  				generateMeta("project detail ", "project detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/project-detail.jpg");
+	  				generateMeta("project detail ", "my project detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/project-detail.jpg");
+	  			break;
+
+	  			case "blog-post-detail":
+	  				generateMeta("blog post detail", "my blog post detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/blog-post-detail.jpg");
+	  			break;
+
+	  			case "site-map":
+	  				generateMeta("site-map", "all the site links!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/site-map.jpg");
 	  			break;
 
 	  			default:
@@ -247,11 +279,11 @@ function generateSkills(array $skills) {
 <?php }?>
 
 
-
 <?php function generatePortfolio(iterable $portfolioData) {?>
 	<ul>
 	<?php foreach ($portfolioData as $portfolio): ?>
-		<li><?=$portfolio["name"]?>
+		<li>
+			<?=$portfolio["name"]?>
 			
 			<ul>
 				<li><?=$portfolio["description"]?></li>
@@ -261,6 +293,7 @@ function generateSkills(array $skills) {
 	<?php endforeach; ?>
 	</ul>
 <?php }?>
+
 
 <?php 
   //get all projects
@@ -354,7 +387,7 @@ function generateSkills(array $skills) {
 	function aboutPageNav() {
 		include "database/nav-data.php";
 
-		$aboutLinks = ["about", "writing", "resume", "goals", "contacts"];
+		$aboutLinks = ["about", "writing", "resume", "goals", "contact"];
 
 		echo "<aside class='about-links'>" . "<inner-column>". "<h2>curious about me?</h2>" . "<nav class='about-page-nav'>";
 
@@ -373,77 +406,183 @@ function generateSkills(array $skills) {
 			$articleH1 = "Hi!";
 			return $articleH1;
 		}
+		else if (getPage() == "false") {
+			$articleH1 = "404!";
+			return $articleH1;
+		}
 
 		else if( isset($_GET["page"]) ) {
 			switch ( getPage() ) {
-			case "home":
-			$articleH1 = "Hi!";
-				return $articleH1;
-				break;
-
-			case "projects":
-				$articleH1 = "My Projects";
-				return $articleH1;
-				break;
-
-			case "project":
-				$articleH1 = "My Project";
-				return $articleH1;
-				break;	
-
-			case "experiments":
-				$articleH1 = "My experiments";
-				return $articleH1;
-				break;
-
-			case "experiment-detail":
-				$articleH1 = "experiment detail";
-				return $articleH1;
-				break;
-
-			case "case-study":
-				$articleH1 = "case study";
-				return $articleH1;
-				break;		
-
-			// case "project":
-			// 	$articleH1 = "my project";
-			// 	return $articleH1;
-			// 	break;	
-					
-			case "about":
-				$articleH1 = "About me";
-				return $articleH1;
-				break;
-
-			case "resume":
-				$articleH1 = "My resume";
-				return $articleH1;
-				break;
-
-			case "writing":
-				$articleH1 = "My writing";
-				return $articleH1;
-				break;		
 			
-			case "goals":
-				$articleH1 = "My goals";
-				return $articleH1;
-				break;	
+				case "home":
+				$articleH1 = "Hi!";
+					return $articleH1;
+					break;
 
-			default:
-				$articleH1 = "404!";
-				return $articleH1;
-		}
-		
-		}
+				case "projects":
+					$articleH1 = "My Projects";
+					return $articleH1;
+					break;
 
-		return $articleH1;
-		
+				case "project":
+					$articleH1 = "My Project";
+					return $articleH1;
+					break;
+
+				case "project":
+					$articleH1 = "My Project";
+					return $articleH1;
+					break;			
+
+				case "blog-post-detail":
+					$articleH1 = "My blog post detail";
+					return $articleH1;
+					break;
+
+				case "experiment-detail":
+					$articleH1 = "experiment detail";
+					return $articleH1;
+					break;
+
+				case "case-study":
+					$articleH1 = "case study";
+					return $articleH1;
+					break;		
+
+				// case "project":
+				// 	$articleH1 = "my project";
+				// 	return $articleH1;
+				// 	break;	
+						
+				case "about":
+					$articleH1 = "About me";
+					return $articleH1;
+					break;
+
+				case "resume":
+					$articleH1 = "My resume";
+					return $articleH1;
+					break;
+
+				case "writing":
+					$articleH1 = "My writing";
+					return $articleH1;
+					break;		
+				
+				case "goals":
+					$articleH1 = "My goals";
+					return $articleH1;
+					break;
+
+				case "experiments":
+					$articleH1 = "My experiments";
+					return $articleH1;
+					break;
+
+				case "contact":
+					$articleH1 = "contact me?";
+					return $articleH1;
+					break;
+
+				case "site-map":
+					$articleH1 = "sitemap links";
+					return $articleH1;
+					break;	
+
+				case "":
+					$articleH1 = "Hi!";
+					return $articleH1;
+					break;	
+						
+				default:
+					$articleH1 = "404!";
+					return $articleH1;
+			}
+		}
+		// return $articleH1;
 	}
+
+	function getClassByQuery() {
+		// $classSuffix = "-main";
+
+		if (checkPages(getPage()) !== "true") {
+			echo "404";
+		}
+		else if (getQueryString() === null) {
+			echo "home";
+		}
+		else {
+			return getPage();
+		}
+	}
+
+function styleSitemapLink() {
+	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
+	if (getQueryString() === "site-map" && 
+		getQueryString() != null) {
+		// return "";
+		return $navLinkStyle;
+	}
+	return "";
+}
 
 ?>
 
+
+<?php function formatSitemap(array $sitemapData) { ?>
+	<?php echo "<ul class='site-map-list'>"?>	
+		<?php foreach($sitemapData as $levelOneKey => $levelOneValue):?>
+			
+			<?php echo "<li>" . "<h3>$levelOneKey</h3>"; ?>
+				<?php echo "<ul class='home-page-list'>"; ?>
+
+					<?php foreach($levelOneValue as $levelTwoKey => $levelTwoValue): ?>
+					
+						<?php if ($levelTwoKey === "projects"): ?>
+							
+								<?php echo "<li>" . "<h3>" . $levelTwoKey . "</h3>"; ?>
+
+									<?php echo "<ul class='sitemap-project-list'>"; ?>
+
+										<?php foreach($levelTwoValue as $projectKey => $projectValue): ?>
+											<?php echo "<li>" . $projectValue["title"] . "</li>"; ?>
+														
+															<?php echo "<li>" . $projectValue['title'] . " detail page</li>"; ?>
+															<?php echo "<li>" . $projectValue['title'] . " case study page". "</li>"; ?>
+										<?php endforeach; ?>
+									<?php echo "</ul>"; ?>
+								<?php "</li>"; ?>	
+						<?php endif; ?>
+
+					<?php if($levelTwoKey === "about"): ?>
+						<?php echo "<li>" . "<h3>" . $levelTwoKey . "</h3>" ?>
+							<?php echo "<ul class='sitemap-about-list'>"; ?>
+							<?php foreach($levelTwoValue as $aboutArrIndex): ?>
+								<li><?=$aboutArrIndex?></li>
+							<?php endforeach;?>
+							<?="</ul>"?>
+						<?="</li>";?>
+					<?php endif; ?>
+
+
+					<?php if($levelTwoKey === "experiments"): ?>
+						<?php echo "<li>" . "<h3>" . $levelTwoKey . "</h3>" ?>
+							<?php echo "<ul class='experiment-list'>"; ?>
+								<?php foreach($levelTwoValue as $experimentArrIndex => $experimentIndexValue): ?>
+									<?php echo "<li>" . $experimentIndexValue["name"] . "</li>"?>
+								<?php endforeach;?>	
+							<?="</ul>"?>
+						<?="</li>";?>
+					<?php endif; ?>
+
+
+					<?php endforeach; ?>
+				<?php echo "</ul>";?>		
+		<?php endforeach; ?>
+	<?php echo "</ul>"?>
+
+<?php }?>
+ 
 
 
 

@@ -1,1 +1,1 @@
-<!-- <button class="theme-changer">change theme</button> -->
+<button class="btn-toggle">toggle theme</button> 

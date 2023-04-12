@@ -1,22 +1,40 @@
-body {
+:root {
   --body-color: rgb(255,200,30);
   --heading-color: rgb(0,42,216);
   --background-color: rgb(59,68,75);
+  --night-theme-background: #002D62;
 }
 
-.light-mode {
+/*default theme*/
+/*.light-mode {
   background: linen;
   color: black;
+}*/
+
+/*dark mode*/
+body.dark-mode {
+  color: var(--body-color);
+  background: var(--background-color);
+}
+
+:is(body.dark-mode a) {
+/*  color: inherit;*/
+  color: linen;
+}
+
+body.dark-mode img {
+  filter: brightness(.8) contrast(1.2);
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
-  body {
+  body.dark-mode {
     color: var(--body-color);
-    background: var(--background-color);
+/*    background: var(--background-color);*/
+    background: var(--night-theme-background);
   }
   body h1, h2 {
-    color: linen;
+/*    color: linen;*/
   }
   .right-arrow {
     background: linen;
@@ -25,13 +43,23 @@ body {
     color: inherit;
   }
   a:visited {
-    color: lightblue;
+/*    color: lightblue;*/
   }
   .dev-credentials {
     border-left:  8px solid white;
     padding: 10px;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  /* defaults to dark theme */
+  .light-mode {
+    background: linen;
+    color: initial;
+  }
+
+}
+
 
 
 

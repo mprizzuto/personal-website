@@ -25,7 +25,7 @@ if ($time >= 16 || $time <= 07) {
 
       <p>To see my projects, click the <?=$planetaryBody?>. To contact me, <a href="?page=contact">read my contact page first</a></p>
 
-      <p>not sure where to start? check out the <a href="?page=sitemap">sitemap</a></p>
+      <p>not sure where to start? check out the <a href="?page=site-map">sitemap</a></p>
     </div>
 
     <celestial-shapes>

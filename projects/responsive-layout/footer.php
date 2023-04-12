@@ -17,6 +17,5 @@
 
 			</inner-column>
 		</footer>
-		<!-- <script src="theme-changer.js"></script> -->
 	</body>
 </html>

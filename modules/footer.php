@@ -4,6 +4,6 @@
 			  <a href="?page=site-map" <?=styleSitemapLink()?>>site-map</a>
 		  </inner-column>
 		</footer>
-		<script src="script.js"></script>
+		<script src="theme-changer.js"></script>
   </body>
 </html>

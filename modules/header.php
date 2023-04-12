@@ -1,8 +1,18 @@
+<?php
+$themeClass = '';
+if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
+  $themeClass = 'dark-mode';
+}
+else {
+  $themeClass = "light-mode";
+}
+?>
 <!doctype html>
 
   <html lang="en">
    <?php 
   require_once "functions.php";
+  // formatVar($_COOKIE["theme"]);
   ?>
   <head>
     <link rel="stylesheet" type="text/css" href="./styles/reset.css">
@@ -14,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body class=<?php echo getClassByQuery() . "-page"?>> 
+  <body class= "<?php echo getClassByQuery() . '-page ' . $themeClass; ?>"> 
     <header class="author-welcome">
       <inner-column>
         <dev-info class="dev-info">

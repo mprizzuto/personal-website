@@ -3,6 +3,7 @@
 @import "setup.css";
 @import "typography.css";
 @import "../pages/css/style.css";
+@import "themes.css";
 
 body {
   padding-bottom:  20vh;

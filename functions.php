@@ -224,6 +224,10 @@ function generateMeta($title, $description, $image) {?>
 	  				generateMeta("site-map", "all the site links!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/site-map.jpg");
 	  			break;
 
+	  			case "style-guide":
+	  				generateMeta("style-guide", "site style guide", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/style-guide.jpg");
+	  			break;
+
 	  			default:
 	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/404.jpg");
   	}
@@ -487,7 +491,12 @@ function generateSkills(array $skills) {
 				case "site-map":
 					$articleH1 = "sitemap links";
 					return $articleH1;
-					break;	
+					break;
+
+				case "style-guide":
+					$articleH1 = "site style guide";
+					return $articleH1;
+					break;		
 
 				case "":
 					$articleH1 = "Hi!";

@@ -234,6 +234,14 @@ strong {
   font-size: 4em;
 }
 
+.noto-font {
+  font-family: "noto serif", serif;
+}
+
+.zen-kaku-font {
+  font-family: "zen kaku", sans-serif;
+}
+
 /*footer*/
 footer .site-menu {
   max-width: 60ch;

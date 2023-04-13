@@ -68,6 +68,10 @@ switch (getPage()) {
 		include "pages/case-studies.php";
 		break;
 
+	case "style-guide":
+		include "pages/style-guide.php";
+		break;	
+
 	case "null":
 		include "pages/home.php";
 		break;

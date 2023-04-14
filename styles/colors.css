@@ -4,4 +4,12 @@
 	--line-color:  #3945E7;
 	--moon-color: rgb(255,200,30);
 	--moon-blue: rgb(0,42,216);
+	--star-bar-color: rgb(0,42,216);
+	--star-color: #FFC81E;
+
+/* theme changer	*/
+--body-color: rgb(255,200,30);
+  --heading-color: rgb(0,42,216);
+  --background-color: rgb(59,68,75);
+  --night-theme-background: #002D62;
 }

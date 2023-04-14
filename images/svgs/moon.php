@@ -1,4 +1,4 @@
-<a class="projects-svg" href="?page=projects"><?=$projectsCTA?>
+<a class="projects-svg" href="?page=projects"><?=$projectsCTA ?? null?>
     <svg width="100%" height="100%" viewBox="0 0 124 100" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
       <g transform="matrix(1,0,0,1,-2677.61,-2457.4)">
           <g transform="matrix(0.997769,0,0,1,3007.34,1171.07)">

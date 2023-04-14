@@ -84,10 +84,21 @@ inner-column  {
 
 
 /*colors*/
+:root {
+  --first-color: "linen";
+  --second-color: "gold";
+  --third-color: "#FFC800";
+  --fourth-color: "#3B444B";
+  --fifth-color: "#002d62";
+  --sixth-color: "#002AD8";
+  --last-color: "#3945E7";
+}
+
 .color-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  max-width: 50ch;
 }
 
 .color-list li {
@@ -97,6 +108,9 @@ inner-column  {
   max-width: 100px;
   margin-top: 5px;
   margin-right:  10px;
+  color: purple;
+  text-align: center;
+  border: 6px double black;
 }
 
 li ul {
@@ -104,24 +118,78 @@ li ul {
 }
 
 .color-list li:first-of-type {
-  background: var(--lolly-pop);
+  background: linen;
+  /* should these be variables and included after the element  */
+}
+
+.color-list li:first-of-type::after {
+  content: var(--first-color);
+/*  color: initial;*/
 }
 
 .color-list :nth-child(2) {
   background: var(--accent-color);
 }
 
-.color-list :nth-child(3) {
+.color-list li:nth-child(2)::after {
+/*  position: relative;*/
+/*  z-index: 2;*/
+/*  color: black;*/
+  content: var(--second-color);
+}
+
+.color-list li:nth-child(3) {
   background: var(--body-color);
 }
 
+.color-list li:nth-child(3)::after {
+  content: var(--third-color);
+}
+
 .color-list :nth-child(4) {
-  background: var(--guac-color);
+  background: var(--background-color);
+}
+
+.color-list li:nth-child(4)::after {
+  content: var(--fourth-color);
+}
+
+
+.color-list :nth-child(5) {
+  background: var(--night-theme-background);
+}
+
+.color-list li:nth-child(5)::after {
+  content: var(--fifth-color);
+}
+
+.color-list :nth-child(6) {
+  background: var(--star-bar-color);
+}
+
+.color-list li:nth-child(6)::after {
+  content: var(--sixth-color)
+}
+
+
+
+.color-list :nth-child(7) {
+  background: var(--moon-blue);
+}
+
+.color-list :nth-child(8) {
+  background: var(--moon-color);
 }
 
 .color-list :last-of-type {
   background: var(--line-color);
 }
+
+.color-list :last-of-type::after {
+  content: var(--last-color);
+}
+
+
 
 /*theme changer*/
 #theme-change, #theme-change option {

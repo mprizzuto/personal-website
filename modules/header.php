@@ -1,23 +1,39 @@
-<?php
+ <?php
+$currentTheme = $_POST["theme_changer"] ?? null;
 
 $themeClass = '';
-// if (!empty($_COOKIE['theme'])) {
-//   if ($_COOKIE['theme'] == 'dark') {
-//     $themeClass = 'dark-theme';
-//   } else if ($_COOKIE['theme'] == 'light') {
-//     $themeClass = 'light-theme';
+
+// $isThemeCookieSet = $_COOKIE["theme"] ?? null;
+$themeCookie = setcookie("theme", $currentTheme, time() + 3600);
+
+// if ( $_SERVER['REQUEST_METHOD']) {
+//   echo "posted!" . var_dump($_POST). count($_POST) .;
+// }
+
+// var_dump($_SERVER["REQUEST_METHOD"])
+// if (!empty($_COOKIE["theme"])) {
+//   if ($_COOKIE["theme"] == 'dark') {
+//     $themeClass = "dark-theme";
+//   } else if ($_COOKIE["theme"] == "light") {
+//     $themeClass = "light-theme";
 //   }  
 // }
+// if (in_array(needle, $_POST))
+var_dump($_COOKIE);
 ?>
 
-<!doctype html>
-
-  <html lang="en">
-   <?php 
+ <?php 
   require_once "functions.php";
 
   // formatVar($_COOKIE["theme"]);
   ?>
+
+
+
+<!doctype html>
+
+  <html lang="en">
+  
   <head>
     <link rel="stylesheet" type="text/css" href="./styles/reset.css">
 

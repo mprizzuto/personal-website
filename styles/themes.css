@@ -45,14 +45,6 @@ body.dark-mode img {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  /* defaults to dark theme */
-  .light-mode {
-    background: linen;
-    color: initial;
-  }
-
-}
 
 
 /* should this be in forms.css ?  */

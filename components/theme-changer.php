@@ -9,3 +9,13 @@
 </form>
 <?php //TODO: only show one option at a time by checking the cookie status. maybe include an OS default theme (like MDN) the default should be day theme.  ?>
 <?=var_dump($_POST)?>
+
+<?php
+
+echo "<pre>";
+var_dump($_SERVER);
+echo "</pre>";
+
+// Set the expiration date to one hour ago
+
+?>

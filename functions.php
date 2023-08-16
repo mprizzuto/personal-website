@@ -157,12 +157,13 @@ function generateMeta($title, $description, $image) {?>
   function getHead() {
   	switch (getPage()) {
   		case "home":
-  			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
-  		break;	
-
   		case null:
   			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
-  			break;
+  			break;	
+
+  		// case null:
+  		// 	generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
+  		// 	break;
 
   		case "projects":
   			generateMeta("projects", "come see my projects", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/projects.jpg");
@@ -198,35 +199,35 @@ function generateMeta($title, $description, $image) {?>
 
 		  		case "goals":
 	  				generateMeta("goals", "check out my goals", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/goals.jpg");
-	  			break;
+	  				break;
 
 	  			case "contact":
 	  				generateMeta("contact", "contact me", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/contact.jpg");
-	  			break;
+	  				break;
 
 	  			case "experiments":
 	  				generateMeta("experiments", "my experiments", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiments.jpg");
-	  			break;
+	  				break;
 
 	  			case "experiment-detail":
 	  				generateMeta("experiment detail", "my experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
-	  			break;
+	  				break;
 
 	  			case "project":
 	  				generateMeta("project detail ", "my project detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/project-detail.jpg");
-	  			break;
+	  				break;
 
 	  			case "blog-post-detail":
 	  				generateMeta("blog post detail", "my blog post detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/blog-post-detail.jpg");
-	  			break;
+	  				break;
 
 	  			case "site-map":
 	  				generateMeta("site-map", "all the site links!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/site-map.jpg");
-	  			break;
+	  				break;
 
 	  			case "style-guide":
 	  				generateMeta("style-guide", "site style guide", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/style-guide.jpg");
-	  			break;
+	  				break;
 
 	  			default:
 	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/404.jpg");

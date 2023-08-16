@@ -1,35 +1,47 @@
-const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+console.clear();
 
-if (prefersDarkScheme.matches) {
-  document.body.classList.toggle("dark-mode");
-  var theme = document.body.classList.contains("light-mode")
-      ? "light"
-      : "dark";
-      console.log("matches dark")
-  }
-  // Listen for a click on the button 
-  btn.addEventListener("click", function() {
+let themeOptions = document.querySelectorAll("input[id$='-theme'");
 
+let themeForm = document.querySelector("#theme-changer-form");
 
-  // Toggle the .dark-theme class on the body
-  document.body.classList.toggle("dark-mode");
-  
-  // Let's say the theme is equal to light
-    // If the body contains the .dark-theme class...
-  if (document.body.classList.contains("dark-mode")) {
-    let theme = "light";
-    // ...then let's make the theme dark
-    theme = "dark";
+const [dayTheme, nightTheme] = themeOptions;
+
+// console.log(dayTheme.checked)
+
+window.addEventListener("click", (event) => {
+  if (event.target.matches("#theme-changer-form button[type='submit']")) {
+    console.log(dayTheme.checked, "day theme");
+    if ( dayTheme.checked ) {
+      // console.log(dayTheme.checked, dayTheme.value, "day theme");
+      localStorage.setItem("theme", dayTheme.value);
+    }
+    if ( nightTheme.checked ) {
+      // console.log(nightTheme.checked, nightTheme.value);
+      localStorage.setItem("theme", nightTheme.value);
+    }
+
   }
-  else if (document.body.classList.contains("light-mode")) {
-    // ...then let's make the theme dark
-    document.body.classList.toggle("light-mode");
-    theme = "light";
-  }
-  // Then save the choice in a cookie
-  document.cookie = "mode=" + theme;
-  document.body.classList.toggle("light-mode");
+
 });
+// console.log(localStorage.getItem("theme").split(" ").join("-"));
 
-  
+window.addEventListener("DOMContentLoaded",  (event) => {
+  // console.log(event, "loaded")
+  let selectedThemeLS = localStorage.getItem("theme").split(" ").join("-");
+  let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
+  // console.log(selectedTheme.checked = true);
+  selectedTheme.checked = true;
+});
+/*
+add click event on window
+
+  if event matches the form button
+
+    check which radio is checked
+
+  add checked button to local storage with theme-change key
+
+on page load, 
+
+get the item from local storage, find the matching radio button, and leave it checked it
+*/ 

@@ -1,17 +1,21 @@
 <?php
+
 $themeClass = '';
-if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
-  $themeClass = 'dark-mode';
-}
-else {
-  $themeClass = "light-mode";
-}
+// if (!empty($_COOKIE['theme'])) {
+//   if ($_COOKIE['theme'] == 'dark') {
+//     $themeClass = 'dark-theme';
+//   } else if ($_COOKIE['theme'] == 'light') {
+//     $themeClass = 'light-theme';
+//   }  
+// }
 ?>
+
 <!doctype html>
 
   <html lang="en">
    <?php 
   require_once "functions.php";
+
   // formatVar($_COOKIE["theme"]);
   ?>
   <head>

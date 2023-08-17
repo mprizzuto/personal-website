@@ -1,33 +1,27 @@
  <?php
+
 $currentTheme = $_POST["theme_changer"] ?? null;
 
-$themeClass = '';
+$themeClass = ($_COOKIE["theme"] ?? null) === "night theme" ? "dark-mode": "";
 
-// $isThemeCookieSet = $_COOKIE["theme"] ?? null;
-$themeCookie = setcookie("theme", $currentTheme, time() + 3600);
+if ($currentTheme) {
+  if ($currentTheme === "night theme") {
+    $themeClass = "dark-mode";
+    $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
+    echo "NIGHT THEME";
+  }
+  elseif ($currentTheme === "day theme") {
+    $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
+    $themeClass = "";
+    echo "DAY THEME";
+  }
+}
 
-// if ( $_SERVER['REQUEST_METHOD']) {
-//   echo "posted!" . var_dump($_POST). count($_POST) .;
-// }
-
-// var_dump($_SERVER["REQUEST_METHOD"])
-// if (!empty($_COOKIE["theme"])) {
-//   if ($_COOKIE["theme"] == 'dark') {
-//     $themeClass = "dark-theme";
-//   } else if ($_COOKIE["theme"] == "light") {
-//     $themeClass = "light-theme";
-//   }  
-// }
-// if (in_array(needle, $_POST))
-var_dump($_COOKIE);
 ?>
 
- <?php 
+<?php 
   require_once "functions.php";
-
-  // formatVar($_COOKIE["theme"]);
-  ?>
-
+?>
 
 
 <!doctype html>

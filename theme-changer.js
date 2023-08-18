@@ -26,11 +26,17 @@ window.addEventListener("click", (event) => {
 // console.log(localStorage.getItem("theme").split(" ").join("-"));
 
 window.addEventListener("DOMContentLoaded",  (event) => {
+
+  if (!localStorage.getItem("theme")) {
+    let selectedTheme = document.querySelector("#day-theme");
+    selectedTheme.checked = true;
+  }
   // console.log(event, "loaded")
   let selectedThemeLS = localStorage.getItem("theme").split(" ").join("-");
   let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
   // console.log(selectedTheme.checked = true);
   selectedTheme.checked = true;
+  console.log("dom content laoed")
 });
 /*
 add click event on window

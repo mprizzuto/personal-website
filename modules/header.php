@@ -2,15 +2,15 @@
 
 $currentTheme = $_POST["theme_changer"] ?? null;
 
-$themeClass = ($_COOKIE["theme"] ?? null) === "night theme" ? "dark-mode": "";
+$themeClass = ($_COOKIE["theme"] ?? null) === "night_theme" ? "dark-mode": "";
 
 if ($currentTheme) {
-  if ($currentTheme === "night theme") {
+  if ($currentTheme === "night_theme") {
     $themeClass = "dark-mode";
     $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
     echo "NIGHT THEME";
   }
-  elseif ($currentTheme === "day theme") {
+  elseif ($currentTheme === "day_theme") {
     $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
     $themeClass = "";
     echo "DAY THEME";

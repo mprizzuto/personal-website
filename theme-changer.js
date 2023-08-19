@@ -10,9 +10,9 @@ const [dayTheme, nightTheme] = themeOptions;
 
 window.addEventListener("click", (event) => {
   if (event.target.matches("#theme-changer-form button[type='submit']")) {
-    console.log(dayTheme.checked, "day theme");
+    console.log(dayTheme.checked, "day_theme");
     if ( dayTheme.checked ) {
-      // console.log(dayTheme.checked, dayTheme.value, "day theme");
+      // console.log(dayTheme.checked, dayTheme.value, "day_theme");
       localStorage.setItem("theme", dayTheme.value);
     }
     if ( nightTheme.checked ) {
@@ -27,27 +27,69 @@ window.addEventListener("click", (event) => {
 
 window.addEventListener("DOMContentLoaded",  (event) => {
 
-  if (!localStorage.getItem("theme")) {
+  if ( !localStorage.getItem("theme") ) {
     let selectedTheme = document.querySelector("#day-theme");
     selectedTheme.checked = true;
   }
-  // console.log(event, "loaded")
-  let selectedThemeLS = localStorage.getItem("theme").split(" ").join("-");
-  let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
-  // console.log(selectedTheme.checked = true);
-  selectedTheme.checked = true;
-  console.log("dom content laoed")
+
+  if ( localStorage.getItem("theme") ) {
+    let selectedThemeLS = localStorage.getItem("theme").split("_").join("-");
+
+    let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
+
+    selectedTheme.checked = true;
+  }
+
+  // let selectedThemeLS = localStorage.getItem("theme").split(" ").join("-");
+
+  // let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
+
+  // selectedTheme.checked = true;
+
+  if (localStorage.getItem("theme") === "night_theme") {
+    // activateDarkMode();
+    // console.log("LS DS!!")
+    document.querySelector("body").classList.add("dark-mode");
+  }
+
+
+
 });
-/*
-add click event on window
 
-  if event matches the form button
 
-    check which radio is checked
 
-  add checked button to local storage with theme-change key
+function activateDarkMode() {
+  // set style to dark
+  let body = document.querySelector("body");
+  var selectedTheme = document.querySelector("#night-theme");
 
-on page load, 
+  if (darkModePreference.matches) {
+    localStorage.clear();
+    localStorage.setItem("theme", "night_theme")
+    body.classList.add("dark-mode");
 
-get the item from local storage, find the matching radio button, and leave it checked it
-*/ 
+    selectedTheme.checked = true;
+  }
+  if ( darkModePreference.matches === false ) {
+    // localStorage.clear();
+    localStorage.setItem("theme", "day_theme");
+    console.log("POOOOP second if ran!");
+    // body.classList.remove("dark-mode");
+    selectedTheme = document.querySelector("#day-theme");
+    selectedTheme.checked = true;
+  }
+
+  
+}
+
+// MediaQueryList
+const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+
+// recommended method for newer browsers: specify event-type as first argument
+// darkModePreference.addEventListener("change", e => e.matches && activateDarkMode());
+
+// deprecated method for backward compatibility
+// darkModePreference.addListener(e => e.matches && activateDarkMode());
+
+
+console.log(darkModePreference);

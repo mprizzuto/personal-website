@@ -40,6 +40,8 @@ window.addEventListener("DOMContentLoaded",  (event) => {
     selectedTheme.checked = true;
   }
 
+  activateDarkMode();
+
   // let selectedThemeLS = localStorage.getItem("theme").split(" ").join("-");
 
   // let selectedTheme = document.querySelector(`#${selectedThemeLS}`);
@@ -61,35 +63,54 @@ window.addEventListener("DOMContentLoaded",  (event) => {
 function activateDarkMode() {
   // set style to dark
   let body = document.querySelector("body");
+
   var selectedTheme = document.querySelector("#night-theme");
 
   if (darkModePreference.matches) {
-    localStorage.clear();
-    localStorage.setItem("theme", "night_theme")
+
+    localStorage.setItem("theme", "night_theme");
+
     body.classList.add("dark-mode");
 
     selectedTheme.checked = true;
   }
-  if ( darkModePreference.matches === false ) {
-    // localStorage.clear();
+  if ( lightModePreference.matches ) {
     localStorage.setItem("theme", "day_theme");
-    console.log("POOOOP second if ran!");
-    // body.classList.remove("dark-mode");
-    selectedTheme = document.querySelector("#day-theme");
-    selectedTheme.checked = true;
-  }
 
-  
+    document.body.classList.remove("dark-mode");
+
+    var selectedTheme = document.querySelector("#day-theme");
+
+    selectedTheme.checked = true;
+    console.log("DA YTHEME");
+  }
 }
 
 // MediaQueryList
 const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
 
+const lightModePreference = window.matchMedia("(prefers-color-scheme: light)");
+
 // recommended method for newer browsers: specify event-type as first argument
-// darkModePreference.addEventListener("change", e => e.matches && activateDarkMode());
+darkModePreference.addEventListener("change", e => e.matches && activateDarkMode());
 
 // deprecated method for backward compatibility
-// darkModePreference.addListener(e => e.matches && activateDarkMode());
+darkModePreference.addListener(e => e.matches && activateDarkMode());
 
 
-console.log(darkModePreference);
+// console.log(darkModePreference);
+
+
+
+// if ( window.matchMedia("(prefers-color-scheme: light)").matches ) {
+//     localStorage.setItem("theme", "day_theme");
+
+//     document.body.classList.remove("dark-mode");
+
+//     var selectedTheme = document.querySelector("#day-theme");
+
+//     selectedTheme.checked = true;
+//     console.log("DA YTHEME");
+// }
+
+// console.log(window.matchMedia("(prefers-color-scheme: dark)").matches === false)

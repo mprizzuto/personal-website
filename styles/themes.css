@@ -20,15 +20,14 @@ body.dark-mode img {
   filter: brightness(.8) contrast(1.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
+/*@media (prefers-color-scheme: dark) {
+
   body.dark-mode {
     color: var(--body-color);
-/*    background: var(--background-color);*/
     background: var(--night-theme-background);
   }
   body h1, h2 {
-/*    color: linen;*/
+
   }
   .right-arrow {
     background: linen;
@@ -37,14 +36,14 @@ body.dark-mode img {
     color: inherit;
   }
   a:visited {
-/*    color: lightblue;*/
+
   }
   .dev-credentials {
     border-left:  8px solid white;
     padding: 10px;
   }
 }
-
+*/
 
 
 /* should this be in forms.css ?  */

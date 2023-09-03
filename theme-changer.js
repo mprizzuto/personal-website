@@ -27,12 +27,39 @@ let themeChanger = {
     return localStorage.getItem("mr-theme");
   },
   applyThemeToBody: function() {
-    document.body.classList.add(this.getThemeFromLs());
+    if ( this.getThemeFromLs() ) {
+      document.body.classList.add(this.getThemeFromLs());
+    }
+    if ( this. getOsTheme().osThemeDark.matches) {
+      console.log("applyThemeToBody: DARK THEME");
+      document.body.classList.remove("light-theme");
+
+      document.body.classList.toggle("dark-theme", "os-theme");
+    }
+    if ( this. getOsTheme().osThemeLight.matches) {
+      console.log("applyThemeToBody: Light THEME");
+      document.body.classList.remove("dark-theme");
+
+      document.body.classList.toggle("light-theme", "os-theme");
+    }
   },
   getOsTheme: function() {
-    const colorSchemeQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-    
-    return colorSchemeQueryList;
+    const osThemeDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const osThemeLight = window.matchMedia("(prefers-color-scheme: light)");
+
+    // if ( osThemeDark.matches ) {
+    //   return "dark"
+    // }
+    // else {
+    //   return "light";
+    // }
+    // console.log(osThemeDark);
+    return {
+      osThemeDark,
+      osThemeLight
+    }
+
+    // return osThemeDark;
   },
 };
 
@@ -77,7 +104,7 @@ window.addEventListener("click", (event) => {
     
     setColorScheme(themeChanger.getOsTheme());
 
-    themeChanger.getOsTheme().addEventListener("change", setColorScheme);
+    themeChanger.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
     
   }
   
@@ -130,32 +157,49 @@ window.addEventListener("DOMContentLoaded", (event) => {
     themeChanger.themeButtons().darkTheme.classList.remove("selected-theme");
     
     themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
-    
-    
-    const setColorScheme = e => {
-      if (e.matches && themeChanger.getThemeFromLs() === "os-theme") {
-
-        document.body.classList.remove("light-theme");
-        document.body.classList.toggle("dark-theme");
-      } 
-      else {
-        document.body.classList.remove("dark-theme");
-      }
-    }
-    
-    setColorScheme(themeChanger.getOsTheme());
-
-    themeChanger.getOsTheme().addEventListener("change", setColorScheme);
-    
   }
 
-  // get the current OS theme. if user prefers dark, apple dark-theme  // && window.matchMedia("(prefers-color-scheme: dark)").matches
-  if (window.matchMedia && themeChanger.getOsTheme()) {
-    document.body.classList.remove("light-theme");
-
-    document.body.classList.toggle("dark-theme", "os-theme");
-
+  if ( !themeChanger.getThemeFromLs() ) {
     themeName.textContent = "os";
+      // get the current OS theme. if user prefers dark, apple dark-theme
+    if (window.matchMedia && themeChanger.getOsTheme().osThemeDark.matches) {
+      document.body.classList.remove("light-theme");
+
+      document.body.classList.toggle("dark-theme", "os-theme");
+
+      // themeName.textContent = "os";
+      // console.log(themeChanger.getOsTheme());
+    }
+
+    if (window.matchMedia && themeChanger.getOsTheme().osThemeLight.matches) {
+      document.body.classList.remove("dark-theme");
+
+      document.body.classList.toggle("light-theme", "os-theme");
+
+      // themeName.textContent = "os";
+      // console.log(themeChanger.getOsTheme());
+    }
+
+    // listening for changes in real time! 
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newColorScheme = event.matches ? "dark" : "light";
+      console.log(newColorScheme);
+      if (newColorScheme === "dark") {
+        console.log("dark");
+        document.body.classList.remove("light-theme");
+
+        document.body.classList.toggle("dark-theme", "os-theme");
+
+      }
+      else {
+        console.log("light");
+         document.body.classList.remove("dark-theme");
+
+        document.body.classList.toggle("light-theme", "os-theme");
+      }
+
+    });
   }
   
   if (themeChanger.getThemeFromLs() === "light-theme") {
@@ -186,8 +230,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
     themeChanger.themeButtons().osTheme.classList.remove("selected-theme");
     
   }
+
+  // console.log(themeChanger.getOsTheme().osThemeDark);
+
+  
 });
 
 
+// const setColorScheme = e => {
+//     if (e.matches) {
+//       document.body.classList.remove("light-theme");
+//       document.body.classList.toggle("dark-theme");
 
+//       themeName.textContent = "os";
 
+//       // themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
+    
+//       // themeChanger.themeButtons().darkTheme.classList.remove("selected-theme");
+    
+//       // themeChanger.themeButtons().osTheme.classList.add("selected-theme");
+//     } 
+//     if (e.matches === false) {
+//       document.body.classList.remove("dark-theme");
+//       themeName.textContent = "os";
+
+//       // themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
+    
+//       // themeChanger.themeButtons().darkTheme.classList.remove("selected-theme");
+    
+//       // themeChanger.themeButtons().osTheme.classList.add("selected-theme");
+//     }
+//   }
+    
+ 

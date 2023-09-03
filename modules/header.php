@@ -1,21 +1,8 @@
  <?php
 
-$currentTheme = $_POST["theme_changer"] ?? null;
+session_start();
 
-$themeClass = ($_COOKIE["theme"] ?? null) === "night_theme" ? "dark-mode": "";
-
-if ($currentTheme) {
-  if ($currentTheme === "night_theme") {
-    $themeClass = "dark-mode";
-    $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
-    echo "NIGHT THEME";
-  }
-  elseif ($currentTheme === "day_theme") {
-    $themeCookie = setcookie("theme", $currentTheme, time() + 3600);
-    $themeClass = "";
-    echo "DAY THEME";
-  }
-}
+$themeClass = ($_SESSION['theme'] ?? null === 'dark') ? 'dark-theme' : '';
 
 ?>
 
@@ -23,6 +10,7 @@ if ($currentTheme) {
   require_once "functions.php";
 ?>
 
+<?=formatVar($_SESSION)?>
 
 <!doctype html>
 
@@ -32,6 +20,9 @@ if ($currentTheme) {
     <link rel="stylesheet" type="text/css" href="./styles/reset.css">
 
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+    <link rel="stylesheet" href="dark-theme.css" class="<?php echo $themeClass; ?>">
+
 
     <meta charset="utf-8">
     <?=getHead()?>

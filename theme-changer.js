@@ -30,13 +30,13 @@ let themeChanger = {
     if ( this.getThemeFromLs() ) {
       document.body.classList.add(this.getThemeFromLs());
     }
-    if ( this. getOsTheme().osThemeDark.matches) {
+    if ( this. getOsTheme().osThemeDark.matches ) {
       console.log("applyThemeToBody: DARK THEME");
       document.body.classList.remove("light-theme");
 
       document.body.classList.toggle("dark-theme", "os-theme");
     }
-    if ( this. getOsTheme().osThemeLight.matches) {
+    if ( this. getOsTheme().osThemeLight.matches ) {
       console.log("applyThemeToBody: Light THEME");
       document.body.classList.remove("dark-theme");
 

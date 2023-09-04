@@ -255,7 +255,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   
   
-  if (themeChanger.getThemeFromLs() === "os-theme") {
+  if (themeChanger.getThemeFromLs() === "os-theme" || themeName.textContent === "os") {
     const newColorScheme = event.matches ? "dark" : "light";
     console.log(event, {newColorScheme});
 

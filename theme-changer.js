@@ -30,36 +30,69 @@ let themeChanger = {
     if ( this.getThemeFromLs() ) {
       document.body.classList.add(this.getThemeFromLs());
     }
-    if ( this. getOsTheme().osThemeDark.matches ) {
-      console.log("applyThemeToBody: DARK THEME");
-      document.body.classList.remove("light-theme");
 
-      document.body.classList.toggle("dark-theme", "os-theme");
-    }
-    if ( this. getOsTheme().osThemeLight.matches ) {
-      console.log("applyThemeToBody: Light THEME");
-      document.body.classList.remove("dark-theme");
+    if ( !this.getThemeFromLs() ) {
+      if ( this.getOsTheme().osThemeDark.matches ) {
+        console.log("applyThemeToBody: DARK THEME");
+        document.body.classList.remove("light-theme");
 
-      document.body.classList.toggle("light-theme", "os-theme");
+        document.body.classList.toggle("dark-theme", "os-theme");
+      }
+
+      if ( this.getOsTheme().osThemeLight.matches ) {
+        console.log("applyThemeToBody: Light THEME");
+        document.body.classList.remove("dark-theme");
+
+        document.body.classList.toggle("light-theme", "os-theme");
+      }
+
+      //detect real time OS change
+      const setColorScheme = e => {
+
+        if (e.matches) {
+          console.log("set color scheme()", e);
+          // document.body.classList.remove("light-theme");
+          // document.body.classList.toggle("dark-theme");
+          document.body.classList.remove("dark-theme");
+        } 
+        else {
+          console.log("set color scheme()", e);
+
+          document.body.classList.remove("light-theme");
+          document.body.classList.toggle("dark-theme");
+
+          
+        }
+      }
+      
+      setColorScheme(themeChanger.getOsTheme());
+
+      this.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
+      this.getOsTheme().osThemeLight.addEventListener("change", setColorScheme);
+
     }
+    // if ( this.getOsTheme().osThemeDark.matches && !this.getThemeFromLs() ) {
+    //   console.log("applyThemeToBody: DARK THEME");
+    //   document.body.classList.remove("light-theme");
+
+    //   document.body.classList.toggle("dark-theme", "os-theme");
+    // }
+    // if ( this.getOsTheme().osThemeLight.matches && !this.getThemeFromLs() ) {
+    //   console.log("applyThemeToBody: Light THEME");
+    //   document.body.classList.remove("dark-theme");
+
+    //   document.body.classList.toggle("light-theme", "os-theme");
+    // }
   },
   getOsTheme: function() {
     const osThemeDark = window.matchMedia("(prefers-color-scheme: dark)");
     const osThemeLight = window.matchMedia("(prefers-color-scheme: light)");
 
-    // if ( osThemeDark.matches ) {
-    //   return "dark"
-    // }
-    // else {
-    //   return "light";
-    // }
-    // console.log(osThemeDark);
     return {
       osThemeDark,
       osThemeLight
     }
 
-    // return osThemeDark;
   },
 };
 
@@ -92,19 +125,19 @@ window.addEventListener("click", (event) => {
     themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
     
     //detect real time OS change
-    const setColorScheme = e => {
-      if (e.matches && themeChanger.getThemeFromLs() === "os-theme") {
-        document.body.classList.remove("light-theme");
-        document.body.classList.toggle("dark-theme");
-      } 
-      else {
-        document.body.classList.remove("dark-theme");
-      }
-    }
+    // const setColorScheme = e => {
+    //   if (e.matches && themeChanger.getThemeFromLs() === "os-theme") {
+    //     document.body.classList.remove("light-theme");
+    //     document.body.classList.toggle("dark-theme");
+    //   } 
+    //   else {
+    //     document.body.classList.remove("dark-theme");
+    //   }
+    // }
     
-    setColorScheme(themeChanger.getOsTheme());
+    // setColorScheme(themeChanger.getOsTheme());
 
-    themeChanger.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
+    // themeChanger.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
     
   }
   
@@ -159,49 +192,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
     themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
   }
 
-  if ( !themeChanger.getThemeFromLs() ) {
+
+
+  if ( !themeChanger.getThemeFromLs() && window.matchMedia ) {
+    console.log("LS emoty", themeChanger.getThemeFromLs());
     themeName.textContent = "os";
-      // get the current OS theme. if user prefers dark, apple dark-theme
-    if (window.matchMedia && themeChanger.getOsTheme().osThemeDark.matches) {
-      document.body.classList.remove("light-theme");
-
-      document.body.classList.toggle("dark-theme", "os-theme");
-
-      // themeName.textContent = "os";
-      // console.log(themeChanger.getOsTheme());
-    }
-
-    if (window.matchMedia && themeChanger.getOsTheme().osThemeLight.matches) {
-      document.body.classList.remove("dark-theme");
-
-      document.body.classList.toggle("light-theme", "os-theme");
-
-      // themeName.textContent = "os";
-      // console.log(themeChanger.getOsTheme());
-    }
-
-    // listening for changes in real time! 
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      const newColorScheme = event.matches ? "dark" : "light";
-      console.log(newColorScheme);
-      if (newColorScheme === "dark") {
-        console.log("dark");
-        document.body.classList.remove("light-theme");
-
-        document.body.classList.toggle("dark-theme", "os-theme");
-
-      }
-      else {
-        console.log("light");
-         document.body.classList.remove("dark-theme");
-
-        document.body.classList.toggle("light-theme", "os-theme");
-      }
-
-    });
+    themeChanger.applyThemeToBody();
+    themeChanger.themeButtons().osTheme.classList.toggle("selected-theme");
   }
   
+
+
   if (themeChanger.getThemeFromLs() === "light-theme") {
     themeName.textContent = "light";
     
@@ -236,30 +237,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
   
 });
 
-
-// const setColorScheme = e => {
-//     if (e.matches) {
-//       document.body.classList.remove("light-theme");
-//       document.body.classList.toggle("dark-theme");
-
-//       themeName.textContent = "os";
-
-//       // themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
-    
-//       // themeChanger.themeButtons().darkTheme.classList.remove("selected-theme");
-    
-//       // themeChanger.themeButtons().osTheme.classList.add("selected-theme");
-//     } 
-//     if (e.matches === false) {
-//       document.body.classList.remove("dark-theme");
-//       themeName.textContent = "os";
-
-//       // themeChanger.themeButtons().lightTheme.classList.remove("selected-theme");
-    
-//       // themeChanger.themeButtons().darkTheme.classList.remove("selected-theme");
-    
-//       // themeChanger.themeButtons().osTheme.classList.add("selected-theme");
-//     }
-//   }
     
  

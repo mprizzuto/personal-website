@@ -2,7 +2,6 @@ console.clear();
 
 let themeChanger = {
   themeMenuButton: function() {
-    // return document.querySelector("#toggle-themes");
     return this.themeButtons().themeMenu;
   },
   themeButtons: function() {
@@ -34,59 +33,28 @@ let themeChanger = {
         if (this.getOsTheme().osThemeDark.matches) {
           document.body.classList.remove("light-theme");
           document.body.classList.add("os-theme", "dark-theme");
-          console.log("apply theme to bofy!, dark theme");
         }
         if ( this.getOsTheme().osThemeLight.matches ) {
-          console.log("apply theme to bofy!, light theme");
           document.body.classList.remove("dark-theme");
           document.body.classList.add("os-theme","light-theme");
         }
       }
     }
 
-
-
-    //detect real time OS change
-    // const setColorScheme = e => {
-
-    //   if (e.matches) {
-    //     console.log("set color scheme()", e);
-    //     document.body.classList.remove("light-theme");
-    //     document.body.classList.toggle("dark-theme");
-    //     // document.body.classList.remove("dark-theme");
-    //   } 
-    //   else {
-    //     console.log("set color scheme()", e);
-
-    //     document.body.classList.remove("light-theme");
-    //     document.body.classList.toggle("dark-theme");
-
-        
-    //   }
-    // }
-
-
     if ( !this.getThemeFromLs() ) {
       if ( this.getOsTheme().osThemeDark.matches ) {
-        console.log("applyThemeToBody: DARK THEME");
         document.body.classList.remove("light-theme");
-
         document.body.classList.toggle("dark-theme", "os-theme");
-        // this.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
       }
 
       if ( this.getOsTheme().osThemeLight.matches ) {
         console.log("applyThemeToBody: Light THEME");
+        
         document.body.classList.remove("dark-theme");
-
         document.body.classList.toggle("light-theme", "os-theme");
-        // this.getOsTheme().osThemeLight.addEventListener("change", setColorScheme);
       }
 
     }
-
-    // this.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
-    // this.getOsTheme().osThemeLight.addEventListener("change", setColorScheme);
   },
   getOsTheme: function() {
     const osThemeDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -101,27 +69,27 @@ let themeChanger = {
 };
 
 let themeButton = themeChanger.themeMenuButton();
+
 let themeList = themeChanger.themesList();
 
 let themeName = document.querySelector("#current-theme");
+
 
 themeButton.addEventListener("click", (event) => {
   themeList.classList.toggle("hide-themes");
 });
 
 
+
 window.addEventListener("click", (event) => {
-  if ( !themeList.classList.contains("hide-themes") && event.target.id !== "toggle-themes") {
+  if ( !themeList.classList.contains("hide-themes") && 
+    event.target.id !== "toggle-themes") {
     themeList.classList.toggle("hide-themes");
   }
   
   if (event.target.id === "os-theme") {
     themeChanger.saveThemeToLs("os-theme");
-    
-    // if (themeChanger.) {
 
-    // }
-    // document.body.classList.remove("dark-theme", "light-theme");
     themeChanger.applyThemeToBody();
     // console.log(themeChanger.getThemeFromLs());
 
@@ -166,6 +134,7 @@ window.addEventListener("click", (event) => {
 });
 
 
+
 window.addEventListener("DOMContentLoaded", (event) => {
   if ( !themeChanger.themesList().classList.contains("hide-themes") ) {
     themeChanger.themesList().classList.toggle("hide-themes");
@@ -186,14 +155,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
 
-
   if ( !themeChanger.getThemeFromLs() && window.matchMedia ) {
     console.log("LS emoty", themeChanger.getThemeFromLs());
     themeName.textContent = "os";
     themeChanger.applyThemeToBody(); //get this to listen and apply theme changes in real time, and also apply the current OS theme
     themeChanger.themeButtons().osTheme.classList.toggle("selected-theme");
   }
-  
 
 
   if (themeChanger.getThemeFromLs() === "light-theme") {
@@ -224,33 +191,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     themeChanger.themeButtons().osTheme.classList.remove("selected-theme");
     
   }
-
-  // console.log(themeChanger.getOsTheme().osThemeDark);
-
   
-});
+}); 
 
 
-// const setColorScheme = e => {
-//   if (e.matches) {
-//     console.log("set color scheme()", e);
-//     document.body.classList.remove("light-theme");
-//     document.body.classList.toggle("dark-theme");
-//     // document.body.classList.remove("dark-theme");
-//   } 
-//   else {
-//     console.log("set color scheme()", e);
-
-//     document.body.classList.remove("light-theme");
-//     document.body.classList.toggle("dark-theme");
-
-    
-//   }
-// }
-
-// themeChanger.getOsTheme().osThemeDark.addEventListener("change", setColorScheme);
-// themeChanger.getOsTheme().osThemeLight.addEventListener("change", setColorScheme);
-    
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   
@@ -271,5 +215,24 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
         document.body.classList.toggle("light-theme", "os-theme");
     }
   }
-});    
+});
+
+
+
+//sending the theme to the server
+window.addEventListener("click", event => {
+  let themeButtonIds = [
+    themeChanger.themeButtons().osTheme.id, 
+    themeChanger.themeButtons().lightTheme.id, 
+    themeChanger.themeButtons().darkTheme.id
+  ];
+
+  if ( themeButtonIds.includes(event.target.id ) ) {
+    console.log( themeButtonIds.includes(event.target.id) );
+  }
+
+  
+}); 
+
+
 

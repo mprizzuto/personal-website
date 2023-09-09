@@ -33,10 +33,34 @@ let themeChanger = {
         if (this.getOsTheme().osThemeDark.matches) {
           document.body.classList.remove("light-theme");
           document.body.classList.add("os-theme", "dark-theme");
+
+          sendThemeToServer("dark-theme")
+          .then((data) => {
+            // Handle the data
+            console.log('Received data:', data);
+
+          })
+          .catch((error) => {
+            // Handle any errors
+            console.error('Error:', error);
+          });
+
         }
         if ( this.getOsTheme().osThemeLight.matches ) {
           document.body.classList.remove("dark-theme");
           document.body.classList.add("os-theme","light-theme");
+
+          sendThemeToServer("light-theme")
+          .then((data) => {
+            // Handle the data
+            console.log('Received data:', data);
+
+          })
+          .catch((error) => {
+            // Handle any errors
+            console.error('Error:', error);
+          }); 
+
         }
       }
     }

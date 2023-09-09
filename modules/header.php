@@ -1,6 +1,6 @@
  <?php
 session_start();
-var_dump($_SESSION['theme']);
+// var_dump($_SESSION['theme']);
 // $inputData = null;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 

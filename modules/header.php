@@ -1,16 +1,34 @@
  <?php
-
 session_start();
 
-$themeClass = ($_SESSION['theme'] ?? null === 'dark') ? 'dark-theme' : '';
+// $inputData = null;
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+  $inputData = json_decode(file_get_contents("php://input"), true);
+
+  if ($inputData && isset( $inputData["theme"]) ) {
+    
+    $_SESSION["theme"] = $inputData["theme"];
+    
+    $response = array(
+      "message" => "Theme updated successfully",
+      // "theme" =>  var_dump($inputData),
+    );
+    
+    header("Content-Type: application/json");
+    
+  }
+  else {
+    header("HTTP/1.1 400 Bad Request");
+  }
+}
 ?>
 
 <?php 
   require_once "functions.php";
 ?>
 
-<?=formatVar($_SESSION)?>
+
 
 <!doctype html>
 
@@ -21,15 +39,12 @@ $themeClass = ($_SESSION['theme'] ?? null === 'dark') ? 'dark-theme' : '';
 
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
-    <link rel="stylesheet" href="dark-theme.css" class="<?php echo $themeClass; ?>">
-
-
     <meta charset="utf-8">
     <?=getHead()?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body class= "<?php echo getClassByQuery() . '-page ' . $themeClass; ?>"> 
+  <body class= "<?php echo getClassByQuery() . '-page ' . $_SESSION["theme"] ?? null; ?>"> 
     <header class="author-welcome">
       <inner-column>
         <dev-info class="dev-info">

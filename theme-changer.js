@@ -45,6 +45,17 @@ let themeChanger = {
       if ( this.getOsTheme().osThemeDark.matches ) {
         document.body.classList.remove("light-theme");
         document.body.classList.toggle("dark-theme", "os-theme");
+
+        sendThemeToServer("dark-theme")
+        .then((data) => {
+          // Handle the data
+          console.log('Received data:', data);
+
+        })
+        .catch((error) => {
+          // Handle any errors
+          console.error('Error:', error);
+        }); 
       }
 
       if ( this.getOsTheme().osThemeLight.matches ) {
@@ -52,8 +63,19 @@ let themeChanger = {
         
         document.body.classList.remove("dark-theme");
         document.body.classList.toggle("light-theme", "os-theme");
-      }
 
+        sendThemeToServer("light-theme")
+        .then((data) => {
+          // Handle the data
+          console.log('Received data:', data);
+
+        })
+        .catch((error) => {
+          // Handle any errors
+          console.error('Error:', error);
+        }); 
+
+      }
     }
   },
   getOsTheme: function() {
@@ -158,8 +180,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if ( !themeChanger.getThemeFromLs() && window.matchMedia ) {
     console.log("LS emoty", themeChanger.getThemeFromLs());
     themeName.textContent = "os";
-    themeChanger.applyThemeToBody(); //get this to listen and apply theme changes in real time, and also apply the current OS theme
+    themeChanger.applyThemeToBody();
     themeChanger.themeButtons().osTheme.classList.toggle("selected-theme");
+
+
   }
 
 
@@ -212,27 +236,96 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     if ( newColorScheme === "light" ) {
       document.body.classList.remove("dark-theme");
 
-        document.body.classList.toggle("light-theme", "os-theme");
+      document.body.classList.toggle("light-theme", "os-theme");
     }
   }
 });
 
 
 
-//sending the theme to the server
-window.addEventListener("click", event => {
-  let themeButtonIds = [
-    themeChanger.themeButtons().osTheme.id, 
-    themeChanger.themeButtons().lightTheme.id, 
-    themeChanger.themeButtons().darkTheme.id
-  ];
+async function sendThemeToServer(theme) {
+  let currentTheme = {theme};
+  try {
+    const response = await fetch('index.php', {
+      method: 'POST', // You can change this to 'POST' if needed
+      headers: {
+        'Content-Type': 'application/json',
+        // Add any other headers as needed
+      },
+      body: JSON.stringify(currentTheme)
+      // You can include a request body for POST requests if necessary
+      // body: JSON.stringify({ key: 'value' }),
+    });
 
-  if ( themeButtonIds.includes(event.target.id ) ) {
-    console.log( themeButtonIds.includes(event.target.id) );
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json(); // Parse the JSON response
+
+    // Handle the JSON data here
+    console.log('Data from server:', data);
+
+    // You can return the data or use it as needed
+    return data;
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    throw error; // You can handle or propagate the error as needed
   }
-
-  
-}); 
+}
 
 
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+  let osTheme = themeChanger.themeButtons().osTheme;
+  let lightTheme = themeChanger.themeButtons().lightTheme;
+  let darkTheme = themeChanger.themeButtons().darkTheme;
+
+  window.addEventListener("click", event => {
+    if (event.target.id === osTheme.id) {
+      // fetchDataFromServer("os-theme");
+      // Call the function to fetch data
+      sendThemeToServer("os-theme")
+      .then((data) => {
+        // Handle the data
+        console.log('Received data:', data);
+
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+
+
+    }
+
+    if ( event.target.id === lightTheme.id) {
+      sendThemeToServer("light-theme")
+      .then((data) => {
+        // Handle the data
+        console.log('Received data:', data);
+
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error:', error);
+      }); 
+    }
+
+    if ( event.target.id === darkTheme.id ) {
+      sendThemeToServer("dark-theme")
+      .then((data) => {
+        // Handle the data
+        console.log('Received data:', data);
+
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+    }
+  });
+
+// });
 

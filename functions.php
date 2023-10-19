@@ -19,7 +19,7 @@ function sanitizeString(string $str) {
 	$result = htmlspecialchars($str);
 	$result = strip_tags($str);
 
-	 return $result;
+	return $result;
 }
 
 //get any page with ?page query string
@@ -516,10 +516,10 @@ function generateSkills(array $skills) {
 		// $classSuffix = "-main";
 
 		if (checkPages(getPage()) !== "true") {
-			echo "404";
+			return "404";
 		}
 		else if (getQueryString() === null) {
-			echo "home";
+			return "home";
 		}
 		else {
 			return getPage();

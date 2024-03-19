@@ -1,5 +1,6 @@
  <?php
 session_start();
+
 // var_dump($_SESSION['theme']);
 // $inputData = null;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -43,11 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     
     <?=getHead()?>
-    
   </head>
 
   <body class= "<?php echo getClassByQuery() . "-page " . $_SESSION["theme"] ?? null; ?>"> 
-    <header class="author-welcome">
+    <header>
       <inner-column>
         <dev-info class="dev-info">
           <div class="dev-credential">

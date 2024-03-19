@@ -2,11 +2,11 @@
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
-		include "pages/home.php";
+		include "../private/includes/pages/home.php";
 		break;
 
 	case "projects":
-		include "pages/projects.php";
+		include "../private/includes/pages/projects.php";
 		break;
 
 	case "project":

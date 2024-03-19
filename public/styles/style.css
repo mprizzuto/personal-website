@@ -2,9 +2,9 @@
 @import "colors.css";
 @import "setup.css";
 @import "typography.css";
-@import "../pages/css/style.css";
+@import ".../private/includes/pages/css/style.css";
 @import "themes.css";
-@import "../modules/css/dark-theme.css"; 
+@import ".../private/includes/modules/css/dark-theme.css"; 
 
 
 body {

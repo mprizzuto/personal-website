@@ -1,4 +1,5 @@
 <?php require "../private/includes/modules/header.php"?>
+
 <main class=<?php echo getClassByQuery() . "-main"?> >
   <article class=<?php echo getClassByQuery() . "-article"?>>
     <header class="article-header">
@@ -7,7 +8,7 @@
       </inner-column>
     </header>
 
-    <?php require "page-router.php";?>
+    <?php require "../private/page-router.php";?>
   </article>
 </main>
 

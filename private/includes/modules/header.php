@@ -1,8 +1,6 @@
  <?php
 session_start();
 
-// var_dump($_SESSION['theme']);
-// $inputData = null;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   $inputData = json_decode(file_get_contents("php://input"), true);
@@ -51,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
            <?php include "../private/includes/components/nav.php";?>
 
-           <?php include "components/theme-changer.php"; ?>
+           <?php include "../private/includes/components/theme-changer.php"; ?>
           </div>
         </dev-info>
       </inner-column>

@@ -1,4 +1,4 @@
-<?php require "modules/header.php"?>
+<?php require "../private/includes/modules/header.php"?>
 <main class=<?php echo getClassByQuery() . "-main"?> >
   <article class=<?php echo getClassByQuery() . "-article"?>>
     <header class="article-header">

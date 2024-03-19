@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 <?php 
-  require_once "functions.php";
+  require_once "../private/includes/functions.php";
 ?>
 
 
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
  <?php include "head.php"; ?>
 
-  <body class= "<?php echo getClassByQuery() . "-page " . $_SESSION["theme"] ?? null; ?>"> 
+  <body class= "<?php //echo getClassByQuery() . "-page " . $_SESSION["theme"] ?? null; ?>"> 
     <header>
       <inner-column>
         <dev-info class="dev-info">
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               
             </div>
 
-           <?php include "components/nav.php";?>
+           <?php include "../private/includes/components/nav.php";?>
 
            <?php include "components/theme-changer.php"; ?>
           </div>

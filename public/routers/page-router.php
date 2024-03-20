@@ -18,15 +18,15 @@ switch (getPage()) {
 		break;
 
 	case "writing":
-		include "pages/writing.php";
+		include "./includes/pages/writing.php";
 		break;
 
 	case "style-guide":
-		include "pages/style-guide.php";
+		include "./includes/pages/style-guide.php";
 		break;
 
 	case "contact":
-		include "pages/contact.php";
+		include "./includes/pages/contact.php";
 		break;
 
 	case "experiments":
@@ -34,7 +34,7 @@ switch (getPage()) {
 		break;
 
 	case "site-map":
-		include "pages/site-map.php";
+		include "./includes/pages/site-map.php";
 		break;	
 
 
@@ -55,12 +55,12 @@ switch (getPage()) {
 
 
 	case "goals":
-		include "pages/goals.php";
+		include "./includes/pages/goals.php";
 		break;
 
 	//resume page
 	case "resume":
-		include "pages/resume.php";
+		include "./includes/pages/resume.php";
 		break;
 
 	//case study page
@@ -69,7 +69,7 @@ switch (getPage()) {
 		break;
 
 	case "style-guide":
-		include "pages/style-guide.php";
+		include "./includes/pages/style-guide.php";
 		break;	
 
 	case "null":

@@ -28,6 +28,6 @@
 
 <?php 
 // include "experiments.php";
-include "detail-router.php";
+include "./routers/detail-router.php";
 
 ?>

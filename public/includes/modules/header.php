@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 <?php 
-  require_once "../private/includes/functions.php";
+  require_once "./includes/functions.php";
 ?>
 
 
@@ -47,9 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               
             </div>
 
-           <?php include "../private/includes/components/nav.php";?>
+           <?php include "./includes/components/nav.php";?>
 
-           <?php include "../private/includes/components/theme-changer.php"; ?>
+           <?php include "./includes/components/theme-changer.php"; ?>
           </div>
         </dev-info>
       </inner-column>

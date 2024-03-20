@@ -6,7 +6,7 @@ switch (getPage()) {
 		break;
 
 	case "projects":
-		include "pages/projects.php";
+		include "./includes/pages/projects.php";
 		break;
 
 	case "project":
@@ -30,7 +30,7 @@ switch (getPage()) {
 		break;
 
 	case "experiments":
-		include "pages/experiments.php";
+		include "./includes/pages/experiments.php";
 		break;
 
 	case "site-map":

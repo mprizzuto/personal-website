@@ -2,7 +2,7 @@
 @import "colors.css";
 @import "setup.css";
 @import "typography.css";
-/*@import ".../private/includes/pages/css/style.css";*/
+@import "../includes/pages/css/style.css";
 @import "themes.css";
 @import "dark-theme.css";
 

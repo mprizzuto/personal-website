@@ -378,7 +378,7 @@ function generateSkills(array $skills) {
 	// }
 
 	function globalNav() {
-		include "../private/database/nav-data.php";
+		include "./database/nav-data.php";
 		$globalLinks = ["home", "about", "projects", "experiments"];
 
     foreach($navLinks as $navLinkText => $navLink) {

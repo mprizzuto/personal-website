@@ -1,6 +1,6 @@
 		<footer class="site-footer">
 		  <inner-column>
-			  <?php include "../private/includes/components/nav.php";?>
+			  <?php include "./includes/components/nav.php";?>
 			  <a href="?page=site-map" <?=styleSitemapLink()?>>site-map</a>
 			  <a href="?page=style-guide">style guide</a>
 		  </inner-column>

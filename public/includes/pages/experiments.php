@@ -1,6 +1,6 @@
 <?php
-include "database/experiment-database.php";
-// include "./routers/detail-router.php";
+include 'database/experiment-database.php';
+include 'detail-router.php';
 ?>
 <section class="experiments">
   <inner-column>

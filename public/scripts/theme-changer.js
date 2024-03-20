@@ -1,5 +1,5 @@
 console.clear();
-
+console.log("THEMECHANGER>js");
 let themeChanger = {
   themeMenuButton: function() {
     return this.themeButtons().themeMenu;
@@ -286,7 +286,7 @@ async function sendThemeToServer(theme) {
     }
 
     const data = await response.json(); // Parse the JSON response
-
+    // console.log('body', body);
     // Handle the JSON data here
     console.log('Data from server:', data);
 

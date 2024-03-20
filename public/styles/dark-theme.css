@@ -1,0 +1,52 @@
+/*dark mode*/
+body.dark-theme {
+  color: var(--body-color);
+  background: var(--background-color);
+}
+
+:is(body.dark-theme a) {
+/*  color: inherit;*/
+  color: linen;
+}
+
+body.dark-theme img {
+  filter: brightness(.8) contrast(1.2);
+}
+
+/*@media (prefers-color-scheme: dark) {
+
+  body.dark-theme {
+    color: var(--body-color);
+    background: var(--night-theme-background);
+  }
+  body h1, h2 {
+
+  }
+  .right-arrow {
+    background: linen;
+  }
+  a {
+    color: inherit;
+  }
+  a:visited {
+
+  }
+  .dev-credentials {
+    border-left:  8px solid white;
+    padding: 10px;
+  }
+}
+*/
+
+
+.dark-theme {
+  background: blue;
+  color: white;
+}
+
+/*@media (prefers-color-scheme: dark) {
+  body {
+    background: blue;
+    color: white;
+  }
+}*/

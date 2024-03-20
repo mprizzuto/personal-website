@@ -1,0 +1,143 @@
+
+/* RESET */
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+@import 'developer-styles.css'; 
+/* comment this ^ out - when you are ready */
+
+
+/* SETTINGS */
+@import 'settings.css'; /* variables/ etc */
+
+
+/* STRUCTURE */
+@import 'structure.css';
+
+
+/* TYPOGRAPHY */
+@import 'typography.css';
+
+
+/* COMPONENTS */
+@import 'components.css';
+
+
+/* MODULES */
+@import 'modules/masthead.css';
+@import 'modules/graphic-diptych.css';
+@import 'modules/call-to-action.css';
+@import 'modules/articles-intro.css';
+@import 'modules/article-card.css';
+@import 'modules/site-map.css';
+/* should everything/nothing be in it's own file? */
+
+/*fonts*/
+@font-face {
+	font-family: "Neuton";
+	src: url("../fonts/neuton/Neuton-Regular.ttf") format("Truetype");
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/work-sans/WorkSans-Regular.ttf") format("Truetype");
+}
+
+* {
+	/*outline:  5px solid lime;*/
+}
+
+html {
+	background-color: var(--white);
+}
+
+
+
+
+/*
+	This the area where you work out your styles 
+	If it makes sense, you can break these out into their own files.
+*/
+
+
+/* SITE SECTIONS */
+.site-header {
+	/*background-color: #9ec9eb;*/
+	background:  var(--accent-color-one);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.site-header inner-column {
+	padding: 14px;
+}
+
+body {
+	background: var(--lighter-slate);
+}
+
+footer inner-column {
+	/*border:  10px solid red;*/
+	padding-left: 20px;
+}
+
+.what-to-call-it-then {
+	padding-left: 10px;
+}
+
+
+
+/* just to show the full-width and section seperation */
+section:nth-of-type(odd) {
+
+}
+
+
+
+/* OK! SITE STYLES! */
+.site-header {
+  /*background-color: var(--brick);*/
+  /*color: var(--white);*/
+  color:  black;
+}
+
+.welcome {
+  
+}
+
+
+/* things kinda just start grouping up... and you'll know when something should be grouped into another file - most of the time */
+
+
+.get-involved {
+  /*background-color:  var(--logo-color);*/
+  /*color:  white;*/
+  /*background-image:  url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");*/
+} /* interesting way to include the whole image in your CSS */
+
+.get-involved inner-column {
+	/*max-width:  700px;*/
+}
+
+.get-involved call-to-action {
+
+}
+
+
+.stuff {
+  
+}
+
+.help-us {
+  
+}
+
+.site-footer {
+	background-color: var(--accent-color-one);
+	color: var(--white);
+}
+
+.site-footer .logo {
+	max-width:  60px;
+}
+

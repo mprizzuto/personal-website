@@ -1,0 +1,65 @@
+.site-header, .calm-voice, 
+call-to-action a, .what-to-call-it-then p, 
+site-map nav, article-card span {
+	font-family: "Work Sans", sans-serif;
+}
+
+call-to-action a, article-card span {
+	text-decoration: underline;
+	color: black;
+}
+
+article-card span:hover {
+	color:  slategray;
+}
+
+.loud-voice	{
+	font-family: sans-serif;
+	font-size: clamp(36px, 5vw, 60px);
+}
+
+.user-menu {
+	margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+	.loud-voice {
+		font-weight: 700;
+	}
+}
+
+.intro-voice, .attention-voice	{
+	font-family: "Neuton", sans-serif;
+	font-size: 40px;
+}
+
+.attention-voice	{
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+.calm-voice {
+	font-size: 1rem;
+}
+
+.attention-voice, .loud-voice {
+	letter-spacing: 0.02em;
+	line-height: 1.2;
+}
+
+p {
+	line-height: 1.5;
+}
+
+p + p {
+	margin-top: 14px;
+}
+
+
+h1 + p {
+	margin-top: 20px;
+}
+
+h2 + p {
+	margin-top: 10px;
+}

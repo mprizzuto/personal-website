@@ -1,0 +1,19 @@
+body.homepage a:link {
+  color:  white;
+}
+
+body.homepage a:visited {
+/*  color:  gray;*/
+}
+
+body.homepage a:hover {
+  color:  orange;
+}
+
+body.homepage a:active {
+  color:  green;
+}
+
+.heading-one {
+  font-size: clamp(2.5em, 5vw, 5em);
+}

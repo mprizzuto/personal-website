@@ -1,0 +1,21 @@
+header a, footer a {
+	text-transform: uppercase;
+}
+
+footer nav {
+	max-width:  300px;
+}
+
+header .right-arrow {
+  max-width: 145px;
+}
+
+header inner-column, footer inner-column {
+	max-width: 1200px;
+	/*outline: 20px solid lime;*/
+}
+
+.author-welcome inner-column {
+  border-bottom: 5px solid gold;
+  /*max-width: 900px;*/
+}

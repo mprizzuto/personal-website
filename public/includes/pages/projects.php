@@ -1,5 +1,5 @@
 <?php 
-  include "./database/project-database.php";
+	include "database/project-database.php";
 
 ?>
 <section class="projects">

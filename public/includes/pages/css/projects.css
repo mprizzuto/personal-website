@@ -1,0 +1,106 @@
+* {
+  /*outline:  3px solid red;*/
+}
+
+.projects h2 {
+/*  color:  var(--moon-blue);*/
+  font-size: 1.8em;
+}
+
+.projects h2 + picture {
+  margin-top: 30px;
+}
+
+project-card picture {
+  max-width: 15vw;
+  max-width: 300px;
+}
+
+.projects inner-column {
+  /*outline:  20px solid purple;*/
+/*  max-width: 1200px;*/
+}
+
+.projects-svg {
+  display: block;
+}
+
+.project-list {
+  margin-top: 40px;
+}
+
+.project-list li + li {
+  margin-top: 20px;
+}
+
+.projects-svg {
+  display: block;
+  margin-top:  30px;
+/*  width: 32vw;*/
+  max-width: 300px;
+}
+
+.projects p {
+  max-width: 90ch;
+}
+
+.project-list picture {
+  outline:  5px solid var(--moon-color);;
+}
+
+project-card {
+  display:  block;
+}
+
+project-card picture + p {
+  margin-top: 10px;
+}
+
+.project-card + .project-card {
+  margin-top: 20px;
+}
+
+.projects a[href="https://perpetual.education"] {
+  display: inline-block;
+/*  color:  red;*/
+}
+
+/*project details card*/
+detail-card {
+  display: block;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+detail-card picture {
+  max-width: 600px;
+  width: 40vw;
+}
+
+detail-card * {
+  margin-top: 10px;
+}
+
+detail-card a {
+  display: block;
+}
+
+detail-card p {
+  max-width: 75ch;
+}
+
+
+@media (min-width: 600px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 25px;
+    list-style: none;
+  }
+  .project-list li + li {
+    margin-top: unset;
+  }
+}

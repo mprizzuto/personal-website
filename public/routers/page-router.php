@@ -2,7 +2,7 @@
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
-		include "pages/home.php";
+		include "./includes/pages/home.php";
 		break;
 
 	case "projects":
@@ -14,7 +14,7 @@ switch (getPage()) {
 		break;
 
 	case "about":
-		include "pages/about.php";
+		include "./includes/pages/about.php";
 		break;
 
 	case "writing":
@@ -77,7 +77,7 @@ switch (getPage()) {
 		break;
 
 	case "":
-		include "pages/home.php";
+		include "./includes/pages/home.php";
 		break;
 
 	default:

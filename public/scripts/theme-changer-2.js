@@ -4,6 +4,7 @@ let themeChanger = {
   getThemeButtons() {
     // return document.querySelector("#toggle-themes");
     let buttonIds = ["toggle-themes", "os-theme", "light-theme", "dark-theme"];
+    
     return buttonIds;
   },
 
@@ -19,29 +20,19 @@ let themeChanger = {
 };
 
 window.addEventListener("click", (event) => {
-
-  if ( [...themeChanger.getThemeMenu().classList].includes("show-themes") ) {
-    // if ( true ) {
-    //   themeChanger.getThemeMenu().classList.toggle("hide-themes");
-    //   console.log("fuck")
-    // }
-
-    console.log("THEME MENU open");
-    // themeChanger.getThemeMenu().classList.toggle("hide-themes");
-    // if (event.target) {
-      // themeChanger.getThemeMenu().classList.toggle("hide-themes");
-    // }
-  }
-  if (
-    themeChanger.getThemeButtons().includes(event.target.id)
-  ) {
-    themeChanger.getThemeMenu().classList.toggle("show-themes");
+  // if it's a button, allow the menu to toggle
+  if ( themeChanger.getThemeButtons().includes(event.target.id) ) {
+    console.log(`event is menu button or sub butt: ${event.target.id}`,themeChanger.getThemeButtons().includes(event.target.id));
+   
     themeChanger.getThemeMenu().classList.toggle("hide-themes");
+    themeChanger.getThemeMenu().classList.toggle("show-themes");
+
   }
 
-  if (event.target) {
-    // themeChanger.getThemeMenu().classList.toggle("hide-themes");
-  }
+  // allow the menu to close if you click anywhere but the buttons
+  if ( !themeChanger.getThemeButtons().includes(event.target.id) ) {
+      themeChanger.getThemeMenu().classList.add("hide-themes");
+    }
 
   if (event.target.id === "os-theme") {
     // console.log("theme-os");

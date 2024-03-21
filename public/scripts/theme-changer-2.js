@@ -4,7 +4,7 @@ let themeChanger = {
   getThemeButtons() {
     // return document.querySelector("#toggle-themes");
     let buttonIds = ["toggle-themes", "os-theme", "light-theme", "dark-theme"];
-    
+
     return buttonIds;
   },
 
@@ -54,7 +54,7 @@ window.addEventListener("click", (event) => {
 
   if (event.target.id === "dark-theme") {
     // console.log("theme- dark");
-    document.body.classList.toggle("dark-theme");
+    document.body.classList.add("dark-theme");
     document.body.classList.remove("light-theme", "os-theme");
 
     themeChanger.saveThemeToLs("dark-theme");

@@ -10,7 +10,7 @@ switch (getPage()) {
 		break;
 
 	case "project":
-		include "pages/project.php";
+		include "./includes/pages/project.php";
 		break;
 
 	case "about":
@@ -65,7 +65,7 @@ switch (getPage()) {
 
 	//case study page
 	case "case-study":
-		include "pages/case-studies.php";
+		include "./includes/pages/case-studies.php";
 		break;
 
 	case "style-guide":

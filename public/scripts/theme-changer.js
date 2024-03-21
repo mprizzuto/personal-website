@@ -37,7 +37,7 @@ let themeChanger = {
           sendThemeToServer("dark-theme")
           .then((data) => {
             // Handle the data
-            console.log('Received data:', data);
+            console.log('Received data:', data.json());
 
           })
           .catch((error) => {
@@ -207,7 +207,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     themeChanger.applyThemeToBody();
     themeChanger.themeButtons().osTheme.classList.toggle("selected-theme");
 
-
   }
 
 
@@ -271,9 +270,9 @@ async function sendThemeToServer(theme) {
   let currentTheme = {theme};
   try {
     const response = await fetch('index.php', {
-      method: 'POST', // You can change this to 'POST' if needed
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
         // Add any other headers as needed
       },
       body: JSON.stringify(currentTheme)
@@ -299,8 +298,6 @@ async function sendThemeToServer(theme) {
 }
 
 
-
-
 // document.addEventListener('DOMContentLoaded', function () {
   let osTheme = themeChanger.themeButtons().osTheme;
   let lightTheme = themeChanger.themeButtons().lightTheme;
@@ -313,7 +310,7 @@ async function sendThemeToServer(theme) {
       sendThemeToServer("os-theme")
       .then((data) => {
         // Handle the data
-        console.log('Received data:', data);
+        console.log('Received data:', data.text());
 
       })
       .catch((error) => {

@@ -5,6 +5,6 @@
 			  <a href="?page=style-guide">style guide</a>
 		  </inner-column>
 		</footer>
-		<script src="./scripts/theme-changer.js"></script>
+		<script src="./scripts/theme-changer-2.js"></script>
   </body>
 </html>

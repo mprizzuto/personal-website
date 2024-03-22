@@ -17,6 +17,16 @@
 
 
 /* themes */
+* {
+/*  outline: 3px solid red;*/
+}
+
+#toggle-themes {
+/*  padding: 12px;*/
+  margin-top: 20px;
+  outline: 3px solid red;
+}
+
 .hide-themes {
   display: none;
 }

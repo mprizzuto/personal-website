@@ -1,4 +1,4 @@
-<button id="toggle-themes"><span id="current-theme"></span></button>
+<button id="toggle-themes"><span id="current-theme"></span>theme</button>
 
 <ul class="theme-list">
   <li>

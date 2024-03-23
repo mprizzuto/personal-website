@@ -1,111 +1,62 @@
 console.clear();
 
 let themeChanger = {
-  getThemeNameById() {
-    let themeName = document.querySelector("#current-theme");
+  getValidThemes() {
+    let themes = ["os-theme", "light-theme", "dark-theme"];
 
-    return themeName;
+    return themes;
   },
-  getThemeButtons() {
-    // return document.querySelector("#toggle-themes");
-    let buttonIds = ["toggle-themes", "current-theme", "os-theme", "light-theme", "dark-theme"];
+  renderMenu() {
+    let themeList = document.querySelector(".theme-list");
 
-    return buttonIds;
-  },
+    let eventTargets = ["toggle-themes", "current-theme"];
 
-  getThemeMenu() {
-    return document.querySelector(".theme-list");
-  },
-	saveThemeToLs(theme) {
-    localStorage.setItem("mr-theme", theme);
-  },
-	getThemeFromLs() {
-    return localStorage.getItem("mr-theme");
-	},
-  templateThemeNameOnLoad() {
-    let lsTheme = this.getThemeFromLs();
-    // return lsTheme ? lsTheme : this.;
-
-    this.getThemeNameById().textContent = lsTheme;
-
-  },
-  templateThemeName(name) {
-    this.getThemeNameById().textContent = name+ "-theme";
-    // themeName.textContent = name;
-  },
-  applyTheme(event) {
-    let themeName = document.querySelector("#current-theme");
-    // if it's a button, allow the menu to toggle
-    if ( this.getThemeButtons().includes(event.target.id) ) {
-      console.log(`event is menu button or sub butt: ${event.target.id}`,themeChanger.getThemeButtons().includes(event.target.id));
-     
-      this.getThemeMenu().classList.toggle("hide-themes");
-      this.getThemeMenu().classList.toggle("show-themes");
-
-    }
-
-    // allow the menu to close if you click anywhere but the buttons
-    if ( !themeChanger.getThemeButtons().includes(event.target.id) ) {
-        this.getThemeMenu().classList.add("hide-themes");
+    window.addEventListener("click", (event) => {
+      // setting the targets for menu toggle
+      if ( eventTargets.includes(event.target.id) ) {
+        themeList.classList.toggle("hide-themes");
+        themeList.classList.toggle("show-themes");
       }
 
-    if (event.target.id === "os-theme") {
-      // console.log("theme-os");
-      document.body.classList.toggle("os-theme");
-      document.body.classList.remove("dark-theme", "light-theme");
+      // only write to local storage if theme is valid
+      if ( this.getValidThemes().includes(event.target.id) ) {
+        this.saveThemeToLs(event.target.id);
 
-      this.templateThemeName("os");
+        themeList.classList.add("hide-themes");
+        themeList.classList.remove("show-themes");
 
-      this.saveThemeToLs("os-theme");
+      }
 
+      // if () {
+
+      // }
+
+      else if ( !eventTargets.includes(event.target.id) ) {
+        themeList.classList.add("hide-themes");
+        themeList.classList.remove("show-themes");
+      }
+
+    });
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+      themeList.classList.toggle("hide-themes");
+    });
+  },
+  applyTheme(theme) {
+    // if the theme is valid, apply to body
+    if ( this.getValidThemes() ) {
+      document.body.classList.toggle(theme);
     }
-
-    if (event.target.id === "light-theme") {
-      // console.log("theme-light");
-      
-      document.body.classList.toggle("light-theme");
-      document.body.classList.remove("dark-theme", "os-theme");
-
-      this.templateThemeName("light");
-
-      this.saveThemeToLs("light-theme");
+  },
+  saveThemeToLs(theme) {
+    if (!theme) {
+      localStorage.setItem("mr-theme", "os");
     }
-
-    if (event.target.id === "dark-theme") {
-      // console.log("theme- dark");
-      document.body.classList.add("dark-theme");
-      document.body.classList.remove("light-theme", "os-theme");
-
-      this.templateThemeName("dark");
-
-      this.saveThemeToLs("dark-theme");
-      console.log("DARKTHEMEZ");
-      alert("DAKR THEM")
+    else {
+      localStorage.setItem("mr-theme", theme);
     }
   }
-};
 
+}
 
-window.addEventListener("click", (event) => {
-  themeChanger.applyTheme(event);
-  console.log("CLIDKED")
-
-});
-
-
-// hide the theme menu upon page loading
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("page laoded");
-
-  themeChanger.getThemeMenu().classList.toggle("hide-themes");
-
-  if ( themeChanger.getThemeFromLs() ) {
-    // if upon page loading the loacal storage oreferencde is set, set it on the body. 
-    console.log( themeChanger.getThemeFromLs() );
-
-    themeChanger.templateThemeNameOnLoad();
-  }
-});
-
-
-
+themeChanger.renderMenu();

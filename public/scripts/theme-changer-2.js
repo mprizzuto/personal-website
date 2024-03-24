@@ -94,6 +94,27 @@ let themeChanger = {
     return localStorage.getItem("mr-theme");
   },
   getUserOsTheme() {
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("dark-theme");
+
+      this.saveThemeToLs("dark-theme");
+
+      this.renderThemeIcon("dark-theme");
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("light-theme");
+
+      this.saveThemeToLs("light-theme");
+
+      this.renderThemeIcon("light-theme");
+    }
+
     // listen for changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     const newColorScheme = event.matches ? "dark" : "light";
@@ -104,12 +125,18 @@ let themeChanger = {
       // console.log("DARK THEME");
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("dark-theme");
+      this.saveThemeToLs(newColorScheme);
+
+      this.renderThemeIcon("dark-theme");
     }
 
     else if ( newColorScheme === "light" ) {
       // console.log("LIGHT THEME");
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("light-theme");
+      this.saveThemeToLs(newColorScheme);
+
+      this.renderThemeIcon("light-theme");
     }
     });
   }

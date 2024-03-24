@@ -25,11 +25,8 @@ let themeChanger = {
         themeList.classList.add("hide-themes");
         themeList.classList.remove("show-themes");
 
+        this.applyTheme(event.target.id);
       }
-
-      // if () {
-
-      // }
 
       else if ( !eventTargets.includes(event.target.id) ) {
         themeList.classList.add("hide-themes");
@@ -45,8 +42,18 @@ let themeChanger = {
   applyTheme(theme) {
     // if the theme is valid, apply to body
     if ( this.getValidThemes() ) {
-      document.body.classList.toggle(theme);
+      // remove
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.add(theme);
+
+      // console.log( document.querySelector("html").classList.length );
     }
+    // on page load get theme from LS, and apply to DOM
+    // window.addEventListener("DOMContentLoaded", () => {
+    //   document.querySelector("html").classList = [];
+    //   // console.log(themeChanger.getThemeFromLs());
+    //   document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
+    // });
   },
   saveThemeToLs(theme) {
     if (!theme) {
@@ -55,8 +62,21 @@ let themeChanger = {
     else {
       localStorage.setItem("mr-theme", theme);
     }
+  },
+  getThemeFromLs() {
+    return localStorage.getItem("mr-theme");
   }
 
 }
 
 themeChanger.renderMenu();
+
+//on page load, get theme from LS and add to DOM
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("html").classList = [];
+  
+  document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
+});
+
+
+

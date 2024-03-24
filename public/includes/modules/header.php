@@ -1,6 +1,3 @@
-<?php
-?>
-
 <?php 
   require_once "./includes/functions.php";
 
@@ -23,8 +20,20 @@
             <div class="credentials">
               <?php include "images/svgs/arrow.svg"; ?>
               <span class="job">Web Developer</span>
-              
             </div>
+
+            <?php 
+              // if ($_SERVER["REQUEST_METHOD"] === "POST") {
+              //   echo "POSTED";
+              // }
+
+              // else {
+              //   echo "NOT POSTED";
+
+              //   var_dump($_SERVER["REQUEST_METHOD"]);
+              // }
+
+            ?>
 
            <?php include "./includes/components/nav.php";?>
 

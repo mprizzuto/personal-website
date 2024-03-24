@@ -50,3 +50,5 @@ html.dark-theme img {
     color: white;
   }
 }*/
+
+/*TODO: implement dark and light theme using css only. i.e dont rely solely on JS. what if the user has JS disabled? */

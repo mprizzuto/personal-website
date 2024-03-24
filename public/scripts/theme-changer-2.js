@@ -49,6 +49,9 @@ let themeChanger = {
         this.applyTheme(event.target.id);
 
         this.renderThemeIcon(event.target.id);
+
+        // TODO: send theme as post request, save as cookie in PHP and applie to body to prevent flashing theme (FOUT).
+
       }
 
       else if ( !eventTargets.includes(event.target.id) ) {
@@ -89,11 +92,32 @@ let themeChanger = {
   },
   getThemeFromLs() {
     return localStorage.getItem("mr-theme");
+  },
+  getUserOsTheme() {
+    // listen for changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+
+    console.log("NCS", newColorScheme);
+
+    if (newColorScheme === "dark") {
+      // console.log("DARK THEME");
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("dark-theme");
+    }
+
+    else if ( newColorScheme === "light" ) {
+      // console.log("LIGHT THEME");
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("light-theme");
+    }
+    });
   }
 
 }
 
 themeChanger.renderMenu();
+themeChanger.getUserOsTheme();
 
 //on page load, get theme from LS and add to DOM
 window.addEventListener("DOMContentLoaded", () => {

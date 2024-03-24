@@ -2,14 +2,14 @@
 
 <ul class="theme-list">
   <li>
-    <button id="os-theme">os theme</button>
+    <button id="os-theme">🌓os theme</button>
   </li>
   
   <li>
-    <button id="light-theme">light theme</button>
+    <button id="light-theme">☀️light theme</button>
   </li>
   
   <li>
-    <button id="dark-theme">dark theme</button>
+    <button id="dark-theme">🌜dark theme</button>
   </li>
 </ul>

@@ -1,15 +1,15 @@
 /*dark mode*/
-body.dark-theme {
+html.dark-theme {
   color: var(--body-color);
   background: var(--background-color);
 }
 
-:is(body.dark-theme a) {
+:is(html.dark-theme a) {
 /*  color: inherit;*/
   color: linen;
 }
 
-body.dark-theme img {
+html.dark-theme img {
   filter: brightness(.8) contrast(1.2);
 }
 

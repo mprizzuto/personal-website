@@ -6,6 +6,27 @@ let themeChanger = {
 
     return themes;
   },
+  renderThemeIcon(theme) {
+    let currentTheme = document.querySelector("#current-theme");
+
+    switch(theme) {
+      case "os-theme": 
+        currentTheme.textContent = "🌓";
+        break;
+
+      case "light-theme": 
+        currentTheme.textContent = "☀️";
+        break;
+
+      case "dark-theme": 
+        currentTheme.textContent = "🌜";
+        break;  
+
+    // default: 
+    //   currentTheme.textContent = "🌓";
+
+    }
+  },
   renderMenu() {
     let themeList = document.querySelector(".theme-list");
 
@@ -26,6 +47,8 @@ let themeChanger = {
         themeList.classList.remove("show-themes");
 
         this.applyTheme(event.target.id);
+
+        this.renderThemeIcon(event.target.id);
       }
 
       else if ( !eventTargets.includes(event.target.id) ) {
@@ -37,6 +60,7 @@ let themeChanger = {
 
     window.addEventListener("DOMContentLoaded", (event) => {
       themeList.classList.toggle("hide-themes");
+
     });
   },
   applyTheme(theme) {
@@ -74,8 +98,10 @@ themeChanger.renderMenu();
 //on page load, get theme from LS and add to DOM
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("html").classList = [];
-  
+
   document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
+
+  themeChanger.renderThemeIcon(themeChanger.getThemeFromLs());
 });
 
 

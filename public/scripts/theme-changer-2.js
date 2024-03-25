@@ -81,10 +81,14 @@ let themeChanger = {
     //   // console.log(themeChanger.getThemeFromLs());
     //   document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
     // });
+
+    if (this.getThemeFromLs() === "os-theme") {
+      this.getUserOsTheme();
+    }
   },
   saveThemeToLs(theme) {
     if (!theme) {
-      localStorage.setItem("mr-theme", "os");
+      localStorage.setItem("mr-theme", "os-theme");
     }
     else {
       localStorage.setItem("mr-theme", theme);
@@ -100,9 +104,9 @@ let themeChanger = {
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("dark-theme");
 
-      this.saveThemeToLs("dark-theme");
+      this.saveThemeToLs("os-theme");
 
-      this.renderThemeIcon("dark-theme");
+      this.renderThemeIcon("os-theme");
     }
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -110,9 +114,9 @@ let themeChanger = {
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("light-theme");
 
-      this.saveThemeToLs("light-theme");
+      this.saveThemeToLs("os-theme");
 
-      this.renderThemeIcon("light-theme");
+      this.renderThemeIcon("os-theme");
     }
 
     // listen for changes
@@ -125,18 +129,18 @@ let themeChanger = {
       // console.log("DARK THEME");
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("dark-theme");
-      this.saveThemeToLs(newColorScheme);
+      this.saveThemeToLs("os-theme");
 
-      this.renderThemeIcon("dark-theme");
+      this.renderThemeIcon("os-theme");
     }
 
     else if ( newColorScheme === "light" ) {
       // console.log("LIGHT THEME");
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("light-theme");
-      this.saveThemeToLs(newColorScheme);
+      this.saveThemeToLs("os-theme");
 
-      this.renderThemeIcon("light-theme");
+      this.renderThemeIcon("os-theme");
     }
     });
   }
@@ -144,15 +148,22 @@ let themeChanger = {
 }
 
 themeChanger.renderMenu();
-themeChanger.getUserOsTheme();
+
+
+// only run this if user clicks the os-theme button
+
+if (themeChanger.getThemeFromLs() === "os") {
+  themeChanger.applyTheme(themeChanger.getThemeFromLs());
+}
 
 //on page load, get theme from LS and add to DOM
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("html").classList = [];
 
-  document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
-
-  themeChanger.renderThemeIcon(themeChanger.getThemeFromLs());
+  // document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
+  console.log(`${themeChanger.getThemeFromLs()}`);
+  themeChanger.renderThemeIcon(`${themeChanger.getThemeFromLs()}`);
+  themeChanger.applyTheme(themeChanger.getThemeFromLs());
 });
 
 

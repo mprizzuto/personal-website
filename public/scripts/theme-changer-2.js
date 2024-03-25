@@ -20,10 +20,7 @@ let themeChanger = {
 
       case "dark-theme": 
         currentTheme.textContent = "🌜";
-        break;  
-
-    // default: 
-    //   currentTheme.textContent = "🌓";
+        break;
 
     }
   },
@@ -39,6 +36,8 @@ let themeChanger = {
         themeList.classList.toggle("show-themes");
       }
 
+
+      // this logic shoudl be in itds own function
       // only write to local storage if theme is valid
       if ( this.getValidThemes().includes(event.target.id) ) {
         this.saveThemeToLs(event.target.id);
@@ -51,7 +50,20 @@ let themeChanger = {
         this.renderThemeIcon(event.target.id);
 
         // TODO: send theme as post request, save as cookie in PHP and applie to body to prevent flashing theme (FOUT).
-
+        fetch('index.php', {
+          method: 'POST',
+          body: JSON.stringify({ some_data: 'Hello from JavaScript' }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+          })
+          .then(response => response.text())
+          .then(data => {
+            console.log(data); // This will log the response from the PHP script
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
       }
 
       else if ( !eventTargets.includes(event.target.id) ) {
@@ -149,9 +161,7 @@ let themeChanger = {
 
 themeChanger.renderMenu();
 
-
 // only run this if user clicks the os-theme button
-
 if (themeChanger.getThemeFromLs() === "os") {
   themeChanger.applyTheme(themeChanger.getThemeFromLs());
 }
@@ -165,6 +175,5 @@ window.addEventListener("DOMContentLoaded", () => {
   themeChanger.renderThemeIcon(`${themeChanger.getThemeFromLs()}`);
   themeChanger.applyTheme(themeChanger.getThemeFromLs());
 });
-
 
 

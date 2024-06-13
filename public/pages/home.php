@@ -29,7 +29,7 @@ if ($time >= 16 || $time <= 07) {
     </div>
 
     <celestial-shapes>
-      <?php include "../private/day-night-router.php";?>
+      <?php include "./routers/day-night-router.php";?>
     </celestial-shapes>
   </inner-column>
 </section>

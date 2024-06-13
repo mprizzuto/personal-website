@@ -2,39 +2,39 @@
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
-		include "./includes/pages/home.php";
+		include "./assets/includes/pages/home.php";
 		break;
 
 	case "projects":
-		include "./includes/pages/projects.php";
+		include "./assets/includes/pages/projects.php";
 		break;
 
 	case "project":
-		include "./includes/pages/project.php";
+		include "./assets/includes/pages/project.php";
 		break;
 
 	case "about":
-		include "./includes/pages/about.php";
+		include "./assets/includes/pages/about.php";
 		break;
 
 	case "writing":
-		include "./includes/pages/writing.php";
+		include "./assets/includes/pages/writing.php";
 		break;
 
 	case "style-guide":
-		include "./includes/pages/style-guide.php";
+		include "./assets/includes/pages/style-guide.php";
 		break;
 
 	case "contact":
-		include "./includes/pages/contact.php";
+		include "./assets/includes/pages/contact.php";
 		break;
 
 	case "experiments":
-		include "./includes/pages/experiments.php";
+		include "./assets/includes/pages/experiments.php";
 		break;
 
 	case "site-map":
-		include "./includes/pages/site-map.php";
+		include "./assets/includes/pages/site-map.php";
 		break;	
 
 
@@ -55,21 +55,21 @@ switch (getPage()) {
 
 
 	case "goals":
-		include "./includes/pages/goals.php";
+		include "./assets/includes/pages/goals.php";
 		break;
 
 	//resume page
 	case "resume":
-		include "./includes/pages/resume.php";
+		include "./assets/includes/pages/resume.php";
 		break;
 
 	//case study page
 	case "case-study":
-		include "./includes/pages/case-studies.php";
+		include "./assets/includes/pages/case-studies.php";
 		break;
 
 	case "style-guide":
-		include "./includes/pages/style-guide.php";
+		include "./assets/includes/pages/style-guide.php";
 		break;	
 
 	case "null":
@@ -77,7 +77,7 @@ switch (getPage()) {
 		break;
 
 	case "":
-		include "./includes/pages/home.php";
+		include "./assets/includes/pages/home.php";
 		break;
 
 	default:

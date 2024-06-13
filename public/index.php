@@ -1,4 +1,4 @@
-<?php require "./includes/modules/header.php"?>
+<?php require "./assets/includes/modules/header.php"?>
 
 <main class=<?php echo getClassByQuery() . "-main"?> >
   <article class=<?php echo getClassByQuery() . "-article"?>>

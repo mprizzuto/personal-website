@@ -1,8 +1,10 @@
+/*setup*/
 @import "reset.css";
 @import "colors.css";
 @import "setup.css";
 @import "typography.css";
-@import "../includes/pages/css/style.css";
+
+/*themes*/
 @import "themes.css";
 @import "dark-theme.css";
 

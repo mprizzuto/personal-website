@@ -12,4 +12,4 @@
   </article>
 </main>
 
-<?php require "./includes/modules/footer.php";
+<?php require "./assets/includes/modules/footer.php";

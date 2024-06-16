@@ -1,5 +1,4 @@
 console.clear();
-
 let themeChanger = {
   getValidThemes() {
     let themes = ["os-theme", "light-theme", "dark-theme"];
@@ -50,16 +49,16 @@ let themeChanger = {
         this.renderThemeIcon(event.target.id);
 
         // TODO: send theme as post request, save as cookie in PHP and applie to body to prevent flashing theme (FOUT).
-       fetch('./index.php', {
+       fetch('/index.php', {
           method: 'POST',
           body: JSON.stringify({theme: event.target.id}),
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'text/plain'
           }
         })
         .then(response => response.text())
         .then(data => {
-          console.log(data); // This will log the response from the PHP script
+          //console.log(data); // This will log the response from the PHP script
         })
         .catch(error => {
           console.error('Error:', error);

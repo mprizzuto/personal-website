@@ -1,5 +1,5 @@
 <?php 
-  require_once "./assets/includes/functions.php";
+  require_once "functions.php";
 
 ?>
 

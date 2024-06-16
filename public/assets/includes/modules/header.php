@@ -1,6 +1,6 @@
 <?php 
   require_once "functions.php";
-
+  // require_once "./assets/includes/components/set-theme.php";
 ?>
 
 

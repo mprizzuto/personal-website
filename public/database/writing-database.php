@@ -39,7 +39,7 @@ $writingList = [
 ?>
 
 <section class="article">
-	<?php include "./images/svgs/left-quote.svg";?>
+	<?php include "./assets/images/svgs/left-quote.svg";?>
 	<?php foreach ($writingList as $list) {?>
 		
 	<inner-column>
@@ -57,6 +57,6 @@ $writingList = [
 		</writing-card>
 	</inner-column>
 	<?php }?>
-	<?php include "./images/svgs/right-quote.svg";?>
+	<?php include "./assets/images/svgs/right-quote.svg";?>
 </section>
 

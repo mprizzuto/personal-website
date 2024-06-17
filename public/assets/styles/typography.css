@@ -75,6 +75,10 @@ body.experimental-body a:active {
   color:  wheat;
 }
 
+.right-arrow {
+  max-width: 100px;
+}
+
 a[target='_blank']::after {
   content: '\21D7';
 }
@@ -101,7 +105,7 @@ em {
 }
 
 span.job {
-  display:block;
+/*  display:block;*/
   font-size: clamp(1.2em, 2vw, 6em);
   transform: translate(2px, 0px);
   line-height: 1.3;

@@ -4,8 +4,8 @@
 @import "about.css";
 @import "writing.css";
 @import "goals.css";
-@import "../../styles/colors.css";
-@import "../../styles/themes.css";
+/*@import "../styles/colors.css";*/
+/*@import "../styles/themes.css";*/
 
 .four-o-four {
 	margin-top: 40px;

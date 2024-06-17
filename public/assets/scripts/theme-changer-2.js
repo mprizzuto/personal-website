@@ -49,22 +49,26 @@ let themeChanger = {
 
         this.renderThemeIcon(event.target.id);
 
-        // TODO: send theme as post request, save as cookie in PHP and applie to body to prevent flashing theme (FOUT).
-       fetch('/index.php', {
-          method: 'POST',
-          body: event.target.id,
-          headers: {
-            'Content-Type': 'text/plain'
-          }
-        })
-        .then(response => response.text())
-        .then(data => {
-          console.log("data:", data); // This will log the response from the PHP script
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
 
+
+       // fetch('/index.php', {
+       //    method: 'POST',
+       //    body: event.target.id,
+       //    headers: {
+       //      'Content-Type': 'text/plain'
+       //    }
+       //  })
+       //  .then(response => response.text())
+       //  .then(data => {
+       //    console.log("data:", data); // This will log the response from the PHP script
+       //  })
+       //  .catch(error => {
+       //    console.error('Error:', error);
+       //  });
+
+
+
+        this.sendThemeToServer(event.target.id);
       }
 
       else if ( !eventTargets.includes(event.target.id) ) {
@@ -161,10 +165,22 @@ let themeChanger = {
 
         this.renderThemeIcon("os-theme");
       }
-    
-    });
-  }
 
+    });
+  },
+  async sendThemeToServer(theme) {
+    const URL = "index.php";
+
+    var response = await fetch(URL, {
+      method: "POST",
+      // headers: {
+      // "Content-Type": "application/json",
+      // } 
+    });
+    var page = await response.json();
+
+    console.log(page);
+  }
 }
 
 themeChanger.renderMenu();

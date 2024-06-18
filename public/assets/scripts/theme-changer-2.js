@@ -49,25 +49,6 @@ let themeChanger = {
 
         this.renderThemeIcon(event.target.id);
 
-
-
-       // fetch('/index.php', {
-       //    method: 'POST',
-       //    body: event.target.id,
-       //    headers: {
-       //      'Content-Type': 'text/plain'
-       //    }
-       //  })
-       //  .then(response => response.text())
-       //  .then(data => {
-       //    console.log("data:", data); // This will log the response from the PHP script
-       //  })
-       //  .catch(error => {
-       //    console.error('Error:', error);
-       //  });
-
-
-
         this.sendThemeToServer(event.target.id);
       }
 
@@ -84,20 +65,10 @@ let themeChanger = {
     });
   },
   applyTheme(theme) {
-    // if the theme is valid, apply to body
     if ( this.getValidThemes() ) {
-      // remove
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.add(theme);
-
-      // console.log( document.querySelector("html").classList.length );
     }
-    // on page load get theme from LS, and apply to DOM
-    // window.addEventListener("DOMContentLoaded", () => {
-    //   document.querySelector("html").classList = [];
-    //   // console.log(themeChanger.getThemeFromLs());
-    //   document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
-    // });
 
     if (this.getThemeFromLs() === "os-theme") {
       this.getUserOsTheme();
@@ -115,9 +86,7 @@ let themeChanger = {
     return localStorage.getItem("mr-theme");
   },
   getUserOsTheme() {
-
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("dark-theme");
@@ -128,7 +97,6 @@ let themeChanger = {
     }
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("light-theme");
@@ -177,7 +145,7 @@ let themeChanger = {
       // "Content-Type": "application/json",
       // } 
     });
-    var page = await response.json();
+    var page = await response;
 
     console.log(page);
   }

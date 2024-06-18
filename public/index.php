@@ -12,4 +12,8 @@
   </article>
 </main>
 
-<?php require "./assets/includes/modules/footer.php";
+<?php require "./assets/includes/modules/footer.php";?>
+
+<?php
+// var_dump($_POST);
+?>

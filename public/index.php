@@ -13,4 +13,3 @@
 </main>
 
 <?php require "./assets/includes/modules/footer.php";?>
-<?php var_dump($_COOKIE["mr-theme"]); ?>

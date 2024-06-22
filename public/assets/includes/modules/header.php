@@ -5,7 +5,7 @@
 
 
 <!doctype html>
-  <html lang="en">
+  <html lang="en" class="<?= $_COOKIE["mr-theme"] ?>">
   
  <?php include "head.php"; ?>
 

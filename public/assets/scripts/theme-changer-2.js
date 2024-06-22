@@ -141,13 +141,18 @@ let themeChanger = {
 
     var response = await fetch(URL, {
       method: "POST",
-      // headers: {
-      // "Content-Type": "application/json",
-      // } 
+      headers: {
+      "Content-Type": "text/plain",
+      }, 
+      body: theme
     });
-    var page = await response;
+    // var page = await response;
 
-    console.log(page);
+    if (!response.ok) {
+      console.error('Network response was not ok', response.statusText);
+      return;
+    }
+    console.log(response.text(), response);
   }
 }
 

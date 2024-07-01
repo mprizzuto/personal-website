@@ -1,15 +1,15 @@
 [
 	{
 		"id": 0,
-		"name": "jan tschichold poster",
-		"purpose": "using HTML and CSS to create a cool poster",
+		"name": "Exercises for Programmers (EFP)",
+		"purpose": "programming exercises using JS and PHP",
 		"link": "?page=experiment-detail&experiment=art-poster"
 	},
 	{
 		"id": 1,
-		"name": "SVG and CSS grid study",
-		"purpose": "using SVG and CSS grid to create poster art ",
-		"link": "?page=experiment-detail&experiment=svg-grid-study"
+		"name": "form validator",
+		"purpose": "regular expressions and forms",
+		"link": "?page=experiment-detail&experiment=form-validator"
 	},
 	{
 		"id": 2,
@@ -19,8 +19,15 @@
 	},
 	{
 		"id": 3,
-		"name": "rotation/transform study",
-		"purpose": "practice using CSS rotate/transform",
-		"link": "?page=experiment-detail&experiment=transform-rotate"
+		"name": "The most A11Y(accessible) page ever (TMAPE)",
+		"purpose": "Can we make a highly accessible page?",
+		"link": "?page=experiment-detail&experiment=most-a11y-page"
+	},
+	{
+		"id": 4,
+		"name": "screenreader experiment",
+		"purpose": "how do different screenreaders interpret the same content, and how to optimize content for them?",
+		"link": "?page=experiment-detail&experiment="
 	}
+
 ]

@@ -1,10 +1,10 @@
 [
 	{
-		"title": "responsive layout",
-		"slug": "responsive-layout",
-		"case-study-slug": "responsive-layout-cs",
+		"title": "responsive layout garden",
+		"slug": "responsive-layout-garden",
+		"case-study-slug": "responsive-layout-garden-cs",
 		"id": 0,
-		"description": "a project that combines research, visual design and CSS."
+		"description": "I like finding cool visual design and recreasting the it for the web"
 	},
 	{
 		"title": "theming challenge",
@@ -12,5 +12,12 @@
 		"case-study-slug": "theming-challenge-cs",
 		"id": 1,
 		"description": "in this project, we were given the base HTML code and told to style it to evoke a certain feeling"
+	},
+	{
+		"title": "PHP guestBook",
+		"slug": "php-guestBook",
+		"case-study-slug": "php-guestBook-cs",
+		"id": 2,
+		"description": "A PHP guestbook with CRUD capabilities and sessions. "
 	}
 ]

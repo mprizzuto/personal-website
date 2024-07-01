@@ -2,10 +2,19 @@
 include "database/experiment-database.php";
 include "./routers/detail-router.php";
 ?>
+<header class="experiments-header">
+  <inner-column>
+    <h2>learning and exploration</h2>
+
+    <p>Form handling, regular expressions (yikes!), and exploration using the web technologies of:</p>
+
+    <?php include "./assets/includes/components/web-technologies.php"?>
+  </inner-column>
+</header>
+
 <section class="experiments">
   <inner-column>
-    <h2 class="design-title">web
-    </h2>
+    <h2 class="design-title">web</h2>
 
     <?php foreach($experimentsList as $experiment): ?>
       <experiment-card class="experiment-experiment-card">

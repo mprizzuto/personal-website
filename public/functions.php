@@ -72,6 +72,7 @@ function styleAnchorLink($slug) {
 			return $navLinkStyle;
 			break;	
 	}
+	// if queryString is null, style home link?
 }
 
 //get any page with ?writing query string
@@ -158,79 +159,75 @@ function generateMeta($title, $description, $image) {?>
   	switch (getPage()) {
   		case "home":
   		case null:
-  			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
+  			generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://marcorizzuto.net/images/metadata/home.jpg");
   			break;	
 
   		// case null:
-  		// 	generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/home.jpg");
+  		// 	generateMeta("home", "My name is Marco Rizzuto. I bring a neurodiverse approach to Web Development and User Experience. I am excited to take part in the current web revolution to build highly performant and accessible websites.", "https://marcorizzuto.net/images/metadata/home.jpg");
   		// 	break;
 
   		case "projects":
-  			generateMeta("projects", "come see my projects", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/projects.jpg");
+  			generateMeta("projects", "come see my projects", "https://marcorizzuto.net/images/metadata/projects.jpg");
   			break;
 
   			case "about":
-	  			generateMeta("about", "come read about the man behind the code", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/about.jpg");
+	  			generateMeta("about", "come read about the man behind the code", "https://marcorizzuto.net/images/metadata/about.jpg");
 	  			break;
 
 	  		case "sitemap":
-	  			generateMeta("sitemap", "the sitemap", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/sitemap.jpg");
+	  			generateMeta("sitemap", "the sitemap", "https://marcorizzuto.net/images/metadata/sitemap.jpg");
 	  			break;	
 
   			case "writing":
-	  			generateMeta("writing", "like reading? you'll love my blog posts", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing.jpg");
+	  			generateMeta("writing", "like reading? you'll love my blog posts", "https://marcorizzuto.net/images/metadata/writing.jpg");
 	  			break;
 
 	  		case "blog-post-detail":
-	  			generateMeta("blog post detail", "get the detail!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing-page-detail.jpg");
+	  			generateMeta("blog post detail", "get the detail!", "https://marcorizzuto.net/images/metadata/writing-page-detail.jpg");
 	  			break;	
 
 	  		case "case-study":
-	  			generateMeta("project case study", "read the case study!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/writing-page-detail.jpg");
-	  			break;		
-
-	  		// case "portfolio":
-	  		// 	generateMeta("portfolio", "check out my portfolio", "htps://peprojects.dev/alpha-1/mprizzuto/personal-website-v2");
-	  		// 	break;
+	  			generateMeta("project case study", "read the case study!", "https://marcorizzuto.net/images/metadata/writing-page-detail.jpg");
+	  			break;
 
 	  			case "resume":
-		  			generateMeta("resume", "check out my resume", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/resume.jpg");
+		  			generateMeta("resume", "check out my resume", "https://marcorizzuto.net/images/metadata/resume.jpg");
 		  			break;
 
 		  		case "goals":
-	  				generateMeta("goals", "check out my goals", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/goals.jpg");
+	  				generateMeta("goals", "check out my goals", "https://marcorizzuto.net/images/metadata/goals.jpg");
 	  				break;
 
 	  			case "contact":
-	  				generateMeta("contact", "contact me", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/contact.jpg");
+	  				generateMeta("contact", "contact me", "https://marcorizzuto.net/images/metadata/contact.jpg");
 	  				break;
 
 	  			case "experiments":
-	  				generateMeta("experiments", "my experiments", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiments.jpg");
+	  				generateMeta("experiments", "my experiments", "https://marcorizzuto.net/images/metadata/experiments.jpg");
 	  				break;
 
 	  			case "experiment-detail":
-	  				generateMeta("experiment detail", "my experiment detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/experiment-detail.jpg");
+	  				generateMeta("experiment detail", "my experiment detail", "https://marcorizzuto.net/images/metadata/experiment-detail.jpg");
 	  				break;
 
 	  			case "project":
-	  				generateMeta("project detail ", "my project detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/project-detail.jpg");
+	  				generateMeta("project detail ", "my project detail", "https://marcorizzuto.net/images/metadata/project-detail.jpg");
 	  				break;
 
 	  			case "blog-post-detail":
-	  				generateMeta("blog post detail", "my blog post detail", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/blog-post-detail.jpg");
+	  				generateMeta("blog post detail", "my blog post detail", "https://marcorizzuto.net/images/metadata/blog-post-detail.jpg");
 	  				break;
 
 	  			case "site-map":
-	  				generateMeta("site-map", "all the site links!", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/site-map.jpg");
+	  				generateMeta("site-map", "all the site links!", "https://marcorizzuto.net/images/metadata/site-map.jpg");
 	  				break;
 
 	  			case "style-guide":
-	  				generateMeta("style-guide", "site style guide", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/style-guide.jpg");
+	  				generateMeta("style-guide", "site style guide", "https://marcorizzuto.net/images/metadata/style-guide.jpg");
 	  				break;
 
 	  			default:
-	  				generateMeta("404", "page not found", "https://peprojects.dev/alpha-1/mprizzuto/images/metadata/404.jpg");
+	  				generateMeta("404", "page not found", "https://marcorizzuto.net/images/metadata/404.jpg");
   	}
   }
 ?>

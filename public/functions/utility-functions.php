@@ -1,13 +1,188 @@
 <?php 
+function isFirstPageLoad() {
+		if (
+    	count($_GET) === 0 || getQueryString() === ""
+ 		) {
+ 			return true;
+			// echo "firt page load";
+		}
+	}
+
+$currentFile = basename($_SERVER["SCRIPT_NAME"]);
+
+function getQueryString() {
+	$queryString = $_GET["page"] ?? null;
+	return $queryString;
+}
+
+// a better var_dump
+function formatVar(mixed $input) {
+	echo "<pre>";
+	var_dump($input);
+	echo "</pre>";
+}
+
+function sanitizeString(string $str) {
+	$result = htmlspecialchars($str);
+	$result = strip_tags($str);
+
+	return $result;
+}
+
+
+
+//get any page with ?page query string
+function getPage() {
+	$page = $_GET["page"] ?? null;
+	return $page;
+}
+
 function checkPages(mixed $page) {
 	// compare $pages against a list of known strings
 
-	$pageList = ["home","projects","project-detail","about","writing","style-guide","contact","experiments","experiment-detail","blog-post-detail", "", "case-study", "resume", "site-map"];
+	$pageList = [
+		"home","projects",
+		"project-detail",
+		"about","writing","style-guide",
+		"contact",
+		"experiments",
+		"experiment-detail",
+		"blog-post-detail", 
+		"",
+		 "case-study", 
+		 "resume", 
+		"site-map"
+	];
 
 	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList) ? "true" : "false";
 }
+
+function getClassByQuery() {
+		// $classSuffix = "-main";
+
+		if (checkPages(getPage()) !== "true") {
+			return "404";
+		}
+		else if (getQueryString() === null) {
+			return "home";
+		}
+		else {
+			return getPage();
+		}
+	}
+
+function generatePageTitle() {
+		$articleH1 = ""; 
+
+		if ( !isset($_GET["page"]) && getPage() !== "false")  {
+			$articleH1 = "Hi!";
+			return $articleH1;
+		}
+		else if (getPage() == "false") {
+			$articleH1 = "404!";
+			return $articleH1;
+		}
+
+		else if( isset($_GET["page"]) ) {
+			switch ( getPage() ) {
+			
+				case "home":
+				$articleH1 = "Hi!";
+					return $articleH1;
+					break;
+
+				case "projects":
+					$articleH1 = "My Projects";
+					return $articleH1;
+					break;
+
+				case "project":
+					$articleH1 = "My Project";
+					return $articleH1;
+					break;
+
+				case "project":
+					$articleH1 = "My Project";
+					return $articleH1;
+					break;			
+
+				case "blog-post-detail":
+					$articleH1 = "My blog post detail";
+					return $articleH1;
+					break;
+
+				case "experiment-detail":
+					$articleH1 = "experiment detail";
+					return $articleH1;
+					break;
+
+				case "case-study":
+					$articleH1 = "case study";
+					return $articleH1;
+					break;		
+
+				// case "project":
+				// 	$articleH1 = "my project";
+				// 	return $articleH1;
+				// 	break;	
+						
+				case "about":
+					$articleH1 = "About me";
+					return $articleH1;
+					break;
+
+				case "resume":
+					$articleH1 = "My resume";
+					return $articleH1;
+					break;
+
+				case "writing":
+					$articleH1 = "My writing";
+					return $articleH1;
+					break;		
+				
+				case "goals":
+					$articleH1 = "My goals";
+					return $articleH1;
+					break;
+
+				case "experiments":
+					$articleH1 = "My experiments";
+					return $articleH1;
+					break;
+
+				case "contact":
+					$articleH1 = "contact me?";
+					return $articleH1;
+					break;
+
+				case "site-map":
+					$articleH1 = "sitemap links";
+					return $articleH1;
+					break;
+
+				case "style-guide":
+					$articleH1 = "site style guide";
+					return $articleH1;
+					break;		
+
+				case "":
+					$articleH1 = "Hi!";
+					return $articleH1;
+					break;	
+						
+				default:
+					$articleH1 = "404!";
+					return $articleH1;
+			}
+		}
+		// return $articleH1;
+	}
 ?>
+
+
+
 <?php
 function generateMeta($title, $description, $image) {?>
 	<title><?=$title?></title>
@@ -90,36 +265,5 @@ function generateMeta($title, $description, $image) {?>
   			generateMeta("404", "page not found", "https://marcorizzuto.net/images/metadata/404.jpg");
   	}
   }
-?>
-
-<?php
-//get the current file .. i.e index.php
-$currentFile = basename($_SERVER["SCRIPT_NAME"]);
-// $queryString = $_GET["page"] ?? null;
-
-function getQueryString() {
-	$queryString = $_GET["page"] ?? null;
-	return $queryString;
-}
-
-// a better var_dump
-function formatVar(mixed $input) {
-	echo "<pre>";
-	var_dump($input);
-	echo "</pre>";
-}
-
-function sanitizeString(string $str) {
-	$result = htmlspecialchars($str);
-	$result = strip_tags($str);
-
-	return $result;
-}
-
-//get any page with ?page query string
-function getPage() {
-	$page = $_GET["page"] ?? null;
-	return $page;
-}
 ?>
 

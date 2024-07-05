@@ -5,7 +5,7 @@
 
 
 <!doctype html>
-  <html lang="en" class="<?= $_COOKIE["mr-theme"] ?>">
+  <html lang="en" class="<?= $_COOKIE["mr-theme"] ?? null ?>">
   
  <?php include "head.php"; ?>
 
@@ -25,6 +25,7 @@
            <?php include "./assets/includes/components/nav.php";?>
 
            <?php include "./assets/includes/components/theme-changer.php"; ?>
+
           </div>
         </dev-info>
       </inner-column>

@@ -1,8 +1,7 @@
 <?php 
-  require_once "functions.php";
+  require_once "./functions/functions.php";
   require_once "./assets/includes/components/set-theme.php";
 ?>
-
 
 <!doctype html>
   <html lang="en" class="<?= $_COOKIE["mr-theme"] ?? null ?>">
@@ -25,7 +24,8 @@
            <?php include "./assets/includes/components/nav.php";?>
 
            <?php include "./assets/includes/components/theme-changer.php"; ?>
-
+           
+           <?php formatVar($_GET)?>
           </div>
         </dev-info>
       </inner-column>

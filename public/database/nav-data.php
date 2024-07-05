@@ -5,7 +5,6 @@ $navLinks = [
 	"about" => "?page=about",
   "experiments" => "?page=experiments",
 
-  "about" => "?page=about",
   "writing" => "?page=writing",
   "resume" => "?page=resume",
   "goals" => "?page=goals",

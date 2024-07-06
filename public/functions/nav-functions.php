@@ -6,7 +6,27 @@ function globalNav() {
 
 	foreach($navLinks as $navLinkText => $navLink) {
     if ( in_array($navLinkText, $globalLinks) ) {
-    	echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+    	if ( !isFirstPageLoad() ) {
+    		echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+    	}
+    	// if its the first page load
+    	if ( isFirstPageLoad() ) {
+    		// if current item is home
+    		if ($navLinkText === "home") {
+    			// style it and continue
+    			 echo " " . "<a style = 'border-bottom: 2px solid maroon; padding-bottom: 2px' href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";
+    			 continue;
+    		}
+    		echo " " . "<a href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";
+    		// template out the rest of the links
+    	}
+    	// this should only happen if it isnt the first time loading the page
+    		// echo " " . "<a href='$navLink'" . styleAnchorLink($navLinkText) . ">" . $navLinkText . "</a>";
+    	// echo " " . "<a href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";
+    	// if first time laoding page,
+    		// style home link
+    		//  continue outputting regular links without style
+
     }
   }
 }

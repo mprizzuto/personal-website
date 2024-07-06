@@ -1,12 +1,13 @@
 <?php 
 function isFirstPageLoad() {
-		if (
-    	count($_GET) === 0 || getQueryString() === ""
- 		) {
- 			return true;
-		}
-    return false;
-	}
+  if (
+  	count($_GET) === 0 || 
+    getQueryString() === ""
+  ) {
+  		return true;
+  }
+  return false;
+}
 
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);
 
@@ -58,84 +59,79 @@ function checkPages(mixed $page) {
 	return in_array($page, $pageList) ? "true" : "false";
 }
 
-function getClassByQuery() {
-		// $classSuffix = "-main";
 
-		if (checkPages(getPage()) !== "true") {
-			return "404";
-		}
-		else if (getQueryString() === null) {
-			return "home";
-		}
-		else {
-			return getPage();
-		}
+function getClassByQuery() {
+	if (checkPages(getPage()) !== "true") {
+		return "404";
 	}
+	else if (getQueryString() === null) {
+		return "home";
+	}
+	else {
+		return getPage();
+	}
+}
+
 
 function generatePageTitle() {
-		$articleH1 = ""; 
+	$articleH1 = ""; 
 
-		if ( !isset($_GET["page"]) && getPage() !== "false")  {
-			$articleH1 = "Hi!";
-			return $articleH1;
-		}
-		else if (getPage() == "false") {
-			$articleH1 = "404!";
-			return $articleH1;
-		}
+  if ( !isset($_GET["page"]) && getPage() !== "false")  {
+  	$articleH1 = "Hi!";
+  	return $articleH1;
+  }
+  else if (getPage() == "false") {
+  	$articleH1 = "404!";
+  	return $articleH1;
+  }
 
-		else if( isset($_GET["page"]) ) {
-			switch ( getPage() ) {
-			
-				case "home":
-				$articleH1 = "Hi!";
-					return $articleH1;
-					break;
+  else if( isset($_GET["page"]) ) {
+  	switch ( getPage() ) {
+  	
+  		case "home":
+  		$articleH1 = "Hi!";
+  			return $articleH1;
+  			break;
 
-				case "projects":
-					$articleH1 = "My Projects";
-					return $articleH1;
-					break;
+  		case "projects":
+  			$articleH1 = "My Projects";
+  			return $articleH1;
+  			break;
 
-				case "project":
-					$articleH1 = "My Project";
-					return $articleH1;
-					break;
+			case "project":
+				$articleH1 = "My Project";
+				return $articleH1;
+				break;
 
-				case "project":
-					$articleH1 = "My Project";
-					return $articleH1;
-					break;			
+			case "project":
+				$articleH1 = "My Project";
+				return $articleH1;
+				break;			
 
-				case "blog-post-detail":
-					$articleH1 = "My blog post detail";
-					return $articleH1;
-					break;
+			case "blog-post-detail":
+				$articleH1 = "My blog post detail";
+				return $articleH1;
+				break;
 
-				case "experiment-detail":
-					$articleH1 = "experiment detail";
-					return $articleH1;
-					break;
+			case "experiment-detail":
+				$articleH1 = "experiment detail";
+				return $articleH1;
+				break;
 
-				case "case-study":
-					$articleH1 = "case study";
-					return $articleH1;
-					break;		
+			case "case-study":
+				$articleH1 = "case study";
+				return $articleH1;
+				break;		
 
-				// case "project":
-				// 	$articleH1 = "my project";
-				// 	return $articleH1;
-				// 	break;	
-						
-				case "about":
-					$articleH1 = "About me";
-					return $articleH1;
-					break;
+			case "about":
+				$articleH1 = "About me";
+				return $articleH1;
+				break;
 
-				case "resume":
-					$articleH1 = "My resume";
-					return $articleH1;
-					break;
+			case "resume":
+				$articleH1 = "My resume";
+				return $articleH1;
+				break;
 
 				case "writing":
 					$articleH1 = "My writing";

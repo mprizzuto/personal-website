@@ -3,19 +3,7 @@ function styleAnchorLink($slug) {
 	// TODO. abstract out $navLinkStyle rule into its own function.
 	$queryString = $_GET["page"] ?? null;
 	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
-	// if $queryString  is null, or  is empty string
-	// if ($queryString === null || $queryString === "") {
-	// 	// echo "HOMEPAGE";
-	// 	return $navLinkStyle;
-	// }
 
-	if (isFirstPageLoad()) {
-		// return $navLinkStyle;
-		// echo "1st";
-	}
-
-	// if ($slug)
-	// echo "SLUG!!" . $slug . "qs" . getQueryString();
 	switch ($slug === getQueryString()) {
 		case "home":
     // case $slug === "":

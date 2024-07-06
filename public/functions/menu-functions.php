@@ -9,12 +9,17 @@ function styleAnchorLink($slug) {
 	// 	return $navLinkStyle;
 	// }
 
-	// if (isFirstPageLoad()) {
-	// 	return $navLinkStyle;
-	// }
+	if (isFirstPageLoad()) {
+		// return $navLinkStyle;
+		// echo "1st";
+	}
 
+	// if ($slug)
+	// echo "SLUG!!" . $slug . "qs" . getQueryString();
 	switch ($slug === getQueryString()) {
 		case "home":
+    // case $slug === "":
+    // case $slug === null:
 		  return $navLinkStyle;
 			break;
 

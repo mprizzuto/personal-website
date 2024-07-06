@@ -10,13 +10,3 @@ include "site-map-functions.php";
 include "goal-functions.php";
 include "portfolio-functions.php";
 ?>
-
-
-
- 
-
-
-
-
-
-

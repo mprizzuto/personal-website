@@ -4,8 +4,8 @@ function isFirstPageLoad() {
     	count($_GET) === 0 || getQueryString() === ""
  		) {
  			return true;
-			// echo "firt page load";
 		}
+    return false;
 	}
 
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);

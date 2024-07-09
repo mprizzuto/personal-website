@@ -8,7 +8,7 @@
       </inner-column>
     </header>
 
-    <?php require "./routers/page-router.php";?>
+    <?php require "../src/routers/page-router.php";?>
   </article>
 </main>
 

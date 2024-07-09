@@ -2,12 +2,11 @@
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
-	case "":
-		include "./templates/pages/home.php";
+		include "../src/templates/pages/home.php";
 		break;
 
 	case "projects":
-		include "./pages/projects.php";
+		include "../src/templates/pages/projects.php";
 		break;
 
 	case "project":
@@ -15,27 +14,27 @@ switch (getPage()) {
 		break;
 
 	case "about":
-		include "./pages/about.php";
+		include "../src/templates/pages/about.php";
 		break;
 
 	case "writing":
-		include "./pages/writing.php";
+		include "../src/templates/pages/writing.php";
 		break;
 
 	case "style-guide":
-		include "./pages/style-guide.php";
+		include "../src/templates/pages/style-guide.php";
 		break;
 
 	case "contact":
-		include "./pages/contact.php";
+		include "../src/templates/pages/contact.php";
 		break;
 
 	case "experiments":
-		include "./templates/pages/experiments.php";
+		include "../src/templates/pages/experiments.php";
 		break;
 
 	case "site-map":
-		include "./pages/site-map.php";
+		include "../src/templates/pages/site-map.php";
 		break;	
 
 	// project details router
@@ -55,11 +54,11 @@ switch (getPage()) {
 
 
 	case "goals":
-		include "./pages/goals.php";
+		include "../src/templates/pages/goals.php";
 		break;
 
 	case "resume":
-		include "./pages/resume.php";
+		include "../src/templates/pages/resume.php";
 		break;
 
 	//case study page
@@ -75,8 +74,12 @@ switch (getPage()) {
 		include "pages/home.php";
 		break;
 
+	case "":
+		include "./pages/home.php";
+		break;
+
   case "now":
-    include "./templates//pages/now.php";
+    include "../src/templates/pages/now.php";
     break;  
 
 

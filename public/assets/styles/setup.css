@@ -54,3 +54,7 @@ main {
   flex-grow: 1;
 }
 
+:is(p, li) {
+	max-width: 90ch;
+}
+

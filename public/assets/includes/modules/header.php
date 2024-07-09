@@ -1,5 +1,5 @@
 <?php 
-  require_once "./functions/functions.php";
+  require_once "../src/functions.php";
   require_once "./assets/includes/components/set-theme.php";
 ?>
 
@@ -25,7 +25,6 @@
 
            <?php include "./assets/includes/components/theme-changer.php"; ?>
            
-           <?php formatVar($_GET)?>
           </div>
         </dev-info>
       </inner-column>

@@ -44,7 +44,5 @@ function styleAnchorLink($slug) {
 			break;	
 	}
 
-
-	// if the query param page isnt in the $GET array, return ?
 }
 ?>

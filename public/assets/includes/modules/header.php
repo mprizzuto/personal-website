@@ -14,7 +14,7 @@
       <inner-column>
         <dev-info class="dev-info">
           <div class="dev-credential">
-            <p class="heading-one">Marco Rizzuto</p>
+            <p class="dev-name">Marco Rizzuto</p>
 
             <div class="credentials">
               <?php include "./assets/images/svgs/arrow.svg"; ?>

@@ -33,7 +33,7 @@
   //get all projects
   function getAllProjects() {
 		//get the project data
-		$json = file_get_contents("database/projects.json");
+		$json = file_get_contents("../src/database/projects.json");
 		//decode data to PHP
 		return json_decode($json, true);
 		//return data
@@ -57,7 +57,7 @@
 	// decode the JSON to PHP
 	//return case study
 	function getAllCaseStudies() {
-		$json = file_get_contents("database/case-studies.json");
+		$json = file_get_contents("../src/database/case-studies.json");
 		return json_decode($json, true);
 	}
 

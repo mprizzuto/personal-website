@@ -6,8 +6,6 @@ function styleAnchorLink($slug) {
 
 	switch ($slug === getQueryString()) {
 		case "home":
-    // case $slug === "":
-    // case $slug === null:
 		  return $navLinkStyle;
 			break;
 
@@ -18,30 +16,37 @@ function styleAnchorLink($slug) {
 		case "about":
 			return $navLinkStyle;
 			break;
+      // ^^^ why do i have to keep these cases, if they are coming in from the database?!
 
-		case "writing":
-			return $navLinkStyle;
-			break;
 
-		case "goals":
-			return $navLinkStyle;
-			break;
+    // i can probably delete the cases below
+		// case "writing":
+		// 	return $navLinkStyle;
+		// 	break;
 
-		case "resume":
-			return $navLinkStyle;
-			break;
+		// case "goals":
+		// 	return $navLinkStyle;
+		// 	break;
 
-		case "contact":
-			return $navLinkStyle;
-			break;	
+		// case "resume":
+		// 	return $navLinkStyle;
+		// 	break;
 
-		case "experiments":
-			return $navLinkStyle;
-			break;
+		// case "contact":
+		// 	return $navLinkStyle;
+		// 	break;	
 
-		case "site-map":
-			return $navLinkStyle;
-			break;	
+		// // case "experiments":
+		// // 	return $navLinkStyle;
+		// // 	break;
+
+		// // case "site-map":
+		// // 	return $navLinkStyle;
+		// // 	break;
+
+    // case "style-guide":
+    //   return $navLinkStyle;
+    //   break;  	
 	}
 
 }

@@ -1,6 +1,6 @@
 <?php 
 // require "./database/goal-data.json";
-$jsonGoals = file_get_contents("./database/goal-data.json");
+$jsonGoals = file_get_contents("../src/database/goal-data.json");
 $goalData = json_decode($jsonGoals, true);
 // formatVar($goalData);
 ?>

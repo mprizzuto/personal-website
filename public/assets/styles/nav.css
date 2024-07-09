@@ -1,0 +1,11 @@
+.site-menu a {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.other-links {
+	display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}

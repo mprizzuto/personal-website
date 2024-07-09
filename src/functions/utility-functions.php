@@ -31,7 +31,6 @@ function sanitizeString(string $str) {
 }
 
 
-
 //get any page with ?page query string
 function getPage() {
 	$page = $_GET["page"] ?? null;
@@ -42,16 +41,19 @@ function checkPages(mixed $page) {
 	// compare $pages against a list of known strings
 
 	$pageList = [
-		"home","projects",
+		"home",
+		"projects",
 		"project-detail",
-		"about","writing","style-guide",
+		"about",
+		"writing",
+		"style-guide",
 		"contact",
 		"experiments",
 		"experiment-detail",
 		"blog-post-detail", 
 		"",
-		 "case-study", 
-		 "resume", 
+		"case-study", 
+		"resume", 
 		"site-map"
 	];
 

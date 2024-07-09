@@ -14,6 +14,6 @@ body.homepage a:active {
   color:  green;
 }
 
-.heading-one {
+.dev-name {
   font-size: clamp(2.5em, 5vw, 5em);
 }

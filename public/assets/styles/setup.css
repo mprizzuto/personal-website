@@ -1,7 +1,3 @@
-* {
-	/*outline:  3px solid gray;*/
-}
-
 *, *:before, *:after {
 	box-sizing: inherit;
 }

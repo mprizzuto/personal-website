@@ -1,5 +1,5 @@
 <?php
-include "database/experiment-database.php";
+include "../src/database/experiment-database.php";
 include "./routers/detail-router.php";
 ?>
 <header class="experiments-header">

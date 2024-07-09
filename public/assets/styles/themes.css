@@ -1,30 +1,6 @@
-
-/*default theme*/
-/*.light-mode {
-  background: linen;
-  color: black;
-}*/
-
-
-/* should this be in forms.css ?  */
-/*:is(#theme-changer-form input, #theme-changer-form label ) {
-  display: block;
-}
-
-#theme-changer-form input + label, #theme-changer-form button {
-  margin-top: 20px;
-}*/
-
-
 /* themes */
-* {
-/*  outline: 3px solid red;*/
-}
-
 #toggle-themes {
-/*  padding: 12px;*/
   margin-top: 20px;
-/*  outline: 3px solid red;*/
 }
 
 .hide-themes {
@@ -34,7 +10,3 @@
 .selected-theme {
   border: 3px solid rebeccapurple;
 }
-
-
-
-

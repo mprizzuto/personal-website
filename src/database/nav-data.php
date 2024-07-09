@@ -9,6 +9,6 @@
     "resume" => "?page=resume",
     "goals" => "?page=goals",
     "contact" => "?page=contact",
-
+    "now" => "?page=now",
   ];
 ?>

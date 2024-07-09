@@ -54,7 +54,8 @@ function checkPages(mixed $page) {
 		"",
 		"case-study", 
 		"resume", 
-		"site-map"
+		"site-map",
+		"now"
 	];
 
 	// return "true" if page exists, otherwise return "false"
@@ -169,7 +170,12 @@ function generatePageTitle() {
 					$articleH1 = "Hi!";
 					return $articleH1;
 					break;	
-						
+
+				case "now":
+					$articleH1 = "now";
+					return $articleH1;
+					break;	
+
 				default:
 					$articleH1 = "404!";
 					return $articleH1;
@@ -257,6 +263,10 @@ function generateMeta($title, $description, $image) {?>
 
 			case "style-guide":
 				generateMeta("style-guide", "site style guide", "https://marcorizzuto.net/images/metadata/style-guide.jpg");
+				break;
+
+			case "now":
+				generateMeta("now", "now page", "https://marcorizzuto.net/images/metadata/style-guide.jpg");
 				break;
 
 			default:

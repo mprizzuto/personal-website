@@ -57,7 +57,6 @@ switch (getPage()) {
 		include "./pages/goals.php";
 		break;
 
-	//resume page
 	case "resume":
 		include "./pages/resume.php";
 		break;
@@ -78,6 +77,11 @@ switch (getPage()) {
 	case "":
 		include "./pages/home.php";
 		break;
+
+  case "now":
+    include "./pages/now.php";
+    break;  
+
 
 	default:
 		// include "pages/home.php";

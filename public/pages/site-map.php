@@ -1,4 +1,4 @@
-<?php include "database/site-map-data.php";?>
+<?php include "../src/database/site-map-data.php";?>
 
 <section class=<?=getClassByQuery()?>-section>
 	<inner-column>

@@ -1,5 +1,5 @@
 <?php 
-  require_once "./functions/functions.php";
+  require_once "../src/functions.php";
   require_once "./assets/includes/components/set-theme.php";
 ?>
 
@@ -14,7 +14,7 @@
       <inner-column>
         <dev-info class="dev-info">
           <div class="dev-credential">
-            <p class="heading-one">Marco Rizzuto</p>
+            <p class="dev-name">Marco Rizzuto</p>
 
             <div class="credentials">
               <?php include "./assets/images/svgs/arrow.svg"; ?>
@@ -25,7 +25,6 @@
 
            <?php include "./assets/includes/components/theme-changer.php"; ?>
            
-           <?php formatVar($_GET)?>
           </div>
         </dev-info>
       </inner-column>

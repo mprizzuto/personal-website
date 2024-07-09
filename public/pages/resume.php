@@ -1,5 +1,5 @@
 <?php 
-require "./database/resume-data.php";
+require "../src/database/resume-data.php";
 ?>
 
 <section class="resume-data">

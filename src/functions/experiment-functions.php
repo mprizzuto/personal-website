@@ -1,7 +1,7 @@
 <?php
 function getAllExperiments() {
 	//get the project data
-	$json = file_get_contents("database/experiments.json");
+	$json = file_get_contents("../src/database/experiments.json");
 	//decode data to PHP
 	return json_decode($json, true);
 	//return data

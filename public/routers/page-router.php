@@ -76,7 +76,7 @@ switch (getPage()) {
 		break;
 
   case "now":
-    include "./templates//pages/now.php";
+    include "./templates/pages/now.php";
     break;  
 
 

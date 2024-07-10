@@ -24,6 +24,8 @@
            <?php include "./assets/includes/components/nav.php";?>
 
            <?php include "./assets/includes/components/theme-changer.php"; ?>
+
+           
            
           </div>
         </dev-info>

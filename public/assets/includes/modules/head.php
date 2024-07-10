@@ -7,7 +7,8 @@
 
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css"> 
 
-	<link rel="stylesheet" type="text/css" href="./assets/styles/css.php">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+
 
 	<?=getHead()?>
 </head>

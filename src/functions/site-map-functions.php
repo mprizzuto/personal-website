@@ -55,11 +55,20 @@
 <?php
 function styleSitemapLink() {
 	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
-	if (getQueryString() === "site-map" && 
-		getQueryString() != null) {
-		// return "";
-		return $navLinkStyle;
+	if (getQueryString() != null) {
+		if ( (getQueryString() === "site-map") ) {
+			// return "";
+			return $navLinkStyle;
+		}
+
+		// else if (getQueryString() === "style-guide" ) {
+		// 	return $navLinkStyle;
+		// }
+
 	}
-	return "";
+	
+	// $navLinkStyle = "";
+
+	// return $navLinkStyle;
 }
 ?>

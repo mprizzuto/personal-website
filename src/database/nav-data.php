@@ -9,6 +9,7 @@
     "resume" => "?page=resume",
     "goals" => "?page=goals",
     "contact" => "?page=contact",
-    "now" => "?page=now",
+    "site-map" => "?page=site-map",
+    "style-guide" => "?page=style-guide",
   ];
 ?>

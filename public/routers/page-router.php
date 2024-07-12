@@ -72,7 +72,7 @@ switch (getPage()) {
 		break;	
 
 	case "null":
-		include "pages/home.php";
+		include "./templates/pages/home.php";
 		break;
 
   case "now":
@@ -82,7 +82,7 @@ switch (getPage()) {
 
 	default:
 		// include "pages/home.php";
-	include "pages/404.php";
+	include "./templates/pages/404.php";
 }
 
 ?>

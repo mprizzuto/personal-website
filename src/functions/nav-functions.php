@@ -2,7 +2,7 @@
 function globalNav() {
 	include "../src/database/nav-data.php";
 
-	$globalLinks = ["home", "about", "projects", "experiments"];
+	$globalLinks = ["home", "about", "projects", "experiments", "site-map", "style-guide"];
 
 	foreach($navLinks as $navLinkText => $navLink) {
     if ( in_array($navLinkText, $globalLinks) ) {

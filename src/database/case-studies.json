@@ -1,16 +1,30 @@
 [
 	{
-		"title": "responsive layout-case study",
-		"slug": "responsive-layout-cs",
+		"title": "Responsive layout garden",
+		"slug": "responsive-layout-garden-cs",
 		"id": 0,
-		"hypothesis": "hypothesis: responsiv elayout case study",
-		"conclusion": "conclusion: responsive layout conclusion"
+		"hypothesis": "Layouts follow similar conventions",
+		"conclusion": "they follow common conmventions but the web is unique, in that one size doesn't fit all"
 	},
 	{
 		"title": "theming challenge",
 		"slug": "theming-challenge-cs",
 		"id": 1,
-		"hypothesis": "hypothesis: theming challenge",
+		"hypothesis": "industries follow certain theming conmventions",
 		"conclusion": "conclusion: theming challenge"
-	}
+	},
+	{
+		"title": "php-guestBook",
+		"slug": "php-guestBook-cs",
+		"id": 2,
+		"hypothesis": "TODO",
+		"conclusion": "they follow common conmventions but the web is unique, in that one size doesn't fit all"
+	},
+  {
+    "title": "visual design inspiration app",
+    "slug": "vdi-cs",
+    "id": 2,
+    "hypothesis": "people like finding and sharing visual design inspiration",
+    "conclusion": "People pass visual design inspiration every day and neglect to notice/share it"
+  }
 ]

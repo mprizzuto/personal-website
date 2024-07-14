@@ -10,7 +10,7 @@ switch (getPage()) {
 		break;
 
 	case "project":
-		include "./pages/project.php";
+		include "../src/templates/pages/project.php";
 		break;
 
 	case "about":
@@ -63,11 +63,11 @@ switch (getPage()) {
 
 	//case study page
 	case "case-study":
-		include "./pages/case-studies.php";
+		include "../src/templates/pages/case-studies.php";
 		break;
 
 	case "style-guide":
-		include "./pages/style-guide.php";
+		include "../src/templates/pages/style-guide.php";
 		break;	
 
 	case "null":
@@ -85,7 +85,7 @@ switch (getPage()) {
 
 	default:
 		// include "pages/home.php";
-	include "pages/404.php";
+	include "../src/templates/pages/404.php";
 }
 
 ?>

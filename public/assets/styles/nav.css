@@ -1,3 +1,7 @@
+.site-menu {
+  max-width: 40ch;
+}
+
 .site-menu a {
   display: inline-block;
   margin-right: 5px;

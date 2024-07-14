@@ -1,6 +1,6 @@
 <?php 
   require_once "../src/functions.php";
-  require_once "./assets/includes/components/set-theme.php";
+  require_once "../src/components/set-theme.php";
 ?>
 
 <!doctype html>
@@ -21,9 +21,9 @@
               <span class="job">Web Developer</span>
             </div>
 
-           <?php include "./assets/includes/components/nav.php";?>
+           <?php include "../src/components/nav.php";?>
 
-           <?php include "./assets/includes/components/theme-changer.php"; ?>
+           <?php include "../src/components/theme-changer.php"; ?>
 
            
            

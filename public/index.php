@@ -1,4 +1,4 @@
-<?php require "./assets/includes/modules/header.php"?>
+<?php require "../src/modules/header.php"?>
 
 <main class=<?php echo getClassByQuery() . "-main"?> >
   <article class=<?php echo getClassByQuery() . "-article"?>>
@@ -12,4 +12,4 @@
   </article>
 </main>
 
-<?php require "./assets/includes/modules/footer.php";?>
+<?php require "../src/modules/footer.php";?>

@@ -8,7 +8,7 @@ include "../src/routers/detail-router.php";
 
     <p>Form handling, regular expressions (yikes!), and exploration using the web technologies of:</p>
 
-    <?php include "./assets/includes/components/web-technologies.php"?>
+    <?php include "../src/components/web-technologies.php"?>
   </inner-column>
 </header>
 

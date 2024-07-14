@@ -1,9 +1,9 @@
-@import "./styles/homepage.css";
-@import "./styles/experimental.css";
-@import "./styles/projects.css";
-@import "./styles/about.css";
-@import "./styles/writing.css";
-@import "./styles/goals.css";
+@import "homepage.css";
+@import "experimental.css";
+@import "projects.css";
+@import "about.css";
+@import "writing.css";
+@import "goals.css";
 
 .four-o-four {
 	margin-top: 40px;

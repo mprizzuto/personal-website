@@ -1,4 +1,0 @@
-<Files "styles.css">
-    Order allow,deny
-    Deny from all
-</Files>

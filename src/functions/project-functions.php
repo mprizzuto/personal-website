@@ -32,22 +32,15 @@
 
   //get all projects
   function getAllProjects() {
-		//get the project data
 		$json = file_get_contents("../src/database/projects.json");
-		//decode data to PHP
 		return json_decode($json, true);
-		//return data
 	}
 
   //get individual project that matches slug
 	function getProjectBySlug($slug) {
-		//get projects
 		$projects = getAllProjects();
-		//look at each project
 		foreach($projects as $project) {
-			//if it matches the given slug
 			if ($project["slug"] === $slug) {
-	  		//return data for that project
 				return $project;
 			}
 		}

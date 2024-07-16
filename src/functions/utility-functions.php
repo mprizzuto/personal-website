@@ -4,7 +4,7 @@ function isFirstPageLoad() {
   	count($_GET) === 0 || 
     getQueryString() === ""
   ) {
-  		return true;
+  	return true;
   }
   return false;
 }
@@ -13,6 +13,7 @@ $currentFile = basename($_SERVER["SCRIPT_NAME"]);
 
 function getQueryString() {
 	$queryString = $_GET["page"] ?? null;
+
 	return $queryString;
 }
 
@@ -34,10 +35,11 @@ function sanitizeString(string $str) {
 //get any page with ?page query string
 function getPage() {
 	$page = $_GET["page"] ?? null;
+
 	return $page;
 }
 
-function checkPages(mixed $page) {
+function checkPages(string $page):bool {
 	// compare $pages against a list of known strings
 
 	$pageList = [
@@ -64,10 +66,10 @@ function checkPages(mixed $page) {
 
 
 function getClassByQuery() {
-	if (checkPages(getPage()) !== "true") {
+	if ( checkPages(getPage()) !== "true" ) {
 		return "404";
 	}
-	else if (getQueryString() === null) {
+	else if ( getQueryString() === null ) {
 		return "home";
 	}
 	else {
@@ -75,14 +77,27 @@ function getClassByQuery() {
 	}
 }
 
+function getProjectSlug() {
+	return $_GET["slug"] ?? null; //SANITIZE THIS
+}
+
+function sanitizeStr(string $str) {
+	// removes anything that isnt a letter, dash, or number.
+	// replace it with empty string ""
+	return preg_replace("/[^a-zA_Z0-9]/", "", $str);
+}
 
 function generatePageTitle() {
 	$articleH1 = ""; 
 
-  if ( !isset($_GET["page"]) && getPage() !== "false")  {
+  if ( 
+  	!isset($_GET["page"]) && 
+  	getPage() !== "false"
+   )  {
   	$articleH1 = "Hi!";
   	return $articleH1;
   }
+
   else if (getPage() == "false") {
   	$articleH1 = "404!";
   	return $articleH1;
@@ -92,9 +107,9 @@ function generatePageTitle() {
   	switch ( getPage() ) {
   	
   		case "home":
-  		$articleH1 = "Hi!";
-  			return $articleH1;
-  			break;
+	  		$articleH1 = "Hi!";
+	  			return $articleH1;
+	  			break;
 
   		case "projects":
   			$articleH1 = "My Projects";
@@ -102,12 +117,7 @@ function generatePageTitle() {
   			break;
 
 			case "project":
-				$articleH1 = "My Project";
-				return $articleH1;
-				break;
-
-			case "project":
-				$articleH1 = "My Project";
+				$articleH1 = "Project";
 				return $articleH1;
 				break;			
 
@@ -136,63 +146,62 @@ function generatePageTitle() {
 				return $articleH1;
 				break;
 
-				case "writing":
-					$articleH1 = "My writing";
-					return $articleH1;
-					break;		
-				
-				case "goals":
-					$articleH1 = "My goals";
-					return $articleH1;
-					break;
+			case "writing":
+				$articleH1 = "My writing";
+				return $articleH1;
+				break;		
+			
+			case "goals":
+				$articleH1 = "My goals";
+				return $articleH1;
+				break;
 
-				case "experiments":
-					$articleH1 = "My experiments";
-					return $articleH1;
-					break;
+			case "experiments":
+				$articleH1 = "My experiments";
+				return $articleH1;
+				break;
 
-				case "contact":
-					$articleH1 = "contact me?";
-					return $articleH1;
-					break;
+			case "contact":
+				$articleH1 = "contact me?";
+				return $articleH1;
+				break;
 
-				case "site-map":
-					$articleH1 = "sitemap links";
-					return $articleH1;
-					break;
+			case "site-map":
+				$articleH1 = "sitemap links";
+				return $articleH1;
+				break;
 
-				case "style-guide":
-					$articleH1 = "site style guide";
-					return $articleH1;
-					break;		
+			case "style-guide":
+				$articleH1 = "site style guide";
+				return $articleH1;
+				break;		
 
-				case "":
-					$articleH1 = "Hi!";
-					return $articleH1;
-					break;	
+			case "":
+				$articleH1 = "Hi!";
+				return $articleH1;
+				break;	
 
-				case "now":
-					$articleH1 = "now";
-					return $articleH1;
-					break;	
+			case "now":
+				$articleH1 = "now";
+				return $articleH1;
+				break;	
 
 				default:
 					$articleH1 = "404!";
 					return $articleH1;
 			}
 		}
-		// return $articleH1;
 	}
 ?>
 
 
 
 <?php
-function generateMeta($title, $description, $image) {?>
-	<title><?=$title?></title>
-    <meta name="description" content="<?=$description?>">
+	function generateMeta($title, $description, $image) {?>
+		<title><?=$title?></title>
+		<meta name="description" content="<?=$description?>">
 
-    <meta property="og:image" content="<?=$image?>">
+		<meta property="og:image" content="<?=$image?>">
 <?php }?>
 
 <?php 

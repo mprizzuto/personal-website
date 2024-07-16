@@ -1,6 +1,5 @@
 <?php 
 	include "../src/database/project-database.php";
-
 ?>
 <section class="projects">
 	<inner-column>

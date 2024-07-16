@@ -44,12 +44,12 @@ switch (getPage()) {
 
 	// experiment detail router
 	case "experiment-detail":
-		include "./database/experiment-details-database.php";
+		include "../src/database/experiment-details-database.php";
 		break;
 
 	// writing details router
 	case "blog-post-detail":
-		include "./database/writing-detail-database.php";
+		include "../src/database/writing-detail-database.php";
 		break;
 
 

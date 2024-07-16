@@ -26,6 +26,11 @@ h2 {
   font-size: clamp(1.5em, 3vw, 3em);
 }
 
+mark {
+  display: inline-block;
+  padding: 2px;
+}
+
 /*homepage*/
 
 .greet {

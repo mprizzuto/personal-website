@@ -1,15 +1,18 @@
 <section>
   <inner-column>
+
   	<?php 
-  	//get case study data
-  	$caseStudy = getCaseStudyBySlug($_GET["slug"]);
-  	//show data
+    	$caseStudy = getCaseStudyBySlug($_GET["slug"] ?? null);
   	?>
 
-  	<h2><?=$caseStudy["title"]?></h2>
-  	<p><?=$caseStudy["hypothesis"]?></p>
-  	<p><?=$caseStudy["conclusion"]?></p>
-
-
+    <?php if ($caseStudy): ?>
+      <h2><?=$caseStudy["title"] ?? null?></h2>
+      <p><?=$caseStudy["hypothesis"] ?? null?></p>
+      <p><?=$caseStudy["conclusion"] ?? null?></p>
+      
+      <?php else: ?>
+      <p><mark>invalid case study</mark>. check the link and try again</p>
+    <?php ENDIF; ?>  
+  	
   </inner-column>
 </section>

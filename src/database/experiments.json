@@ -1,11 +1,5 @@
 [
 	{
-		"id": 0,
-		"name": "Exercises for Programmers (EFP)",
-		"purpose": "programming exercises using JS and PHP",
-		"link": "?page=experiment-detail&experiment=art-poster"
-	},
-	{
 		"id": 1,
 		"name": "form validator",
 		"purpose": "regular expressions and forms",

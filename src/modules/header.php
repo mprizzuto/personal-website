@@ -5,10 +5,7 @@
 
 <!doctype html>
   <html lang="en" class="<?= $_COOKIE["mr-theme"] ?? null ?>">
-  
  <?php include "head.php"; ?>
-
-
   <body class= "<?php echo getClassByQuery() . "-page" //. $_SESSION["theme"] ?? null; ?>"> 
     <header>
       <inner-column>
@@ -25,8 +22,6 @@
 
            <?php include "../src/components/theme-changer.php"; ?>
 
-           
-           
           </div>
         </dev-info>
       </inner-column>

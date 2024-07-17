@@ -66,7 +66,7 @@ function checkPages(string $page):bool {
 
 
 function getClassByQuery() {
-	if ( checkPages(getPage()) !== "true" ) {
+	if ( checkPages(getPage() ?? "") !== "true" ) {
 		return "404";
 	}
 	else if ( getQueryString() === null ) {

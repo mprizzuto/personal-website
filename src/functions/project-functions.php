@@ -32,8 +32,9 @@
 
   //get all projects
   function getAllProjects() {
-		$json = file_get_contents("../src/database/projects.json");
-		return json_decode($json, true);
+		// $json = file_get_contents("../src/database/projects.json");
+		// return json_decode($json, true);
+		return file_get_contents("../src/database/projects.json");
 	}
 
   //get individual project that matches slug

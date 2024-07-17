@@ -1,18 +1,18 @@
 <?php 
 $projectName = $_GET["slug"] ?? null;
 
-$projectsJSON = file_get_contents("../src/database/projects.json");
+$projectsJSON = getAllProjects();
 
 $projectsArr = json_decode($projectsJSON, true);
  
 ?>
 
-<section>
+<section class="mr-projects">
   <inner-column>
     <?php
       switch ($projectName) {
         case "responsive-layout-garden":
-          echo "RLG PROJECT";
+          include "../src/templates/pages/projects/rlg/garden.php";
           break;
         
         case "theming-challenge":

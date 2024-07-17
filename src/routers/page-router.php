@@ -1,7 +1,17 @@
 <?php
+// echo "TEST";
+// // if isFirstPageLoad, incude home page
+// echo "FIRST OAGE LOAD" . isFirstPageLoad();
+// if ( isFirstPageLoad() ) {
+
+// 	include "../src/templates/pages/home.php";	
+// }
+
 /*main page router*/ 
 switch (getPage()) {
 	case "home":
+	case "":
+	// if first pagge load
 		include "../src/templates/pages/home.php";
 		break;
 
@@ -71,10 +81,6 @@ switch (getPage()) {
 		break;	
 
 	case "null":
-		include "pages/home.php";
-		break;
-
-	case "":
 		include "../src/templates/pages/home.php";
 		break;
 

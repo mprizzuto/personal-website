@@ -13,6 +13,7 @@
           <div class="dev-credential">
             <p class="dev-name">Marco Rizzuto</p>
 
+
             <div class="credentials">
               <?php include "./assets/images/svgs/arrow.svg"; ?>
               <span class="job">Web Developer</span>

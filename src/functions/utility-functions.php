@@ -12,7 +12,7 @@ function isFirstPageLoad() {
 $currentFile = basename($_SERVER["SCRIPT_NAME"]);
 
 function getQueryString() {
-	$queryString = $_GET["page"] ?? null;
+	$queryString = $_GET["page"] ?? "";
 
 	return $queryString;
 }
@@ -34,9 +34,17 @@ function sanitizeString(string $str) {
 
 //get any page with ?page query string
 function getPage() {
-	$page = $_GET["page"] ?? null;
+	// ig valif pah return
+	if (
+		checkPages( getQueryString() )
+	) {
+		$page = $_GET["page"] ?? "";
 
-	return $page;
+		return $page;
+	}
+	
+
+	return "404";
 }
 
 function checkPages(string $page):bool {
@@ -61,20 +69,24 @@ function checkPages(string $page):bool {
 	];
 
 	// return "true" if page exists, otherwise return "false"
-	return in_array($page, $pageList) ? "true" : "false";
+	return in_array($page, $pageList);
 }
 
 
 function getClassByQuery() {
-	if ( checkPages(getPage() ?? "") !== "true" ) {
-		return "404";
-	}
-	else if ( getQueryString() === null ) {
+
+	if ( 
+		getQueryString() === null || 
+		isFirstPageLoad()
+	 ) {
 		return "home";
 	}
-	else {
-		return getPage();
-	}
+	// if firsdt page load, return home + getPage()
+
+	// if ( isFirstPageLoad() ) {
+	// 	return getPage();
+	// }
+	return getPage();
 }
 
 function getProjectSlug() {

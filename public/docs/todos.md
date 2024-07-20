@@ -1,7 +1,10 @@
 # TODOS:
+KEEP THINGS SMALL UNTIL
+- we figure out proper file structure
+- bundle CSS files by theme
 - create function to create unique id for database
 
-- bundle CSS files by theme
+- why is the class 404 on page load?? FIX IT
 
 - set 404 message for invalid project page slug
 
@@ -13,3 +16,9 @@
 
 - fix site map page
  - include links to respective pages
+
+- Projects
+  - abstract require stattements into function and paths to files into a database
+  - improve HTML, as it's now being embedded in other HTML. 
+    - so, remove major landmarks i.e main. only 1 main per page!
+  - stop project modules from inheriting theme changes  

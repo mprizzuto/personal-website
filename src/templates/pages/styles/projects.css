@@ -305,3 +305,114 @@ design-poster > inner-column {
     min-width: 50px;
   }
 }
+
+
+/* garden 3 */
+.tsch-site-main {
+  --heading-accent: rgb(179,27,27);
+  font-family: "Trebuchet ms", sans-serif;
+}
+
+/*  type*/
+.tsch-site-main {
+  line-height: 1.5;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  padding-bottom: 40vh;
+  background: url("https://i.ibb.co/nD9f6B5/tshci.png");
+  background-repeat: no-repeat;
+  background-position: center;
+/*   background-position: bottom -200px right -160px; */
+  background-position: bottom -200px right 10%;
+}
+
+.tsch-page-header, .tsch-history {
+  padding: 5px;
+}
+
+.tsch-bookmark {
+  
+}
+
+.tsch-bookmark h1 {
+  font-size: 3em;
+}
+
+.tsch-history h2 {
+  font-size: 1.8em;
+}
+
+.tsch-site-main h1, .tsch-site-main h1 h2 {
+  line-height: 1;
+}
+
+.tsch-history {
+  margin-top: 10px;
+}
+
+.tsch-dot {
+  display: inline-block;
+  font-size: 2em;
+}
+
+.tsch-advocate {
+  margin-top: 5px;
+  font-size: clamp(1.2em, 2vw, 4em);
+}
+
+/*  media*/
+.jan-portrait {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.bookmark svg rect {
+  fill: var(--heading-accent);
+}
+
+@media (min-width: 600px) {
+  .tsch-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tsch-history .tsch-bookmark {
+    border-left: 8px solid var(--heading-accent);
+  }
+  .tsch-history h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    min-height: 450px;
+    transform: translate(0px, 0px);
+    padding: 5px;
+  }
+  .tsch-page-header .tsch-bookmark {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 8px solid var(--heading-accent);
+  }
+  .tsch-facts {
+    display: flex;
+    writing-mode: vertical-rl;
+    line-height: 1;
+    max-width: 150px;
+  }
+  .tsch-sub-fact  {
+    /*   seems crazy...*/
+    transform: rotate(90deg) translate(400px, -460%); 
+  }
+  .tsch-advocate {
+    margin-left: 30px;
+/*     min-width: 20vw; */
+    max-width: 30vw;
+  }
+  .tsch-dot {
+    transform: translate(3%, 10px);
+  }
+  .tsch-facts li:first-of-type {
+/*     outline: 2px solid lime;   */
+  }
+}

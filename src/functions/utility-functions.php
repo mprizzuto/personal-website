@@ -53,6 +53,7 @@ function checkPages(string $page):bool {
 	$pageList = [
 		"home",
 		"projects",
+		"project",
 		"project-detail",
 		"about",
 		"writing",

@@ -111,7 +111,7 @@ function generatePageTitle() {
   	return $articleH1;
   }
 
-  else if (getPage() == "false") {
+  else if ( getPage() == "false" ) {
   	$articleH1 = "404!";
   	return $articleH1;
   }
@@ -130,8 +130,20 @@ function generatePageTitle() {
   			break;
 
 			case "project":
-				$articleH1 = "Project";
-				return $articleH1;
+				
+
+				if ( getProjectBySlug($_GET["slug"]) ) {
+					$articleH1 = setProjectTitle($_GET["slug"]);
+
+					return $articleH1;
+				}
+				
+				else if ( getProjectBySlug($_GET["slug"]) ) {
+					return $articleH1;
+				}
+				// return return $articleH1;
+				// return $articleH1;
+				 //if not a valid titxle, return ""
 				break;			
 
 			case "blog-post-detail":

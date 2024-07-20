@@ -32,9 +32,11 @@
 
   //get all projects
   function getAllProjects() {
-		// $json = file_get_contents("../src/database/projects.json");
-		// return json_decode($json, true);
-		return file_get_contents("../src/database/projects.json");
+  	// why is the project detail page breaking??
+		$json = file_get_contents("../src/database/projects.json");
+		return json_decode($json, true);
+
+		// return file_get_contents("../src/database/projects.json"); 
 	}
 
   //get individual project that matches slug
@@ -66,6 +68,12 @@
 				//return case study data
 				return $caseStudy;
 			}
+		}
+	}
+
+	function setProjectTitle(string $projectTitle):string {
+		if ( getAllProjects() ) {
+			return $projectTitle;
 		}
 	}
 ?>

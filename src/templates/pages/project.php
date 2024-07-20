@@ -1,10 +1,13 @@
 <?php 
 $projectName = $_GET["slug"] ?? null;
 
-$projectsJSON = getAllProjects();
+// $projectsJSON = getAllProjects();
+ // formatVar(getProjectBySlug($_GET["slug"]) );
+// getProjectBySlug($_GET["slug"]);
 
-$projectsArr = json_decode($projectsJSON, true);
- 
+if ( getProjectBySlug($_GET["slug"]) ) {
+  // echo $_GET["slug"];
+}
 ?>
 
 <section class="mr-projects">
@@ -16,20 +19,20 @@ $projectsArr = json_decode($projectsJSON, true);
           break;
         
         case "theming-challenge":
-          echo "theming challenge";
+          // echo "theming challenge";
           break;
 
         case "php-guestBook":
-          echo "php-guestBook";
+          // echo "php-guestBook";
           break;
 
 
         case "vdi-app":
-          echo "vdi-app";
+          // echo "vdi-app";
           break;
             
         default:
-          echo "invalid Project. Check your URL and try again";
+          echo "<h2>invalid Project. Check your URL and try again</h2>";
           break;
       }
     ?>

@@ -91,6 +91,5 @@
 	<inner-column>
 		<h2 class="heading-two">site map</h2>
 
-		<?=formatSitemap($siteData)?>
 	</inner-column>
 </section>

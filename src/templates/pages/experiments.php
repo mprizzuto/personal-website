@@ -17,7 +17,7 @@ include "../src/routers/detail-router.php";
     <h2 class="design-title">web</h2>
 
     <?php foreach($experimentsList as $experiment): ?>
-      <experiment-card class="experiment-experiment-card">
+      <experiment-card class="experiment-card">
         <details open>
           <summary><?=$experiment["name"]?></summary>
           <p><?=$experiment["purpose"]?></p>

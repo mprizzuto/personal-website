@@ -4,6 +4,9 @@
 @import "about.css";
 @import "writing.css";
 @import "goals.css";
+@import "./project-styles/garden-1.css";
+@import "./project-styles/garden-2.css";
+@import "./project-styles/garden-3.css";
 
 .four-o-four {
 	margin-top: 40px;

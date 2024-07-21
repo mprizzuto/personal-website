@@ -2,7 +2,7 @@
   max-width: 40ch;
 }
 
-.site-menu a {
+.site-menu a, .about-page-nav a {
   display: inline-block;
   margin-right: 5px;
 }

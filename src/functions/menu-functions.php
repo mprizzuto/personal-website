@@ -2,7 +2,7 @@
 function styleAnchorLink($slug) {
 	// TODO. abstract out $navLinkStyle rule into its own function.
 	$queryString = $_GET["page"] ?? null;
-	$navLinkStyle = " style = 'border-bottom: 2px solid maroon; padding-bottom: 2px'";
+	$navLinkStyle = " style = 'border-bottom: 1px solid maroon;'";
 
 	switch ($slug === getQueryString()) {
 		case "home":

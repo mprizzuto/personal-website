@@ -254,13 +254,9 @@ design-poster {
   min-height: 100vh;
 }
 
-design-poster inner-column {
-/*  max-width: 1000px;*/
-}
-
 
 design-poster > inner-column {
-  padding-bottom: 30vh;
+/*  padding-bottom: 30vh;*/
 }
 
 @media (min-width: 600px) {
@@ -316,9 +312,9 @@ design-poster > inner-column {
 /*  type*/
 .tsch-site-main {
   line-height: 1.5;
-  max-width: 700px;
+ /* max-width: 700px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto;*/
   
   padding-bottom: 40vh;
   background: url("https://i.ibb.co/nD9f6B5/tshci.png");

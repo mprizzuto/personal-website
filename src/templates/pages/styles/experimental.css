@@ -17,6 +17,10 @@ experiment-card + experiment-card{
   text-transform: capitalize;
 }
 
+experiment-card p {
+  text-wrap: pretty;
+}
+
 .experiment-card {
   margin-top: 20px;
 }

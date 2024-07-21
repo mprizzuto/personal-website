@@ -37,5 +37,4 @@ $aboutData = [
 		<?php endforeach; ?>
 <?php endforeach; ?>
 
-<?php aboutPageNav();?>
 </about-card>

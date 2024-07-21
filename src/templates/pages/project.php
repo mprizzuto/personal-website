@@ -19,16 +19,12 @@ if ( getProjectBySlug($_GET["slug"]) ) {
           break;
         
         case "theming-challenge":
-          // echo "theming challenge";
           break;
 
         case "php-guestBook":
-          // echo "php-guestBook";
           break;
 
-
         case "vdi-app":
-          // echo "vdi-app";
           break;
             
         default:

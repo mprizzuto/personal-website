@@ -219,7 +219,8 @@ li ul {
   }
   .welcome inner-column {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+/*    justify-content: space-between;*/
   }
   .welcome h2:first-of-type {
     writing-mode: vertical-rl;

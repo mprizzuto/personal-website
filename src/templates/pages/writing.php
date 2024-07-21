@@ -6,6 +6,5 @@
 
 		<?php include "../src/database/writing-database.php";?>
 
-		<?php aboutPageNav();?>
 	</inner-column>
 </section>

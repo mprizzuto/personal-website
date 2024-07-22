@@ -4,10 +4,6 @@ KEEP THINGS SMALL UNTIL
 - bundle CSS files by theme
 - create function to create unique id for database
 
-- why is the class 404 on page load?? FIX IT
-
-- set 404 message for invalid project page slug
-
 - project page control flow
   - if project is found, output project
   - if project isnt found/empty output "invalid project, check URL and try again"
@@ -21,4 +17,5 @@ KEEP THINGS SMALL UNTIL
   - abstract require stattements into function and paths to files into a database
   - improve HTML, as it's now being embedded in other HTML. 
     - so, remove major landmarks i.e main. only 1 main per page!
-  - stop project modules from inheriting theme changes  
+  - stop project modules from inheriting theme changes
+  - rename project.php to project-detail.php  

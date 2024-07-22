@@ -44,4 +44,15 @@ experiment-card p {
   experiment-card + experiment-card{
     margin-top: unset;
   }
+  .ments {
+    font-size:  clamp(.5em, 3vw, 1em);
+    display: inline-block;
+    /*position: absolute;*/
+    /*right:  100px;*/
+    transform:  rotate(90deg);
+    /*top:  120px;*/
+  }
+  .experiments-title {
+    margin-top: 40px;
+  }
 }

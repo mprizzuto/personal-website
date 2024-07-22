@@ -37,15 +37,6 @@ inner-column  {
   align-self: flex-end;
 }
 
-.welcome {
-  margin-top: 30px;
-}
-
-.welcome h2:first-of-type {
-  /*writing-mode: vertical-rl;*/
-  /*transform: rotate(180deg)translate(0px, -50px);*/
-  /*transform: rotate(180deg)translate(40px, 0px);*/
-}
 
 /*SVGs*/
 .construction {
@@ -58,22 +49,13 @@ inner-column  {
   margin:  5px;
 }
 
-.green-rect {
+/*.green-rect {
   position: absolute;
   top: 350px;
   z-index:  -1;
   fill:  rgba(0,100,0, .5);
 }
-
-.chips-and-guac {
-  max-width: 230px;
-  margin-left: 5%;
-}
-
-.lollypop {
-  max-width: 600px;
-  width: 20vw;
-}
+*/
 
 .shy-sun {
   max-width: 600px;
@@ -86,111 +68,8 @@ inner-column  {
   margin-top: 40px;
 }
 
-
-/*colors*/
-:root {
-  --first-color: "linen";
-  --second-color: "gold";
-  --third-color: "#FFC800";
-  --fourth-color: "#3B444B";
-  --fifth-color: "#002d62";
-  --sixth-color: "#002AD8";
-  --last-color: "#3945E7";
-}
-
-.color-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 50ch;
-}
-
-.color-list li {
-  flex-basis: 100px;
-  min-height: 100px;
-  min-width: 30px;
-  max-width: 100px;
-  margin-top: 5px;
-  margin-right:  10px;
-  color: purple;
-  text-align: center;
-  border: 6px double black;
-}
-
 li ul {
   margin-left:  40px;
-}
-
-.color-list li:first-of-type {
-  background: linen;
-  /* should these be variables and included after the element  */
-}
-
-.color-list li:first-of-type::after {
-  content: var(--first-color);
-/*  color: initial;*/
-}
-
-.color-list :nth-child(2) {
-  background: var(--accent-color);
-}
-
-.color-list li:nth-child(2)::after {
-/*  position: relative;*/
-/*  z-index: 2;*/
-/*  color: black;*/
-  content: var(--second-color);
-}
-
-.color-list li:nth-child(3) {
-  background: var(--body-color);
-}
-
-.color-list li:nth-child(3)::after {
-  content: var(--third-color);
-}
-
-.color-list :nth-child(4) {
-  background: var(--background-color);
-}
-
-.color-list li:nth-child(4)::after {
-  content: var(--fourth-color);
-}
-
-
-.color-list :nth-child(5) {
-  background: var(--night-theme-background);
-}
-
-.color-list li:nth-child(5)::after {
-  content: var(--fifth-color);
-}
-
-.color-list :nth-child(6) {
-  background: var(--star-bar-color);
-}
-
-.color-list li:nth-child(6)::after {
-  content: var(--sixth-color)
-}
-
-
-
-.color-list :nth-child(7) {
-  background: var(--moon-blue);
-}
-
-.color-list :nth-child(8) {
-  background: var(--moon-color);
-}
-
-.color-list :last-of-type {
-  background: var(--line-color);
-}
-
-.color-list :last-of-type::after {
-  content: var(--last-color);
 }
 
 
@@ -215,6 +94,7 @@ li ul {
 @media(min-width: 700px) {
   .writing-area inner-column {
     display: flex;
+    outline: 10px solid lime;
     /*justify-content: space-between;*/
   }
   .welcome inner-column {
@@ -224,7 +104,7 @@ li ul {
   }
   .welcome h2:first-of-type {
     writing-mode: vertical-rl;
-    transform: rotate(180deg);
+/*    transform: rotate(180deg);*/
   }
   .chips-and-guac {
     position: absolute;
@@ -256,17 +136,6 @@ li ul {
     margin-left: auto;
     line-height: 2;
     padding: 10px;
-  }
-  .ments {
-    font-size:  clamp(.5em, 3vw, 1em);
-    display: inline-block;
-    /*position: absolute;*/
-    /*right:  100px;*/
-    transform:  rotate(90deg);
-    /*top:  120px;*/
-  }
-  .experiments-title {
-    margin-top: 40px;
   }
   .projects-svg {
     margin-left: 30px;

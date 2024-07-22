@@ -17,3 +17,11 @@ body.homepage a:active {
 .dev-name {
   font-size: clamp(1em, 2vw, 3em);
 }
+
+.welcome {
+  margin-top: 30px;
+}
+
+.welcome inner-column {
+
+}

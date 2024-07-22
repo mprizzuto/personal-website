@@ -31,6 +31,10 @@ mark {
   padding: 2px;
 }
 
+a {
+  text-decoration: underline;
+}
+
 /*homepage*/
 
 .greet {

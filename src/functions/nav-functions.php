@@ -26,7 +26,7 @@ function globalNav() {
 function aboutPageNav() {
 	include "../src/database/nav-data.php";
 
-	$aboutLinks = ["about", "writing", "resume", "goals", "contact", "now"];
+	$aboutLinks = ["writing", "resume", "goals", "contact", "now"];
 
 	echo "<h2>curious about me?</h2>" . "<nav class='about-page-nav'>";
 

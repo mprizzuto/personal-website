@@ -214,7 +214,7 @@ letters.upper-case {
 /*  background: black;*/
 /*  color:  gold;*/
   max-width: 90px;
-  padding-left: 10px;
+/*  padding-left: 10px;*/
 }
 
 letters + p, .font-flag {
@@ -295,13 +295,17 @@ list-style: circle;
     min-height: 100px;
   }
   .job {
+    position: relative;
+    top: 25px;
+
     align-self: end;
+
   }
   .right-arrow {
     display: block;
     position: relative;
   }
-  .job, .right-arrow {
+  .right-arrow {
     position: relative;
     top: 15px;
   }

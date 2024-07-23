@@ -56,6 +56,11 @@ project-card picture {
 
 project-card {
   display:  block;
+  line-height: 1.5;
+}
+
+project-card p {
+  margin-top: 5px;
 }
 
 project-card picture + p {

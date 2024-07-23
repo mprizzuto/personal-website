@@ -1,0 +1,20 @@
+/* style guide */
+.shapes figure[class$="-shape"] {
+/*  width: 30vw;*/
+/*  max-width: 80%;*/
+  max-width: 200px;
+/*  border: 10px solid red;*/
+}
+
+.shapes .quotes-shape svg {
+  max-width: 150px;
+}
+
+.style-guide-article section + section {
+  margin-top: 30px;
+/*  border-top: 3px solid lime;*/
+}
+
+.shapes figure {
+  margin-top: 50px;
+}

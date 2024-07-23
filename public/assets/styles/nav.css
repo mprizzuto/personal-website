@@ -1,3 +1,7 @@
+* {
+/*  outline: 2px solid lime;*/
+}
+
 .site-menu {
   max-width: 40ch;
 /*  max-width: 20ch;*/
@@ -5,6 +9,7 @@
 
 .site-menu a {
 /*  outline: 2px solid red;*/
+  margin-top: 20px;
 }
 
 .site-menu a, .about-page-nav a {

@@ -15,7 +15,7 @@ body.homepage a:active {
 }
 
 .dev-name {
-  font-size: clamp(1em, 2vw, 3em);
+  font-size: clamp(1.3em, 1vw, 3em);
 }
 
 .welcome {

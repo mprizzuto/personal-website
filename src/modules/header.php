@@ -11,12 +11,17 @@
       <inner-column>
         <dev-info class="dev-info">
           <div class="dev-credential">
-            <p class="dev-name">Marco Rizzuto</p>
+            <!-- <p class="dev-name">Marco Rizzuto</p> -->
 
 
             <div class="credentials">
-              <?php include "./assets/images/svgs/arrow.svg"; ?>
-              <span class="job">Web Developer</span>
+              <div class="dev-badge">
+                <p class="dev-name">Marco Rizzuto</p>
+                <?php include "./assets/images/svgs/arrow.svg"; ?>
+                <p class="job">Web Developer</p>
+                
+              </div>
+              
             </div>
 
            <?php include "../src/components/nav.php";?>

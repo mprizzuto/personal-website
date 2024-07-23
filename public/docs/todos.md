@@ -2,6 +2,7 @@
 KEEP THINGS SMALL UNTIL
 - we figure out proper file structure
 - bundle CSS files by theme
+
 - create function to create unique id for database
 
 - project page control flow
@@ -18,4 +19,8 @@ KEEP THINGS SMALL UNTIL
   - improve HTML, as it's now being embedded in other HTML. 
     - so, remove major landmarks i.e main. only 1 main per page!
   - stop project modules from inheriting theme changes
-  - rename project.php to project-detail.php  
+  - rename project.php to project-detail.php
+
+  blog-post-detail
+  - when post-detail slug is invalud
+  	- remove pritning of unsanitiized $_GET param 

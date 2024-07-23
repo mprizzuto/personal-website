@@ -24,3 +24,4 @@ KEEP THINGS SMALL UNTIL
   blog-post-detail
   - when post-detail slug is invalud
   	- remove pritning of unsanitiized $_GET param 
+    - changhe inline styleing to use of classes?

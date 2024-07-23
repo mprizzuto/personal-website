@@ -28,7 +28,7 @@ function aboutPageNav() {
 
 	$aboutLinks = ["writing", "resume", "goals", "contact", "now"];
 
-	echo "<h2>curious about me?</h2>" . "<nav class='about-page-nav'>";
+	echo "<h2 class='about-page-heading'>curious about me?</h2>" . "<nav class='about-page-nav'>";
 
   foreach($navLinks as $navLinkText => $navLink) {
     if ( in_array($navLinkText, $aboutLinks)) {

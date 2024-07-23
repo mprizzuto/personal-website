@@ -14,8 +14,8 @@ body.homepage a:active {
   color:  green;
 }
 
-.dev-name {
-  font-size: clamp(1.3em, 1vw, 3em);
+.dev-name, .job {
+  font-size: clamp(1.3em, 2vw, 3em);
 }
 
 .welcome {

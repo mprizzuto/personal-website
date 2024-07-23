@@ -12,7 +12,6 @@
 
 		<p><a href="mailto:<?=$email?>" target="_blank">email me</a></p>
 
-		<?php aboutPageNav();?>
 	</inner-column>
 </section>
 	

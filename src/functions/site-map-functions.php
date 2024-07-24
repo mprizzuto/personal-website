@@ -78,6 +78,15 @@ function templateSiteMap(array $sitemapData) {
       // echo "<li>" . "<a href='?page=blog-post-detail&post-detail='" . $value["id"] . ">" . "</a>" . "</li>";
     }
     echo "</ul>";
+
+    echo "<h2>resume</h2>";
+
+    echo
+    "<ul>
+      <li>
+        <a href='?page=resume'>resume</a>
+      </li>
+    </ul>";
   echo "</ul>";
   
 }

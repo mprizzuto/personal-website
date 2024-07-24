@@ -1,6 +1,9 @@
 <?php
 
-if (isFirstPageLoad() && !doesGEThaveCount() ) {
+if (
+	( isFirstPageLoad() && !doesGEThaveCount() ) || 
+	getPage() === ""
+) {
 	include "../src/templates/pages/home.php";
 }
 
@@ -10,15 +13,14 @@ else if ( doesGEThaveCount() ) {
 	if ( !isPageQueryValid() ) {
 		include "../src/templates/pages/404.php";
 	}
-
 }
 
-if ( $_GET["page"] ?? null ) {
+if ( $_GET["page"] ?? "" ) {
 	/*main page router*/ 
 	switch (getPage()) {
-		case "home":
 		case "":
-		// if first pagge load
+		case "home":
+		
 			include "../src/templates/pages/home.php";
 			break;
 

@@ -68,6 +68,7 @@ function templateSiteMap(array $sitemapData) {
       </ul>
     </li>";
     echo "<li><h2>writing</h2></li>";
+
     echo "<li>" ."<ul class='writing-links'>";
     foreach ($sitemapData["writing"] as $key => $value) {
       // formatVar($value);
@@ -82,9 +83,27 @@ function templateSiteMap(array $sitemapData) {
     echo "<h2>resume</h2>";
 
     echo
-    "<ul>
+    "<ul class='resume-links'>
       <li>
         <a href='?page=resume'>resume</a>
+      </li>
+    </ul>";
+
+    echo "<h2>goals</h2>";
+
+    echo
+    "<ul class='goal-links'>
+      <li>
+        <a href='?page=goals'>goals</a>
+      </li>
+    </ul>";
+
+    echo "<h2>contact</h2>";
+
+    echo
+    "<ul class='contact-links'>
+      <li>
+        <a href='?page=contact'>contact</a>
       </li>
     </ul>";
   echo "</ul>";

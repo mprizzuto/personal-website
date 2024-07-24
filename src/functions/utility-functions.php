@@ -1,4 +1,6 @@
 <?php 
+$currentFile = basename($_SERVER["SCRIPT_NAME"]);
+
 function isFirstPageLoad() {
   if (
   	count($_GET) === 0 || 
@@ -9,7 +11,11 @@ function isFirstPageLoad() {
   return false;
 }
 
-$currentFile = basename($_SERVER["SCRIPT_NAME"]);
+
+function doesGethaveCount() {
+	return count($_GET);
+}
+
 
 function getQueryString() {
 	$queryString = $_GET["page"] ?? "";
@@ -46,7 +52,7 @@ function getPage() {
 }
 
 function isPageQueryValid() {
-	return array_key_exists("page", $_GET);
+	return isset($_GET["page"]);
 }
 
 function checkPages(string $page):bool {
@@ -128,12 +134,12 @@ function generatePageTitle() {
   			break;
 
 			case "project":
-				if ( getProjectBySlug($_GET["slug"]) ) {
-					$articleH1 = setProjectTitle($_GET["slug"]);
+				if ( getProjectBySlug($_GET["slug"] ?? null) ) {
+					$articleH1 = setProjectTitle($_GET["slug"] ?? null);
 					return $articleH1;
 				}
 				
-				else if ( getProjectBySlug($_GET["slug"]) ) {
+				else if ( getProjectBySlug($_GET["slug"] ?? null) ) {
 					return $articleH1;
 				}
 				// return return $articleH1;

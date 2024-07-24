@@ -17,7 +17,7 @@ if ( count($_GET) ) {
 
 }
 
-if ( isPageQueryValid() ) {
+if ( isPageQueryValid() || isFirstPageLoad() ) {
 	/*main page router*/ 
 	switch (getPage()) {
 		case "home":

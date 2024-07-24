@@ -22,3 +22,7 @@ KEEP THINGS SMALL UNTIL
   	- remove pritning of unsanitiized $_GET param 
     - change inline styling to use of classes? 
 - find code for theming challenge
+
+- sitemap 
+  - make headings links to their respective pages
+  - improve HTML, (i.e nest lists, home links belong with home heading)

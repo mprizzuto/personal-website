@@ -66,7 +66,8 @@ function checkPages(string $page):bool {
 		"case-study", 
 		"resume", 
 		"site-map",
-		"now"
+		"now",
+		"goals"
 	];
 
 	// return "true" if page exists, otherwise return "false"

@@ -1,14 +1,10 @@
 <?php
-// echo "TEST";
-// // if isFirstPageLoad, incude home page
-// echo "FIRST OAGE LOAD" . isFirstPageLoad();
-// if ( isFirstPageLoad() ) {
 
-// 	include "../src/templates/pages/home.php";	
-// }
-// if $_GET array has count a"
+if (isFirstPageLoad() && !doesGEThaveCount() ) {
+	include "../src/templates/pages/home.php";
+}
 
-if ( count($_GET) ) {
+else if ( doesGEThaveCount() ) {
 	// echo "GET HAS COUNT" . formatVar($_GET);
 	// nd it doesnt include "page 
 	if ( !isPageQueryValid() ) {
@@ -17,7 +13,7 @@ if ( count($_GET) ) {
 
 }
 
-if ( isPageQueryValid() || isFirstPageLoad() ) {
+if ( $_GET["page"] ?? null ) {
 	/*main page router*/ 
 	switch (getPage()) {
 		case "home":

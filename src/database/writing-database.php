@@ -10,17 +10,6 @@
 "category" => "",
 */ 
 
-// function getPosts($data, $key, $value)
-// {
-//   $posts = array_filter($data, function ($post) use ($key, $value) {
-//     return $post[$key] == $value;
-//   });
-//   return $posts;
-// }
-
-// $caseStudy = getPosts($writingList, "category", "case-study");
-// $caseStudy = getPosts($writingList, "category", "case-study");
-
 ?>
 
 <section class="article">

@@ -12,7 +12,7 @@ function isFirstPageLoad() {
 }
 
 
-function doesGethaveCount() {
+function doesGEThaveCount() {
 	return count($_GET);
 }
 

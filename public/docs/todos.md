@@ -26,3 +26,6 @@ KEEP THINGS SMALL UNTIL
 - sitemap 
   - make headings links to their respective pages
   - improve HTML, (i.e nest lists, home links belong with home heading)
+
+  general
+   - if page slug is invalid(i.e :"?pge=")/empty, output 404 page

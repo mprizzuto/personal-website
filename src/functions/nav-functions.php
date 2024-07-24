@@ -11,7 +11,7 @@ function globalNav() {
     	}
     	if ( isFirstPageLoad() ) {
     		if ($navLinkText === "home") {
-    			 echo " " . "<a style = 'border-bottom: 2px solid maroon; padding-bottom: 2px' href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";
+    			 echo " " . "<a style = 'display: inline-block; border-bottom: 2px solid maroon; padding-bottom: 2px' href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";
     			 continue;
     		}
     		echo " " . "<a href='$navLink'" . $navLinkText . ">" . $navLinkText . "</a>";

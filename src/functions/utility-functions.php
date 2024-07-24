@@ -34,7 +34,6 @@ function sanitizeString(string $str) {
 
 //get any page with ?page query string
 function getPage() {
-	// ig valif pah return
 	if (
 		checkPages( getQueryString() )
 	) {
@@ -43,8 +42,11 @@ function getPage() {
 		return $page;
 	}
 	
-
 	return "404";
+}
+
+function isPageQueryValid() {
+	return array_key_exists("page", $_GET);
 }
 
 function checkPages(string $page):bool {
@@ -52,6 +54,7 @@ function checkPages(string $page):bool {
 
 	$pageList = [
 		"home",
+		"",
 		"projects",
 		"project",
 		"project-detail",
@@ -62,7 +65,6 @@ function checkPages(string $page):bool {
 		"experiments",
 		"experiment-detail",
 		"blog-post-detail", 
-		"",
 		"case-study", 
 		"resume", 
 		"site-map",
@@ -70,7 +72,6 @@ function checkPages(string $page):bool {
 		"goals"
 	];
 
-	// return "true" if page exists, otherwise return "false"
 	return in_array($page, $pageList);
 }
 
@@ -83,16 +84,11 @@ function getClassByQuery() {
 	 ) {
 		return "home";
 	}
-	// if firsdt page load, return home + getPage()
-
-	// if ( isFirstPageLoad() ) {
-	// 	return getPage();
-	// }
 	return getPage();
 }
 
 function getProjectSlug() {
-	return $_GET["slug"] ?? null; //SANITIZE THIS
+	return $_GET["slug"] ?? null;
 }
 
 function sanitizeStr(string $str) {
@@ -106,7 +102,7 @@ function generatePageTitle() {
 
   if ( 
   	!isset($_GET["page"]) && 
-  	getPage() !== "false"
+  	getPage() !== "false" && isPageQueryValid()
    )  {
   	$articleH1 = "Hi!";
   	return $articleH1;
@@ -121,6 +117,7 @@ function generatePageTitle() {
   	switch ( getPage() ) {
   	
   		case "home":
+  		case "":
 	  		$articleH1 = "Hi!";
 	  			return $articleH1;
 	  			break;
@@ -131,11 +128,8 @@ function generatePageTitle() {
   			break;
 
 			case "project":
-				
-
 				if ( getProjectBySlug($_GET["slug"]) ) {
 					$articleH1 = setProjectTitle($_GET["slug"]);
-
 					return $articleH1;
 				}
 				
@@ -149,6 +143,11 @@ function generatePageTitle() {
 
 			case "blog-post-detail":
 				$articleH1 = "My blog post detail";
+				return $articleH1;
+				break;
+
+			case "experiments":
+				$articleH1 = "My experiments";
 				return $articleH1;
 				break;
 
@@ -182,11 +181,6 @@ function generatePageTitle() {
 				return $articleH1;
 				break;
 
-			case "experiments":
-				$articleH1 = "My experiments";
-				return $articleH1;
-				break;
-
 			case "contact":
 				$articleH1 = "contact me?";
 				return $articleH1;
@@ -200,11 +194,6 @@ function generatePageTitle() {
 			case "style-guide":
 				$articleH1 = "site style guide";
 				return $articleH1;
-				break;		
-
-			case "":
-				$articleH1 = "Hi!";
-				return $articleH1;
 				break;	
 
 			case "now":
@@ -212,9 +201,9 @@ function generatePageTitle() {
 				return $articleH1;
 				break;	
 
-				default:
-					$articleH1 = "404!";
-					return $articleH1;
+			default:
+				$articleH1 = "404!";
+				return $articleH1;
 			}
 		}
 	}

@@ -56,6 +56,17 @@ function templateSiteMap(array $sitemapData) {
       }
     }
     echo "</ul>";
+
+    echo
+    "<li>
+      <h2>style guide</h2>
+
+      <ul class='style-guide-links'>
+        <li>
+          <a href='?page=style-guide'>style guide</a>
+        </li> 
+      </ul>
+    </li>";
   echo "</ul>";
   
 }

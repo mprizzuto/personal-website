@@ -46,6 +46,16 @@ function templateSiteMap(array $sitemapData) {
         </li> 
       </ul>
     </li>";
+
+    echo "<li><h2>Experiments</h2></li>";
+    echo "<li>" . "<ul class='experiment-links'>";
+    foreach ($sitemapData["experiments"] as $key => $value) {
+      foreach ($value as $subKey => $subValue) {
+        // formatvar($subValue);
+        echo "<li>" . "<a href='" . $subValue["link"] . "'>" . $subValue["name"] . "</a>" . "</li>";
+      }
+    }
+    echo "</ul>";
   echo "</ul>";
   
 }

@@ -5,6 +5,9 @@ $siteData = [
 	],
 	"experiments" => [
     getAllExperiments()
-  ]
+  ],
+  "writing" => [
+    getWritingData()
+  ],
 ];
 ?>

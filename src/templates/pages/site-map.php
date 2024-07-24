@@ -2,6 +2,6 @@
 
 <section class=<?=getClassByQuery()?>-section>
 	<inner-column>
-		
+		<?php templateSiteMap($siteData); ?>
 	</inner-column>
 </section>

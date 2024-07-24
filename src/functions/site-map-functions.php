@@ -1,7 +1,6 @@
 <?php
 function templateSiteMap(array $sitemapData) {
   echo "<ul class='site-map-list'>";
-
  // formatVar($sitemapData);
   // foreach ($sitemapData as $data) {
   //   formatVar($data);
@@ -25,18 +24,29 @@ function templateSiteMap(array $sitemapData) {
   echo "<li>" . 
   "<h2>Projects</h2>".
   "<li>" . 
-    "<ul class='home-page-links'>";
+  "<ul class='home-page-links'>";
 
 
     foreach ( getAllProjects() as $key => $projectData) {
       // formatVar($projectData["title"]);
-      echo "<li>" . "project: <a href='?page=project&slug=" . $projectData['slug'] . "'>" . $projectData['title'] . "</a>" . "</li>";
-      echo "<li>" . "case study: <a href='?page=case-study&slug=" . $projectData['case-study-slug'] . "'>" . $projectData['title'] . "</a>" . "</li>"; 
+      echo "<li>" . "project: <a href='?page=project&slug=" . $projectData['slug'] . "'>" . $projectData['title'] . "</a>" . "<br>" .
+      " case study: <a href='?page=case-study&slug=" . $projectData['case-study-slug'] . "'>" . $projectData['title'] . "</a>" .
+      "</li>";
     }
     echo "</ul>".
     "</li>";
-  echo "</ul>";
 
+    echo
+    "<li>
+      <h2>about</h2>
+
+      <ul class='about-page-links'>
+        <li>
+          <a href='?page=about'>about</a>
+        </li> 
+      </ul>
+    </li>";
+  echo "</ul>";
   
 }
 

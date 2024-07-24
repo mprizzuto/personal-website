@@ -37,4 +37,11 @@ function aboutPageNav() {
   }
   	echo "</nav>";
 }
+
+
+function getNavData() {
+	require "../src/database/nav-data.php";
+
+	return $navLinks;
+}
 ?>

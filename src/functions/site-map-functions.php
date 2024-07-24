@@ -1,48 +1,43 @@
 <?php
-// function formatSitemap(array $sitemapData) {
-//     echo "<ul class='site-map-list'>";
+function templateSiteMap(array $sitemapData) {
+  echo "<ul class='site-map-list'>";
 
-//     foreach ($sitemapData as $levelOneKey => $levelOneValue) {
-//       echo "<li><h3>$levelOneKey</h3>";
+ // formatVar($sitemapData);
+  // foreach ($sitemapData as $data) {
+  //   formatVar($data);
+  //   // code...
+  // }
 
-//       echo "<ul class='home-page-list'>";
+  foreach ($sitemapData["home"] as $data) {
+    foreach ($data as $linkString => $queryString) {
+      if ($linkString === "home") {
+        echo "<li>" . "<h2>Home</h2>" . "</li>";
+        echo "<li>" .
+        "<ul class='home-page-links'>";
+        // echo "<li>" . $linkString . "</li>";
+        continue;
+      }
+      echo "<li>" . "<a href='$queryString'>" . $linkString . "</a>" . "</li>";
+    }
+      echo "</ul>" 
+    . "</li>";
+  }
+  echo "<li>" . 
+  "<h2>Projects</h2>".
+  "<li>" . 
+    "<ul class='home-page-links'>";
 
-//       foreach ($levelOneValue as $levelTwoKey => $levelTwoValue) {
-//         if ($levelTwoKey === "projects") {
-//             echo "<li><h3>$levelTwoKey</h3>";
-//             echo "<ul class='sitemap-project-list'>";
 
-//             foreach ($levelTwoValue as $projectKey => $projectValue) {
-//                 echo "<li>" . $projectValue["title"] . "</li>";
-//                 echo "<li>" . $projectValue['title'] . " detail page</li>";
-//                 echo "<li>" . $projectValue['title'] . " case study page</li>";
-//             }
+    foreach ( getAllProjects() as $key => $projectData) {
+      // formatVar($projectData["title"]);
+      echo "<li>" . "project: <a href='?page=project&slug=" . $projectData['slug'] . "'>" . $projectData['title'] . "</a>" . "</li>";
+      echo "<li>" . "case study: <a href='?page=case-study&slug=" . $projectData['case-study-slug'] . "'>" . $projectData['title'] . "</a>" . "</li>"; 
+    }
+    echo "</ul>".
+    "</li>";
+  echo "</ul>";
 
-//                 echo "</ul></li>";
-//             } elseif ($levelTwoKey === "about") {
-//                 echo "<li><h3>$levelTwoKey</h3>";
-//                 echo "<ul class='sitemap-about-list'>";
-                
-//                 foreach ($levelTwoValue as $aboutArrIndex) {
-//                     echo "<li>$aboutArrIndex</li>";
-//                 }
+  
+}
 
-//                 echo "</ul></li>";
-//             } elseif ($levelTwoKey === "experiments") {
-//               echo "<li><h3>$levelTwoKey</h3>";
-//               echo "<ul class='experiment-list'>";
-              
-//               foreach ($levelTwoValue as $experimentIndexValue) {
-//                   echo "<li>" . $experimentIndexValue["name"] . "</li>";
-//               }
-
-//               echo "</ul></li>";
-//           }
-//       }
-
-//         echo "</ul></li>";
-//     }
-
-//     echo "</ul>";
-// }
 ?>

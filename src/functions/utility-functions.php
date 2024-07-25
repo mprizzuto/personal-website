@@ -52,7 +52,24 @@ function getPage() {
 }
 
 function isPageQueryValid() {
-	return isset($_GET["page"]);
+	
+	// return "false";
+
+	// formatVar(array_key_exists("page", $_GET));
+
+	// if (array_key_exists("page", $_GET)) {
+	// 	return true;
+	// }
+	// return array_key_exists("page", $_GET);
+	if (array_key_exists("page", $_GET)) {
+		// echo "true";
+		return "true";
+	}
+	if (!array_key_exists("page", $_GET)) {
+		// echo "false";
+		return "false";
+	}
+	
 }
 
 function checkPages(string $page):bool {

@@ -175,7 +175,7 @@ function generatePageTitle() {
 				break;
 
 			case "experiment-detail":
-				$articleH1 = "experiment detail";
+				$articleH1 = setExperimentDetailTitle( getExperimentName() );
 				return $articleH1;
 				break;
 

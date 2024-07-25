@@ -90,6 +90,6 @@
 <section class="site-map">
 	<inner-column>
 		<h2 class="heading-two">site map</h2>
-
+		<?php include "../src/templates/pages/site-map.php"; ?>
 	</inner-column>
 </section>

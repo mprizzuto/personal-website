@@ -5,16 +5,20 @@ function getAllExperiments() {
 }
 
 
-function getExperimentBySlug($slug) {
-	$experiment = getAllProjects();
+// function getExperimentBySlug($slug) {
+// 	$experiment = getAllExperiments();
 
-	foreach($experiment as $experiment) {
+// 	foreach($experiment as $experiment) {
     
-		if ($experiment["slug"] === $slug) {
-			return $experiment;
-		}
+// 		if ($experiment["slug"] === $slug) {
+// 			return $experiment;
+// 		}
     
-	}
+// 	}
+// }
+
+function getExperimentName() {
+	return $_GET["experiment"] ?? "";
 }
 ?>
 
@@ -47,3 +51,21 @@ function getExperimentBySlug($slug) {
   	</section>
   	
 <?php } ?>
+
+<?php 
+// get the experiment slug
+
+// loop over experiments database
+// if slug matches value in database, set title to it and output to page
+
+function setExperimentDetailTitle($title) {
+	foreach (getAllExperiments() as $key => $value) {
+		// formatVar($value["name"]);
+
+		if ($title === $value["name"]) {
+			return $value["name"];
+		}
+	}
+	return "";
+}
+?>

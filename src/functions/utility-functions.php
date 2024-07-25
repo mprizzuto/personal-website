@@ -125,13 +125,13 @@ function generatePageTitle() {
 
   if ( 
   	!isset($_GET["page"]) && 
-  	getPage() !== "false" && isPageQueryValid()
+  	getPage() !== "false" && isPageQueryValid() === "true"
    )  {
   	$articleH1 = "Hi!";
   	return $articleH1;
   }
 
-  else if ( getPage() == "false" ) {
+  else if ( getPage() == "false" || isPageQueryValid() === "false") {
   	$articleH1 = "404!";
   	return $articleH1;
   }

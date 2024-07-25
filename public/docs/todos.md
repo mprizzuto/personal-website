@@ -10,7 +10,7 @@ KEEP THINGS SMALL UNTIL
 - fix site map page
  - include links to respective pages
 
-- Projects
+## Projects
   - abstract require stattements into function and paths to files into a database
   - improve HTML, as it's now being embedded in other HTML. 
     - so, remove major landmarks i.e main. only 1 main per page!
@@ -23,9 +23,12 @@ KEEP THINGS SMALL UNTIL
     - change inline styling to use of classes? 
 - find code for theming challenge
 
-- sitemap 
+## sitemap 
   - make headings links to their respective pages
   - improve HTML, (i.e nest lists, home links belong with home heading)
 
-  general
+  ## general
    - if page slug is invalid(i.e :"?pge=")/empty, output 404 page
+
+#@ visual design
+- size sun/moon SVG 

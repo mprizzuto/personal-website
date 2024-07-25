@@ -1,39 +1,29 @@
 <?php
 function templateSiteMap(array $sitemapData) {
   echo "<ul class='site-map-list'>";
- // formatVar($sitemapData);
-  // foreach ($sitemapData as $data) {
-  //   formatVar($data);
-  //   // code...
-  // }
 
-  foreach ($sitemapData["home"] as $data) {
-    foreach ($data as $linkString => $queryString) {
-      if ($linkString === "home") {
-        echo "<li>" . "<h2>Home</h2>" . "</li>";
-        echo "<li>" .
-        "<ul class='home-page-links'>";
-        // echo "<li>" . $linkString . "</li>";
-        continue;
+    foreach ($sitemapData["home"] as $data) {
+      foreach ($data as $linkString => $queryString) {
+        if ($linkString === "home") {
+          echo "<li>" . "<a href='?page=home'><h2>Home</h2></a>";
+          echo 
+          "<ul class='home-page-links'>";
+          continue;
+        }
+        echo "<li>" . "<a href='$queryString'>" . $linkString . "</a>" . "</li>";
       }
-      echo "<li>" . "<a href='$queryString'>" . $linkString . "</a>" . "</li>";
+        echo "</ul>";
     }
-      echo "</ul>" 
-    . "</li>";
-  }
-  echo "<li>" . 
-  "<h2>Projects</h2>".
-  "<li>" . 
-  "<ul class='home-page-links'>";
+    echo "<li>" . "<a href='?page=projects'><h2>Projects</h2></a>".
+    "<ul class='home-page-links'>";
 
-
-    foreach ( getAllProjects() as $key => $projectData) {
-      // formatVar($projectData["title"]);
-      echo "<li>" . "project: <a href='?page=project&slug=" . $projectData['slug'] . "'>" . $projectData['title'] . "</a>" . "<br>" .
-      " case study: <a href='?page=case-study&slug=" . $projectData['case-study-slug'] . "'>" . $projectData['title'] . "</a>" .
-      "</li>";
-    }
-    echo "</ul>".
+      foreach ( getAllProjects() as $key => $projectData) {
+        // formatVar($projectData["title"]);
+        echo "<li>" . "project: <a href='?page=project&slug=" . $projectData['slug'] . "'>" . $projectData['title'] . "</a>" . "<br>" .
+        " case study: <a href='?page=case-study&slug=" . $projectData['case-study-slug'] . "'>" . $projectData['title'] . "</a>" .
+        "</li>";
+      }
+     echo "</ul>";
     "</li>";
 
     echo
@@ -47,7 +37,7 @@ function templateSiteMap(array $sitemapData) {
       </ul>
     </li>";
 
-    echo "<li><h2>Experiments</h2></li>";
+    echo "<li><a href='?page=experiments'><h2>Experiments</h2></a></li>";
     echo "<li>" . "<ul class='experiment-links'>";
     foreach ($sitemapData["experiments"] as $key => $value) {
       foreach ($value as $subKey => $subValue) {
@@ -57,17 +47,17 @@ function templateSiteMap(array $sitemapData) {
     }
     echo "</ul>";
 
-    echo
-    "<li>
-      <h2>style guide</h2>
+      echo
+      "<li>
+        <h2>style guide</h2>
 
-      <ul class='style-guide-links'>
-        <li>
-          <a href='?page=style-guide'>style guide</a>
-        </li> 
-      </ul>
-    </li>";
-    echo "<li><h2>writing</h2></li>";
+        <ul class='style-guide-links'>
+          <li>
+            <a href='?page=style-guide'>style guide</a>
+          </li> 
+        </ul>
+      </li>";
+      echo "<li><a href='?page=writing'><h2>writing</h2></a></li>";
 
     echo "<li>" ."<ul class='writing-links'>";
     foreach ($sitemapData["writing"] as $key => $value) {
@@ -80,34 +70,35 @@ function templateSiteMap(array $sitemapData) {
     }
     echo "</ul>";
 
-    echo "<h2>resume</h2>";
+    echo "<li><h2>resume</h2>";
 
-    echo
-    "<ul class='resume-links'>
-      <li>
-        <a href='?page=resume'>resume</a>
-      </li>
-    </ul>";
+      echo
+      "<ul class='resume-links'>
+        <li>
+          <a href='?page=resume'>resume</a>
+        </li>
+      </ul>";
+    echo "</li>";
+    echo "<li><h2>goals</h2>";
 
-    echo "<h2>goals</h2>";
+      echo
+      "<ul class='goal-links'>
+        <li>
+          <a href='?page=goals'>goals</a>
+        </li>
+      </ul>";
+    echo "</li>"; 
 
-    echo
-    "<ul class='goal-links'>
-      <li>
-        <a href='?page=goals'>goals</a>
-      </li>
-    </ul>";
+    echo "<li><h2>contact</h2>";
 
-    echo "<h2>contact</h2>";
-
-    echo
-    "<ul class='contact-links'>
-      <li>
-        <a href='?page=contact'>contact</a>
-      </li>
-    </ul>";
+      echo
+      "<ul class='contact-links'>
+        <li>
+          <a href='?page=contact'>contact</a>
+        </li>
+      </ul>";
+    echo "</li>";
   echo "</ul>";
-  
 }
 
 ?>

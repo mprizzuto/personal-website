@@ -23,12 +23,15 @@ KEEP THINGS SMALL UNTIL
     - change inline styling to use of classes? 
 - find code for theming challenge
 
-## sitemap 
+## Sitemap 
   - make headings links to their respective pages
   - improve HTML, (i.e nest lists, home links belong with home heading)
 
-  ## general
+  ## General
    - if page slug is invalid(i.e :"?pge=")/empty, output 404 page
 
-#@ visual design
+## visual design
 - size sun/moon SVG 
+
+## Experiments
+  - dynamically render tityle based on experiment detail query slug

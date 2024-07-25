@@ -23,9 +23,7 @@ KEEP THINGS SMALL UNTIL
     - change inline styling to use of classes? 
 - find code for theming challenge
 
-## Sitemap 
-  - make headings links to their respective pages
-  - improve HTML, (i.e nest lists, home links belong with home heading)
+## Sitemap
 
   ## General
    - if page slug is invalid(i.e :"?pge=")/empty, output 404 page

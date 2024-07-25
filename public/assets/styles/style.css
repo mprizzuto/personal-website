@@ -18,7 +18,10 @@ body {
 body.homepage, body.experimental-body {
 /*  background:  linen;*/
 }
-
+.home-main h1 {
+  position: relative;
+  left: 10px;
+}
 body.writing-body {
   /*background: linen;*/
 }
@@ -103,8 +106,11 @@ li ul {
 /*    justify-content: space-between;*/
   }
   .welcome h2:first-of-type {
+    position: relative;
+    bottom: -8px;
     writing-mode: vertical-rl;
 /*    transform: rotate(180deg);*/
+
   }
   .chips-and-guac {
     position: absolute;

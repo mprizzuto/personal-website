@@ -20,7 +20,7 @@ $projectName = $_GET["slug"] ?? null;
           break;
             
         default:
-          echo "<h2>invalid Project. Check your URL and try again</h2>";
+          echo "<mark>invalid Project. Check your URL and try again</mark>";
           break;
       }
     ?>

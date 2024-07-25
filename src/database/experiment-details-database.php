@@ -27,7 +27,7 @@
 
         
         default:
-          echo "invalid experiment! check the URL and try again";
+          echo "<mark>invalid experiment! check the URL and try again</mark>";
           break;
       }
     ?>

@@ -1,21 +1,10 @@
 <?php
-
-if (
-	( isFirstPageLoad() && !doesGEThaveCount() ) || 
-	getPage() === ""
-) {
+// load home page if no get param is present
+if (!doesGEThaveCount()) {
 	include "../src/templates/pages/home.php";
 }
 
-else if ( doesGEThaveCount() ) {
-	// echo "GET HAS COUNT" . formatVar($_GET);
-	// nd it doesnt include "page 
-	if ( !isPageQueryValid() ) {
-		include "../src/templates/pages/404.php";
-	}
-}
-
-if ( $_GET["page"] ?? "" ) {
+elseif ( $_GET["page"] ?? "" ) {
 	/*main page router*/ 
 	switch (getPage()) {
 		case "":
@@ -104,6 +93,9 @@ if ( $_GET["page"] ?? "" ) {
 	}
 }
 
+else {
+	include "../src/templates/pages/404.php";
+}
 
 
 ?>

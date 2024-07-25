@@ -1,7 +1,8 @@
 <?php 
-  $experimentDetail = $_GET["experiment-detail"] ?? null;
-  $experiment = $_GET["experiment"] ?? null;
+  // $experimentDetail = $_GET["experiment-detail"] ?? null;
+  $experiment = getExperimentName();
 
+setExperimentDetailTitle(getExperimentName());
 ?>
 
 <section>

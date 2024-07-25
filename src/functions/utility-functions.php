@@ -131,7 +131,7 @@ function generatePageTitle() {
   	return $articleH1;
   }
 
-  else if ( getPage() == "false" || isPageQueryValid() === "false") {
+  else if ( (getPage() == "false" || isPageQueryValid() === "false") && !isFirstPageLoad() )  {
   	$articleH1 = "404!";
   	return $articleH1;
   }

@@ -1,13 +1,5 @@
 <?php 
 $projectName = $_GET["slug"] ?? null;
-
-// $projectsJSON = getAllProjects();
- // formatVar(getProjectBySlug($_GET["slug"]) );
-// getProjectBySlug($_GET["slug"]);
-
-if ( getProjectBySlug($_GET["slug"]) ) {
-  // echo $_GET["slug"];
-}
 ?>
 
 <section class="mr-projects">

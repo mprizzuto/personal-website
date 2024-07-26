@@ -1,18 +1,30 @@
 <?php 
-// $projectDetail = ["project-detail"] ?? null;
-// switch ($projectDetail) {
-// 	case "":
-// 		// code...
-// 		break;
-	
-// 	default:
-// 		echo "404 project not found";
-// 		break;
-// }
+$projectName = $_GET["slug"] ?? null;
 ?>
 
-<section>
-	<inner-column>
-		<h2>project detail page</h2>
-	</inner-column>
+<section class="mr-projects">
+  <inner-column>
+    <?php
+      switch ($projectName) {
+        case "responsive-layout-garden":
+          include "../src/templates/pages/projects/rlg/garden.php";
+          break;
+        
+        case "theming-challenge":
+        include "../src/projects/theming-challenge/theming-challenge.php";
+          break;
+
+        case "php-guestBook":
+          break;
+
+        case "vdi-app":
+          break;
+            
+        default:
+          echo "<mark>invalid Project. Check your URL and try again</mark>";
+          break;
+      }
+    ?>
+  </inner-column>
 </section>
+

@@ -9,7 +9,7 @@ elseif ( $_GET["page"] ?? "" ) {
 	switch (getPage()) {
 		case "":
 		case "home":
-		
+		case "null":
 			include "../src/templates/pages/home.php";
 			break;
 
@@ -78,13 +78,9 @@ elseif ( $_GET["page"] ?? "" ) {
 			include "../src/templates/pages/style-guide.php";
 			break;	
 
-		case "null":
-			include "../src/templates/pages/home.php";
-			break;
-
-	  case "now":
-	    include "../src/templates/pages/now.php";
-	    break;  
+	  	case "now":
+	    	include "../src/templates/pages/now.php";
+	    	break;  
 
 
 		default:

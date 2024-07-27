@@ -1,9 +1,6 @@
 /* style guide */
 .shapes figure[class$="-shape"] {
-/*  width: 30vw;*/
-/*  max-width: 80%;*/
-  max-width: 200px;
-/*  border: 10px solid red;*/
+
 }
 
 .shapes .quotes-shape svg {
@@ -16,5 +13,28 @@
 }
 
 .shapes figure {
-  margin-top: 50px;
+/*  margin-top: 50px;*/
+}
+
+.arrow-shape {
+/*  position: relative;*/
+}
+
+.style-guide-main .right-arrow {
+  top: 100px;
+}
+
+.arrow-shape {
+  min-height: 180px;
+}
+
+@media (min-width: 600px) {
+
+.shapes figure[class$="-shape"] {
+/*    display: flex;*/
+/*    align-items: center;*/
+  }
+  .shapes figcaption {
+/*    margin-left: 10%;*/
+  }
 }

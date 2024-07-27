@@ -36,3 +36,6 @@ KEEP THINGS SMALL UNTIL
 
 ## style guide
   -- make grid of colors evenly soaces
+
+  ## SVGS
+  -- align stars in moon.svg

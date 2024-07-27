@@ -6,7 +6,6 @@
         <h1><?=generatePageTitle()?></h1>
       </inner-column>
     </header>
-
     <?php require "../src/routers/page-router.php";?>
   </article>
 </main>

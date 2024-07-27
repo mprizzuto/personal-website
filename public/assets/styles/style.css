@@ -30,7 +30,7 @@ inner-column  {
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  line-height: 2;
+  line-height: 1.5;
   /*max-width: 600px;*/
   padding: 10px;
   letter-spacing: 0.03em;
@@ -140,7 +140,6 @@ li ul {
     /*max-width: 900px;*/
     margin-right: auto;
     margin-left: auto;
-    line-height: 2;
     padding: 10px;
   }
   .projects-svg {

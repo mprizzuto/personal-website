@@ -1,9 +1,9 @@
 <a class="projects-svg" href="?page=projects">
     <svg class="sun" width="100%" height="100%" viewBox="0 0 134 100" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-2530.89,-2457.4)">
+      <g transform="matrix(1,0,0,1,-2530.89,-2457.4)">
         <g transform="matrix(0.997769,0,0,1,3007.34,1171.07)">
             <g transform="matrix(0.992908,0,0,0.97644,-4836.81,-844.163)">
-                <ellipse cx="4474.36" cy="2233.1" rx="50.47" ry="51.206" style="fill:rgb(255,200,30);"/>
+                <ellipse class="golden-sun" cx="4474.36" cy="2233.1" rx="50.47" ry="51.206"/>
             </g>
         </g>
         <g transform="matrix(0.997769,0,0,1,3007.34,1171.07)">
@@ -78,7 +78,7 @@
                 </g>
             </g>
         </g>
-        </g>
+      </g>
     </svg>
 
 </a>

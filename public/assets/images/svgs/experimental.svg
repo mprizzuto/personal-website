@@ -4,12 +4,12 @@
             <g id="rising-sun" transform="matrix(21.365,0,0,2.48003,-13464.6,-110.576)">
                 <g transform="matrix(0.259424,0,0,0.303829,132.559,33.2796)">
                     <g>
-                        <ellipse cx="765" cy="390" rx="285" ry="290" style="fill:rgb(154,3,30);"/>
+                        <ellipse class="experimental-rect" cx="765" cy="390" rx="285" ry="290"/>
                     </g>
                 </g>
                 <g transform="matrix(0.340122,0,0,0.440551,-173.235,-306.4)">
                     <g>
-                        <rect x="600" y="1500" width="434.762" height="400" style="fill:rgb(154,3,30);"/>
+                        <rect class="experimental-rect" x="600" y="1500" width="434.762" height="400"/>
                     </g>
                 </g>
                 <g transform="matrix(0.147871,0,0,0.40427,97.3802,2.29627)">
@@ -19,7 +19,7 @@
                 </g>
                 <g transform="matrix(1.1295e-17,-0.176221,0.126126,2.5345e-18,55.1066,58.3758)">
                     <g>
-                        <rect x="200" y="300" width="120" height="680" style="fill:rgb(154,3,30);"/>
+                        <rect class="experimental-rect" x="200" y="300" width="120" height="680" />
                     </g>
                 </g>
                 <g transform="matrix(1.58223e-17,-0.264331,0.126126,-8.00042e-19,281.35,583.513)">

@@ -33,3 +33,6 @@ KEEP THINGS SMALL UNTIL
 
 ## Experiments
   - dynamically render tityle based on experiment detail query slug
+
+## style guide
+  -- make grid of colors evenly soaces

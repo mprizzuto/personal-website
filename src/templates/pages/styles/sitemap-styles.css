@@ -1,12 +1,9 @@
 /*colors*/
 :root {
-  --first-color: "linen";
-  --second-color: "gold";
-  --third-color: "#FFC800";
-  --fourth-color: "#3B444B";
-  --fifth-color: "#002d62";
-  --sixth-color: "#002AD8";
-  --last-color: "#3945E7";
+  --white-color: #ebebeb;
+  --gold-color: #ffc81e;
+  --brown-color: #af2912;
+  --blue-color: #2b66a2;
 }
 
 .color-list {
@@ -18,14 +15,16 @@
 
 .color-list li {
   flex-basis: 100px;
+
   min-height: 100px;
   min-width: 30px;
   max-width: 100px;
-  margin-top: 5px;
+
+  margin-top: 10px;
   margin-right:  10px;
-  color: purple;
+
+  color: initial;
   text-align: center;
-  border: 6px double black;
 }
 
 .color-list li:first-of-type {
@@ -34,8 +33,8 @@
 }
 
 .color-list li:first-of-type::after {
-  content: var(--first-color);
-/*  color: initial;*/
+  --color-name: "#ebebeb"; /* not DRY! but because using the variables defined in root didnt work! */
+  content: var(--color-name);
 }
 
 .color-list :nth-child(2) {
@@ -46,54 +45,24 @@
 /*  position: relative;*/
 /*  z-index: 2;*/
 /*  color: black;*/
-  content: var(--second-color);
+  --color-name: "#ffc81e";
+  content: var(--color-name);
 }
 
 .color-list li:nth-child(3) {
-  background: var(--body-color);
+  background: var(--brown-color);
 }
 
 .color-list li:nth-child(3)::after {
-  content: var(--third-color);
+  --color-name: "#af2912";
+  content: var(--color-name);
 }
 
 .color-list :nth-child(4) {
-  background: var(--background-color);
+  background: var(--blue-color);
 }
 
 .color-list li:nth-child(4)::after {
-  content: var(--fourth-color);
-}
-
-
-.color-list :nth-child(5) {
-  background: var(--night-theme-background);
-}
-
-.color-list li:nth-child(5)::after {
-  content: var(--fifth-color);
-}
-
-.color-list :nth-child(6) {
-  background: var(--star-bar-color);
-}
-
-.color-list li:nth-child(6)::after {
-  content: var(--sixth-color)
-}
-
-.color-list :nth-child(7) {
-  background: var(--moon-blue);
-}
-
-.color-list :nth-child(8) {
-  background: var(--moon-color);
-}
-
-.color-list :last-of-type {
-  background: var(--line-color);
-}
-
-.color-list :last-of-type::after {
-  content: var(--last-color);
+  --color-name: "#2b66a2";
+  content: var(--color-name);
 }

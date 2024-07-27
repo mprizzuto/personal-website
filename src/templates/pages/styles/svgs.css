@@ -3,7 +3,7 @@
 }
 
 .sun ellipse {
-  fill: #ffc81e;
+  fill: var(--accent-color);
 }
 
 :is(.right-quote #right-rect, .left-quote #left-rect) {
@@ -14,4 +14,11 @@
   fill: var(--brown-color);
 }
 
-/*.left-quote#left-rect, .left-quote#left-square*/
+
+.experimental-svg .experimental-rect {
+  fill: var(--brown-color);
+}
+
+.moon-star {
+  fill:  var(--accent-color);
+}

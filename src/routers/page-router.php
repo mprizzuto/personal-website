@@ -47,7 +47,7 @@ elseif ( $_GET["page"] ?? "" ) {
 
 		// project details router
 		case "project-detail":
-			include "./database/project-details-database.php";
+			include "../src/database/project-detail.php";
 			break;
 
 		// experiment detail router
@@ -58,8 +58,7 @@ elseif ( $_GET["page"] ?? "" ) {
 		// writing details router
 		case "blog-post-detail":
 			include "../src/database/writing-detail-database.php";
-			break;
-
+			break; 
 
 		case "goals":
 			include "../src/templates/pages/goals.php";

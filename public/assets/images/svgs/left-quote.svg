@@ -5,10 +5,10 @@
                 <g>
                     <g>
                         <g transform="matrix(-0.0614984,-0.0487506,0.107637,-0.145404,98.5292,749.042)">
-                            <rect x="2200" y="2050" width="1900" height="1850" style="fill:rgb(88,140,214);stroke:black;stroke-width:292.82px;"/>
+                            <rect id="left-rect" x="2200" y="2050" width="1900" height="1850"/>
                         </g>
                         <g transform="matrix(-0.0821998,8.67362e-18,-1.21431e-17,-0.0985945,354.742,496.929)">
-                            <rect x="950" y="300" width="2550" height="2200" style="fill:rgb(154,3,30);stroke:black;stroke-width:454.24px;"/>
+                            <rect id="left-square" x="950" y="300" width="2550" height="2200"/>
                         </g>
                     </g>
                 </g>

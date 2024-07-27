@@ -1,0 +1,17 @@
+#fence {
+  fill: #2b66a2;
+}
+
+.sun ellipse {
+  fill: #ffc81e;
+}
+
+:is(.right-quote #right-rect, .left-quote #left-rect) {
+  fill: var(--blue-color);
+}
+
+:is(.right-quote #right-square, .left-quote #left-square) {
+  fill: var(--brown-color);
+}
+
+/*.left-quote#left-rect, .left-quote#left-square*/

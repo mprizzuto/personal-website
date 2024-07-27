@@ -7,12 +7,12 @@ $projectName = $_GET["slug"] ?? null;
     <?php
       switch ($projectName) {
         case "responsive-layout-garden":
-          include "../src/templates/pages/projects/rlg/garden.php";
+          // include "../src/templates/pages/projects/rlg/garden.php";
           break;
         
         case "theming-challenge":
-        include "../src/projects/theming-challenge/theming-challenge.php";
-          break;
+          include "../src/projects/theming-challenge/challenge.php";
+            break;
 
         case "php-guestBook":
           break;

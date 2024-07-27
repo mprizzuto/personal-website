@@ -11,7 +11,6 @@
 h1, h2, h3, h4 {
   font-family: 'zen kaku', sans-serif;
   line-height: 1;
-  text-transform: capitalize;
 }
 
 h1, h2 {
@@ -44,7 +43,7 @@ a {
 }
 
 .dev-credentials {
-  border-left:  8px solid maroon;
+  border-left:  8px solid #af2912;
   padding: 10px;
 }
 

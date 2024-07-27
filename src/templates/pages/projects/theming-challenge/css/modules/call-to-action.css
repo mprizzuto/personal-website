@@ -1,0 +1,37 @@
+html {
+  --brick: #840808;
+}
+call-to-action {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*background: var(--brick);*/
+  /*color:  white;*/
+  padding-left: 20px;
+  max-width: 90ch;
+}
+
+call-to-action a {
+  margin-top:  20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+call-to-action span {
+  display: block;
+  padding: 10px;
+  background: var(--brick);
+}
+call-to-action .attention-voice {
+  color:  var(--brick);
+}
+
+@media (min-width: 600px) {
+  call-to-action {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,44 @@
+html {
+  --black: #111111;
+  --white: #FFFFFF;
+  --color: #9ec9eb;
+  --highlight: #aadee9;
+  --brick: #840808;
+  --building-blue: #0060A6;
+  --logo-color: #FF3F01;
+  --accent-color-one: slategray;
+}
+
+mast-head {
+  display: block;
+  padding: 5px;
+}
+
+mast-head nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+mast-head nav a {
+  border-right:  2px solid lightgray;
+  color:  white;
+  text-transform: uppercase;
+  padding:  10px;
+
+}
+
+mast-head .logo {
+  max-width:  80px;
+}
+
+
+
+
+@media (min-width: 600px) {
+  mast-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

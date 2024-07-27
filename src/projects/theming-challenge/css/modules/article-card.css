@@ -1,0 +1,34 @@
+
+article-card {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  outline: 2px solid var(--brick);
+  padding:  10px;
+}
+
+article-card a {
+  margin-top:  20px;
+  background:  var(--brick);
+  text-transform: uppercase;
+}
+
+article-card a span {
+  display: block;
+  color:  white;
+  padding:  10px;
+}
+
+article-card .attention-voice, article-card .calm-voice,
+article-card a {
+  transform: translate(-2px);
+}
+
+article-card .attention-voice {
+  color:  var(--brick);
+}
+

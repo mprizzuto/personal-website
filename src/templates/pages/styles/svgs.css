@@ -1,5 +1,5 @@
 #fence {
-  fill: #2b66a2;
+  fill: var(--moon-blue);
 }
 
 .sun ellipse {
@@ -20,5 +20,5 @@
 }
 
 .moon-star {
-  fill:  var(--accent-color);
+  fill: var(--accent-color);
 }

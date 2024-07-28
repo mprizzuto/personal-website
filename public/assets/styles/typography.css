@@ -53,6 +53,10 @@ a:active {
   color: var(--moon-blue);
 }
 
+p {
+  max-width: 55ch;
+}
+
 /*homepage*/
 .greet {
   font-family:  "zen kaku", sans-serif;
@@ -61,7 +65,7 @@ a:active {
 }
 
 .dev-credentials {
-  border-left:  8px solid #af2912;
+  border-left:  8px solid var(--brown-color);
   padding: 10px;
 }
 
@@ -171,18 +175,9 @@ p, a, ul, details,
   font-family: 'noto serif', serif;
 }
 
-.web-languages {
-  /*display: inline-block;*/
-}
-
 .dev-credentials {
   margin-top: 5px;
   max-width: 450px;
-}
-
-aside inner-column {
-/*  display: flex;*/
-  /*justify-content: flex-end;*/
 }
 
 aside ul li, h2 + p {
@@ -195,13 +190,6 @@ aside ul li:first-of-type {
 
 p + p {
   margin-top: 20px;
-}
-
-.lfps {
-  /*margin-top: 40px;*/
-}
-
-.lfps:first-letter {
 }
 
 .exercise-list {
@@ -217,6 +205,12 @@ p + p {
   align-items: center;
   justify-content: space-between;
   max-width: 300px;
+}
+
+@media (min-width: 600px) {
+  .author-welcome .credentials {
+    max-width: 450px;
+  }
 }
 
 /*style guide*/
@@ -297,11 +291,7 @@ list-style: circle;
 
 
 
-@media (min-width: 600px) {
-	.author-welcome .credentials {
-    max-width: 450px;
-	}
-}
+
 
 
 @media (min-width: 600px) {

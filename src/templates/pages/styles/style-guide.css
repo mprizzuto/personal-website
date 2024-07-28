@@ -7,8 +7,12 @@
   max-width: 150px;
 }
 
-.style-guide-article section + section {
-  margin-top: 30px;
+:is(
+  .style-guide-article, 
+  section + section, 
+  .style-guide-article header + h2  
+){
+  margin-top: 5px;
 /*  border-top: 3px solid lime;*/
 }
 

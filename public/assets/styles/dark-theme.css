@@ -1,7 +1,24 @@
 /*dark mode*/
 html.dark-theme {
-  color: var(--body-color);
+  color: var(--accent-color);
+
   background: var(--background-color);
+
+  a:link {
+    color: var(--lighter-gray);
+  }
+
+  a:visited {
+    color: var(--light-gray);
+  }
+
+  a:hover {
+    color: var(--accent-color);
+  }
+
+  a:active {
+    color: rgba(175,41,18,255, .3);
+  }
 }
 
 :is(html.dark-theme a) {
@@ -13,42 +30,56 @@ html.dark-theme img {
   filter: brightness(.8) contrast(1.2);
 }
 
-/*@media (prefers-color-scheme: dark) {
+/*links*/
 
-  body.dark-theme {
-    color: var(--body-color);
-    background: var(--night-theme-background);
-  }
-  body h1, h2 {
 
-  }
-  .right-arrow {
-    background: linen;
-  }
-  a {
-    color: inherit;
-  }
-  a:visited {
+@media (prefers-color-scheme: dark) {
+  html.dark-theme {
+    color: var(--accent-color);
 
-  }
-  .dev-credentials {
-    border-left:  8px solid white;
-    padding: 10px;
+    background: var(--background-color);
+
+    a:link {
+      color: var(--brown-color);
+    }
+
+    a:visited {
+      color: var(--light-gray);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    a:active {
+    }
+    body h1, h2 {
+
+    }
+    .right-arrow {
+/*      background: linen;*/
+    }
+    a {
+      color: inherit;
+    }
+    a:visited {
+
+    }
+    .dev-credentials {
+      border-left:  8px solid white;
+      padding: 10px;
+    }
   }
 }
-*/
 
-
-/*.dark-theme {
-  background: blue;
-  color: white;
-}*/
-
-/*@media (prefers-color-scheme: dark) {
-  body {
-    background: blue;
-    color: white;
+@media (prefers-color-scheme: light) {
+  html {
+    background: white;
+    color: black;
   }
-}*/
+}
+
+
+
 
 /*TODO: implement dark and light theme using css only. i.e dont rely solely on JS. what if the user has JS disabled? */

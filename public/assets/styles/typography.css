@@ -8,12 +8,12 @@
   src: url("../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("truetype");
 }
 
-h1, h2, h3, h4 {
+:is(h1, h2, h3, h4) {
   font-family: 'zen kaku', sans-serif;
   line-height: 1;
 }
 
-h1, h2 {
+:is(h1, h2) {
 	line-height: 1.3;
 }
 
@@ -30,12 +30,30 @@ mark {
   padding: 2px;
 }
 
+/*links*/
 a {
   text-decoration: underline;
 }
 
-/*homepage*/
+a:link {
+/*  color: red;*/
+  color: var(--moon-blue);
+}
 
+a:visited {
+  color: purple;
+}
+
+a:hover {
+/*  background: var(--accent-color);*/
+  color: var(--brown-color);
+}
+
+a:active {
+  color: var(--moon-blue);
+}
+
+/*homepage*/
 .greet {
   font-family:  "zen kaku", sans-serif;
   display: block;
@@ -65,7 +83,6 @@ a[target="_blank"]:after {
   display: inline-block;
   text-transform: capitalize;
 }
-
 
 
 body.experimental-body a:link {
@@ -230,7 +247,7 @@ strong {
 }
 
 .lfps strong {
-  font-size: .1.3em;
+  font-size: 1.3em;
 }
 
 .welcome h2 {

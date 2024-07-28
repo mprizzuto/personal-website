@@ -22,3 +22,15 @@
 .moon-star {
   fill: var(--accent-color);
 }
+
+.experimental-gold-accent {
+  fill: var(--gold-color);
+}
+
+.experimental-brown-accent {
+  fill: var(--brown-color);
+}
+
+.experimental-moon-accent {
+  fill: var(--moon-blue);
+}

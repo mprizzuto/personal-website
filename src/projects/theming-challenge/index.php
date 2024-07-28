@@ -5,41 +5,41 @@
 
 
 <section class='welcome'>
-<inner-column>
+  <inner-column>
 
-	<?php include('modules/graphic-diptych.php'); ?>
+  	<?php include('modules/graphic-diptych.php'); ?>
 
-</inner-column>
+  </inner-column>
 </section>
 
 
 
 <section class='get-involved'>
-<inner-column>
+  <inner-column>
 
-	<?php include('modules/call-to-action.php'); ?>
+  	<?php include('modules/call-to-action.php'); ?>
 
-</inner-column>
+  </inner-column>
 </section>
 
 
 
 <section class='stuff'>
-<inner-column>
-	
-	<?php include('modules/articles-intro.php'); ?>
+  <inner-column>
+  	
+  	<?php include('modules/articles-intro.php'); ?>
 
-</inner-column>
+  </inner-column>
 </section>
 
 
 
 <section class='help-us'>
-<inner-column>
+  <inner-column>
 
-	<?php include('modules/call-to-action.php'); ?>
+  	<?php include('modules/call-to-action.php'); ?>
 
-</inner-column>
+  </inner-column>
 </section>
 
 

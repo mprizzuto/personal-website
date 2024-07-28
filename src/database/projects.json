@@ -19,12 +19,5 @@
 		"case-study-slug": "php-guestBook-cs",
 		"id": 2,
 		"description": "A PHP guestbook with CRUD capabilities and sessions. "
-	},
-	{
-		"title": "visual design inspiration(vdi) app",
-		"slug": "vdi-app",
-		"case-study-slug": "vdi-cs",
-		"id": 2,
-		"description": "a full-stack app to upload all your cool visual design inspiration to"
 	}
 ]

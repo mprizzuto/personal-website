@@ -1,15 +1,19 @@
 :root {
 	--accent-color: #FFD700;
 	--body-color: #FAF0E6;
-	--line-color:  #3945E7;
-	--moon-color: rgb(255,200,30);
-	--moon-blue: rgb(0,42,216);
-	--star-bar-color: rgb(0,42,216);
-	--star-color: #FFC81E;
+	--moon-blue: #2b66a2;;
 
-/* theme changer	*/
---body-color: rgb(255,200,30);
-  --heading-color: rgb(0,42,216);
-  --background-color: rgb(59,68,75);
-  --night-theme-background: #002D62;
+	/* theme changer	*/
+	--body-color: rgb(255,200,30);
+	--heading-color: rgb(0,42,216);
+	--background-color: rgb(59,68,75);
+	--night-theme-background: #002D62;
+
+	--light-gray: lightgray;
+	--lighter-gray: #ebebeb;
+
+	--white-color: #ebebeb;
+  --gold-color: #ffc81e;
+	--brown-color: #af2912;
+	--blue-color: #2b66a2;
 }

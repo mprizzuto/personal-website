@@ -2,7 +2,7 @@
 <graphic-diptych>
 
 	<picture>
-		<img src='./images/cartoons.jpg' alt='an illustrated drawing of buildings'>
+		<img src='../src/projects/theming-challenge/images/cartoons.jpg' alt='an illustrated drawing of buildings'>
 	</picture>
 
 	<text-content>

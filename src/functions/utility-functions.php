@@ -256,6 +256,10 @@ function generatePageTitle() {
   			generateMeta("projects", "come see my projects", "https://marcorizzuto.net/images/metadata/projects.jpg");
   			break;
 
+  		case "project":
+				generateMeta("project detail ", "my project detail", "https://marcorizzuto.net/images/metadata/project-detail.jpg");
+				break;	
+
 			case "about":
   			generateMeta("about", "come read about the man behind the code", "https://marcorizzuto.net/images/metadata/about.jpg");
   			break;
@@ -295,10 +299,6 @@ function generatePageTitle() {
 			case "experiment-detail":
   				generateMeta("experiment detail", "my experiment detail", "https://marcorizzuto.net/images/metadata/experiment-detail.jpg");
   				break;
-
-			case "project":
-				generateMeta("project detail ", "my project detail", "https://marcorizzuto.net/images/metadata/project-detail.jpg");
-				break;
 
 			case "blog-post-detail":
 				generateMeta("blog post detail", "my blog post detail", "https://marcorizzuto.net/images/metadata/blog-post-detail.jpg");

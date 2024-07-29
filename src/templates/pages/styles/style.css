@@ -11,6 +11,8 @@
 @import "./project-styles/garden-1.css";
 @import "./project-styles/garden-2.css";
 @import "./project-styles/garden-3.css";
+@import "../theming-challenge/css/style.css";
+
 
 
 .warning {

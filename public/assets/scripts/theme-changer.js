@@ -94,6 +94,7 @@ let themeChanger = {
       this.saveThemeToLs("os-theme");
 
       this.renderThemeIcon("os-theme");
+      console.log("dark theme");
     }
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -104,6 +105,7 @@ let themeChanger = {
       this.saveThemeToLs("os-theme");
 
       this.renderThemeIcon("os-theme");
+      console.log("light theme");
     }
 
     // listen for changes
@@ -157,11 +159,13 @@ let themeChanger = {
 }
 
 themeChanger.renderMenu();
-
+themeChanger.getUserOsTheme();
 // only run this if user clicks the os-theme button
 if (themeChanger.getThemeFromLs() === "os") {
   themeChanger.applyTheme( themeChanger.getThemeFromLs() );
 }
+
+// on page load, if LS theme is empty, 
 
 //on page load, get theme from LS and add to DOM
 window.addEventListener("DOMContentLoaded", () => {

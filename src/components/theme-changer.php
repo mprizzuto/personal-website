@@ -1,6 +1,6 @@
 <button id="toggle-themes"><span id="current-theme"></span>theme</button>
 
-<ul class="theme-list">
+<ul class="theme-list hide-themes">
   <li>
     <button id="os-theme">🌓os theme</button>
   </li>

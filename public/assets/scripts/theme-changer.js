@@ -60,8 +60,8 @@ let themeChanger = {
     });
 
     window.addEventListener("DOMContentLoaded", (event) => {
-      themeList.classList.toggle("hide-themes");
-
+      // themeList.classList.add("hide-themes");
+      // alert("DOMCONTENTLOADED");
     });
   },
   applyTheme(theme) {
@@ -156,7 +156,8 @@ let themeChanger = {
     }
     console.log(response.text(), response);
   }
-}
+};
+
 
 themeChanger.renderMenu();
 themeChanger.getUserOsTheme();
@@ -165,16 +166,13 @@ if (themeChanger.getThemeFromLs() === "os") {
   themeChanger.applyTheme( themeChanger.getThemeFromLs() );
 }
 
-// on page load, if LS theme is empty, 
-
-//on page load, get theme from LS and add to DOM
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("html").classList = [];
 
-  // document.querySelector("html").classList.add(themeChanger.getThemeFromLs());
   console.log(`${themeChanger.getThemeFromLs()}`);
   themeChanger.renderThemeIcon(`${themeChanger.getThemeFromLs()}`);
   themeChanger.applyTheme( themeChanger.getThemeFromLs() );
+  
 });
 
 

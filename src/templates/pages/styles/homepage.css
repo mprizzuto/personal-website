@@ -23,9 +23,13 @@ body.homepage a:active {
 }
 
 .welcome {
-  margin-top: 30px;
+/*  margin-top: 30px;*/
 }
 
 .welcome inner-column {
 
+}
+
+.dev-name-lfps {
+  display: inline-block;
 }

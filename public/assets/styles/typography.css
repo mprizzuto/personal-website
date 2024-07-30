@@ -176,7 +176,7 @@ p, a, ul, details,
 }
 
 .dev-credentials {
-  margin-top: 5px;
+  margin-top: 30px;
   max-width: 450px;
 }
 
@@ -245,7 +245,8 @@ strong {
 }
 
 .welcome h2 {
-  font-size: 4em;
+  font-size: 3em;
+  line-height: 1;
 }
 
 .noto-font {
@@ -289,8 +290,12 @@ list-style: circle;
 }
 
 
+celestial-shapes {
+  align-self: start;
 
-
+  position: relative;
+  bottom: 32px;
+}
 
 
 

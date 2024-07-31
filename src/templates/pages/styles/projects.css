@@ -11,6 +11,7 @@ design-poster inner-column > * {
 .projects h2 {
 /*  color:  var(--moon-blue);*/
   font-size: 1.8em;
+  text-transform: capitalize;
 }
 
 .projects h2 + picture {

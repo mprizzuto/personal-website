@@ -1,27 +1,21 @@
 [
 	{
 		"id": 1,
-		"name": "form validator",
-		"purpose": "regular expressions and forms",
-		"link": "?page=experiment-detail&experiment=form-validator"
+		"name": "EFP (PHP)",
+		"purpose": "UX, pseudocode and form handling",
+		"link": "?page=experiment-detail&experiment=efp_php"
 	},
 	{
 		"id": 2,
-		"name": "Tourette symptom checker",
-		"purpose": "a project that demonstrates form handling. Using PHP",
+		"name": "TS evaluator",
+		"purpose": "UX and form handling",
 		"link": "?page=experiment-detail&experiment=ts-symptom-checker"
 	},
 	{
 		"id": 3,
-		"name": "The most A11Y(accessible) page ever (TMAPE)",
-		"purpose": "Can we make a highly accessible page?",
-		"link": "?page=experiment-detail&experiment=most-a11y-page"
-	},
-	{
-		"id": 4,
-		"name": "screenreader experiment",
-		"purpose": "how do different screenreaders interpret the same content, and how to optimize content for them?",
-		"link": "?page=experiment-detail&experiment="
+		"name": "EFP (JS)",
+		"purpose": "UX, pseudocode and form handling",
+		"link": "?page=experiment-detail&experiment=efp_js"
 	}
 
 ]

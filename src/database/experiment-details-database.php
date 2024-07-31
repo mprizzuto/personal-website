@@ -10,7 +10,7 @@ setExperimentDetailTitle(getExperimentName());
     <?php
       switch ($experiment) {
         case "most-a11y-page":
-          experimentDetailBuilder("most-a11y-page", "can i make the most accessible page ever?", "skitch, affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "the result was, i was successful!");
+          experimentDetailBuilder("most-a11y-page", "can i make the most accessible page ever?", "skitch, affinity designer, sublime text", "https://via.placeholder.com/150", "ALT", "the result was, i was successful!");
           break;
 
         case "ts-symptom-checker":
@@ -18,11 +18,19 @@ setExperimentDetailTitle(getExperimentName());
           break;
 
         case "form-validator":
-          experimentDetailBuilder("form validator", "can i validate form data?", " affinity designer, sublime text", "https://via.placeholder.com/150", "a figure showing screenshots of my work", "It turns out, valid form data benefits human and computer users!");
+          experimentDetailBuilder("form validator", "can i validate form data?", " affinity designer, sublime text", "https://via.placeholder.com/150", "ALT", "It turns out, valid form data benefits human and computer users!");
           break;
+
+        case "efp_php":
+          experimentDetailBuilder("Exercises for Programmers. <br>PHP edition", "Exploring PHP through bite-sized programming exercises", "paper, pencil, sublime", "https://via.placeholder.com/150", "ALT", "i got lots of practice with pseudocode, form handling and UX");
+          break;
+
+        case "efp_js":
+          experimentDetailBuilder("Exercises for Programmers. <br>JS edition", "Exploring JavaScript (JS) through bite-sized programming exercises", "paper, pencil, sublime", "https://via.placeholder.com/150", "ALT", "i got lots of practice with pseudocode, form handling and UX");
+          break;     
         
         // case "":
-        //   experimentDetailBuilder("", "", "", "", "I");
+        //   experimentDetailBuilder("", "", "", "", "I", "");
         //   break;
 
 

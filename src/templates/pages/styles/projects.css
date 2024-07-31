@@ -48,7 +48,7 @@ project-card picture {
 }
 
 .projects p {
-  max-width: 75ch;
+/*  max-width: 75ch;*/
 }
 
 .project-list picture {
@@ -61,6 +61,7 @@ project-card {
 
 project-card p {
   margin-top: 5px;
+  max-width: 25ch;
 }
 
 project-card picture + p {

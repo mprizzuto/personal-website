@@ -4,14 +4,14 @@
 		"slug": "responsive-layout-garden",
 		"case-study-slug": "responsive-layout-garden-cs",
 		"id": 0,
-		"description": "I like finding cool visual design and recreasting the it for the web"
+		"description": "Finding and implementing web layouts"
 	},
 	{
 		"title": "theming challenge",
 		"slug": "theming-challenge",
 		"case-study-slug": "theming-challenge-cs",
 		"id": 1,
-		"description": "in this project, we were given the base HTML code and told to style it to evoke a certain feeling"
+		"description": "styling a base template on a theme"
 	},
 	{
 		"title": "PHP guestBook",

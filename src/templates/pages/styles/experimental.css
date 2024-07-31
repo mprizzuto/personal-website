@@ -19,6 +19,7 @@ experiment-card + experiment-card{
 
 experiment-card p {
   text-wrap: pretty;
+  max-width: 14ch;
 }
 
 .experiment-card {

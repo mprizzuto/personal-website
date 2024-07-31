@@ -14,8 +14,8 @@
 				<li>
 					<project-card>
 						<h2><?=$project["title"]?></h2>
-						<a href="?page=project&slug=<?=$project["slug"] ?? null?>">see the project</a>
-						<a href="?page=case-study&slug=<?=$project["case-study-slug"] ?? null?>">read the case study</a>
+						<a href="?page=project&slug=<?=$project["slug"] ?? null?>">project</a>
+						<a href="?page=case-study&slug=<?=$project["case-study-slug"] ?? null?>">case study</a>
 						<p><?=$project["description"]?></p>
 					</project-card>
 				</li>

@@ -22,11 +22,11 @@ KEEP THINGS SMALL UNTIL
   	- remove pritning of unsanitiized $_GET param 
     - change inline styling to use of classes? 
 - find code for theming challenge
+- fix CSS for theming challenge
 
 ## Sitemap
 
-  ## General
-   - if page slug is invalid(i.e :"?pge=")/empty, output 404 page
+## General
 
 ## visual design
 - size sun/moon SVG 
@@ -39,3 +39,6 @@ KEEP THINGS SMALL UNTIL
 
   ## SVGS
   -- align stars in moon.svg
+
+  ## menu
+  stop menu from toggling open upon page load

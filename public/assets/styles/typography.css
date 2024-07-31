@@ -19,6 +19,7 @@
 
 h1 {
 	font-size: clamp(2.5em, 5vw, 6em);
+  text-transform: capitalize;
 }
 
 h2 {
@@ -287,6 +288,7 @@ list-style: circle;
 
 .site-map-list li h2 {
   margin-top: 40px;
+  text-transform: capitalize;
 }
 
 

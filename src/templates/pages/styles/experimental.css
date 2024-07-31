@@ -48,7 +48,7 @@ experiment-card p {
   .experiments inner-column {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1%;
+    gap: 3%;
   }
   .experiments h2, .experiments span {
 /*    color:  rgb(0,42,216);*/
@@ -66,5 +66,8 @@ experiment-card p {
   }
   .experiments-title {
     margin-top: 40px;
+  }
+  experiment-card details {
+    max-width: 30ch;
   }
 }

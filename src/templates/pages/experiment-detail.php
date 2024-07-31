@@ -9,7 +9,6 @@
 	<section>
 		<h2>details</h2>
 
-		<?php require "../detail-router.php";?>
 	</section>
 </article>
 

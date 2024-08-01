@@ -33,10 +33,10 @@
 }
 
 @media (min-width: 600px) {
-
-.shapes figure[class$="-shape"] {
-/*    display: flex;*/
-/*    align-items: center;*/
+  .shapes figure[class$="-shape"] {
+  /*    display: flex;*/
+  /*    align-items: center;*/
+      max-width: 400px;
   }
   .shapes figcaption {
 /*    margin-left: 10%;*/

@@ -25,9 +25,20 @@ about-card {
 }
 
 .favorite-photo-title ~ * {
-	margin-top: 20px;
+/*	margin-top: 20px;*/
 }
 
 .about-page-nav h2 {
 	font-size: clamp(1.2em, 2vw, 3em);
+}
+
+.photo-list {
+	display: flex;
+	flex-direction: row;
+	gap: 3%;
+	flex-wrap: wrap;
+}
+
+.photo-list li {
+	margin-top: 3%;
 }

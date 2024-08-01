@@ -27,7 +27,10 @@ if ( $time >= 16 || $time <= 07 ) {
     </div>
 
     <celestial-shapes>
-      <?php include "../src/routers/day-night-router.php";?>
+      <a class="projects-svg" href="?page=projects"><?=$projectsCTA ?? null?>
+
+        <?php include "../src/routers/day-night-router.php";?>
+      </a>
     </celestial-shapes>
   </inner-column>
 </section>

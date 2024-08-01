@@ -1,6 +1,13 @@
 @font-face {
-  font-family: "zen kaku";
-  src: url("../fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Black.ttf") format("truetype");
+  font-family: "Zen Kaku Gothic New Black";
+  src: 
+  url("../fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic New Regular";
+  src: 
+  url("../fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Regular.ttf") format("truetype"); 
 }
 
 @font-face {
@@ -9,8 +16,11 @@
 }
 
 :is(h1, h2, h3, h4) {
-  font-family: 'zen kaku', sans-serif;
-  line-height: 1;
+  font-family: 'Zen Kaku Gothic New Black', sans-serif;
+}
+
+:is(p, li, a, figcaption) {
+   font-family: "Zen Kaku Gothic New Regular", sans-serif;
 }
 
 :is(h1, h2) {
@@ -60,7 +70,6 @@ p {
 
 /*homepage*/
 .greet {
-  font-family:  "zen kaku", sans-serif;
   display: block;
   font-size: 5em;
 }
@@ -121,7 +130,6 @@ a[target='_blank']::after {
 }
 
 .credentials h1 {
-  font-family: 'zen kaku', sans-serif;
   font-size: clamp(1.8em, 4vw, 4em);
 }
 
@@ -173,7 +181,7 @@ span.job {
 
 p, a, ul, details,
 .job, figcaption {
-  font-family: 'noto serif', serif;
+/*  font-family: 'noto serif', serif;*/
 }
 
 .dev-credentials {

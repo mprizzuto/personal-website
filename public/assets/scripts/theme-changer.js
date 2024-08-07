@@ -29,6 +29,7 @@ let themeChanger = {
 
     let eventTargets = ["toggle-themes", "current-theme"];
 
+
     window.addEventListener("click", (event) => {
       // setting the targets for menu toggle
       if ( eventTargets.includes(event.target.id) ) {
@@ -50,19 +51,32 @@ let themeChanger = {
         this.renderThemeIcon(event.target.id);
 
         this.sendThemeToServer(event.target.id);
+
+        // if theme is os theme
+          // if theme is dark theme
+            // send "dark-theme" string to server
+
+        // if theme is light theme
+          // send "light-theme" string to server
+
+        if (event.target.id === "os-theme") {
+          if (this.getUserOsTheme() === "light") {
+            this.sendThemeToServer("light-theme");
+          }
+
+          if (this.getUserOsTheme() === "dark") {
+            this.sendThemeToServer("dark-theme");
+          }
+        } 
       }
 
       else if ( !eventTargets.includes(event.target.id) ) {
         themeList.classList.add("hide-themes");
         themeList.classList.remove("show-themes");
       }
-
     });
 
-    window.addEventListener("DOMContentLoaded", (event) => {
-      // themeList.classList.add("hide-themes");
-      // alert("DOMCONTENTLOADED");
-    });
+
   },
   applyTheme(theme) {
     if ( this.getValidThemes() ) {
@@ -95,6 +109,8 @@ let themeChanger = {
 
       this.renderThemeIcon("os-theme");
       console.log("dark theme");
+
+      return "dark";
     }
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -106,37 +122,11 @@ let themeChanger = {
 
       this.renderThemeIcon("os-theme");
       console.log("light theme");
+
+      return "light";
     }
 
-    // listen for changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      const newColorScheme = event.matches ? "dark" : "light";
 
-      console.log("NCS", newColorScheme);
-
-      if (newColorScheme === "dark") {
-        // console.log("DARK THEME");
-        document.querySelector("html").classList = [];
-        document.querySelector("html").classList.toggle("os-theme");
-        document.querySelector("html").classList.toggle("dark-theme");
-
-        this.saveThemeToLs("os-theme");
-
-        this.renderThemeIcon("os-theme");
-      }
-
-      else if ( newColorScheme === "light" ) {
-        // console.log("LIGHT THEME");
-        document.querySelector("html").classList = [];
-        document.querySelector("html").classList.toggle("os-theme");
-        document.querySelector("html").classList.toggle("light-theme");
-
-        this.saveThemeToLs("os-theme");
-
-        this.renderThemeIcon("os-theme");
-      }
-
-    });
   },
   async sendThemeToServer(theme) {
     const URL = "index.php";
@@ -160,18 +150,47 @@ let themeChanger = {
 
 
 themeChanger.renderMenu();
-themeChanger.getUserOsTheme();
-// only run this if user clicks the os-theme button
-if (themeChanger.getThemeFromLs() === "os") {
-  themeChanger.applyTheme( themeChanger.getThemeFromLs() );
-}
+// themeChanger.getUserOsTheme();
+
+ // listen for changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  const newColorScheme = event.matches ? "dark" : "light";
+
+  // console.log("NCS", newColorScheme);
+  if (newColorScheme === "dark") {
+    // console.log("DARK THEME");
+    document.querySelector("html").classList = [];
+    document.querySelector("html").classList.toggle("os-theme");
+    document.querySelector("html").classList.toggle("dark-theme");
+
+    themeChanger.saveThemeToLs("os-theme");
+    themeChanger.sendThemeToServer("dark-theme");
+
+    themeChanger.renderThemeIcon("os-theme");
+  }
+
+  else if ( newColorScheme === "light" ) {
+    // console.log("LIGHT THEME");
+    document.querySelector("html").classList = [];
+    document.querySelector("html").classList.toggle("os-theme");
+    document.querySelector("html").classList.toggle("light-theme");
+
+    themeChanger.saveThemeToLs("os-theme");
+    themeChanger.sendThemeToServer("light-theme");
+
+    themeChanger.renderThemeIcon("os-theme");
+  }
+
+});
 
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("html").classList = [];
-
-  console.log(`${themeChanger.getThemeFromLs()}`);
   themeChanger.renderThemeIcon(`${themeChanger.getThemeFromLs()}`);
-  themeChanger.applyTheme( themeChanger.getThemeFromLs() );
+
+  if ( themeChanger.getThemeFromLs() ) {
+    themeChanger.applyTheme( themeChanger.getThemeFromLs() );
+  }
+  
   
 });
 

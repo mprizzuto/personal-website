@@ -52,6 +52,8 @@ let themeChanger = {
 
         this.sendThemeToServer(event.target.id);
 
+        document.documentElement.setAttribute('data-theme', event.target.id);
+
         // if theme is os theme
           // if theme is dark theme
             // send "dark-theme" string to server
@@ -62,10 +64,14 @@ let themeChanger = {
         if (event.target.id === "os-theme") {
           if (this.getUserOsTheme() === "light") {
             this.sendThemeToServer("light-theme");
+
+            document.documentElement.setAttribute('data-theme', "os-theme-light");
           }
 
           if (this.getUserOsTheme() === "dark") {
             this.sendThemeToServer("dark-theme");
+
+            document.documentElement.setAttribute('data-theme', "os-theme-dark");
           }
         } 
       }
@@ -110,6 +116,7 @@ let themeChanger = {
       this.renderThemeIcon("os-theme");
       console.log("dark theme");
 
+      document.documentElement.setAttribute('data-theme', "os-theme-dark");
       return "dark";
     }
 
@@ -117,6 +124,8 @@ let themeChanger = {
       document.querySelector("html").classList = [];
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("light-theme");
+
+      document.documentElement.setAttribute('data-theme', "os-theme-light");
 
       this.saveThemeToLs("os-theme");
 
@@ -152,36 +161,45 @@ let themeChanger = {
 themeChanger.renderMenu();
 // themeChanger.getUserOsTheme();
 
- // listen for changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-  const newColorScheme = event.matches ? "dark" : "light";
+ // listen for changes only if current choice is os-theme
 
-  // console.log("NCS", newColorScheme);
-  if (newColorScheme === "dark") {
-    // console.log("DARK THEME");
-    document.querySelector("html").classList = [];
-    document.querySelector("html").classList.toggle("os-theme");
-    document.querySelector("html").classList.toggle("dark-theme");
+if ( themeChanger.getThemeFromLs() === "os-theme" ) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
 
-    themeChanger.saveThemeToLs("os-theme");
-    themeChanger.sendThemeToServer("dark-theme");
+    // console.log("NCS", newColorScheme);
+    if (newColorScheme === "dark") {
+      // console.log("DARK THEME");
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("os-theme");
+      document.querySelector("html").classList.toggle("dark-theme");
 
-    themeChanger.renderThemeIcon("os-theme");
-  }
+      themeChanger.saveThemeToLs("os-theme");
+      themeChanger.sendThemeToServer("dark-theme");
 
-  else if ( newColorScheme === "light" ) {
-    // console.log("LIGHT THEME");
-    document.querySelector("html").classList = [];
-    document.querySelector("html").classList.toggle("os-theme");
-    document.querySelector("html").classList.toggle("light-theme");
+      themeChanger.renderThemeIcon("os-theme");
 
-    themeChanger.saveThemeToLs("os-theme");
-    themeChanger.sendThemeToServer("light-theme");
+      document.documentElement.setAttribute('data-theme', "os-theme-dark" );
+    }
 
-    themeChanger.renderThemeIcon("os-theme");
-  }
+    else if ( newColorScheme === "light" ) {
+      // console.log("LIGHT THEME");
+      document.querySelector("html").classList = [];
+      document.querySelector("html").classList.toggle("os-theme");
+      document.querySelector("html").classList.toggle("light-theme");
 
-});
+      themeChanger.saveThemeToLs("os-theme");
+      themeChanger.sendThemeToServer("light-theme");
+
+      themeChanger.renderThemeIcon("os-theme");
+
+      document.documentElement.setAttribute('data-theme', "os-theme-light" );
+    }
+
+  });
+
+}
+
 
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("html").classList = [];
@@ -189,8 +207,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if ( themeChanger.getThemeFromLs() ) {
     themeChanger.applyTheme( themeChanger.getThemeFromLs() );
+
+    // document.documentElement.setAttribute('data-theme', themeChanger.getThemeFromLs() );
   }
   
+  else if ( !themeChanger.getThemeFromLs() ) {
+    themeChanger.getUserOsTheme();
+    themeChanger.saveThemeToLs("os-theme");
+    themeChanger.renderThemeIcon(`os-theme`);
+  }
   
 });
 

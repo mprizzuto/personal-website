@@ -42,3 +42,6 @@ KEEP THINGS SMALL UNTIL
 
   ## menu
   stop menu from toggling open upon page load
+
+## theme change
+- prevent css prefers color scheme from overriding JS theme changing functionality

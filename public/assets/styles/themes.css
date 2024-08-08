@@ -16,28 +16,6 @@
 }
 
 /*dark mode*/
-html.dark-theme {
-  color: var(--accent-color);
-
-  background: var(--background-color);
-
-  a:link {
-    color: var(--lighter-gray);
-  }
-
-  a:visited {
-    color: var(--light-gray);
-  }
-
-  a:hover {
-    color: var(--accent-color);
-  }
-
-  a:active {
-    color: rgba(175,41,18,255, .3);
-  }
-}
-
 :is(html.dark-theme a) {
 /*  color: inherit;*/
   color: linen;
@@ -48,79 +26,36 @@ html.dark-theme img {
 }
 
 /*links*/
+html {
+  background-color: white;
+  color: black;
+}
 
-
-/*@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   html {
     color: var(--accent-color);
-
     background: var(--background-color);
-
-    a:link {
-      color: var(--brown-color);
-    }
-
-    a:visited {
-      color: var(--light-gray);
-    }
-
-    a:hover {
-      color: var(--accent-color);
-    }
-
-    a:active {
-    }
-    body h1, h2 {
-
-    }
-    .right-arrow {
-    }
-    a {
-      color: inherit;
-    }
-    a:visited {
-
-    }
-    .dev-credentials {
-      border-left:  8px solid white;
-      padding: 10px;
-    }
   }
+
 }
+
 
 @media (prefers-color-scheme: light) {
-  html {
-    background: white;
-    color: black;
+  body {
+    * {
+      color: initial;
+      background: initial;
+    }
   }
-}*/
-
-:root {
-    --background-color: #333;
-    --text-color: #fff;
 }
 
-/* Light theme (as an example) */
-/*[data-theme="light"] {
-    --background-color: #fff;
-    --text-color: #000;
-}*/
 
-/* Use variables in your CSS */
-/*body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}*/
+html[data-theme="dark-theme"] {
+  color: var(--accent-color);
+  background: var(--background-color);
+}
 
-/*
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-        --background-color: lime;
-        --text-color: ;
-    }
-
-    [data-theme="light"] {
-        --background-color: #fff;
-        --text-color: #000;
-    }
-}*/
+html[data-theme="light-theme"] {
+  background-color: initial;
+  color: initial;
+}

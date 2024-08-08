@@ -208,7 +208,8 @@ window.addEventListener("DOMContentLoaded", () => {
   if ( themeChanger.getThemeFromLs() ) {
     themeChanger.applyTheme( themeChanger.getThemeFromLs() );
 
-    // document.documentElement.setAttribute('data-theme', themeChanger.getThemeFromLs() );
+    document.documentElement.setAttribute('data-theme', themeChanger.getThemeFromLs()  );
+    
   }
   
   else if ( !themeChanger.getThemeFromLs() ) {

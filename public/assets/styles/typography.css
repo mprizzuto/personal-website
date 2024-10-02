@@ -302,9 +302,6 @@ list-style: circle;
 
 celestial-shapes {
   align-self: start;
-
-  position: relative;
-  bottom: 32px;
 }
 
 
@@ -335,5 +332,10 @@ celestial-shapes {
   .right-arrow {
     position: relative;
     top: 15px;
+  }
+
+  celestial-shapes {
+    position: relative;
+    bottom: 32px;
   }
 }

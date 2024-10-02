@@ -1,17 +1,20 @@
 <?php function generateGoals(iterable $goalData) {?>
-	<ul class="goal-list">
-  <?php
-  	foreach($goalData as $data) {
-			foreach($data as $key => $values) {
-		    echo "<li>" . "<h2>$key</h2>";
-			  
-	      foreach((array)$values as $value) {
-	        // remove the square brackets from the string
-	        echo str_replace(array('[',']'), "", $value ). " ";
-	      }
-		  }
-		    echo "</li>";
-		}
-   ?>
+<h2><?=$goalData["heading"]?></h2>
+
+	<ul class="goal-list-parent">
+   
+    <?php foreach($goalData["sections"] as $data) {?>
+        <li>
+          <h2><?=$data["heading"]?></h2>
+
+          <ul class="goal-list-child">
+            <?php foreach ($data["goals"] as $goal) {?>
+            <li><?=$goal["text"] ?? $goal["other"]?></li>
+            <?php //formatVar($goal["text"] ?? $goal["other"])?>
+          <?php }?>
+          </ul>
+        </li>
+        
+     <?php }?> 
   </ul>
 <?php }?>

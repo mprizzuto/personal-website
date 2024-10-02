@@ -1,14 +1,53 @@
 [
 	{
-		"5-year-goal": "[<p>I have a position programming websites/ apps with PHP and JavaScript. I also mentor future developers with a special interest in Neurodiverse developers. I have my own home someplace warm year-round (California sounds nice).</p> <p>I work at a company that prides itself on accessibility and user experience. I am open to working in the fields of health care and education.</p>]"
+		"title": "5-year-goal",
+		"goals": [
+			{
+				"text": "I have a position programming websites/apps with PHP and JavaScript. I also mentor future developers with a special interest in Neurodiverse developers."
+			},
+			{
+				"text": "I work at a company that prides itself on accessibility and user experience."
+			}
+		],
+		"": "",
 	},
 	{
-		"1-year-goal": "[<p>I am a Jr Developer. My primary role is Web Developer/User Tester. I am working remotely, or on-site someplace warm year-round. The company is small to medium sized.</p>]"
+		"title": "1-year-goal",
+		"goals": [
+			{
+				"text": "I am a Jr Developer. My primary role is Web Developer/User Tester."
+			},
+			{
+				"text": "I work on-site, remote, or hybrid in the NYC area, or California. The company is small to medium sized with an inclusive culture and room for growth."
+			},
+			{
+			"text": "Preferably in the fields of Health Care and Education."
+			}
+		],
 	},
 	{
-		"End-of-month": "[<p>have the PHP templates/routing and visual design for this website completed. The site is user tested with a wide range of audiences<p>]"
+		"title": "End-of-month",
+		"goals": [
+			{
+				"text": "One job offer"
+			},
+		],
 	},
 	{
-		"end-of-week": "[<p>coming soon</p>]"
-	}
+		"title": "end-of-week",
+		"goals": [
+			{
+				"text": "better work/life balance",
+			},
+			{
+				"text": "Personal website: cohesive visual design",
+			},
+			{
+				"text": "have the PHP templates/routing and visual design for this website completed. The site is user tested with a wide range of audiences",
+			},
+			{
+				"text": "The site is user tested with a wide range of audiences"
+			}
+		],
+	},
 ]

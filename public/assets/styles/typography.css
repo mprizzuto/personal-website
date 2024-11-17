@@ -141,6 +141,10 @@ a[target='_blank']::after {
   text-transform: uppercase;
 }
 
+.dev-credentials {
+  margin-right: 20px;
+}
+
 em {
   font-weight: bold;
 }
@@ -326,10 +330,5 @@ list-style: circle;
   .right-arrow {
     position: relative;
     top: 15px;
-  }
-
-  celestial-shapes {
-    position: relative;
-    bottom: 32px;
   }
 }

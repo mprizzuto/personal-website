@@ -1,7 +1,7 @@
 # Marco Rizzuto's personal website
 
 ## Why I created this website
-This website is a repository of the learning (and experimenting) I did as a [Perpetual Education](https://perpetual.education) student. 
+This website is a repository of the learning (and experimenting) I did as a [Perpetual Education](https://perpetual.education) beta-tester. 
 
 ## Technologies used
 - [`PHP`]

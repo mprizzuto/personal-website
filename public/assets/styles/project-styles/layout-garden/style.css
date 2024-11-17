@@ -1,5 +1,5 @@
 /*gardens*/
-@import "./project-styles/garden-1.css";
-@import "./project-styles/garden-2.css";
-@import "./project-styles/garden-3.css";
-@import "./project-styles/garden-4.css";
+@import "./garden-1/garden-1.css";
+@import "./garden-2/garden-2.css";
+@import "./garden-3/garden-3.css";
+@import "./garden-4/garden-4.css";

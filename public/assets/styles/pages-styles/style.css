@@ -7,6 +7,8 @@
 @import "sitemap-styles.css";
 @import "style-guide.css";
 @import "404.css";
+
+
 @import "svgs.css";
 
 /*gardens*/
@@ -16,11 +18,6 @@
 @import "./project-styles/garden-4.css";*/
 
 /*@import "./project-styles/layout-garden/style.css";*/
-
-
-
-
-
 .warning {
 	margin-top: 20px;
 	font-size: 1.5em;

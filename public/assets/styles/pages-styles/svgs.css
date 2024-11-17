@@ -34,3 +34,9 @@
 .experimental-moon-accent {
   fill: var(--moon-blue);
 }
+
+@media (width >= 600px) {
+  celestial-shapes {
+    margin-left: 30px;
+  }
+}

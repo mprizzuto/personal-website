@@ -21,7 +21,6 @@ function appendCssLinkToHead(url, rel) {
   let head = document.querySelector("head");
 
   let createLink = createCssLink(url, rel);
-  createLink.id = "haha";
   head.append(createLink);
 }
 

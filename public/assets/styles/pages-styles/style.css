@@ -8,7 +8,6 @@
 @import "style-guide.css";
 @import "404.css";
 
-
 @import "svgs.css";
 
 /*gardens*/
@@ -32,3 +31,6 @@
 	margin-left: auto;
 }
 
+.site-menu a {
+	display: block;
+}

@@ -3,14 +3,17 @@
 		"title": "Responsive layout garden",
 		"slug": "responsive-layout-garden-cs",
 		"id": 0,
-		"hypothesis": "Layouts follow similar conventions",
-		"conclusion": "they follow common conmventions but the web is unique, in that one size doesn't fit all"
+		"hypothesis": [
+			"almost any layout can be designed for the web using design thinking. By empathizing ('desiging and optimizing content for different screen sizes and internet connections'), defining (the goal of the design, both for myself and the user), iterating(implementing different versions based off feedback and personal insights), prototyping (drawing out the layout with pencil/paper and graphics programs), and testing(getting feedback from other developers).",
+			"A majority of these layouts I created were found through visual design accounts I follow on social media, and sometimes in random books and magazines I find. I also draw inspiration from my daily walks, analyzing the branding of bnusinesses and layouts on billboards and posters."
+		],
+		"conclusion": "If you make something easy to use and fun, people will want to interact with it. Actions matter more than intent"
 	},
 	{
 		"title": "theming challenge",
 		"slug": "theming-challenge-cs",
 		"id": 1,
-		"hypothesis": "industries follow certain theming conmventions",
+		"hypothesis": "industries follow certain theming conmventions.",
 		"conclusion": "conclusion: theming challenge"
 	},
 	{
@@ -20,11 +23,11 @@
 		"hypothesis": "TODO",
 		"conclusion": "they follow common conmventions but the web is unique, in that one size doesn't fit all"
 	},
-  {
-    "title": "visual design inspiration app",
-    "slug": "vdi-cs",
-    "id": 2,
-    "hypothesis": "people like finding and sharing visual design inspiration",
-    "conclusion": "People pass visual design inspiration every day and neglect to notice/share it"
-  }
+	{
+		"title": "visual design inspiration app",
+		"slug": "vdi-cs",
+		"id": 2,
+		"hypothesis": "people like finding and sharing visual design inspiration",
+		"conclusion": "People pass visual design inspiration every day and neglect to notice/share it"
+	}
 ]

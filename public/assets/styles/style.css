@@ -17,12 +17,9 @@ body {
 
 /*page bodys*/
 body.homepage, body.experimental-body {
-/*  background:  linen;*/
 }
 
 .home-main h1 {
-/*  position: relative;*/
-/*  left: 10px;*/
 }
 body.writing-body {
   /*background: linen;*/
@@ -42,42 +39,14 @@ inner-column  {
   align-self: flex-end;
 }
 
-
-/*SVGs*/
-.construction {
-  max-width: 400px;
-  margin-top: 10px;
-}
-
 .logo {
   max-width:  50px;
   margin:  5px;
 }
 
-/*.green-rect {
-  position: absolute;
-  top: 350px;
-  z-index:  -1;
-  fill:  rgba(0,100,0, .5);
-}
-*/
-
-.shy-sun {
-  max-width: 600px;
-  margin-right: 10px;
-}
-
-.experimental-svg {
-  width: 30vw;
-  max-width: 800px;
-  margin-top: 40px;
-}
-
 li ul {
   margin-left:  20px;
 }
-
-
 
 /*theme changer*/
 #theme-change, #theme-change option {
@@ -100,55 +69,29 @@ li ul {
   .writing-area inner-column {
     display: flex;
     outline: 10px solid lime;
-    /*justify-content: space-between;*/
   }
   .welcome inner-column {
     display: flex;
     flex-direction: row;
-/*    align-items: center;*/
   }
   .dev-credentials {
     margin-top: unset;
   }
   .welcome h2:first-of-type {
-/*    position: relative;*/
-/*    bottom: -8px;*/
     writing-mode: vertical-rl;
-/*    transform: rotate(180deg);*/
-
   }
-  .chips-and-guac {
-    position: absolute;
-    top: 550px;
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*right: 345px;*/
-    left:  60vw;
-    z-index: -1;
-  }
-  .lollypop {
-    align-self: flex-end;
-  }
-  /*.blog-list {
-    position: absolute;
-    min-width: 550px;
-    top:  620px;
-    transform: rotate(-20deg);
-    right: 10%;
-    flex-basis: 500px;
-  }*/
   .role {
     transform: rotate(90deg) translate(-70px, 30px);
   }
-  .welcome inner-column, .homepage header inner-column, 
-  .dev-article aside inner-column {
+  :is(
+    .welcome inner-column, 
+    .homepage header inner-column, 
+    .dev-article aside inner-column
+  ) {
     /*max-width: 900px;*/
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
-  }
-  .projects-svg {
-/*    margin-top: 120px;*/
   }
 }
 
@@ -157,6 +100,10 @@ li ul {
     fill: rgba(219,25,0, .7);
     transform:  rotate(-20deg) translate(0px, 10px);
   }
+}
+
+footer nav.site-menu {
+  margin-top: 30px;
 }
 
 

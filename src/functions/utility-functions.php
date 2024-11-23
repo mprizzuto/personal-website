@@ -11,11 +11,9 @@ function isFirstPageLoad() {
   return false;
 }
 
-
 function doesGEThaveCount() {
 	return count($_GET);
 }
-
 
 function getQueryString() {
 	$queryString = $_GET["page"] ?? "";
@@ -36,7 +34,6 @@ function sanitizeString(string $str) {
 
 	return $result;
 }
-
 
 //get any page with ?page query string
 function getPage() {
@@ -97,7 +94,6 @@ function checkPages(string $page):bool {
 
 	return in_array($page, $pageList);
 }
-
 
 function getClassByQuery() {
 
@@ -232,8 +228,6 @@ function generatePageTitle() {
 		}
 	}
 ?>
-
-
 
 <?php
 	function generateMeta($title, $description, $image) {?>

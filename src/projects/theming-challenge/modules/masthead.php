@@ -1,9 +1,8 @@
 
 <mast-head>
-
 	<nav class='site-menu'>
 		<a class='logo' href='#'>
-			<img src="images/logo.svg" alt="">
+			<img src="images/icons/circle.php" alt="circle">
 			<!-- or you could actually use the SVG -->
 		</a>
 

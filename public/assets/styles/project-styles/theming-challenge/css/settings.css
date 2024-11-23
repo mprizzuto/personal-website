@@ -1,22 +1,50 @@
-/* SETTINGS  ("variables" in our case) */
+/*
+	this could be broken up into things 
+	like "color" and "spacing" as needed as it grows
+*/
+
+
 html {
-	--black: #111111;
-	--white: #FFFFFF;
+	--black: #000000;
+	--white: #efefef;
+
+	--neutral-stuffs: gray;
+
 	--color: #9ec9eb;
 	--highlight: #aadee9;
-	--brick: #840808;
-	--building-blue: #0060A6;
-	--logo-color: #FF3F01;
-	--accent-color-one: slategray;
-	--lighter-slate: rgba(112, 128, 144, .4);
-	--inner-column-width:  300px;
+
+	--shadow: rgba(0, 0, 0, 0.8);
+
+	--corners: 10px; /* or whatevers */
+
+	--paper: var(--white);
+	--ink: var(--black);
+
+	/* structure */
+	--standard-inner-column: 1140px;
+	--tight-inner-column: 800px;
+
+	@media (prefers-color-scheme: dark) {
+		--paper: #231a1a;
+		--ink: #ffffe2;
+		--color: red;
+		--highlight: pink;
+	}
+
 }
-/* you can make more! */
 
+/*theme styles*/
+html {
+	/*links*/
+	--link-color: #262626;
+	--link-hover: #E5E5E5;
 
+	/*main color*/
 
-/* USAGE */
-
-.thingy {
-	color:  var(--highlight); /* used as variable */
+	/*--body-copy*/
+	--banner-background-color-dark: #292729;
+  --heading-text-color: #262626;
+  --body-text-color: #000000;
 }
+
+

@@ -1,6 +1,20 @@
-/* DEVELOPER STYLES */
 
 body * {
-	/*border:  1px solid rgba(0,0,0,.2);
-	padding:  4px;*/
+	padding: 2px;
+}
+
+body inner-column {
+	padding: 2px;
+}
+
+section:nth-of-type(odd) {
+	background-color: rgba(0,0,0,.03);
+}
+
+picture img {
+	opacity: 0;
+}
+
+picture {
+	background-color: var(--shadow);
 }

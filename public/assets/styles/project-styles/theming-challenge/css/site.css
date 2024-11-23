@@ -1,0 +1,79 @@
+/* 
+	BTW in case it isn't obvious... the whole PSSST-CSS idea is a joke 
+	like... (it's just CSS)
+*/
+
+/* P reset */
+@import "preset.css";
+
+/* S etup */
+@import "setup.css";
+
+/* S ettings */
+@import "settings.css";
+/* @import "developer-styles.css"; */
+
+/* S tructure */
+@import "structure.css";
+
+/* T ypography */
+@import "typography.css";
+
+/* C omponents */
+@import "components.css";
+
+/* S tuff (modules) */
+@import "modules.css";
+
+/* S ections and more stuff */
+/* 
+	really this ends up being the "Scratch" area 
+	where you can put everything as you think it up --
+	then... when it starts for form meaninful groups - 
+	you can move them or create new files
+*/
+
+/* then other contextual styles */
+body {
+/*	background-color: var(--paper);*/
+	background: white;
+/*	color: var(--ink);*/
+}
+
+section:is(.sign-up, .get-involved) {
+	inner-column {
+		max-width: var(--tight-inner-column);
+	}
+}
+
+section + section {
+	margin-top: 30px;
+}
+
+section.get-involved {
+/*	background-color: var(--highlight);*/
+}
+
+section.get-involved {
+/*	background: url("../images/background/woman-in-wheat-field.jpg");*/
+
+}
+
+@media (prefers-color-scheme: dark) {
+	section.sign-up {
+		background-color: var(--color);
+		color: var(--black);
+	}
+
+	section.sign-up {
+		.button {
+/*			background-color: var(--black);*/
+/*			color: var(--white);*/
+		}
+	}
+
+	section.get-involved {
+/*		background-color: var(--highlight);*/
+/*		color: var(--black);*/
+	}
+}

@@ -1,10 +1,6 @@
 
-/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-html {
+* {
   box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 a {
@@ -21,6 +17,7 @@ p a {
 
 picture {
 	display: block;
+	overflow: hidden;
 }
 
 img {
@@ -32,5 +29,5 @@ img {
 svg {
   display: block;
   width: 100%;
-  /* may need height: 100%; Check all browsers */
+  /* check safari... */
 }

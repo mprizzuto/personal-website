@@ -1,22 +1,47 @@
+@import "forms.css";
 
-/* COMPONENTS */
+/* buttons and icons and smaller reusable bits here */
+
 .button {
-  text-transform: uppercase;
-  color: inherit;
-  font-weight: 700;
-  letter-spacing: .05em;
-  text-decoration: underline;
-  padding:  10px 0;
-  /* should a link look like a "button" though? */
-  display: flex;
-  flex-direction: row;
-  border:  1px solid black;
-  padding:  10px;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight:  400;
+	all: unset; /* what would this do? */
+	appearance: none;
+
+	display: block;
+
+	font-family: "Maison NB", Helvetica, Arial, sans-serif;
+	font-size: .90rem;
+	line-height: 1.4;
+
+	padding: 0.5em 1em;
+	background-color: var(--heading-text-color);
+	color: white;
+	min-width: 120px;
+	text-align: center;
 }
 
-.arrow {
-  /* maybe icons in here? Any reusable smaller things */  
+
+
+/* 
+	article-card - might be something you put here?
+*/
+.article-card {
+	:is(
+		text-content, 
+		text-content h1 ~ *
+	) {
+		margin-top: 5px;
+
+	}
+
+}
+
+@media (width >= 700px) {
+	:is(inner-column) {
+		padding: 20px;
+	/*	outline: 10px solid lime;*/
+	}
+
+	.latest inner-column {
+/*		padding: unset;*/
+	}
 }

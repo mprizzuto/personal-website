@@ -1,65 +1,178 @@
-.site-header, .calm-voice, 
-call-to-action a, .what-to-call-it-then p, 
-site-map nav, article-card span {
-	font-family: "Work Sans", sans-serif;
+/* could we pull in @fonts here? */
+@font-face {
+  font-family: "Maison NB";
+  src:
+    local("Maison-Neue-Book"),
+    url("../fonts/Maison-Neue-Book.ttf") format("TrueType"),
 }
 
-call-to-action a, article-card span {
-	text-decoration: underline;
-	color: black;
+/*links*/
+:is(site-map a, .page-link a) {
+	font-family: "Maison NB", Helvetica, Arial, sans-serif;
 }
 
-article-card span:hover {
-	color:  slategray;
+:is(.page-link a) {
+	color: var(--link-color);
 }
 
+:is(site-map a) {
+	color: #737373;
+}
+
+.page-link a, .user-menu a {
+	padding: 12px;
+	font-size: .75rem;
+/*	text-align: center;*/
+}
+
+.page-link a:hover, .user-menu a:hover {
+	display: inline-block;
+	background-color: var(--link-hover);
+	border-radius: 8px;
+}
+
+/*headings*/
 .loud-voice	{
-	font-family: sans-serif;
+	font-family: "Maison NB", Helvetica, Arial, sans-serif;
 	font-size: clamp(36px, 5vw, 60px);
+	@media (min-width: 600px) {
+		font-weight: 700; /* or variable font */
+	}
+	line-height: 1;
 }
 
-.user-menu {
-	margin-top: 20px;
+.attention-voice	{
+	font-family: "Maison NB", Helvetica, Arial, sans-serif;
+	font-size: 3rem;
+	line-height: 1;
+	/* we suggest you always specifically set things like line-height and test multiple lines of text */
 }
 
-@media (min-width: 600px) {
-	.loud-voice {
+.strong-voice	{
+	font-family: "Maison NB", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.article-card .strong-voice {
+	font-size: 1em;
+}
+
+:is(footer .strong-voice) {
+	font-size: 1.3em;
+}
+
+:is(.calm-voice, p) {
+  font-family: "Maison NB", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+}
+
+/* should handle all the default fonts sizes */
+/* could be set on the body... but... consider what side-effects... */
+
+/* consider what these do */
+:is(.calm-voice, p) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p) {
+	strong {
 		font-weight: 700;
 	}
 }
 
-.intro-voice, .attention-voice	{
-	font-family: "Neuton", sans-serif;
-	font-size: 40px;
+/* these would be scoped to section or to an article element */
+/* this is just a loose setting for now */
+
+:is(call-to-action) p {
+	max-width: 35ch;
 }
 
-.attention-voice	{
-	font-size: 30px;
-	margin-top: 10px;
-}
+:is(p) {
+  color: var(--body-text-color);
 
-.calm-voice {
-	font-size: 1rem;
-}
-
-.attention-voice, .loud-voice {
-	letter-spacing: 0.02em;
-	line-height: 1.2;
-}
-
-p {
-	line-height: 1.5;
+  max-width: 40ch;
 }
 
 p + p {
-	margin-top: 14px;
-}
-
-
-h1 + p {
-	margin-top: 20px;
+	margin-top: 1em;
 }
 
 h2 + p {
 	margin-top: 10px;
+}
+
+code {
+	font-family: monospace;
+	font-size: 1.1em;
+	color: green;
+}
+
+:is(h1, h2, h3, p) {
+  color: var(--heading-text-color);
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+:is(.site-menu, .x-menu) ul {
+	line-height: 1.5;
+}
+
+:is(.logo) {
+  font-family: "Maison NB", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+  max-width: 180px;
+  margin-bottom: 20px;
+  fill: var(--link-color);
+}
+
+.user-menu .button {
+  background: initial;
+  color: var(--link-color);
+  text-align: center;
+}
+
+site-map a {
+  font-size: .75rem;
+}
+
+.site-menu ul li:first-of-type, #toggle {
+	margin-left: 20px;
+}
+
+nav a {
+	max-width: 150px;
+}
+
+.welcome text-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+/*	outline: 10px solid red;*/
+}
+
+:is(.welcome graphic-diptych text-content, 
+	.sign-up call-to-action) p {
+	font-size: 1.5em;
+}
+
+
+@media (width >= 700px) {
+	.logo {
+		margin-bottom: unset;
+	}
+}
+ 
+header#top {
+  margin-bottom: 30px;
+	border-bottom: 1px solid #e1e0e0;
+
+}
+
+header inner-column {
+
 }

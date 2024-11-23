@@ -1,4 +1,4 @@
-<?php
+ <?php
 include "functions/utility-functions.php";
 include "functions/menu-functions.php";
 include "functions/project-functions.php";

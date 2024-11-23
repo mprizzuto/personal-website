@@ -1,4 +1,4 @@
-<section class="tsch-site-main">
+<section class="tsch-site-main" id="garden-3">
   <header class="tsch-page-header">
     <div class="tsch-bookmark">
       <h1>jan tschichold</h1>

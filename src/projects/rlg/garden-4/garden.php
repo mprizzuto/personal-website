@@ -1,4 +1,4 @@
-<architect-poster>
+<architect-poster id="garden-4">
   <section class="ap-welcome">
     <header class="ap-header">
       <h2 class="architect-intro">

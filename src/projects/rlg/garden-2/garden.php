@@ -1,4 +1,4 @@
-<design-poster>
+<design-poster id="garden-2">
   <inner-column>
     <header class="dp-header">
       <ul class="dp-design-datalist">

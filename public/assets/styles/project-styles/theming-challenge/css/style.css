@@ -24,12 +24,12 @@
 
 
 /* MODULES */
-@import 'modules/masthead.css';
-@import 'modules/graphic-diptych.css';
-@import 'modules/call-to-action.css';
-@import 'modules/articles-intro.css';
-@import 'modules/article-card.css';
-@import 'modules/site-map.css';
+@import 'modules/mast-head/style.css';
+@import 'modules/graphic-diptych/style.css';
+@import 'modules/call-to-action/style.css';
+@import 'modules/articles-intro/style.css';
+@import 'modules/article-card/style.css';
+@import 'modules/site-map/style.css';
 /* should everything/nothing be in it's own file? */
 
 /*fonts*/

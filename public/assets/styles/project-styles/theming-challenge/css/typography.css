@@ -3,7 +3,7 @@
   font-family: "Maison NB";
   src:
     local("Maison-Neue-Book"),
-    url("../fonts/Maison-Neue-Book.ttf") format("TrueType"),
+    url("./assets/fonts/maison-nb/Maison-Neue-Book.ttf") format("TrueType"),
 }
 
 /*links*/

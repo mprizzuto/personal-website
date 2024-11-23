@@ -1,0 +1,15 @@
+
+site-map {
+	display: block;
+	/*border: 4px solid green;*/
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 20px;
+
+	padding: 10vh 0 15vh;
+}
+
+site-map .logo {
+	display: none;
+}

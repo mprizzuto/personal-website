@@ -2,7 +2,7 @@
 <mast-head>
 	<nav class='site-menu'>
 		<a class='logo' href='#'>
-			<img src="images/icons/circle.php" alt="circle">
+			<img src="./assets/images/theme-challenge-images/icons/circle.svg" alt="circle">
 			<!-- or you could actually use the SVG -->
 		</a>
 

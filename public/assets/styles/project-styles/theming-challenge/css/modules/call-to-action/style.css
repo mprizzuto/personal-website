@@ -1,0 +1,68 @@
+
+call-to-action {
+	display: block;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10vh 0;
+	
+	.button {
+		margin-top: 20px;
+		background: none;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	:is(
+		.welcome graphic-diptych, 
+		.sign-up call-to-action *, 
+		.get-involved call-to-action *
+	) {
+		color: white;
+	}
+
+	a.button {
+		margin-top: 10px;
+
+/*		color: initial;*/
+		border: 1px solid rgb(255, 255, 255);
+
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	:is(p.story) {
+		font-size: 1.5em;
+	}
+}
+
+.get-involved {
+	background: url("./images/brownTextile.jpg");
+
+	background-position: center center;
+    background-size: cover;
+
+    max-width: var(--standard-inner-column);
+
+    margin-right: auto;
+    margin-left: auto;
+/*	min-height: 500px;*/
+}
+
+.sign-up {
+	background: url("./images/texture.jpg");
+
+	background-position: center center;
+    background-size: cover;
+
+	min-height: 500px;
+	max-width: var(--standard-inner-column);
+	margin-right: auto;
+    margin-left: auto;
+}
+
+@media (width >= 700px) {
+}

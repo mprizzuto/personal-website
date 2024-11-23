@@ -10,7 +10,7 @@
 <article-card>
 
 	<picture>
-		<img src='<?=$thumbnail?>' loading='lazy' alt='$todo'>
+		<img src='./assets/images/theme-challenge-images/<?=$thumbnail?>' loading='lazy' alt='$todo'>
 	</picture>
 
 	<h2 class='attention-voice'><?=$article["heading"]?></h2>

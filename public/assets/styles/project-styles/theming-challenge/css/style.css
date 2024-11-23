@@ -48,7 +48,7 @@
 }
 
 html {
-	background-color: var(--white);
+/*	background-color: var(--white);*/
 }
 
 
@@ -73,7 +73,7 @@ html {
 }
 
 body {
-	background: var(--lighter-slate);
+/*	background: var(--lighter-slate);*/
 }
 
 footer inner-column {

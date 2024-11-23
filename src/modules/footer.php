@@ -1,7 +1,16 @@
 		<footer class="site-footer">
 		  <inner-column>
-			  <?php include "../src/components/nav.php"; ?>
-			  <?php aboutPageNav();?>
+        <!-- <h2>TESTSTTSSTST</h2> -->
+			  <?php 
+         
+        if (getPage()=== "about") {
+          aboutPageNav();
+          // echo aboutPageNav();
+        }
+        
+        include "../src/components/nav.php";
+        ?>
+			  
 		  </inner-column>
 		</footer>
 		<script src="./assets/scripts/theme-changer.js"></script>

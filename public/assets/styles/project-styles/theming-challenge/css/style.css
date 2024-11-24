@@ -30,18 +30,18 @@
 @import 'modules/articles-intro/style.css';
 @import 'modules/article-card/style.css';
 @import 'modules/site-map/style.css';
-/* should everything/nothing be in it's own file? */
+@import "modules.css";
 
 /*fonts*/
-@font-face {
+/*@font-face {
 	font-family: "Neuton";
-	src: url("../fonts/neuton/Neuton-Regular.ttf") format("Truetype");
+	src: url("../../assets/fonts/neuton/Neuton-Regular.ttf") format("Truetype");
 }
 
 @font-face {
 	font-family: "Work Sans";
-	src: url("../fonts/work-sans/WorkSans-Regular.ttf") format("Truetype");
-}
+	src: url("../../assets/fonts/work-sans/WorkSans-Regular.ttf") format("Truetype");
+}*/
 
 * {
 	/*outline:  5px solid lime;*/
@@ -140,4 +140,3 @@ section:nth-of-type(odd) {
 .site-footer .logo {
 	max-width:  60px;
 }
-

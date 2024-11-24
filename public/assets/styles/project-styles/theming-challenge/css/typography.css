@@ -186,6 +186,6 @@ header inner-column {
 
 @media (prefers-color-scheme: dark) {
 	.project-article h1 {
-/*		color: white;*/
+		color: white;
 	}
 }

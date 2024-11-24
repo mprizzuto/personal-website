@@ -1,18 +1,18 @@
 
-@import '../modules/mast-head/style.css';
-@import '../modules/graphic-diptych/style.css';
-@import '../modules/call-to-action/style.css';
-@import '../modules/articles-intro/style.css';
-@import '../modules/article-card/style.css';
-@import '../modules/site-map/style.css';
-
+/*@import 'modules/mast-head/style.css';
+@import 'modules/graphic-diptych/style.css';
+@import 'modules/call-to-action/style.css';
+@import 'modules/articles-intro/style.css';
+@import 'modules/article-card/style.css';
+@import 'modules/site-map/style.css';
+*/
 :is(
 	.welcome text-content, 
 	.sign-up call-to-action, 
 	.get-involved call-to-action
 ) {
 /*	outline: 5px solid red;*/
-	max-width: 70ch;
-	margin-right: auto;
-	margin-left: auto;
+/*	max-width: 70ch;*/
+/*	margin-right: auto;*/
+/*	margin-left: auto;*/
 }

@@ -1,19 +1,17 @@
-@font-face {
+/*@font-face {
   font-family: "Zen Kaku Gothic New Black";
-  src: 
-  url("../fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Black.ttf") format("truetype");
-}
+  src:  url("../assets/fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Black.ttf") format("truetype");
+}*/
 
-@font-face {
+/*@font-face {
   font-family: "Zen Kaku Gothic New Regular";
-  src: 
-  url("../fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Regular.ttf") format("truetype"); 
+  src: url("../../assets/fonts/Zen_Kaku_Gn/ZenKakuGothicNew-Regular.ttf") format("truetype"); 
 }
 
 @font-face {
   font-family: "noto serif";
-  src: url("../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("truetype");
-}
+  src: url("../../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("truetype");
+}*/
 
 :is(h1, h2, h3, h4, summary) {
   font-family: 'Zen Kaku Gothic New Black', sans-serif;
@@ -150,7 +148,6 @@ em {
 }
 
 span.job {
-/*  display:block;*/
   font-size: clamp(1.2em, 2vw, 6em);
   transform: translate(2px, 0px);
   line-height: 1.3;

@@ -1,25 +1,36 @@
 
 <mast-head>
+
+	<!-- <input id='toggle' type='checkbox' /> -->
+
 	<nav class='site-menu'>
-		<a class='logo' href='#'>
-			<img src="./assets/images/theme-challenge-images/icons/circle.svg" alt="circle">
-			<!-- or you could actually use the SVG -->
-		</a>
+		<ul>
+			<li>
+				<a class='home' href='#'>
+					<?php include('./assets/images/theme-challenge-images/icons/circle.svg'); ?>
+				</a>
+			</li>
 
-		<a href='#'>
-			<span>Some page</span>
-		</a>
+			<li class='page-link'>
+				<a href='#'>Some page</a>
+			</li>
 
-		<a href='#'>
-			<span>"Masthead"</span>
-		</a>
+			<li class='page-link'>
+				<a href='#'>Some other page</a>
+			</li>
+
+			<li>
+				<input id='toggle' type='checkbox' />
+			</li>
+		</ul>
 	</nav>
 
-
 	<nav class='user-menu'>
-		<a href='#'>
-			<span>Sign-in</span>
-		</a>
+		<ul>
+			<li>
+				<a class='button' href='#'>Sign in</a>
+			</li>
+		</ul>
 	</nav>
 
 </mast-head>

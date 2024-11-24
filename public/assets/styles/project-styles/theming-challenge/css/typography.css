@@ -3,7 +3,7 @@
   font-family: "Maison NB";
   src:
     local("Maison-Neue-Book"),
-    url("./assets/fonts/maison-nb/Maison-Neue-Book.ttf") format("TrueType"),
+    url("../../../../../assets/fonts/maison-nb/Maison-Neue-Book.ttf") format("TrueType"),
 }
 
 /*links*/
@@ -175,4 +175,17 @@ header#top {
 
 header inner-column {
 
+}
+
+:is(html[data-theme="os-theme-dark"]) {
+	h1 {
+		color: white;
+	}
+}
+		
+
+@media (prefers-color-scheme: dark) {
+	.project-article h1 {
+/*		color: white;*/
+	}
 }

@@ -54,13 +54,6 @@ let themeChanger = {
 
         document.documentElement.setAttribute('data-theme', event.target.id);
 
-        // if theme is os theme
-          // if theme is dark theme
-            // send "dark-theme" string to server
-
-        // if theme is light theme
-          // send "light-theme" string to server
-
         if (event.target.id === "os-theme") {
           if (this.getUserOsTheme() === "light") {
             this.sendThemeToServer("light-theme");
@@ -90,7 +83,7 @@ let themeChanger = {
       document.querySelector("html").classList.add(theme);
     }
 
-    if (this.getThemeFromLs() === "os-theme") {
+    if ( this.getThemeFromLs().includes("os-theme") ) {
       this.getUserOsTheme();
     }
   },
@@ -111,7 +104,7 @@ let themeChanger = {
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("dark-theme");
 
-      this.saveThemeToLs("os-theme");
+      this.saveThemeToLs("os-theme-dark");
 
       this.renderThemeIcon("os-theme");
       console.log("dark theme");
@@ -127,7 +120,7 @@ let themeChanger = {
 
       document.documentElement.setAttribute('data-theme', "os-theme-light");
 
-      this.saveThemeToLs("os-theme");
+      this.saveThemeToLs("os-theme-light");
 
       this.renderThemeIcon("os-theme");
       console.log("light theme");
@@ -163,7 +156,7 @@ themeChanger.renderMenu();
 
  // listen for changes only if current choice is os-theme
 
-if ( themeChanger.getThemeFromLs() === "os-theme" ) {
+if ( themeChanger.getThemeFromLs().includes("os-theme") ) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     const newColorScheme = event.matches ? "dark" : "light";
 
@@ -174,7 +167,7 @@ if ( themeChanger.getThemeFromLs() === "os-theme" ) {
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("dark-theme");
 
-      themeChanger.saveThemeToLs("os-theme");
+      themeChanger.saveThemeToLs("os-theme-dark");
       themeChanger.sendThemeToServer("dark-theme");
 
       themeChanger.renderThemeIcon("os-theme");
@@ -188,7 +181,7 @@ if ( themeChanger.getThemeFromLs() === "os-theme" ) {
       document.querySelector("html").classList.toggle("os-theme");
       document.querySelector("html").classList.toggle("light-theme");
 
-      themeChanger.saveThemeToLs("os-theme");
+      themeChanger.saveThemeToLs("os-theme-light");
       themeChanger.sendThemeToServer("light-theme");
 
       themeChanger.renderThemeIcon("os-theme");

@@ -18,6 +18,20 @@
 
 }
 
+article-card {
+	a:hover {
+		color: white;
+	}
+}
+
+article-card h2 {
+	margin-top: 15px;
+}
+
+article-card a {
+	text-decoration: underline;
+}
+
 .article-list li {
 /*	padding: 16px;*/
 }

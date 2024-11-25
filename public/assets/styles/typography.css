@@ -202,6 +202,18 @@ p + p {
   margin-top: 20px;
 }
 
+.resume-list li {
+  max-width: 45ch;
+}
+
+.resume-list h2 {
+  text-transform: capitalize;
+}
+
+.resume-list > li:nth-of-type(odd) {
+  margin-top: 20px;
+}
+
 .exercise-list {
   margin-left: 15px;
 }

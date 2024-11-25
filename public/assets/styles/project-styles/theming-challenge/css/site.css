@@ -76,4 +76,12 @@ section.get-involved {
 /*		background-color: var(--highlight);*/
 /*		color: var(--black);*/
 	}
+	
+	:is(
+		.welcome graphic-diptych, 
+		.sign-up call-to-action *, 
+		.get-involved call-to-action *
+	) {
+		color: white;
+	}
 }

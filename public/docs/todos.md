@@ -24,6 +24,10 @@ KEEP THINGS SMALL UNTIL
 - find code for theming challenge
 - fix CSS for theming challenge
 
+## theming challenmge
+- style link states
+- make hero links look like buttons
+
 ## Sitemap
 
 ## General
@@ -35,13 +39,17 @@ KEEP THINGS SMALL UNTIL
   - dynamically render tityle based on experiment detail query slug
 
 ## style guide
-  -- make grid of colors evenly soaces
+  - make grid of colors evenly soaces
 
-  ## SVGS
-  -- align stars in moon.svg
+## SVGS
+- align stars in moon.svg
 
-  ## menu
-  stop menu from toggling open upon page load
+## menu
+- stop menu from toggling open upon page load
 
 ## theme change
 - prevent css prefers color scheme from overriding JS theme changing functionality
+
+
+
+

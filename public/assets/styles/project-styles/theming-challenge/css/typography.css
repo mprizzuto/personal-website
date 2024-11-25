@@ -185,7 +185,12 @@ header inner-column {
 		
 
 @media (prefers-color-scheme: dark) {
-	.project-article h1 {
-		color: white;
+	:is(html[data-theme="dark-theme"], html[data-theme="os-theme-dark"]) {
+		article * {
+			color: white;
+		}
+		.user-menu .button {
+			color: inherit;
+		}
 	}
 }

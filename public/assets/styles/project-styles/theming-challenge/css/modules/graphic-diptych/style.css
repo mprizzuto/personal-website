@@ -34,7 +34,7 @@ graphic-diptych {
 		margin-top: 10px;
 	}
 
-	:is(.loud-voice, p) {
+	text-content {
 		color: white;
 	}
 

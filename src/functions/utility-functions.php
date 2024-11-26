@@ -202,7 +202,7 @@ function generatePageTitle() {
 				break;
 
 			case "contact":
-				$articleH1 = "contact me?";
+				$articleH1 = "Are we a good match?";
 				return $articleH1;
 				break;
 

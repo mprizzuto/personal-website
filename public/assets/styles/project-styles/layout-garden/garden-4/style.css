@@ -72,7 +72,7 @@ architect-poster {
 
   }
   
-  .ap-interior {
+  section.ap-interior {
     margin-top: 50px;
   }
 
@@ -84,6 +84,11 @@ architect-poster {
     background-position: center;
     aspect-ratio: 1 / 2;
     margin-top: 10px;
+  }
+
+  .ap-header {
+    padding: 10px;
+    line-height: 1.5;
   }
 }
 

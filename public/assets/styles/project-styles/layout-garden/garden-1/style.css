@@ -1,19 +1,23 @@
 /* garden 1  */
 .services-list {
   display: grid;
-  gap: 5px;
+  gap: 10px;
   justify-items: center;
   align-items: center;
   /* make it wrap, auto-filling columns*/
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-/*   max-width: 900px; */
-/*   outline: 1px solid red; */
+
+
   max-width: 2000px;
   padding: 10px;
 }
 
+* {
+/*  outline: 2px solid lime;*/
+}
+
 .services-list li {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .services-list li:nth-child(odd) {

@@ -12,6 +12,9 @@ mast-head {
 		}
 
 		&:has(#toggle:checked) {
+			ul *, a.button {
+				color: black;
+			}
 			/* this probably isn't accessible - but it's a good trick for now to practice the small-screen menu styling */
 			position: fixed;
 			top: 0;

@@ -1,14 +1,14 @@
 [
 	{
 		"id": 1,
-		"name": "EFP (PHP)",
-		"purpose": "UX, pseudocode and form handling",
-		"link": "?page=experiment-detail&experiment=efp_php"
+		"name": "Form validator",
+		"purpose": "UX, validation, sanitization, form handling",
+		"link": "?page=experiment-detail&experiment=form-validator"
 	},
 	{
 		"id": 2,
-		"name": "TS evaluator",
-		"purpose": "UX and form handling",
+		"name": "Vue.js todo list",
+		"purpose": "framework, UX",
 		"link": "?page=experiment-detail&experiment=ts-symptom-checker"
 	},
 	{
@@ -17,5 +17,4 @@
 		"purpose": "UX, pseudocode and form handling",
 		"link": "?page=experiment-detail&experiment=efp_js"
 	}
-
 ]

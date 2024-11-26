@@ -44,6 +44,10 @@ a {
   text-decoration: underline;
 }
 
+a[href="?page=contact"] {
+  display: block;
+}
+
 a:link {
 /*  color: red;*/
   color: var(--moon-blue);

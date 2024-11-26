@@ -42,7 +42,7 @@
 /*  position: relative;*/
 /*  z-index: 2;*/
 /*  color: black;*/
-  --color-name: "#ffc81e";
+  --color-name: "#FFD700";
   content: var(--color-name);
 }
 

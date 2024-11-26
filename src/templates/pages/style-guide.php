@@ -5,21 +5,9 @@
 		<header class="page-header">
 			<h2>website goal(s)</h2>
 
-			<p>a highly perfiormant and accessible website in the style of bauhaus/swiss poster art.</p>
+			<p>a highly performant and accessible website in the style of bauhaus/swiss poster art.</p>
 		</header>
 		<h2 class="heading-two">type faces</h2>
-
-		<p class="noto-font font-flag">noto serif</p>
-		
-		<letters class="upper-case noto-font">
-			abcdefghijklmnopqrstuvwxyz
-			!@#$%^&*()_+=<{}> 
-		</letters>
-
-		<letters class="lower-case noto-font">
-			abcdefghijklmnopqrstuvwxyz
-			!@#$%^&*()_+=<{}> 
-		</letters>
 
 		<p class="zen-kaku-font font-flag">zen kaku</p>
 

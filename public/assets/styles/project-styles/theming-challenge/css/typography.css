@@ -192,15 +192,17 @@ header#top {
 header inner-column {
 
 }
-		
 
 @media (prefers-color-scheme: dark) {
 	:is(html[data-theme="dark-theme"], html[data-theme="os-theme-dark"]) {
-		article * {
+		article *, a.button {
 			color: white;
 		}
+		a {
+/*			color: red;*/
+		}
 		.user-menu .button {
-			color: inherit;
+/*			color: inherit;*/
 		}
 		.page-link a:hover, .user-menu a:hover {
 			display: inline-block;
